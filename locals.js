@@ -412,6 +412,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/([^ ]+) repositories^/, "$1 的仓库"],
         [/Create new page · ([^ ]+) Wiki/, "新建页面 · $1 的 Wiki"],
         [/Branches · ([^ ]+)/, "分支 · $1"],
+        [/([^ ]+) · GitHub Topics/, "$1 · GitHub 主题"],
         ["_regexp_end", "end"]
     ],
 };
