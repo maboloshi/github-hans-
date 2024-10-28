@@ -4,14 +4,14 @@
 // @description  中文化 GitHub 界面的部分菜单及内容。原作者为楼教主(http://www.52cik.com/)。
 // @copyright    2021, 沙漠之子 (https://maboloshi.github.io/Blog)
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @version      1.9.3-2024-10-18
+// @version      1.9.3-2024-10-27
 // @author       沙漠之子
 // @license      GPL-3.0
 // @match        https://github.com/*
 // @match        https://skills.github.com/*
 // @match        https://gist.github.com/*
 // @match        https://www.githubstatus.com/*
-// @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals.js?v1.9.3-2024-10-18
+// @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals.js?v1.9.3-2024-10-27
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
@@ -129,6 +129,7 @@
             switch (node.tagName) {
                 case "RELATIVE-TIME": // 翻译时间元素
                     transTimeElement(node.shadowRoot);
+                    watchTimeElement(node.shadowRoot);
                     return;
 
                 case "INPUT":
@@ -249,15 +250,27 @@
      */
     function transTimeElement(el) {
         const text = el.childNodes.length > 0 ? el.lastChild.textContent : el.textContent;
-        const res = I18N[lang]['public']['time-regexp']; // 时间正则规则
-
-        for (let [a, b] of res) {
-            const translatedText = text.replace(a, b);
-            if (translatedText !== text) {
-                el.textContent = translatedText;
-                break;
-            }
+        const translatedText = text.replace(/^on/, "");
+        if (translatedText !== text) {
+            el.textContent = translatedText;
         }
+    }
+
+    /**
+     * watchTimeElement 函数：监视时间元素变化, 触发和调用时间元素翻译
+     * @param {Element} el - 需要监视的元素。
+     */
+    function watchTimeElement(el) {
+        const MutationObserver =
+            window.MutationObserver ||
+            window.WebKitMutationObserver ||
+            window.MozMutationObserver;
+
+        new MutationObserver(mutations => {
+            transTimeElement(mutations[0].addedNodes[0]);
+        }).observe(el, {
+            childList: true
+        });
     }
 
     /**
