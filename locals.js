@@ -413,6 +413,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Create new page · ([^ ]+) Wiki/, "新建页面 · $1 的 Wiki"],
         [/Branches · ([^ ]+)/, "分支 · $1"],
         [/([^ ]+) · GitHub Topics/, "$1 · GitHub 主题"],
+        [/New release · ([^ ]+)/, "新发行版 · $1"],
         ["_regexp_end", "end"]
     ],
 };
@@ -11299,6 +11300,9 @@ I18N["zh-CN"]["repository/releases"] = { // 仓库 - 发行版页面
             // 有发行版时
             "Draft a new release": "起草发行版",
             "Find a release": "搜索发行版",
+                
+                // 搜索未找到
+                "No releases found": "无匹配结果",
             // 左侧栏
             "Pre-release": "预发行版",
             "Latest": "最新发行版",
@@ -11542,6 +11546,7 @@ I18N["zh-CN"]["repository/releases"] = { // 仓库 - 发行版页面
         [/You and (\d+) others? reacted/, "您和另外 $1 人表达看法"],
         [/ and /, " 和 "],
         [/(\d+) (people|person) reacted/, "$1 人表达看法"],
+        [/There are no releases containing \"([^ ]+)\"./, "没有发行版包含“$1”。"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
