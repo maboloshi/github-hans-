@@ -430,7 +430,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Search or jump to...": "搜索或跳轉到…",
             "Type": "請鍵入",
             "to search": "去搜索",
-            "Command palette": "命令面板",
+            "Command palette": "指令面板",
             "Saved queries": "已保存的搜索",
             "All of GitHub": "整個 GitHub",
             "Autocomplete": "自動完成",
@@ -514,18 +514,18 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                     "Varying by gender and geography, color blindness can affect on average 8% of men and up to 0.5% of women. Our previous colorblind theme has been split into two new themes:": "色盲會因性別和地域的不同而有所不同，平均而言，色盲會影響 8% 的男性和高達 0.5% 的女性。我們之前的色盲主題被分為兩個新主題：",
                     "Light/dark Protanopia & Deuteranopia for red/green color blindness.": "明/暗 - 紅綠色盲主題適用於紅綠色盲。",
                     "Light/dark Tritanopia for blue/yellow color blindness.": "明/暗 - 藍色盲主題適用於藍黃色盲。",
-                "Command Palette": "命令面板",
-                    "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的命令面板，可以快速導航並跳轉到您所在的組織或倉庫，並搜索最近的議題、拉取請求、項目等等。您還可以執行節省時間的命令，而無需將手指從鍵盤上移開！",
-                    "To open the command palette:": "打開命令面板：",
+                "Command Palette": "指令面板",
+                    "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的指令面板，可以快速導航並跳轉到您所在的組織或倉庫，並搜索最近的議題、拉取請求、項目等等。您還可以執行節省時間的指令，而無需將手指從鍵盤上移開！",
+                    "To open the command palette:": "打開指令面板：",
                 "Rich Jupyter Notebook Diffs": "Jupyter Notebook 的豐富差異視圖",
                     "Enables rich diffs of Jupyter Notebooks in pull requests": "在拉取請求中啟用 Jupyter Notebook 的豐富差異視圖",
                     "Note: commenting on rich diff views of notebooks is not yet supported": "註意：尚不支持對 Jupyter Notebook 的豐富差異視圖進行評論",
                 "Enhanced Repos Insights Views": "倉庫洞察增強視圖",
                     "We』re thrilled to introduce our new graphics library! With this update, you』ll find significant enhancements to two of our repository insights views—Contributors and Code Frequency. Both now utilize an SVG-based solution, offering improved focus navigation for precise, point-by-point interaction. You can also hide a series by interacting with the chart legend and view or download the data in both table format and as PNGs.": "我們非常高興地介紹我們的新圖形庫！通過此次更新，您將發現我們的兩個倉庫洞察視圖-- 「貢獻者」 和 「程式碼頻率」 都有了顯著增強。這兩個視圖現在都采用了基於 SVG 的解決方案，為精確的逐點交互提供了改進的焦點導航。您還可以通過與圖表圖例交互來隱藏系列，並以表格格式和 PNG 格式查看或下載數據。",
-                "Slash Commands": "斜杠命令",
-                    "Slash commands make it easier to type more complex Markdown, such as tables, tasklists, and code blocks.": "斜線命令可以讓您更輕松地輸入更復雜的 Markdown，如表格、任務列表和程式碼塊。",
+                "Slash Commands": "斜杠指令",
+                    "Slash commands make it easier to type more complex Markdown, such as tables, tasklists, and code blocks.": "斜線指令可以讓您更輕松地輸入更復雜的 Markdown，如表格、任務列表和程式碼塊。",
                     "Simply type": "只需在議題、拉取請求和討論中鍵入",
-                    "on Issues, PRs and Discussions to check out a list of available commands!": "，即可查看可用命令的列表！",
+                    "on Issues, PRs and Discussions to check out a list of available commands!": "，即可查看可用指令的列表！",
                 "Feature disabled.": "功能已禁用。",
                     "Please": "請",
                     "give feedback": "提交反饋",
@@ -631,7 +631,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Saved replies": "快速回復",
                 "Select a reply": "選擇回復",
                 "Create a new saved reply": "創建新的快速回復",
-            "Slash commands": "斜杠命令",
+            "Slash commands": "斜杠指令",
                 "Code block": "程式碼塊",
                     "Insert a code block formatted for a chosen syntax": "插入針對所選語法格式化的程式碼塊",
                 "Details": "詳細信息",
@@ -736,8 +736,8 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
         // 全局快捷鍵對話框 - 快捷鍵 ? 打開
             "Keyboard shortcuts": "鍵盤快捷鍵",
             "Site-wide shortcuts": "全站快捷鍵",
-                "Open command palette": "打開命令面板",
-                "Open command palette in command mode": "在命令模式下打開命令面板",
+                "Open command palette": "打開指令面板",
+                "Open command palette in command mode": "在指令模式下打開指令面板",
                 "Focus search bar": "聚焦搜索欄", // gist
                 "Open search bar": "打開搜索欄",
                 "Go to notifications": "跳轉到通知",
@@ -752,8 +752,8 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                 "Expand and move focus into focused link's hovercard": "展開並將焦點移至聚焦鏈接的懸浮卡",
             "View all keyboard shortcuts": "查看所有鍵盤快捷鍵",
 
-        // 命令面板 - ctrl k 或 ctrl alt k 打開
-            "Clear Command Palette": "清除命令面板",
+        // 指令面板 - ctrl k 或 ctrl alt k 打開
+            "Clear Command Palette": "清除指令面板",
             "Tip:": "小貼士：",
                 "Go to your accessibility settings to change your keyboard shortcuts": "跳轉到您的無障礙設置，以更改您的鍵盤快捷鍵",
                 "to search discussions": "搜索討論", // 鍵入 #
@@ -762,7 +762,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                 "to search projects": "搜索項目", // 鍵入 !
                 "to search people and organizations": "搜索成員和組織", // 鍵入 @
                 "to search teams": "搜索團隊", // 鍵入 @
-                "to activate command mode": "激活命令模式", // 鍵入 >
+                "to activate command mode": "激活指令模式", // 鍵入 >
                 "Type is:issue to filter to issues": "鍵入 is:issue 以篩選議題",
                 "Type is:pr to filter to pull requests": "鍵入 is:pr 以篩選拉取請求",
                 "Type is:open to filter to open content": "鍵入 is:open 以篩選打開的內容",
@@ -801,11 +801,11 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Search files": "搜索文件",
             "Files": "文件",
 
-            // > 命令模式
-            "Run a command": "運行命令",
-            "Run command": "運行命令",
-            "Commands": "命令",
-            "Global Commands": "全局命令",
+            // > 指令模式
+            "Run a command": "運行指令",
+            "Run command": "運行指令",
+            "Commands": "指令",
+            "Global Commands": "全局指令",
             "Type > to filter": "鍵入 > 去篩選",
             "– New repository": "- 新建倉庫",
             "– Import repository": "- 導入倉庫",
@@ -854,7 +854,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "repositories": "倉庫",
             "users": "用戶",
             "Activate": "激活",
-            "command mode": "命令模式",
+            "command mode": "指令模式",
 
             "Use filters in issues, pull requests, discussions, and projects": "在議題題、拉取請求、討論和項目中使用過濾器",
             "Search your issues, pull requests, and discussions": "搜索您的議題、拉取請求和討論",
@@ -1262,7 +1262,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
             "You're seeing this because you haven't opened a pull request in a while.": "您看到這個是因為您有一段時間沒有打開拉取請求了。",
                 "Simplify your development workflow with a GUI": "使用 GUI 簡化開發工作流程",
                 "Install GitHub Desktop": "安裝 GitHub Desktop",
-                "to visualize, commit, and push changes without ever touching the command line.": "來可視化、提交和推送更改，而無需使用命令行。",
+                "to visualize, commit, and push changes without ever touching the command line.": "來可視化、提交和推送更改，而無需使用指令行。",
             "Get AI-based coding suggestions": "獲取基於 AI 的編碼建議",
                 "Try GitHub Copilot free for 30 days,": "免費試用 GitHub Copilot 30 天，",
                 "which suggests entire functions in real time, right from your editor.": "它可以直接從您的編輯器實時建議所有函數。",
@@ -1276,7 +1276,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
             "set up Git": "設置 Git",
             ", simplify your dev workflow with": "，簡化您的開發工作流程，使用",
             ", or": "，或",
-            "bring GitHub to the command line": "將 GitHub 引入命令行",
+            "bring GitHub to the command line": "將 GitHub 引入指令行",
         "Get started on GitHub": "開始使用 GitHub",
             "You're seeing this because you haven't used GitHub's core features, yet.": "您看到這個是因為您有一段時間沒有使用過 GitHub 的核心功能了。",
         "Introduce yourself with a profile README": "使用 README 介紹自己",
@@ -2780,12 +2780,12 @@ I18N["zh-TW"]["settings/accessibility"] = { // 設置 - 無障礙
                 "to view context relevant shortcuts.": "查看與上下文相關的快捷鍵。",
                 "Learn more about character key shortcuts": "了解更多關於字符快捷鍵的信息",
 
-            "Command palette": "命令面板",
-                "Modify the shortcuts to trigger the Command Palette for the default search mode and the command mode": "修改快捷鍵以觸發默認搜索模式和命令模式的命令面板",
+            "Command palette": "指令面板",
+                "Modify the shortcuts to trigger the Command Palette for the default search mode and the command mode": "修改快捷鍵以觸發默認搜索模式和指令模式的指令面板",
                 "Search mode": "搜索模式",
                     "control + k or control + alt + k (default)": "control + k 或 control + alt + k (默認)",
                     "Disabled": "禁用",
-                "Command mode": "命令模式",
+                "Command mode": "指令模式",
                     "control + shift + k (default)": "control + shift + k (默認)",
                 "Save keyboard shortcut preferences": "保存鍵盤快捷鍵首選項",
 
@@ -3196,9 +3196,9 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
             // 具體內容
                 "Code management": "程式碼管理",
                     "Public repositories": "公共倉庫",
-                        "Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.": "在 GitHub 公共倉庫中托管開源項目，可通過網絡或命令行訪問。任何人都可以訪問 GitHub.com 上的公共倉庫。",
+                        "Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.": "在 GitHub 公共倉庫中托管開源項目，可通過網絡或指令行訪問。任何人都可以訪問 GitHub.com 上的公共倉庫。",
                     "Private repositories": "私有倉庫",
-                        "Host code in private GitHub repositories, accessible via appliance, web, and command line. Private repositories are only accessible to you and people you share them with.": "在私有 GitHub 倉庫中托管程式碼，可通過設備、網絡和命令行訪問。只有您和與您共享的人才能訪問私有倉庫。",
+                        "Host code in private GitHub repositories, accessible via appliance, web, and command line. Private repositories are only accessible to you and people you share them with.": "在私有 GitHub 倉庫中托管程式碼，可通過設備、網絡和指令行訪問。只有您和與您共享的人才能訪問私有倉庫。",
 
                 "Code workflow": "程式碼工作流",
                     "GitHub Codespaces": "GitHub 程式碼空間",
@@ -3247,7 +3247,7 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
                     "Organization and team management": "組織和團隊管理",
                         "Manage access to projects on a team-by-team, or individual user, basis.": "以團隊或個人用戶為基礎管理對項目的訪問。",
                     "Pages and wikis": "GitHub Pages 和 Wiki",
-                        "Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.": "以 Wiki 格式為您的項目托管文檔和簡單網站，貢獻者可以輕松在網絡或命令行上進行編輯。",
+                        "Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.": "以 Wiki 格式為您的項目托管文檔和簡單網站，貢獻者可以輕松在網絡或指令行上進行編輯。",
                     "Multiple issue assignees": "多個議題受理人",
                         "Assign more than one person to an issue.": "為議題指派多人受理",
                     "GitHub organizations give you team-based access control and discussions.": "GitHub 組織為您提供基於團隊的訪問控製和討論。",
@@ -3435,11 +3435,11 @@ I18N["zh-TW"]["settings/emails"] = { // 設置 - 電子郵箱
                 "profile settings.": "個人資料設置。",
                 "Your primary email address is now private. If you previously made your email public, we』ve removed it from your profile.": "您的主電子郵箱地址現已設為私密。如果您以前公開過您的電子郵箱，我們已經從您的個人資料中刪除了它。",
             "We』ll remove your public profile email and use": "我們將刪除您的公開個人資料中的電子郵箱，並使用",
-            "when performing web-based Git operations (e.g. edits and merges) and sending email on your behalf. If you want command line Git operations to use your private email you must": "執行基於 Web 的 Git 操作（例如：編輯和合並）並以您的名義發送電子郵件。如果您想在命令行 Git 操作中使用您的私人電子郵箱，您必須",
+            "when performing web-based Git operations (e.g. edits and merges) and sending email on your behalf. If you want command line Git operations to use your private email you must": "執行基於 Web 的 Git 操作（例如：編輯和合並）並以您的名義發送電子郵件。如果您想在指令行 Git 操作中使用您的私人電子郵箱，您必須",
             "set your email in Git": "在 Git 中設置您的電子郵箱",
             "Previously authored commits associated with a public email will remain public.": "以前創建的與公共電子郵件相關的提交將保持公開狀態。",
 
-            "Block command line pushes that expose my email": "阻止在命令行推送中暴露我的電子郵箱",
+            "Block command line pushes that expose my email": "阻止在指令行推送中暴露我的電子郵箱",
                 // 頂部提醒
                 "Commits pushed with a private email will no longer be blocked.": "使用私人電子郵箱推送的提交將不再被阻止。",
                 "Commits pushed with a private email will now be blocked and you will see a warning.": "使用私人電子郵箱推送的提交將被阻止，您會看到一個警告。",
@@ -6251,7 +6251,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             // [/Branch ([^ ]+) was renamed to ([^ ]+)./, "分支 $1 已更名為 $2。"],
 
             // 快捷鍵
-                "Commands": "命令",
+                "Commands": "指令",
                 "Clone repository: Copy HTTPS": "克隆倉庫：復製 HTTPS",
                 "Clone repository: Copy SSH": "克隆倉庫：復製 SSH",
                 "Clone repository: Copy GitHub CLI": "克隆倉庫：復製 GitHub CLI",
@@ -6384,7 +6384,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             // 默認分支被重命名提醒框
                 "The default branch has been renamed!": "默認分支已重命名!",
                 "is now named": "已重命名為",
-                "If you have a local clone, you can update it by running the following commands.": "如果您有一個本地克隆，您可以通過運行以下命令來更新它。",
+                "If you have a local clone, you can update it by running the following commands.": "如果您有一個本地克隆，您可以通過運行以下指令來更新它。",
                 "OK, got it": "好的，我知道了！",
 
                 // 上遊倉庫分支重命名
@@ -6553,7 +6553,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
                 "Discard": "丟棄", // 新版倉庫概述
                 "to make this branch match the upstream repository.": "，以使本分支與上遊倉庫一致。", // 新版倉庫概述
                 "will be removed from this branch.": "將從本分支中刪除。", // 新版倉庫概述
-                "You can resolve merge conflicts using the command line and a text editor.": "您可以使用命令行和文本編輯器解決合並沖突。",
+                "You can resolve merge conflicts using the command line and a text editor.": "您可以使用指令行和文本編輯器解決合並沖突。",
                 // [/Discard (\d+) commits?/, "丟棄 $1 個提交"],
                 "Discarding changes...": "放棄更改...",
 
@@ -6733,8 +6733,8 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             "uploading an existing file": "上傳一個現有的文件",
             ". We recommend every repository include a": "來開始。我們推薦每個倉庫都包括",
             ", and": "，和",
-            "…or create a new repository on the command line": "…或在命令行上創建一個新的倉庫",
-            "…or push an existing repository from the command line": "…或從命令行中推送現有的倉庫",
+            "…or create a new repository on the command line": "…或在指令行上創建一個新的倉庫",
+            "…or push an existing repository from the command line": "…或從指令行中推送現有的倉庫",
             "…or import code from another repository": "…或從另一個倉庫導入程式碼",
             "You can initialize this repository with code from a Subversion, Mercurial, or TFS project.": "您可以初始化此倉庫從一個 Subversion，Mercurial 或 TFS 項目導入。",
             "Import code": "導入程式碼",
@@ -8055,7 +8055,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
             "You can also": "您也可以",
             "open this in GitHub Desktop": "在 GitHub Desktop 中打開",
             "or view": "，或查看",
-            "command line instructions": "命令行指令",
+            "command line instructions": "指令行指令",
 
             // "Merged": "已合並",
             "View details": "查看詳情",
@@ -8084,11 +8084,11 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
             "You』re all set—the": "一切就緒 —",
             "branch can be safely deleted.": "分支可以被安全刪除。",
             "This branch has conflicts that must be resolved": "該分支存在沖突，必須解決",
-                "Use the command line": "使用命令行",
+                "Use the command line": "使用指令行",
                 "to resolve conflicts before continuing.": "解決沖突後再繼續。",
 
-                "Checkout via command line": "通過命令行檢出",
-                "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果該分支上的沖突過於復雜，無法在 Web 編輯器中解決，您可以通過命令行檢出來解決沖突。",
+                "Checkout via command line": "通過指令行檢出",
+                "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果該分支上的沖突過於復雜，無法在 Web 編輯器中解決，您可以通過指令行檢出來解決沖突。",
                 "Step 1:": "第 1 步：",
                     "From your project repository, check out a new branch and test the changes.": "從項目倉庫中，檢出新分支並測試更改。",
                     "Clone the repository or update your local repository with the latest changes.": "克隆倉庫或使用最新更改更新本地倉庫。",
@@ -8100,7 +8100,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
                 "Step 4:": "第 4 步：",
                     "Fix the conflicts and commit the result.": "修復沖突並提交。",
                     "See": "查閱",
-                        "Resolving a merge conflict using the command line": "使用命令行解決合並沖突",
+                        "Resolving a merge conflict using the command line": "使用指令行解決合並沖突",
                         "for step-by-step instructions on resolving merge conflicts.": "的分步說明。",
                 "Step 5:": "第 5 步：",
                     "Push the changes.": "推送更改。",
@@ -8109,7 +8109,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
                 "Use the": "使用",
                 "web editor": "Web 編輯器",
                 "or the": "或",
-                "command line": "命令行",
+                "command line": "指令行",
                 "to resolve conflicts.": "來解決沖突。",
                 "These conflicts are too complex to resolve in the web editor": "這些沖突過於復雜，無法在網頁編輯器中解決",
             "Conflicting files": "沖突的文件:",
@@ -10532,7 +10532,7 @@ I18N["zh-TW"]["repository/branches"] = { // 倉庫 - 分支頁面
 
                     "Will not update your members' local environments.": "不會更新您成員的本地環境。",
                 "Renaming this branch will not update your members' local environments.": "重命名此分支不會更新您成員的本地環境。",
-                    "Your members will have to manually update their local environments. We'll let them know when they visit the repository, or you can share the following commands.": "您的成員將不得不手動更新他們的本地環境。我們會在他們訪問倉庫時通知他們，或者您可以共享以下命令。",
+                    "Your members will have to manually update their local environments. We'll let them know when they visit the repository, or you can share the following commands.": "您的成員將不得不手動更新他們的本地環境。我們會在他們訪問倉庫時通知他們，或者您可以共享以下指令。",
 
                 "Rename branch": "重命名分支",
                 "Saving…": "保存中…",
@@ -11082,8 +11082,8 @@ I18N["zh-TW"]["repository/pkgs"] = { // 倉庫 - 軟體包
             "Installation": "安裝",
             "Learn more about packages": "了解更多關於軟體包的信息",
             "Learn more about npm packages": "了解更多關於 npm 軟體包的信息",
-            "Install from the command line": "從命令行安裝",
-            "Install from the command line:": "從命令行安裝：",
+            "Install from the command line": "從指令行安裝",
+            "Install from the command line:": "從指令行安裝：",
             "Install via package.json:": "通過 package.json 安裝：",
             "Use as base image in Dockerfile:": "在 Dockerfile 中用作基礎鏡像：",
             "Recent tagged image versions": "最近被標記的映像版本",
@@ -11342,7 +11342,7 @@ I18N["zh-TW"]["repository/security"] = { // 倉庫 - 安全頁面
             "ProTip!": "專業提示！",
                 "See auto-dismissed alerts with": "要查看自動解除的警報，請使用",
                 "to see alerts without an available fix.": "來查看沒有可用修復程序的警報。",
-                "Find alerts on your dev dependencies using": "使用以下命令查找開發依賴項的警報：",
+                "Find alerts on your dev dependencies using": "使用以下指令查找開發依賴項的警報：",
                 "to see alerts with calls to vulnerable functions.": "查看調用易受攻擊函數的警報。",
 
          // 具體某條 Dependabot 警報 /security/dependabot/<id>
@@ -12463,7 +12463,7 @@ I18N["zh-TW"]["repository/settings"] = { // 倉庫設置 - 通常 /<user-name>/<
 
                     "Will not update your members' local environments.": "不會更新您成員的本地環境。",
                 "Renaming this branch will not update your members' local environments.": "重命名此分支不會更新您成員的本地環境。",
-                    "Your members will have to manually update their local environments. We'll let them know when they visit the repository, or you can share the following commands.": "您的成員將不得不手動更新他們的本地環境。我們會在他們訪問倉庫時通知他們，或者您可以共享以下命令。",
+                    "Your members will have to manually update their local environments. We'll let them know when they visit the repository, or you can share the following commands.": "您的成員將不得不手動更新他們的本地環境。我們會在他們訪問倉庫時通知他們，或者您可以共享以下指令。",
                 "Saving…": "保存中…",
 
             "Switch to another branch": "切換到另一分支",
@@ -20855,7 +20855,7 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
             "GitHub Actions": "GitHub 操作",
             "before starting to make their own courses.": "。",
             "Some courses will require knowledge of": "部分課程需要了解",
-            "command line": "命令行",
+            "command line": "指令行",
         "Planning your course": "規劃課程",
             "Write down your learning goals": "寫下學習目標",
                 "Does your course give the learner something practical to work on?": "您的課程是否為學員提供了實用的學習內容？",
