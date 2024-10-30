@@ -334,7 +334,8 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Import repository": "导入仓库",
         "Explore GitHub": "探索 GitHub",
         //"Rate limit · GitHub": "速率限制 · GitHub",
-        "GitHub: Let’s build from here · GitHub": "GitHub: 让我们从这里开始",
+        //"GitHub: Let’s build from here · GitHub": "GitHub: 让我们从这里开始",
+        "GitHub · Build and ship software on a single, collaborative platform · GitHub": "GitHub · 在单一协作平台上构建和发布软件",
         "Topics on GitHub · GitHub": "GitHub 上的主题",
     },
     "regexp": [ // 正则翻译
@@ -15512,94 +15513,167 @@ I18N["zh-CN"]["repository/custom-properties"] = { // 仓库 - 自定义属性 ht
 
 I18N["zh-CN"]["homepage"] = { // 未登录的首页
     "static": { // 静态翻译
-        "Let’s build from here": "让我们从这里开始",
-        "The world’s leading AI-powered developer platform.": "全球领先的人工智能开发者平台。",
+        //"Let’s build from here": "让我们从这里开始",
+        //"The world’s leading AI-powered developer platform.": "全球领先的人工智能开发者平台。",
+        "Build and ship software on a single, collaborative platform": "在单一协作平台上构建和发布软件",
+        "Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
 
-        "Email address": "电子邮箱地址",
-        "Sign up for GitHub": "注册 GitHub",
-        "Start a free enterprise trial": "开始免费试用企业版",
+        //"Email address": "电子邮箱地址",
+        //"Sign up for GitHub": "注册 GitHub",
+        //"Start a free enterprise trial": "开始免费试用企业版",
 
-        "Trusted by the world’s leading organizations ↘︎": "全球领先机构所信赖的合作伙伴 ↘︎",
+        "Try GitHub Copilot": "试用 GitHub Copilot",
+            "30 days free": "30天免费",
 
-        "Productivity": "生产力",
-        "Accelerate innovation": "加快创新",
-        "Our AI-powered platform increases the pace of software development.": "我们的人工智能平台加快了软件开发的步伐。",
+        // 代码
+            "Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.": "使用嵌入在整个工作流程中的 GitHub Copilot 快速、更安全地构建代码。",
+        "Plan": "计划",
+            "Track and coordinate your work with GitHub Issues, GitHub Projects, and insights.": "使用 GitHub 议题、GitHub 项目和见解来跟踪和协调您的工作。",
+        "Collaborate": "协作",
+            "Work easily with your team in real time with GitHub Pull Requests, code reviews, and GitHub Discussions.": "通过 GitHub 拉取请求、代码审查和 GitHub 讨论轻松地与您的团队实时合作。",
+        "Automate": "自动化",
+            "Streamline your workflows with automated CI/CD, testing, planning, project management, issue labeling, approvals, onboarding, and more.": "通过自动化的 CI/CD、测试、规划、项目管理、问题标签、批准、入职等简化您的工作流程。",
+        "Secure": "安全",
+            "Leverage tooling to detect, review, and fix vulnerabilities before they reach production.": "利用工具在漏洞进入生产之前检测、审查并修复漏洞。",
 
-        "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.": "能够为开发者提供上下文化的 AI 编程辅助，帮助他们在整个工作流程中完成任务的速度提高 55%。",
-        "Explore GitHub Copilot": "探索 GitHub Copilot",
+        "Accelerate performance": "提高性能",
+            "With GitHub Copilot embedded throughout the platform, you can simplify your toolchain, automate tasks, and improve the developer experience.": "通过嵌入整个平台的 GitHub Copilot，您可以简化工具链、自动执行任务并改善开发人员体验。",
 
-        "Did you know?": "您知道吗?",
+            "Work 55% faster.": "工作快 55%。",
+                "Increase productivity with AI-powered coding assistance, including code completion, chat, and more.": "通过人工智能编码辅助（包括代码完成、聊天等）提高生产力。",
+                "Survey: The AI wave continues to grow on software development teams, 2024.": "调查：2024 年，人工智能浪潮将在软件开发团队中持续高涨。",
+                "Explore GitHub Copilot": "探索 GitHub Copilot",
+            
+            "Duolingo boosts developer speed by 25% with GitHub Copilot": "多邻国利用 GitHub Copilot 将开发速度提高了 25%",
+              "Read customer story": "阅读客户故事",
 
-        "22% increase": "22% 效率提升",
-        "in developer productivity after three years with GitHub": "使用 GitHub 三年后，开发人员的工作效率",
-        "Read the report": "阅读报告",
+            "2024 Gartner® Magic Quadrant™ for AI Code Assistants": "2024 年 Gartner® 人工智能代码助手魔力象限™",
+              "Read report": "阅读报告",
+        
+        "Optimize your process with simple and secured CI/CD.": "使用简单、安全的 CI/CD 优化您的流程。",
+            "Get up and running in seconds": "数秒内即可启动并运行",
+                "Start building instantly with a comprehensive dev environment in the cloud.": "利用云中全面的开发环境立即开始构建。",
+            "Build on the go": "随时随地构建",
+                "Manage projects and chat with GitHub Copilot from anywhere.": "随时随地管理项目并与 GitHub Copilot 聊天。",
+            "Integrate the tools you love": "整合您喜爱的工具",
+                "Sync with 17,000+ integrations and a growing library of Copilot Extensions.": "与 17,000 多个集成和不断增长的 Copilot 扩展库同步。",
+                "Visit GitHub Marketplace": "访问 GitHub 市场",
 
-        "automates your build, test, and deployment workflow with simple and secure CI/CD.": "可以使用简单且安全的 CI/CD 来自动化您的构建、测试和部署工作流。",
+        "Built-in application security": "内置应用程序安全性",
+        "where found means fixed": "发现即修复",
+            "Use AI to find and fix vulnerabilities—freeing your teams to ship more secure software faster.": "使用人工智能来查找和修复漏洞——让您的团队能够更快地交付更安全的软件。",
+
+            "Apply fixes in seconds.": "在几秒钟内完成修复。",
+                "Spend less time fixing vulnerabilities and more time building features with Copilot Autofix.": "使用 Copilot 自动修复可以减少修复漏洞的时间，而将更多的时间用于构建功能。",
+                "Explore GitHub Advanced Security": "探索 GitHub 高级安全",
+
+                "Solve security debt.": "解决担保债务。",
+                    "Leverage AI-assisted security campaigns to reduce application vulnerabilities and zero-day attacks.": "利用人工智能辅助安全活动来减少应用程序漏洞和零日攻击。",
+                    "Discover security campaigns": "探索安全活动",
+                
+                "Dependencies you can depend on.": "您可以依赖的依赖项。",
+                    "Update vulnerable dependencies with supported fixes for breaking changes.": "使用支持的修复程序更新易受攻击的依赖项以解决重大更改。",
+                    "Learn about Dependabot": "了解 Dependabot",
+
+                "Your secrets, your business: protected. ": "您的机密、您的业务：受到保护。",
+                    "Detect, prevent, and remediate leaked secrets across your organization.": "检测、预防并补救整个组织内泄露的机密。",
+
+                "90% coverage": "90% 覆盖率",
+                    "of alert types in all supported languages with Copilot Autofix": "Copilot 自动修复支持所有语言的警报类型",
+
+        "Work together, achieve more": "共同协作，取得更大成就",
+            "Collaborate with your teams, use management tools that sync with your projects, and code from anywhere—all on a single, integrated platform.": "与您的团队协作，使用与您的项目同步的管理工具并从任何地方编写代码——所有这些都在单一集成平台上进行。",
+
+        // 从初创公司到大型企业，GitHub 可以适应任何行业、任何规模的团队。
+        "From startups to enterprises,": "从初创公司到大型企业，",
+            "GitHub scales": "GitHub",
+            "with teams of any size in any industry.": "可以适应任何行业、任何规模的团队。",
+
+            "Explore customer stories": "探索客户故事",
+        
+        "Millions of developers and businesses call GitHub home": "数百万开发者和企业将 GitHub 视为自己的家",
+            "Whether you’re scaling your development process or just learning how to code, GitHub is where you belong. Join the world’s most widely adopted AI-powered developer platform to build the technologies that redefine what’s possible.": "无论您是在扩展开发流程还是只是学习如何编码，GitHub 都是您的理想选择。加入全球最广泛采用的 AI 驱动开发者平台，构建重新定义可能性的技术。",
+
+        //"Trusted by the world’s leading organizations ↘︎": "全球领先机构所信赖的合作伙伴 ↘︎",
+
+        //"Productivity": "生产力",
+        //"Accelerate innovation": "加快创新",
+        //"Our AI-powered platform increases the pace of software development.": "我们的人工智能平台加快了软件开发的步伐。",
+
+        //"empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.": "能够为开发者提供上下文化的 AI 编程辅助，帮助他们在整个工作流程中完成任务的速度提高 55%。",
+
+        //"Did you know?": "您知道吗?",
+
+        //"22% increase": "22% 效率提升",
+        //"in developer productivity after three years with GitHub": "使用 GitHub 三年后，开发人员的工作效率",
+        //"Read the report": "阅读报告",
+
+        //automates your build, test, and deployment workflow with simple and secure CI/CD.": "可以使用简单且安全的 CI/CD 来自动化您的构建、测试和部署工作流。",
         "Discover GitHub Actions": "探索 GitHub Actions",
 
-        "GitHub Codespaces": "GitHub 代码空间",
-        "offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.": "可在几秒钟内提供完整的开发环境。可在任何代码库中编写代码、构建、测试并打开拉取请求。",
+        //GitHub Codespaces": "GitHub 代码空间",
+        //offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.": "可在几秒钟内提供完整的开发环境。可在任何代码库中编写代码、构建、测试并打开拉取请求。",
         "Check out GitHub Codespaces": "查看 GitHub 代码空间",
 
-        "GitHub Mobile and Copilot": "GitHub Mobile 和 Copilot",
+        //GitHub Mobile and Copilot": "GitHub Mobile 和 Copilot",
         //"fits your projects in your pocket, so you never miss a beat while on the go.": "让您的项目尽在掌握，让您在旅途中永不遗漏任何信息。",
-        "now let you manage projects and converse with your AI pair programmer on the go.": "让您可以管理项目，并与您的 AI 结对程序员在旅途中交流。",
+        //"now let you manage projects and converse with your AI pair programmer on the go.": "让您可以管理项目，并与您的 AI 结对程序员在旅途中交流。",
         "Download GitHub Mobile": "下载 GitHub Mobile",
 
-        "Application security": "应用安全",
-        "Empower developers": "为开发者赋能",
-        "With GitHub, you can secure code in minutes.": "通过 GitHub，您可以在几分钟内保护代码安全",
+        //"Application security": "应用安全",
+        //"Empower developers": "为开发者赋能",
+        //"With GitHub, you can secure code in minutes.": "通过 GitHub，您可以在几分钟内保护代码安全",
 
-        "GitHub Advanced Security": "GitHub 高级安全功能",
-        "enables you to find and fix vulnerabilities with ease and ship secure code quickly.": "可帮助您轻松发现和修复漏洞，并快速发布安全代码。",
-        "Dive into GitHub Advanced Security": "深入了解 GitHub 高级安全功能",
+        //"GitHub Advanced Security": "GitHub 高级安全功能",
+        //"enables you to find and fix vulnerabilities with ease and ship secure code quickly.": "可帮助您轻松发现和修复漏洞，并快速发布安全代码。",
+        //"Dive into GitHub Advanced Security": "深入了解 GitHub 高级安全功能",
 
         "7x faster": "快 7 倍",
         "vulnerability fixes with GitHub": "GitHub 漏洞修复速度",
 
-        "Code scanning": "代码扫描",
-        "is our code analysis tool that helps you remediate issues in your code.": "是我们的代码分析工具，可以帮助您修复代码中的问题。",
-        "Download the latest SAST ebook": "下载最新 SAST 电子书",
+        //"Code scanning": "代码扫描",
+        //"is our code analysis tool that helps you remediate issues in your code.": "是我们的代码分析工具，可以帮助您修复代码中的问题。",
+        //"Download the latest SAST ebook": "下载最新 SAST 电子书",
 
-        "makes it easy to find and fix vulnerable dependencies in your supply chain.": "易于发现和修复供应链中的脆弱依赖项。",
-        "Explore Dependabot": "探索 Dependabot",
+        //"makes it easy to find and fix vulnerable dependencies in your supply chain.": "易于发现和修复供应链中的脆弱依赖项。",
+        //"Explore Dependabot": "探索 Dependabot",
 
-        "Secret scanning": "机密扫描",
-        "automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.": "可以自动寻找合作伙伴模式，并防止意外泄露的机密被恶意使用。",
+        //"Secret scanning": "机密扫描",
+        //"automatically looks for partner patterns and prevents fraudulent use of accidentally committed secrets.": "可以自动寻找合作伙伴模式，并防止意外泄露的机密被恶意使用。",
         "Read about secret scanning": "了解机密扫描",
 
-        "Collaboration": "协作",
-        "Supercharge collaboration": "加强协作",
-        "GitHub helps your teams work more efficiently together.": "GitHub 帮助您的团队更高效地协作。",
+        //"Collaboration": "协作",
+        //"Supercharge collaboration": "加强协作",
+        //"GitHub helps your teams work more efficiently together.": "GitHub 帮助您的团队更高效地协作。",
 
-        "GitHub Issues and GitHub Projects": "GitHub 议题和 GitHub 项目",
-        "supply project management tools that adapt to your team alongside your code.": "提供了适合您的团队和代码的项目管理工具。",
-        "Get started with GitHub Issues": "开始使用 GitHub 议题",
+        //"GitHub Issues and GitHub Projects": "GitHub 议题和 GitHub 项目",
+        //"supply project management tools that adapt to your team alongside your code.": "提供了适合您的团队和代码的项目管理工具。",
+        //"Get started with GitHub Issues": "开始使用 GitHub 议题",
 
-        "reduction in onboarding time with GitHub": "使用 GitHub 缩短入职时间",
+        //"reduction in onboarding time with GitHub": "使用 GitHub 缩短入职时间",
 
-        "GitHub Discussions": "GitHub 讨论",
-        "creates space to ask questions and have open-ended conversations.": "营造了提问和开放式对话的空间。",
-        "Jump into GitHub Discussions": "跳转到 GitHub 讨论",
+       //"GitHub Discussions": "GitHub 讨论",
+       //"creates space to ask questions and have open-ended conversations.": "营造了提问和开放式对话的空间。",
+       //"Jump into GitHub Discussions": "跳转到 GitHub 讨论",
 
-        "allow real-time communication and collaboration about code changes.": "允许就代码更改进行实时交流和协作。",
-        "Check out pull requests": "查看拉取请求",
+       //"allow real-time communication and collaboration about code changes.": "允许就代码更改进行实时交流和协作。",
+       //"Check out pull requests": "查看拉取请求",
 
-        "GitHub Sponsors": "GitHub 赞助者",
-        "lets you support your favorite open source maintainers and projects.": "让您能够支持您喜欢的开源维护者和项目。",
-        "Invest with GitHub Sponsors": "通过 GitHub 赞助者进行投资",
+       //"GitHub Sponsors": "GitHub 赞助者",
+       //"lets you support your favorite open source maintainers and projects.": "让您能够支持您喜欢的开源维护者和项目。",
+       //"Invest with GitHub Sponsors": "通过 GitHub 赞助者进行投资",
 
-        "Over 100 million developers call GitHub home": "超过 1 亿开发者把 GitHub 视为自己的家",
-        "Whether you’re scaling your startup or just learning how to code, GitHub is your home. Join the world’s largest developer platform to build the innovations that empower humanity. Let’s build from here.": "无论您是正在扩大创业规模，还是刚刚开始学习编程，GitHub 都是您的家。加入全球最大的开发者平台，构建赋予人类力量的创新。让我们从这里开始。",
+       //"Over 100 million developers call GitHub home": "超过 1 亿开发者把 GitHub 视为自己的家",
+       //"Whether you’re scaling your startup or just learning how to code, GitHub is your home. Join the world’s largest developer platform to build the innovations that empower humanity. Let’s build from here.": "无论您是正在扩大创业规模，还是刚刚开始学习编程，GitHub 都是您的家。加入全球最大的开发者平台，构建赋予人类力量的创新。让我们从这里开始。",
 
         // 动画下方按钮
-        "Pause": "停止",
-        "Play": "播放",
+        //"Pause": "停止",
+        //"Play": "播放",
 
         "This 7X times factor is based on data from the industry’s longest running analysis of fix rates Veracode State of Software Security 2023, which cites the average time to fix 50% of flaws as 198 days vs. GitHub’s fix rates of 72% of flaws with in 28 days which is at a minimum of 7X faster when compared.": "这个 7 倍的修复速率是基于软件安全领域持续时间最长的修复率分析数据 —— Veracode《2023 年软件安全状况》中提到的，修复 50% 漏洞的平均时间为 198 天，而 GitHub 在 28 天内修复了 72% 的漏洞，相比之下至少快 7 倍。",
-        "The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security, a commissioned study conducted by Forrester Consulting, 2022. Results are for a composite organization based on interviewed customers.": "由 Forrester Consulting 开展的委托研究《GitHub Enterprise Cloud 和高级安全的总体经济影响》(The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security)，其结果显示了基于受访客户的综合组织的结果。",
-        "There are now 100 million developers around the world using GitHub.": "现在全球有 1 亿开发者使用 GitHub。",
-        "Read the blog post": "阅读博客文章",
+        //"The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security, a commissioned study conducted by Forrester Consulting, 2022. Results are for a composite organization based on interviewed customers.": "由 Forrester Consulting 开展的委托研究《GitHub Enterprise Cloud 和高级安全的总体经济影响》(The Total Economic Impact™ Of GitHub Enterprise Cloud and Advanced Security)，其结果显示了基于受访客户的综合组织的结果。",
+        //"There are now 100 million developers around the world using GitHub.": "现在全球有 1 亿开发者使用 GitHub。",
+        //"Read the blog post": "阅读博客文章",
 
         // 底部栏
         "Subscribe to our developer newsletter": "订阅我们的开发者新闻",
