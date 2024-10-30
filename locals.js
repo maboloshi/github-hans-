@@ -94,14 +94,14 @@ I18N.conf = {
         ],
         'repository/tree': [
             '.AppHeader-context-full', // 頂部 <username>/<repo_name>
-            'div.react-tree-show-tree-items', // 左側文件樹項目
+            'div.react-tree-show-tree-items', // 左側文件樹專案
             'tr.react-directory-row', // 文件列表中文件夾和文件條目
             '#repos-header-breadcrumb',
             '#file-name-id', // 文件路徑中文件部分
         ],
         'repository/blob': [
             '.AppHeader-context-full', // 頂部 <username>/<repo_name>
-            'div.react-tree-show-tree-items', // 左側文件樹項目
+            'div.react-tree-show-tree-items', // 左側文件樹專案
             '[id^="offset"]', // 符號-->引用
             'section', // 程式碼視圖
             '#filter-results', // 右側 符號篩選
@@ -159,9 +159,9 @@ I18N["zh-TW"]["title"] = { // 標題翻譯
         "GitHub · Where software is built": "GitHub · 軟體構建的地方",
         "Create a New Repository": "創建新倉庫",
         "Import a Repository": "導入倉庫",
-        "New Project": "創建項目",
+        "New Project": "創建專案",
         "Your Repositories": "我的倉庫",
-        "Your Projects": "我的項目",
+        "Your Projects": "我的專案",
         "Your Packages": "我的軟體包",
         "Your Stars": "我的星標頁面",
         "Your profile": "個人資料",
@@ -263,7 +263,7 @@ I18N["zh-TW"]["title"] = { // 標題翻譯
         [/Issues?/, "議題"],
         [/Pull (R|r)equests?/, "拉取請求"],
         [/Actions/, "操作"],
-        [/Projects/, "項目"],
+        [/Projects/, "專案"],
         [/Packages?/, "軟體包"],
         [/Settings · Rulesets/, "設置 · 規則集"],
         [/Security Overview/, "安全概述"],
@@ -403,7 +403,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Open Source": "開源",
                 "GitHub Sponsors": "GitHub 贊助者",
                     "Fund open source developers": "資助開源開發人員",
-                "The ReadME Project": "自述文件項目",
+                "The ReadME Project": "自述文件專案",
                     "GitHub community articles": "GitHub 社區文章",
                 // 倉庫
                     "Topics": "主題",
@@ -448,7 +448,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Home": "主頁",
             "Issues": "議題",
             "Pull requests": "拉取請求",
-            "Projects": "項目",
+            "Projects": "專案",
             "Codespaces": "程式碼空間",
             "Explore": "探索",
             "Marketplace": "市場",
@@ -477,7 +477,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                 "New codespace": "新建程式碼空間",
                 "New gist": "新建程式碼片段",
                 "New organization": "新建組織",
-                "New project": "新建項目",
+                "New project": "新建專案",
                 "This organization": "本組織", // 組織
                 "New team": "新建團隊", // 組織
 
@@ -491,7 +491,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Your repositories": "我的倉庫",
             "Your codespaces": "我的程式碼空間",
             "Your Copilot": "我的 Copilot",
-            "Your projects": "我的項目",
+            "Your projects": "我的專案",
             "Your discussions": "我的討論",
             "Your stars": "我的星標",
             "Your gists": "我的程式碼片段",
@@ -515,7 +515,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                     "Light/dark Protanopia & Deuteranopia for red/green color blindness.": "明/暗 - 紅綠色盲主題適用於紅綠色盲。",
                     "Light/dark Tritanopia for blue/yellow color blindness.": "明/暗 - 藍色盲主題適用於藍黃色盲。",
                 "Command Palette": "指令面板",
-                    "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的指令面板，可以快速導航並跳轉到您所在的組織或倉庫，並搜索最近的議題、拉取請求、項目等等。您還可以執行節省時間的指令，而無需將手指從鍵盤上移開！",
+                    "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的指令面板，可以快速導航並跳轉到您所在的組織或倉庫，並搜索最近的議題、拉取請求、專案等等。您還可以執行節省時間的指令，而無需將手指從鍵盤上移開！",
                     "To open the command palette:": "打開指令面板：",
                 "Rich Jupyter Notebook Diffs": "Jupyter Notebook 的豐富差異視圖",
                     "Enables rich diffs of Jupyter Notebooks in pull requests": "在拉取請求中啟用 Jupyter Notebook 的豐富差異視圖",
@@ -759,7 +759,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
                 "to search discussions": "搜索討論", // 鍵入 #
                 "to search issues": "搜索議題", // 鍵入 #
                 "to search pull requests": "搜索拉取請求", // 鍵入 #
-                "to search projects": "搜索項目", // 鍵入 !
+                "to search projects": "搜索專案", // 鍵入 !
                 "to search people and organizations": "搜索成員和組織", // 鍵入 @
                 "to search teams": "搜索團隊", // 鍵入 @
                 "to activate command mode": "激活指令模式", // 鍵入 >
@@ -787,11 +787,11 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
 
             // # 模式
             "Search issues and pull requests": "搜索議題和拉取請求",
-            "Search issues, pull requests, discussions, and projects": "搜索議題、拉取請求、討論和項目",
+            "Search issues, pull requests, discussions, and projects": "搜索議題、拉取請求、討論和專案",
             "Issues, pull requests, and discussions": "議題、拉取請求和討論",
 
             // ! 模式
-            "Search projects": "搜索項目",
+            "Search projects": "搜索專案",
 
             // @ 模式
             "Search or jump to a repository": "搜索或跳轉到倉庫",
@@ -809,7 +809,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Type > to filter": "鍵入 > 去篩選",
             "– New repository": "- 新建倉庫",
             "– Import repository": "- 導入倉庫",
-            "– New project": "- 新建項目",
+            "– New project": "- 新建專案",
             "– New discussion": "- 新建討論",
             "– New organization": "- 新建組織",
             "– New gist": "- 新建程式碼片段",
@@ -846,7 +846,7 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "across all of GitHub": "在整個 GitHub 中",
             "issues, pull requests, discussions,": "議題、拉取請求、討論",
             "organizations, repositories,": "組織、倉庫",
-            "projects": "項目",
+            "projects": "專案",
             "files": "文件",
             "issues": "議題",
             "pull requests": "拉取請求",
@@ -856,12 +856,12 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Activate": "激活",
             "command mode": "指令模式",
 
-            "Use filters in issues, pull requests, discussions, and projects": "在議題題、拉取請求、討論和項目中使用過濾器",
+            "Use filters in issues, pull requests, discussions, and projects": "在議題題、拉取請求、討論和專案中使用過濾器",
             "Search your issues, pull requests, and discussions": "搜索您的議題、拉取請求和討論",
             "Filter to pull requests": "篩選拉取請求",
             "Filter to issues": "篩選議題",
             "Filter to discussions": "篩選討論",
-            "Filter to projects": "篩選項目",
+            "Filter to projects": "篩選專案",
             "Filter to open issues, pull requests, and discussions": "篩選打開的議題、拉取請求和討論",
 
             // 議題頁面
@@ -1227,7 +1227,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
         // [/Edit ([^ ]+)』s settings/, "編輯 $1 的設置"],
         "Return to your personal dashboard": "返回到您的個人儀表板",
 
-        // 已有倉庫的項目
+        // 已有倉庫的專案
         // 左側欄
         "View organization": "查看組織", // 組織
         "Browse organization's repositories": "瀏覽組織的倉庫", // 組織
@@ -1241,7 +1241,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
         "Recent activity": "近期活動",
             "When you take actions across GitHub, we』ll provide links to that activity here.": "當您在 GitHub 上采取行動時，我們會在這裏提供該活動的鏈接。", // 組織
 
-        "Create your first project": "創建您的第一個項目",
+        "Create your first project": "創建您的第一個專案",
             "Ready to start building? Create a repository for a new idea or bring over an existing repository to keep contributing to it.": "準備好開始構建了嗎？為新想法創建一個倉庫或使用現有倉庫繼續為其做出貢獻。",
             "Create repository": "創建倉庫",
 
@@ -1249,7 +1249,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
         "The home for all developers — including you.": "所有開發者的家園——包括您。",
         "Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.": "歡迎來到您的個人儀表板，在這裏您可以看到關於 GitHub 工作原理的介紹，幫助您構建軟體的工具，以及幫助您合並您的第一行程式碼。",
         "Start writing code": "開始編寫程式碼",
-            "A repository contains all of your project's files, revision history, and collaborator discussion.": "倉庫包含項目的所有文件、修訂歷史記錄和協作者討論。",
+            "A repository contains all of your project's files, revision history, and collaborator discussion.": "倉庫包含專案的所有文件、修訂歷史記錄和協作者討論。",
             "Repository name": "倉庫名稱",
             "name your new repository...": "命名您的新倉庫……",
             "Anyone on the internet can see this repository": "任何人都可以看到這個倉庫，您可以選擇誰能提交。",
@@ -1287,7 +1287,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
         "About version control and Git": "關於版本控製和 Git",
         "Learn about the version control system, Git, and how it works with GitHub.": "了解版本控製系統、Git 以及它如何與 GitHub 一起工作。",
         "The GitHub Flow": "GitHub 流程",
-        "Adopt GitHub's lightweight, branch-based workflow to collaborate on projects.": "采用 GitHub 的輕量級、基於分支的工作流程來協作處理項目。",
+        "Adopt GitHub's lightweight, branch-based workflow to collaborate on projects.": "采用 GitHub 的輕量級、基於分支的工作流程來協作處理專案。",
 
         "One moment please...": "稍等一會兒...",
         "Loading activity...": "載入活動...",
@@ -1311,7 +1311,7 @@ I18N["zh-TW"]["page-dashboard"] = { // 已登錄的首頁 - 儀表板（含組�
             "Releases": "發行版",
                 "Update posts from repositories": "來自倉庫的更新帖",
             // 贊助
-                "Relevant projects or people that are being sponsored": "獲得贊助的相關項目或人員",
+                "Relevant projects or people that are being sponsored": "獲得贊助的相關專案或人員",
             "Stars": "星標",
                 "Repositories being starred by people": "被人們標星的倉庫",
             "Repositories": "倉庫",
@@ -1656,8 +1656,8 @@ I18N["zh-TW"]["page-profile"] = { // 個人首頁
 
         // 概述標簽卡 即主頁 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             "Customize your pins": "自定義置頂",
-            // 設置置頂項目對話框
-            "Edit pinned items": "設置置頂項目",
+            // 設置置頂專案對話框
+            "Edit pinned items": "設置置頂專案",
             "Select up to six public repositories or gists you'd like to show to anyone.": "最多選擇 6 個您想向任何人展示的公共倉庫或程式碼片段。",
             "Select up to six public repositories you'd like to show.": "最多選擇 6 個要顯示的公共倉庫。", // 組織頁
             "Filter repositories and gists": "篩選倉庫和程式碼片段",
@@ -1753,7 +1753,7 @@ I18N["zh-TW"]["page-profile"] = { // 個人首頁
         [/(\d+) discussions? answered/, "$1 個討論已回答"], // 高光時刻
         [/Block or report ([^ ]+)/, "拉黑或舉報 $1"],
         [/(\d+) GitHub Archive Program/, "$1 GitHub 存檔計劃"], // 成就浮動款
-        [/(\d+) remaining/, "$1 剩余"], // 置頂項目 剩余
+        [/(\d+) remaining/, "$1 剩余"], // 置頂專案 剩余
         [/([^ ]+) doesn('|』)t have any public repositories yet./, "$1 尚無任何公共倉庫。"],
         [/([\d,]+) contributions? in the last year/, "在過去的一年中貢獻 $1 次"],
         [/([\d,]+) contributions? in (\d+) in ([^ ]+)/, "在 $2 年中向 $3, 貢獻 $1 次"],
@@ -1780,7 +1780,7 @@ I18N["zh-TW"]["page-profile"] = { // 個人首頁
         [/(\d+) of (\d+) tasks?/, "$1 / $2 個任務"],
         [/(\d+) comments?/, "$1 條評論"],
         [/(\d+) tasks? done/, "$1 個任務完成"],
-        [/([^ ]+) doesn't have any projects yet./, "$1 目前還沒有任何項目。"],
+        [/([^ ]+) doesn't have any projects yet./, "$1 目前還沒有任何專案。"],
         [/([^ ]+) has no activity yet for this period./, "$1 目前還沒有活動。"],
         [/([^ ]+) had no activity during this period./, "$1 在此期間沒有活動。"],
         [/Contribution activity in ([^ ]+)/, "在 $1 中的貢獻活動"],
@@ -1877,7 +1877,7 @@ I18N["zh-TW"]["page-profile/repositories"] = { // 個人首頁 - 倉庫標簽卡
 
             "No repositories matched your search.": "沒有與您的搜索匹配的倉庫。", // 無匹配倉庫
 
-            // 項目 狀態詞
+            // 專案 狀態詞
             "Updated": "更新於",
             "Forked from": "復刻自",
 
@@ -1926,8 +1926,8 @@ I18N["zh-TW"]["page-profile/repositories"] = { // 個人首頁 - 倉庫標簽卡
                         "Enter a number": "輸入數字",
                         "Enter search text": "輸入搜索文本",
                         "Make a selection": "進行選擇",
-                            "Select items": "選擇項目",
-                            "Select an item": "選擇項目",
+                            "Select items": "選擇專案",
+                            "Select an item": "選擇專案",
                                 "Filter values": "篩選值",
                                     // 復刻
                                         "Only forks": "僅復刻",
@@ -1976,22 +1976,22 @@ I18N["zh-TW"]["page-profile/repositories"] = { // 個人首頁 - 倉庫標簽卡
     ],
 };
 
-I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
+I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 專案標簽卡
     "static": { // 靜態翻譯
         ...I18N["zh-TW"]["page-profile-public"]["static"],
 
-        // 項目標簽卡 ?tab=projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            "There aren't any projects yet": "尚無任何項目",
-            "Provide quick access to relevant projects.": "提供快速訪問相關項目的途徑。",
-            "Add projects to view them here.": "將項目添加到此處查看。",
+        // 專案標簽卡 ?tab=projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            "There aren't any projects yet": "尚無任何專案",
+            "Provide quick access to relevant projects.": "提供快速訪問相關專案的途徑。",
+            "Add projects to view them here.": "將專案添加到此處查看。",
 
-            "Welcome to the all-new projects": "歡迎訪問全新的項目",
-            "Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.": "構建像電子表格一樣的項目表，給您一個實時的畫布來對議題和拉取請求進行篩選、排序和分組。通過自定義字段和保存的視圖，使它們符合您的需要。",
+            "Welcome to the all-new projects": "歡迎訪問全新的專案",
+            "Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.": "構建像電子表格一樣的專案表，給您一個實時的畫布來對議題和拉取請求進行篩選、排序和分組。通過自定義字段和保存的視圖，使它們符合您的需要。",
 
-            "Learn more about projects": "了解更多關於項目", // ?tab=projects
+            "Learn more about projects": "了解更多關於專案", // ?tab=projects
 
-            "Create your first GitHub project": "創建您的第一個 GitHub 項目",
-            "Projects are a customizable, flexible tool for planning and tracking your work.": "項目是一個可定製的、靈活的工具，用於規劃和跟蹤您的工作。",
+            "Create your first GitHub project": "創建您的第一個 GitHub 專案",
+            "Projects are a customizable, flexible tool for planning and tracking your work.": "專案是一個可定製的、靈活的工具，用於規劃和跟蹤您的工作。",
 
             "Sort": "排序",
                 // 排序下拉菜單
@@ -2003,10 +2003,10 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "Clear current search query and sorts": "清除當前的搜索查詢和分類",
 
             "Plan and track work across repositories with custom fields and multiple views": "通過自定義字段和多個視圖來計劃和跟蹤整個倉庫的工作",
-            "Kanban-style project board": "看板式項目面板",
+            "Kanban-style project board": "看板式專案面板",
 
-            "You don't have any projects yet.": "您還沒有任何項目。",
-            "There are no projects matching your search.": "沒有符合您搜索條件的項目。",
+            "You don't have any projects yet.": "您還沒有任何專案。",
+            "There are no projects matching your search.": "沒有符合您搜索條件的專案。",
             "Learn More": "了解更多",
 
             "No description": "無描述",
@@ -2015,13 +2015,13 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "Reopen": "重新打開",
 
             // 頂部提醒
-            "Project closed.": "項目已關閉。",
-            "Project reopened.": "項目已重新打開。",
+            "Project closed.": "專案已關閉。",
+            "Project reopened.": "專案已重新打開。",
 
             // 組織
             "Created by me": "由我創建",
-            "Create your first GitHub project template": "創建您的第一個 GitHub 項目模板",
-            "Templates can be used to quickly get started with a new project.": "模板可以用於快速新建項目。",
+            "Create your first GitHub project template": "創建您的第一個 GitHub 專案模板",
+            "Templates can be used to quickly get started with a new project.": "模板可以用於快速新建專案。",
             "New template": "新建模版",
 
         // https://github.com/users/<user-name>/projects/<id>
@@ -2046,7 +2046,7 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "Delete view": "刪除視圖",
             "Export view data": "導出視圖數據",
             "Assignees": "負責人",
-            "Project templates": "項目模板",
+            "Project templates": "專案模板",
             "Featured": "特色",
             "Iteration": "叠代",
             "Dates": "日期",
@@ -2054,14 +2054,14 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "Truncate titles": "截斷標題",
             "Show date fields": "顯示日期字段",
             "Add status update": "添加狀態更新",
-            "Project details": "項目詳情",
+            "Project details": "專案詳情",
             "View more options": "查看更多選項",
             "Date fields": "日期字段",
             "Month": "月",
             "Quarter": "季度",
             "Year": "年",
             "Today": "今天",
-            "Add item": "添加項目",
+            "Add item": "添加專案",
             "Start typing to create a draft, or type # to select a repository": "開始輸入以創建草案，或輸入 # 選擇一個倉庫",
             "Scroll to previous date range": "滾動到上一個日期範圍",
             "Scroll to next date range": "滾動到下一個日期範圍",
@@ -2073,23 +2073,23 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "New field": "新建字段",
             "Column by": "欄目",
             "Workflows": "工作流",
-            "Archived items": "已存檔項目",
+            "Archived items": "已存檔專案",
             "Make a copy": "復製",
-            "GitHub Projects": "GitHub 項目",
+            "GitHub Projects": "GitHub 專案",
             "What』s new": "新功能",
-            "Project settings": "項目設置",
-            "Project name": "項目名稱",
+            "Project settings": "專案設置",
+            "Project name": "專案名稱",
             "Short description": "簡短描述",
             "More options": "更多選項",
-            "Make a copy of this project.": "復製此項目",
+            "Make a copy of this project.": "復製此專案",
             "Danger zone": "危險區",
-            "This project is currently private.": "此項目當前為私有.",
-            "Closing a project will disable its workflows & remove it from the list of open projects.": "關閉項目將禁用其工作流程，並將其從打開項目列表中刪除.",
-            "Close this project": "關閉此項目",
+            "This project is currently private.": "此專案當前為私有.",
+            "Closing a project will disable its workflows & remove it from the list of open projects.": "關閉專案將禁用其工作流程，並將其從打開專案列表中刪除.",
+            "Close this project": "關閉此專案",
             "Manage access": "管理訪問權限",
             "Who has access": "誰有訪問權限",
-            "Private project": "私有項目",
-            "Only those with access to this project can view it.": "只有有權訪問此項目的人才能查看它.",
+            "Private project": "私有專案",
+            "Only those with access to this project can view it.": "只有有權訪問此專案的人才能查看它.",
             "Invite collaborators": "邀請協作者",
             "Manage access": "管理訪問權限",
             "Custom fields": "自定義字段",
@@ -2109,11 +2109,11 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "Make template": "製作模板",
             "Copy as template": "復製為模板",
             "Visibility": "可見性",
-            "Close project": "關閉項目",
-            "Delete project": "刪除項目",
-            "Delete this project": "刪除此項目",
+            "Close project": "關閉專案",
+            "Delete project": "刪除專案",
+            "Delete this project": "刪除此專案",
             "Status chart": "狀態圖表",
-            "This chart shows the current status for the total number of items in your project.": "此圖表顯示了項目中所有項目的當前狀態.",
+            "This chart shows the current status for the total number of items in your project.": "此圖表顯示了專案中所有專案的當前狀態.",
             "Default charts": "默認圖表",
             "Custom charts": "自定義圖表",
             "Configure": "配置",
@@ -2122,15 +2122,15 @@ I18N["zh-TW"]["page-profile/projects"] = { // 個人首頁- 項目標簽卡
             "X-axis": "X 軸",
             "Y-axis": "Y 軸",
             "Save to new chart": "保存到新圖表",
-            "Add a project status update": "添加項目狀態更新",
+            "Add a project status update": "添加專案狀態更新",
             "Add update": "添加更新",
-            "Status updates are brief reports tracking your project's health and progress. Begin by adding an update.": "狀態更新是跟蹤項目健康和進度的簡要報告. 從添加更新開始.",
-            "Let everyone know what this project is about, how to use it and link to important resources.": "讓每個人都知道這個項目是關於什麽的，如何使用它，並鏈接到重要資源.",
-            "A short description about this project.": "關於此項目的簡短描述.",
+            "Status updates are brief reports tracking your project's health and progress. Begin by adding an update.": "狀態更新是跟蹤專案健康和進度的簡要報告. 從添加更新開始.",
+            "Let everyone know what this project is about, how to use it and link to important resources.": "讓每個人都知道這個專案是關於什麽的，如何使用它，並鏈接到重要資源.",
+            "A short description about this project.": "關於此專案的簡短描述.",
     },
     "regexp": [ // 正則翻譯
         [/View (\d+)/, "視圖 $1"],
-        [/([\d,]+) Open/, "$1 打開"], // 項目標簽卡
+        [/([\d,]+) Open/, "$1 打開"], // 專案標簽卡
         [/([\d,]+) Closed/, "$1 已關閉"],
         ...I18N["zh-TW"]["orgs-public"]["regexp"],
     ],
@@ -2290,7 +2290,7 @@ I18N["zh-TW"]["page-profile/stars"] = { // 個人首頁 - 星標標簽卡
 
             "Clear filter": "清除篩選",
 
-            // 項目 狀態詞
+            // 專案 狀態詞
             "Updated": "更新於",
             "Forked from": "復刻自",
 
@@ -2321,7 +2321,7 @@ I18N["zh-TW"]["page-profile/stars"] = { // 個人首頁 - 星標標簽卡
                 "Save list": "保存清單",
                 "Saving...": "保存中...",
             "Add repositories to this list": "添加倉庫到此清單",
-            "Star repositories on GitHub to keep track of your favorite projects and inspirational code.": "GitHub上的星標倉庫可以跟蹤您最喜歡的項目和鼓舞人心的程式碼。",
+            "Star repositories on GitHub to keep track of your favorite projects and inspirational code.": "GitHub上的星標倉庫可以跟蹤您最喜歡的專案和鼓舞人心的程式碼。",
             "Explore repositories.": "探索倉庫。",
     },
     "regexp": [ // 正則翻譯
@@ -2429,7 +2429,7 @@ I18N["zh-TW"]["orgs-settings-menu"] = { // 組織設置 公共部分
                 "Caches": "緩存",
             "Webhooks": "Web 鉤子",
             "Packages": "軟體包",
-            "Projects": "項目",
+            "Projects": "專案",
 
             "Security": "安全",
             "Authentication security": "身份驗證安全",
@@ -3196,7 +3196,7 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
             // 具體內容
                 "Code management": "程式碼管理",
                     "Public repositories": "公共倉庫",
-                        "Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.": "在 GitHub 公共倉庫中托管開源項目，可通過網絡或指令行訪問。任何人都可以訪問 GitHub.com 上的公共倉庫。",
+                        "Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.": "在 GitHub 公共倉庫中托管開源專案，可通過網絡或指令行訪問。任何人都可以訪問 GitHub.com 上的公共倉庫。",
                     "Private repositories": "私有倉庫",
                         "Host code in private GitHub repositories, accessible via appliance, web, and command line. Private repositories are only accessible to you and people you share them with.": "在私有 GitHub 倉庫中托管程式碼，可通過設備、網絡和指令行訪問。只有您和與您共享的人才能訪問私有倉庫。",
 
@@ -3204,10 +3204,10 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
                     "GitHub Codespaces": "GitHub 程式碼空間",
                         "Spin up fully configured dev environments in the cloud with the power of your favorite editor. A \"core hour\" denotes compute usage. On a 2-core machine, you would get 60 hours free. On a 4-core machine, you would get 30 hours free, etc. Free hours are assigned to personal accounts, rather than free organizations.": "利用您喜愛的編輯器的強大功能，在雲中快速配置完整的開發環境。「核心小時」 表示計算使用量。在雙核機器上，您將獲得 60 小時的免費時長。在 4 核機器上，您將獲得 30 小時的免費時長，以此類推。免費時長數分配給個人賬戶，而不是免費組織。",
                     "GitHub Actions": "Github 操作",
-                        "Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories.": "利用 GitHub Actions 的幾分鐘執行時間，實現軟體開發工作流程自動化。編寫任務並組合它們，即可在 GitHub 上構建、測試和部署任何程式碼項目。對於公共倉庫，執行時間是免費的。",
+                        "Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories.": "利用 GitHub Actions 的幾分鐘執行時間，實現軟體開發工作流程自動化。編寫任務並組合它們，即可在 GitHub 上構建、測試和部署任何程式碼專案。對於公共倉庫，執行時間是免費的。",
                         "Learn more about billing": "了解更多關於賬單的信息",
                     "GitHub Packages": "Github 軟體包",
-                        "Host your own software packages or use them as dependencies in other projects. Both private and public hosting available. Packages are free for public repositories.": "托管您的軟體包，或將其用作其他項目的依賴項。提供私有和公共托管。對於公共倉庫，軟體包是免費的。",
+                        "Host your own software packages or use them as dependencies in other projects. Both private and public hosting available. Packages are free for public repositories.": "托管您的軟體包，或將其用作其他專案的依賴項。提供私有和公共托管。對於公共倉庫，軟體包是免費的。",
                     "Code reviews": "程式碼審查",
                         "Review new code, see visual code changes, and confidently merge code changes with automated status checks.": "審查新程式碼，查看可視化的程式碼更改，並通過自動化狀態檢查自行地合並程式碼更改。",
                     // 拉取請求
@@ -3238,16 +3238,16 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
                         "Invite any GitHub member, or all GitHub members, to work with you on code in a private repository you control – including making changes and opening issues.": "邀請任何 GitHub 成員或所有 GitHub 成員，在您控製的私有倉庫上與您共同處理程式碼，包括進行更改和提出議題。",
                     // 議題
                         "Track bugs, enhancements, and other requests, prioritize work, and communicate with stakeholders as changes are proposed and merged.": "跟蹤漏洞、增強功能和其他請求，確定工作的優先級，並在提出和合並變更時與利益相關者溝通。",
-                    // 項目
+                    // 專案
                         "Visualize and manage issues and pull requests across tables, boards, and roadmaps with custom fields and views that you can arrange to suit your workflow.": "通過自定義字段和視圖，在表格、面板和路線圖上可視化管理議題和拉取請求，以適應您的工作流程。",
                     "Milestones": "裏程碑",
-                        "Track progress on groups of issues or pull requests in a repository, and map groups to overall project goals.": "跟蹤倉庫中議題或拉取請求組的進展，並將組映射到整體項目目標。",
+                        "Track progress on groups of issues or pull requests in a repository, and map groups to overall project goals.": "跟蹤倉庫中議題或拉取請求組的進展，並將組映射到整體專案目標。",
                     // 團隊討論
-                        "Discuss any topic, unattached to a specific project or issue. Control who has access, notify discussion participants with updates, and link from anywhere.": "討論任何主題，不與特定項目或議題相關。控製訪問權限，通知討論參與者最新情況，並從任何地方進行鏈接。",
+                        "Discuss any topic, unattached to a specific project or issue. Control who has access, notify discussion participants with updates, and link from anywhere.": "討論任何主題，不與特定專案或議題相關。控製訪問權限，通知討論參與者最新情況，並從任何地方進行鏈接。",
                     "Organization and team management": "組織和團隊管理",
-                        "Manage access to projects on a team-by-team, or individual user, basis.": "以團隊或個人用戶為基礎管理對項目的訪問。",
+                        "Manage access to projects on a team-by-team, or individual user, basis.": "以團隊或個人用戶為基礎管理對專案的訪問。",
                     "Pages and wikis": "GitHub Pages 和 Wiki",
-                        "Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.": "以 Wiki 格式為您的項目托管文檔和簡單網站，貢獻者可以輕松在網絡或指令行上進行編輯。",
+                        "Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.": "以 Wiki 格式為您的專案托管文檔和簡單網站，貢獻者可以輕松在網絡或指令行上進行編輯。",
                     "Multiple issue assignees": "多個議題受理人",
                         "Assign more than one person to an issue.": "為議題指派多人受理",
                     "GitHub organizations give you team-based access control and discussions.": "GitHub 組織為您提供基於團隊的訪問控製和討論。",
@@ -3265,9 +3265,9 @@ I18N["zh-TW"]["settings/billing"] = { // 設置 - 賬單和計劃
                     "Dependabot alerts": "Dependabot 警報",
                         "Get notified when there are new vulnerabilities affecting dependencies in your repositories.": "當您的倉庫中出現影響依賴項的新漏洞時，您會收到通知。",
                     "Dependabot security updates": "Dependabot 安全更新",
-                        "Keep projects secure by automatically opening pull requests that update vulnerable dependencies to secure versions.": "通過自動打開拉取請求，更新易受攻擊的依賴項至安全版本，保持項目的安全性。",
+                        "Keep projects secure by automatically opening pull requests that update vulnerable dependencies to secure versions.": "通過自動打開拉取請求，更新易受攻擊的依賴項至安全版本，保持專案的安全性。",
                     "Dependabot version updates": "Dependabot 版本更新",
-                        "Keep projects up-to-date by automatically opening pull requests that update out-of-date dependencies.": "通過自動打開拉取請求，更新過時的依賴項，保持項目的最新狀態。",
+                        "Keep projects up-to-date by automatically opening pull requests that update out-of-date dependencies.": "通過自動打開拉取請求，更新過時的依賴項，保持專案的最新狀態。",
                     "Repository rules": "倉庫規則",
                         "Enforce branch and tag protections across repositories. Rule insights allow you to review rule enforcement and understand its impact.": "跨倉庫實施分支和標簽保護限製。規則洞察允許您審查規則執行並了解其影響。",
                     "Required reviews": "批準審查",
@@ -4906,8 +4906,8 @@ I18N["zh-TW"]["settings/apps"] = { // 設置 - 開發者設置/GitHub 應用
                         "Packages published to the GitHub Package Platform.": "發布軟體包到 GitHub Package 平臺。",
                     "Pages": "GitHub Pages",
                         "Retrieve Pages statuses, configuration, and builds, as well as create new builds.": "檢索頁面狀態、配置和構建，以及創建新的構建。",
-                    "Projects": "項目",
-                        "Manage classic projects within a repository.": "管理倉庫中的經典項目。",
+                    "Projects": "專案",
+                        "Manage classic projects within a repository.": "管理倉庫中的經典專案。",
                     "Pull requests": "拉取請求",
                         "Pull requests and related comments, assignees, labels, milestones, and merges.": "拉取請求及相關評論、受讓人、標簽、裏程碑和合並。",
                     "Repository security advisories": "倉庫安全公告",
@@ -4962,8 +4962,8 @@ I18N["zh-TW"]["settings/apps"] = { // 設置 - 開發者設置/GitHub 應用
                         "View and revoke personal access tokens that have been granted access to an organization.": "查看和撤銷已被授予組織訪問權限的個人訪問令牌。",
                     "Plan": "計劃",
                         "View an organization's plan.": "查看組織的計劃。",
-                    // 項目
-                        "Manage projects for an organization.": "管理組織的項目。",
+                    // 專案
+                        "Manage projects for an organization.": "管理組織的專案。",
                     // 機密
                         "Manage Actions organization secrets.": "管理操作組織機密",
                     "Self-hosted runners": "自托管運行器",
@@ -5076,16 +5076,16 @@ I18N["zh-TW"]["settings/apps"] = { // 設置 - 開發者設置/GitHub 應用
                     "Pages site built.": "GitHub Pages 站點的建立。",
                 "Personal access token request": "個人訪問令牌請求",
                     "Personal access token request created, approved, denied, or cancelled.": "個人訪問令牌請求的創建、批準、拒絕或取消。",
-                "Project": "項目",
-                    "Project created, updated, or deleted.": "項目的創建、更新或刪除。",
-                "Project card": "項目面板卡",
-                    "Project card created, updated, or deleted.": "項目面板卡的創建、更新或刪除",
-                "Project column": "項目欄目",
-                    "Project column created, updated, moved or deleted.": "項目欄目的創建、更新、移動或刪除。",
-                "Projects v2 item": "項目 v2 條目",
-                    "Project item created, edited, deleted, archived, restored, converted, or reordered.": "項目條目的創建、編輯、刪除、歸檔、恢復、轉換或重新排序。",
-                "Projects v2": "項目 v2",
-                    "Project created, updated, deleted, closed, or reopened.": "項目的創建、更新、刪除、關閉或重新打開。",
+                "Project": "專案",
+                    "Project created, updated, or deleted.": "專案的創建、更新或刪除。",
+                "Project card": "專案面板卡",
+                    "Project card created, updated, or deleted.": "專案面板卡的創建、更新或刪除",
+                "Project column": "專案欄目",
+                    "Project column created, updated, moved or deleted.": "專案欄目的創建、更新、移動或刪除。",
+                "Projects v2 item": "專案 v2 條目",
+                    "Project item created, edited, deleted, archived, restored, converted, or reordered.": "專案條目的創建、編輯、刪除、歸檔、恢復、轉換或重新排序。",
+                "Projects v2": "專案 v2",
+                    "Project created, updated, deleted, closed, or reopened.": "專案的創建、更新、刪除、關閉或重新打開。",
                 // 公共
                     "Repository changes from private to public.": "倉庫從私有更改為公共。",
                 "Pull request": "拉取請求",
@@ -5520,8 +5520,8 @@ I18N["zh-TW"]["settings/tokens"] = { // 設置 - 開發者設置/個人訪問令
                         "Packages published to the GitHub Package Platform.": "發布軟體包到 GitHub Package 平臺。",
                     "Pages": "GitHub Pages",
                         "Retrieve Pages statuses, configuration, and builds, as well as create new builds.": "檢索頁面狀態、配置和構建，以及創建新的構建。",
-                    "Projects": "項目",
-                        "Manage classic projects within a repository.": "管理倉庫中的經典項目。",
+                    "Projects": "專案",
+                        "Manage classic projects within a repository.": "管理倉庫中的經典專案。",
                     "Pull requests": "拉取請求",
                         "Pull requests and related comments, assignees, labels, milestones, and merges.": "拉取請求及相關評論、受讓人、標簽、裏程碑和合並。",
                     "Repository security advisories": "倉庫安全公告",
@@ -5597,8 +5597,8 @@ I18N["zh-TW"]["settings/tokens"] = { // 設置 - 開發者設置/個人訪問令
                         "Manage Dependabot organization secrets.": "管理 Dependabot 組織的機密。",
                     "Plan": "計劃",
                         "View an organization's plan.": "查看組織的計劃。",
-                    // 項目
-                        "Manage projects for an organization.": "管理組織的項目。",
+                    // 專案
+                        "Manage projects for an organization.": "管理組織的專案。",
                     // 機密
                         "Manage Actions organization secrets.": "管理操作組織機密",
                     "Self-hosted runners": "自托管運行器",
@@ -5674,9 +5674,9 @@ I18N["zh-TW"]["settings/tokens"] = { // 設置 - 開發者設置/個人訪問令
             "Upload packages to GitHub Package Registry": "將包上傳到 GitHub Packages 包註冊",
             "Download packages from GitHub Package Registry": "從 GitHub Packages 包註冊表下載包",
             "Delete packages from GitHub Package Registry": "從 GitHub Packages 包註冊表中刪除包",
-            "Full control of orgs and teams, read and write org projects": "完全控製組織和團隊，讀寫組織項目",
-            "Read and write org and team membership, read and write org projects": "讀寫組織和團隊成員，讀寫組織項目",
-            "Read org and team membership, read org projects": "讀取組織和團隊成員，讀取組織項目",
+            "Full control of orgs and teams, read and write org projects": "完全控製組織和團隊，讀寫組織專案",
+            "Read and write org and team membership, read and write org projects": "讀寫組織和團隊成員，讀寫組織專案",
+            "Read org and team membership, read org projects": "讀取組織和團隊成員，讀取組織專案",
             "Manage org runners and runner groups": "管理組織運行器和運行器組",
             "Full control of user public keys": "完全控製用戶公鑰",
             "Write user public keys": "寫入用戶公鑰",
@@ -5704,8 +5704,8 @@ I18N["zh-TW"]["settings/tokens"] = { // 設置 - 開發者設置/個人訪問令
             "Ability to create, read, update, and delete codespace secrets": "創建、讀取、更新和刪除程式碼空間機密",
             "Full control of GitHub Copilot settings and seat assignments": "完全控製 GitHub Copilot 設置和席位分配",
                 "View and edit Copilot Business seat assignments": "查看和編輯 GitHub Copilot 商業版席位分配",
-            "Full control of projects": "完全控製項目",
-            "Read access of projects": "讀取項目",
+            "Full control of projects": "完全控製專案",
+            "Read access of projects": "讀取專案",
             "Full control of public user GPG keys": "完全控製公共用戶 GPG 密鑰",
             "(Developer Preview)": "（開發者預覽版）",
             "Write public user GPG keys": "寫入公共用戶 GPG 密鑰",
@@ -5805,7 +5805,7 @@ I18N["zh-TW"]["repository-public"] = { // 倉庫 - 公共部分
             "Pull requests": "拉取請求",
             "Discussions": "討論",
             "Actions": "操作",
-            "Projects": "項目",
+            "Projects": "專案",
             "Security": "安全",
             "Insights": "洞察",
             "Settings": "設置",
@@ -5910,7 +5910,7 @@ I18N["zh-TW"]["repository-public"] = { // 倉庫 - 公共部分
                 "Go to Issues"               : "跳轉到議題",
                 "Go to Pull Requests"        : "跳轉到拉取請求",
                 "Go to Actions"              : "跳轉到操作",
-                "Go to Projects"             : "跳轉到項目",
+                "Go to Projects"             : "跳轉到專案",
                 "Go to Wiki"                 : "跳轉到 Wiki",
                 "Go to Discussions"          : "跳轉到討論",
 
@@ -5927,7 +5927,7 @@ I18N["zh-TW"]["repository-public"] = { // 倉庫 - 公共部分
                 // "篩選用戶": "",
                 "Filter by or edit assignees"  : "按受理人篩選或編輯受理人",
                 "Filter by or edit labels"     : "按標簽篩選或編輯標簽",
-                "Filter by or edit projects"   : "按項目篩選或編輯項目",
+                "Filter by or edit projects"   : "按專案篩選或編輯專案",
                 "Filter by or edit milestones" : "按裏程碑篩選或編輯裏程碑",
                 "Reply (quoting selected text)": "答復（引用所選文本）",
                 "Open saved replies": "打開快捷回復（引用所選文本）",
@@ -6061,7 +6061,7 @@ I18N["zh-TW"]["page-new-repo"] = {// 倉庫 - 新建/導入/復刻倉庫
 
         // 新建倉庫 https://github.com/new
             "Create a new repository": "創建新倉庫",
-            "A repository contains all project files, including the revision history.": "倉庫包含項目中的所有文件，包括修訂歷史記錄。",
+            "A repository contains all project files, including the revision history.": "倉庫包含專案中的所有文件，包括修訂歷史記錄。",
             "Already have a project repository elsewhere?": "在其他地方已有倉庫？",
             "Import a repository.": "導入倉庫",
             //"Cancel": "取消",
@@ -6097,7 +6097,7 @@ I18N["zh-TW"]["page-new-repo"] = {// 倉庫 - 新建/導入/復刻倉庫
             "Initialize this repository with:": "使用以下方式初始化此倉庫：",
                 "Skip this step if you』re importing an existing repository.": "如果您要導入現有倉庫，請跳過此步驟。",
             "Add a README file": "添加 README 文件",
-                "This is where you can write a long description for your project.": "您可以在此處為您的項目編寫詳細描述。",
+                "This is where you can write a long description for your project.": "您可以在此處為您的專案編寫詳細描述。",
                 "Learn more about READMEs.": "了解更多關於 README 的信息。",
             "Add .gitignore": "添加 .gitignore 文件",
                 "Choose which files not to track from a list of templates.": "從模板列表中選擇哪些文件不需要跟蹤。",
@@ -6142,7 +6142,7 @@ I18N["zh-TW"]["page-new-repo"] = {// 倉庫 - 新建/導入/復刻倉庫
                 "and not just the default branch.": "倉庫分支，而不僅僅是默認分支。",
 
         // 導入倉庫 第一頁 https://github.com/new/import
-            "Import your project to GitHub": "將您的項目導入到 GitHub",
+            "Import your project to GitHub": "將您的專案導入到 GitHub",
                 "Import all the files, including revision history, from another version control system.": "導入的所有文件，包括修訂歷史記錄，來自其他版本控製系統。",
                 "Support for importing Mercurial, Subversion and Team Foundation Version Control (TFVC) repositories ended on April 12, 2024. For more details, see the": "對導入 Mercurial、Subversion 和 Team Foundation 版本控製 (TFVC) 倉庫的支持已結束於 2024 年 4 月 12 日。有關詳細信息，請參閱",
                 "changelog": "更新日誌",
@@ -6181,7 +6181,7 @@ I18N["zh-TW"]["page-new-repo"] = {// 倉庫 - 新建/導入/復刻倉庫
         // 導入倉庫 第二頁 /<user-name>/<repo-name>/import
             "Preparing your new repository": "準備您的新倉庫",
                 "There is no need to keep this window open, we』ll email you when the import is done.": "無需保持此窗口，導入完成後我們會通過電子郵件通知您。",
-            "Detecting your project』s version control system…": "正在檢測項目的版本控製系統…",
+            "Detecting your project』s version control system…": "正在檢測專案的版本控製系統…",
             "Importing commits and revision history…": "導入提交和修訂歷史…",
             // [/Updating branches and (\d) commit authors?…/, "更新分支和 $1 個提交者…"],
             "Optimizing repository and pushing commits to GitHub…": "優化倉庫並將提交推送到 GitHub...",
@@ -6192,7 +6192,7 @@ I18N["zh-TW"]["page-new-repo"] = {// 倉庫 - 新建/導入/復刻倉庫
             "Create a new fork": "創建新復刻",
             "A": " ",
             "fork": "復刻",
-            "is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.": "是一個倉庫的副本。復刻倉庫可以讓您在不影響原項目的情況下自由地進行修改實驗。",
+            "is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.": "是一個倉庫的副本。復刻倉庫可以讓您在不影響原專案的情況下自由地進行修改實驗。",
             "View existing forks.": "查看現有復刻。",
             "No available destinations to fork this repository.": "沒有復刻此倉庫的可用目標。",
             "Required fields are marked with an asterisk (*).": "帶星號 (*) 的為必填項。",
@@ -6354,12 +6354,12 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
                 "GitHub Channel on YouTube": "YouTube 上的 GitHub 頻道",
                 "while you wait?": "在您等待的時候？",
 
-            // 已上架的 GitHub Action 項目
-                "Use this GitHub action with your project": "將此 GitHub Actions 用於您的項目",
+            // 已上架的 GitHub Action 專案
+                "Use this GitHub action with your project": "將此 GitHub Actions 用於您的專案",
                 "Add this Action to an existing workflow or create a new one": "將此操作添加到現有工作流程或創建新工作流程",
                 "View on Marketplace": "去市場查看",
 
-            // 未上架的 GitHub Action 項目
+            // 未上架的 GitHub Action 專案
                 "You can publish this Action to the GitHub Marketplace": "您可以將此 Action 發布到 GitHub 市場",
                 "Draft a release": "起草發布",
 
@@ -6582,7 +6582,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             "View code": "查看程式碼", //小屏模式
 
             // 倉庫缺失 README 提醒
-            "Help people interested in this repository understand your project by adding a README.": "通過添加 README，幫助對此倉庫感興趣的人了解您的項目。",
+            "Help people interested in this repository understand your project by adding a README.": "通過添加 README，幫助對此倉庫感興趣的人了解您的專案。",
             "Add a README": "添加 README",
 
             // 右側欄
@@ -6608,7 +6608,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
                 "will appear on the organization's profile.": "將出現在該組織資料中。",
 
             // 組織下.github-private 倉庫 README
-                "Add a README with an overview of your project.": "為您項目添加一個概述 README 文件。",
+                "Add a README with an overview of your project.": "為您專案添加一個概述 README 文件。",
                 "The": " ",
                 // [/will appear on ([^ ]+)'s member profile, visible only to organization members./, "將出現在 $1 的成員資料中，僅對組織成員可見。"],
 
@@ -6673,7 +6673,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             // "Packages": "軟體包",
                 "No packages published": "未發布軟體包",
                 "Publish your first package": "發布軟體包",
-            "Sponsor this project": "贊助本項目",
+            "Sponsor this project": "贊助本專案",
                 "Learn more about GitHub Sponsors": "了解更多關於 GitHub 贊助者的信息",
             "Used by": "使用者",
             "Contributors": "貢獻者",
@@ -6692,16 +6692,16 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
         // 新版倉庫概述
             // /<user-name>/<repo-name>#coc
                 "Add a code of conduct": "添加行為準則",
-                "Define community standards, signal a welcoming and inclusive project, and outline procedures for handling abuse by adding a code of conduct.": "通過添加行為準則，明確社區標準，體現項目的歡迎和包容性，並概述處理濫用行為的程序。",
+                "Define community standards, signal a welcoming and inclusive project, and outline procedures for handling abuse by adding a code of conduct.": "通過添加行為準則，明確社區標準，體現專案的歡迎和包容性，並概述處理濫用行為的程序。",
 
             // /<user-name>/<repo-name>#license
                 "License": "許可證",
                 "Add a license": "添加許可證",
-                "Add a license to your repository to make it clear how others can use, change, and contribute to your project.": "向倉庫中添加許可證，以明確其他人可以如何使用、更改您的項目並為您的項目做出貢獻。",
+                "Add a license to your repository to make it clear how others can use, change, and contribute to your project.": "向倉庫中添加許可證，以明確其他人可以如何使用、更改您的專案並為您的專案做出貢獻。",
 
             // /<user-name>/<repo-name>#security
                 "Add a security policy": "添加安全策略",
-                "Help your community understand how to securely report security vulnerabilities for your project.": "幫助您的社區了解如何安全地報告項目的安全漏洞。",
+                "Help your community understand how to securely report security vulnerabilities for your project.": "幫助您的社區了解如何安全地報告專案的安全漏洞。",
 
         // Action 倉庫 右側欄
             "Suggested workflows": "建議的工作流程",
@@ -6736,7 +6736,7 @@ I18N["zh-TW"]["repository"] = { // 倉庫頁面 /<user-name>/<repo-name>/
             "…or create a new repository on the command line": "…或在指令行上創建一個新的倉庫",
             "…or push an existing repository from the command line": "…或從指令行中推送現有的倉庫",
             "…or import code from another repository": "…或從另一個倉庫導入程式碼",
-            "You can initialize this repository with code from a Subversion, Mercurial, or TFS project.": "您可以初始化此倉庫從一個 Subversion，Mercurial 或 TFS 項目導入。",
+            "You can initialize this repository with code from a Subversion, Mercurial, or TFS project.": "您可以初始化此倉庫從一個 Subversion，Mercurial 或 TFS 專案導入。",
             "Import code": "導入程式碼",
             "ProTip!": "專業提示！",
                 "Use the URL for this page when adding GitHub as a remote.": "將 GitHub 添加為遠程時，請使用此頁面上的 URL。",
@@ -6835,11 +6835,11 @@ I18N["zh-TW"]["repository/milestones"] = { // 倉庫 - 裏程碑頁面
             "Milestones": "裏程碑",
 
             "You haven』t created any Milestones.": "您尚未創建任何裏程碑。",
-            "Use Milestones to create collections of Issues and Pull Requests for a particular release or project.": "使用裏程碑為特定版本或項目創建議題和拉取請求的集合。",
+            "Use Milestones to create collections of Issues and Pull Requests for a particular release or project.": "使用裏程碑為特定版本或專案創建議題和拉取請求的集合。",
 
             // 組織 倉庫 裏程碑
             "No Milestones found!": "沒有發現裏程碑!",
-            "If this project had milestones, we』d show you them here. Promise!": "如果該項目有裏程碑，我們會在此處向您展示。",
+            "If this project had milestones, we』d show you them here. Promise!": "如果該專案有裏程碑，我們會在此處向您展示。",
 
             "Create a Milestone": "創建裏程碑",
 
@@ -6914,12 +6914,12 @@ I18N["zh-TW"]["repository/pull_issue_public"] = { // 倉庫 - 議題和拉取請
                 "to exclude labels": "排除標簽",
                 "for logical OR": "表示邏輯「或」",
 
-            // "Projects": "項目",
-                "Filter by project": "按項目篩選",
-                "Filter projects": "篩選項目",
+            // "Projects": "專案",
+                "Filter by project": "按專案篩選",
+                "Filter projects": "篩選專案",
                 "Repository": "倉庫",
                 "Organization": "組織",
-                "No projects found. Sorry about that.": "很抱歉，未找到任何項目。",
+                "No projects found. Sorry about that.": "很抱歉，未找到任何專案。",
 
             // "Milestones": "裏程碑",
                 "Filter by milestone": "按裏程碑篩選",
@@ -7061,10 +7061,10 @@ I18N["zh-TW"]["repository/pull_issue_public"] = { // 倉庫 - 議題和拉取請
                     "dependencies": "依賴關系",
                         "Pull requests that update a dependency file": "更新依賴文件的拉取請求",
 
-                // 項目
+                // 專案
                     "Recent": "最近",
                     "User": "用戶",
-                    "No projects": "無項目",
+                    "No projects": "無專案",
 
                 "Milestone": "裏程碑",
                     "No milestone": "無裏程碑",
@@ -7380,7 +7380,7 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
                     // "this issue": "這個議題",
 
                     // 第一次打開議題
-                    "It looks like this is your first time opening an issue in this project!": "看起來這是您第一次在此項目中打開議題！",
+                    "It looks like this is your first time opening an issue in this project!": "看起來這是您第一次在此專案中打開議題！",
                     "Be sure to review the": "請務必查閱",
 
                     // 議題表單
@@ -7422,11 +7422,11 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
                 "Transfer issue": "轉移議題",
                     // 轉移議題 對話框
                         "Transfer this issue": "轉移議題",
-                            "Repository projects assigned to this issue will not transfer to the new location": "分配給此議題的倉庫項目不會轉移到新位置",
+                            "Repository projects assigned to this issue will not transfer to the new location": "分配給此議題的倉庫專案不會轉移到新位置",
                         "Choose a repository": "選擇倉庫",
                         "Find a repository": "搜索倉庫",
                         "Warning!": "警告！",
-                            "Transferring an issue does not scrub any issue content. Content such as text references to other issues, pull requests, projects, teams will remain in this issue's descriptions and comments.": "轉移議題不會清除任何議題內容。諸如對其他議題、拉取請求、項目、團隊的文本引用等內容將保留在此議題的描述和評論中。",
+                            "Transferring an issue does not scrub any issue content. Content such as text references to other issues, pull requests, projects, teams will remain in this issue's descriptions and comments.": "轉移議題不會清除任何議題內容。諸如對其他議題、拉取請求、專案、團隊的文本引用等內容將保留在此議題的描述和評論中。",
                             "Assignees, labels and milestones will be transferred if they are present in the target repository.": "如果目標倉庫中存在受讓人、標簽和裏程碑，它們將被轉移。",
                 "Convert to discussion": "轉為討論",
                     // 轉換議題為討論 對話框
@@ -7523,7 +7523,7 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
                     // "All comments and reactions will be the same as the issue": "所有評論和反應將與議題相同",
                     "Discussions do not have tasklists": "討論沒有任務列表",
                     "Discussions do not have assignees": "討論沒有受理人",
-                    "Discussions cannot be added to projects": "討論無法添加到項目",
+                    "Discussions cannot be added to projects": "討論無法添加到專案",
                     "Discussions do not have milestones": "討論沒有裏程碑",
                     "You must choose a category for the discussion to belong to. You will be able to change this after the conversion is complete.": "您必須為討論選擇一個所屬類別。轉換完成後，您可以更改類別。",
                     "Choose a category": "選擇類別",
@@ -7546,7 +7546,7 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
                 "Create a report to help us improve": "創建報告以幫助我們改進",
             "Feature request": "功能要求",
                 "Standard feature request template": "標準功能請求模板",
-                "Suggest an idea for this project": "為這個項目提出想法",
+                "Suggest an idea for this project": "為這個專案提出想法",
             "Custom template": "自定義模板",
                 "Blank template for other issue types": "其他議題類型的空白模板",
                 "Custom issue template": "自定義議題模板",
@@ -7558,7 +7558,7 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
             "Template name": "模板名稱",
             "This file lives in": "該文件位於",
             "Template content": "模板內容",
-            "Optional additional items": "可選附加項目",
+            "Optional additional items": "可選附加專案",
             "Issue default title": "議題默認標題",
             "This will be suggested as the issue title": "建議作為議題標題",
 
@@ -7584,7 +7584,7 @@ I18N["zh-TW"]["repository/issues"] = { // 倉庫 - 議題頁面
         [/· ([\d,]+) comments?/, "• $1 條評論"],
         [/([\d,]+) participants?/, "$1 位參與者"],
         [/(\d+) similar comments?/, "$1 條類似評論"],
-        [/(\d+) hidden items?/, "$1 條隱藏項目"],
+        [/(\d+) hidden items?/, "$1 條隱藏專案"],
         [/added a commit to ([^ ]+) that referenced this issue/, "為 $1 添加了引用這個議題的提交"],
         [/Only people who can see ([^ ]+) will see this reference./, "只有能看到 $1 的人才能看到這個參考。"],
         [/Sponsor ([^ ]+)?/, "贊助 $1"], // 贊助按鈕 對話框 標題
@@ -7803,7 +7803,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
                 "on": "：",
                 // 首次彈窗
                     "Your first automated security update": "您的第一個自動安全更新",
-                        "Dependabot security updates keep your projects secure and up-to-date.": "Dependabot 安全更新使您的項目安全且最新。",
+                        "Dependabot security updates keep your projects secure and up-to-date.": "Dependabot 安全更新使您的專案安全且最新。",
                         "You can opt out at any time in": "你可以在任何時候選擇退出在",
                         "this repository』s settings": "倉庫設置",
                         "Got it!": "我知道了",
@@ -7945,7 +7945,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
             "This pull request is still a work in progress": "此拉取請求仍在進行中",
                 "Ready for review": "準備審核",
                 "Draft pull requests cannot be merged.": "拉取請求草案不能合並。",
-            "This pull request can be automatically merged by project collaborators": "此拉取請求可以由項目協作者自動合並",
+            "This pull request can be automatically merged by project collaborators": "此拉取請求可以由專案協作者自動合並",
                 "Only those with": "只有對此倉庫具有",
                 "write access": "寫入訪問權限",
                 "to this repository can merge pull requests.": "的才可合並拉取請求。",
@@ -8090,7 +8090,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
                 "Checkout via command line": "通過指令行檢出",
                 "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果該分支上的沖突過於復雜，無法在 Web 編輯器中解決，您可以通過指令行檢出來解決沖突。",
                 "Step 1:": "第 1 步：",
-                    "From your project repository, check out a new branch and test the changes.": "從項目倉庫中，檢出新分支並測試更改。",
+                    "From your project repository, check out a new branch and test the changes.": "從專案倉庫中，檢出新分支並測試更改。",
                     "Clone the repository or update your local repository with the latest changes.": "克隆倉庫或使用最新更改更新本地倉庫。",
                 "Step 2:": "第 2 步：",
                     "Merge the changes and update on GitHub.": "合並更改並在 GitHub 上更新。",
@@ -8419,7 +8419,7 @@ I18N["zh-TW"]["repository/pull"] = { // 倉庫 - 某個拉取請求頁面
         [/on this commit as ([^@]+@[^\n]+)/, "該提交以 $1 身份"],
         [/Notify someone on an issue with a mention, like: @([^ ]+)./, "在某個問題上通知並提及某人，例如：@$1。"], // 專業提示
         [/(\d+) conversations? must be resolved before merging./, "合並之前必須解決 $1 個對話。"],
-        [/(\d+) hidden items?/, "$1 條隱藏項目"],
+        [/(\d+) hidden items?/, "$1 條隱藏專案"],
         [/([^ ]+) requested changes/, "$1 要求更改"],
         [/(\d+) active deployments?/, "$1 個活動的部署"],
 
@@ -8531,11 +8531,11 @@ I18N["zh-TW"]["repository/compare"] = { // 倉庫 - 比較並創建拉取請求
             "Create a new pull request by comparing changes across two branches. If you need to, you can also": "通過比較兩個分支的更改來創建一個新的拉請求。如果需要，還可以",
 
             // 提示框（第一次提交拉取請求時）
-            "It looks like this is your first time opening a pull request in this project!": "看起來這是您在這個項目中首次發起的拉取請求呢！",
+            "It looks like this is your first time opening a pull request in this project!": "看起來這是您在這個專案中首次發起的拉取請求呢！",
             "Be sure to review the": "請務必查閱",
             "contributing guidelines": "貢獻指南",
             "Reporting a security vulnerability?": "報告安全漏洞？",
-            "Check out the project's": "查看本項目的",
+            "Check out the project's": "查看本專案的",
 
             "Checking mergeability…": "檢查可合並性…",
             "Don』t worry, you can still create the pull request.": "別擔心，您仍然可以創建拉取請求。",
@@ -8616,7 +8616,7 @@ I18N["zh-TW"]["repository/compare"] = { // 倉庫 - 比較並創建拉取請求
                     "Pull requests that update a dependency file": "更新依賴文件的拉取請求",
                 "Recent": "最近",
                 "User": "用戶",
-                "No projects": "無項目",
+                "No projects": "無專案",
 
             "Milestone": "裏程碑",
                 "No milestone": "無裏程碑",
@@ -9405,7 +9405,7 @@ I18N["zh-TW"]["repository/discussions"] = { // 討論頁面
                 "Are you sure you want to unhide this comment?": "您確定要取消隱藏此評論嗎？",
 
             // [/Show (\d+) previous repl(y|ies)/, "顯示 $1 條之前的答復"],
-            // [/(\d+) hidden items?/, "$1 條隱藏項目"],
+            // [/(\d+) hidden items?/, "$1 條隱藏專案"],
             "Load more…": "載入更多…",
             "New": "新",
 
@@ -9565,7 +9565,7 @@ I18N["zh-TW"]["repository/discussions"] = { // 討論頁面
         [/(\d+) suggested answers?/, "$1 個建議答案"],
         [/(\d+) participants?/, "$1 位參與者"],
         [/Show (\d+) previous repl(y|ies)/, "顯示 $1 條之前的答復"],
-        [/(\d+) hidden items?/, "$1 條隱藏項目"],
+        [/(\d+) hidden items?/, "$1 條隱藏專案"],
         [/Discussion \"([^ ]+)\" has been unpinned./, "討論 「$1」 已取消置頂。"],
         [/Edited (\d+) times?/,"編輯 $1 次"], //評論框編輯次數
         [/edited by ([^ ]+)/,"被 $1 編輯"], //評論框 被他人編輯
@@ -9633,9 +9633,9 @@ I18N["zh-TW"]["repository/actions"] = { // 倉庫 - 操作頁面
             "Getting started and core concepts": "入門和核心概念",
             "New to Actions? Start here. Learn the core concepts and how to get started.": "初次接觸 Actions？從這裏開始。了解核心概念和如何開始。",
             "Configuring and managing workflows": "配置和管理工作流程",
-            "Create custom workflows to control your project's life cycle processes.": "創建自定義工作流程以控製項目的生命周期過程。",
+            "Create custom workflows to control your project's life cycle processes.": "創建自定義工作流程以控製專案的生命周期過程。",
             "Language and framework guides": "語言與框架指南",
-            "Guides for projects written in many programming languages.": "項目指南由多種編程語言編寫。",
+            "Guides for projects written in many programming languages.": "專案指南由多種編程語言編寫。",
 
             "Didn't find what you're looking for?": "沒有找到您需要的？",
             "Fill out a 2-minute survey to request a new workflow template for GitHub Actions." :"填寫一份 2 分鐘的調查，為 GitHub Actions 申請一個新的工作流模板。",
@@ -9657,7 +9657,7 @@ I18N["zh-TW"]["repository/actions"] = { // 倉庫 - 操作頁面
             "GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.": "GitHub Actions 現在可以使用世界一流的 CI/CD 輕松自動化所有軟體工作流程。直接從 GitHub 構建、測試和部署您的程式碼。",
             "Learn more about getting started with Actions.": "了解更多關於開始使用 Actions 的信息。",
             "Linux, macOS, Windows, ARM, and containers": "Linux、macOS、Windows、ARM 和容器",
-            "Hosted runners for every major OS make it easy to build and test all your projects. Run directly on a VM or inside a container. Use your own VMs, in the cloud or on-prem, with self-hosted runners.": "為每一個主要的操作系統提供的托管運行程序，使您能夠輕松地構建和測試您的所有項目。直接在虛擬機上或容器內運行。在雲端或本地使用您自己的虛擬機，以及自托管的運行器。",
+            "Hosted runners for every major OS make it easy to build and test all your projects. Run directly on a VM or inside a container. Use your own VMs, in the cloud or on-prem, with self-hosted runners.": "為每一個主要的操作系統提供的托管運行程序，使您能夠輕松地構建和測試您的所有專案。直接在虛擬機上或容器內運行。在雲端或本地使用您自己的虛擬機，以及自托管的運行器。",
 
             "Matrix builds": "矩陣式構建",
             "Save time with matrix workflows that simultaneously test across multiple operating systems and versions of your runtime.": "使用矩陣工作流程可同時跨多個操作系統和版本運行，節省時間",
@@ -10090,7 +10090,7 @@ I18N["zh-TW"]["repository/deployments"] = { // 倉庫 - 部署頁面
                             "is": "是",
                         "Value": "值",
                             "Make a selection": "請選擇",
-                            "Select items": "請選擇項目",
+                            "Select items": "請選擇專案",
                             "Filter values": "篩選值",
                             "Enter search text": "鍵入任意文本",
                                 "Me": "我",
@@ -10254,7 +10254,7 @@ I18N["zh-TW"]["repository/new"] = { // 倉庫 - 新建/編輯/上傳/刪除文�
                     "for this commit and start a pull request": "為這個提交，並且發起一個拉取請求",
                     "Learn more about pull requests": "了解更多關於拉取請求的信息",
 
-                "Something went wrong. Please fork the project, then try from your fork.": "出錯了。請復刻該項目，然後從您的復刻處嘗試。",
+                "Something went wrong. Please fork the project, then try from your fork.": "出錯了。請復刻該專案，然後從您的復刻處嘗試。",
 
             // 底部欄
                 "Use": "使用",
@@ -10273,12 +10273,12 @@ I18N["zh-TW"]["repository/new"] = { // 倉庫 - 新建/編輯/上傳/刪除文�
                 "Fork this repository": "復刻此倉庫",
                     "Learn more about forks": "了解更多關於復刻的信息",
 
-                "You』re making changes in a project you don』t have write access to. Submitting a change will write it to a new branch in your fork": "您正在對沒有寫入權限的項目進行更改。提交更改會將其寫入您的復刻",
+                "You』re making changes in a project you don』t have write access to. Submitting a change will write it to a new branch in your fork": "您正在對沒有寫入權限的專案進行更改。提交更改會將其寫入您的復刻",
                 ", so you can send a pull request.": " 中的新分支，這樣您就可以發送拉取請求。",
 
             // 組織倉庫 編輯文件頁面
-                "You』re making changes in a project you don』t have write access to. We』ve": "您正在對沒有寫入權限的項目進行更改。我們已經",
-                "created a fork of this project": "為該項目創建復刻",
+                "You』re making changes in a project you don』t have write access to. We』ve": "您正在對沒有寫入權限的專案進行更改。我們已經",
+                "created a fork of this project": "為該專案創建復刻",
                 "for you to commit your proposed changes to. Submitting a change will write it to a new branch in your fork, so you can send a pull request.": "供您提交建議的更改。提交更改會將其寫入復刻中的新分支，這樣您就可以發送拉取請求。",
 
             // 混合換行符
@@ -10312,9 +10312,9 @@ I18N["zh-TW"]["repository/new"] = { // 倉庫 - 新建/編輯/上傳/刪除文�
                         "Code quality": "程式碼質量",
                         "Monitoring": "監控",
                         "Continuous integration": "持續集成",
-                        "Project management": "項目管理",
+                        "Project management": "專案管理",
                         "Deployment": "部署",
-                        "Project management": "項目管理",
+                        "Project management": "專案管理",
                         "Testing": "測試",
                     "Browse all actions on the GitHub Marketplace": "瀏覽 GitHub 市場 上的所有 Actions",
 
@@ -10509,7 +10509,7 @@ I18N["zh-TW"]["repository/branches"] = { // 倉庫 - 分支頁面
                 "Rename this branch": "重命名分支", // 重命名其他分支 標題
                 "Rename": "重命名",
                 "to:": "為：",
-                "Most projects name the default branch": "大多數項目將默認分支名為",
+                "Most projects name the default branch": "大多數專案將默認分支名為",
                 "Renaming this branch:": "重命名此分支：",
                     // 該分支存在來自其他分支的拉取請求時
                         "Will update": "將更新",
@@ -11238,11 +11238,11 @@ I18N["zh-TW"]["repository/security"] = { // 倉庫 - 安全頁面
 
         // 安全政策 /<user-name>/<repo-name>/security/policy
             "Set up a security policy": "製定安全政策",
-            "Help your community understand how to securely report security vulnerabilities for your project.": "幫助您的社區了解如何安全地報告項目的安全漏洞。",
+            "Help your community understand how to securely report security vulnerabilities for your project.": "幫助您的社區了解如何安全地報告專案的安全漏洞。",
             "Start setup": "開始設置",
 
             "No security policy detected": "未檢測到安全策略",
-            "This project has not set up a": "該項目尚未設置",
+            "This project has not set up a": "該專案尚未設置",
             "file yet.": "文件。",
 
         // 安全公告 /<user-name>/<repo-name>/security/advisories
@@ -11271,7 +11271,7 @@ I18N["zh-TW"]["repository/security"] = { // 倉庫 - 安全頁面
             "learn more about auto-dismissing alerts.": "了解更多關於自動撤消警報的信息。",
 
             "Auto-triage your alerts": "自動分類您的警報",
-                "Control how Dependabot opens pull requests, ignores false positives and snoozes alerts. Rules can be enforced at the organization level. Free for open source and available for private repos through": "控製 Dependabot 如何打開拉取請求、忽略誤報和推遲警報。規則可以在組織層面強製執行。免費供開源項目使用，私有倉庫需要通過",
+                "Control how Dependabot opens pull requests, ignores false positives and snoozes alerts. Rules can be enforced at the organization level. Free for open source and available for private repos through": "控製 Dependabot 如何打開拉取請求、忽略誤報和推遲警報。規則可以在組織層面強製執行。免費供開源專案使用，私有倉庫需要通過",
                 "GitHub Advanced Security.": "GitHub 高級安全性。",
                 "Learn more about auto-triage": "了解更多關於自動分類的信息",
 
@@ -11534,7 +11534,7 @@ I18N["zh-TW"]["repository/security"] = { // 倉庫 - 安全頁面
                         "false positive": "假陽性",
                     "closed this as completed in": "將其關閉為已完成",
 
-                "hidden item": "條隱藏項目",
+                "hidden item": "條隱藏專案",
                 "s": " ",
                 "Load all...": "加載全部...",
 
@@ -11782,7 +11782,7 @@ I18N["zh-TW"]["repository/pulse"] = { // 倉庫 -> 洞察 - 統計
             "Issues opened by": "個議題打開由",
             "person": "人",
             "people": "人",
-            "Sometimes conversations happen on old items that aren』t yet closed. Here is a list of all the Issues and Pull Requests with unresolved conversations.": "有時會針對尚未關閉的舊項目進行討論。以下是所有未解決的討論的議題和拉取請求的列表。",
+            "Sometimes conversations happen on old items that aren』t yet closed. Here is a list of all the Issues and Pull Requests with unresolved conversations.": "有時會針對尚未關閉的舊專案進行討論。以下是所有未解決的討論的議題和拉取請求的列表。",
             // [/• (\d+) new comments/, "• $1 個新評論"],
             "Unresolved conversation": "個未解決的討論",
             "Unresolved conversations": "個未解決的討論",
@@ -11919,14 +11919,14 @@ I18N["zh-TW"]["repository/community"] = { // 倉庫 -> 洞察 - 社區準則
         ...I18N["zh-TW"]["repository-insights-menu"]["static"],
 
         // 社區準則 /<user-name>/<repo-name>/community
-            "Here』s how this project compares to": "以下是該項目內容，不同於",
+            "Here』s how this project compares to": "以下是該專案內容，不同於",
             "recommended community standards": "推薦的社區標準",
             "Checklist": "檢查清單",
             "Add": "添加",
             "Propose": "提議",
 
             "Description": "描述",
-                "Add a description to your repository so people understand the goals of your project.": "向您的倉庫添加描述，以便人們了解您項目的目標。",
+                "Add a description to your repository so people understand the goals of your project.": "向您的倉庫添加描述，以便人們了解您專案的目標。",
             "README": "自述文件（README）",
                 "Writing a README": "編寫自述文件（README）",
             "Code of conduct": "行為準則",
@@ -11944,16 +11944,16 @@ I18N["zh-TW"]["repository/community"] = { // 倉庫 -> 洞察 - 社區準則
             "the community profile": "社區簡介",
 
         // 添加許可證 /<user-name>/<repo-name>/community/license/new?branch=main
-            "Add a license to your project": "為您的項目添加許可證",
-            "Choose a license to add to your project": "選擇要添加到項目的許可證",
+            "Add a license to your project": "為您的專案添加許可證",
+            "Choose a license to add to your project": "選擇要添加到專案的許可證",
             "Select a template on the left to get started.": "在左側選擇一個模板開始。",
             "Learn more about": "了解更多關於",
-            "which license best fits your project": "哪種許可證最適合您的項目",
+            "which license best fits your project": "哪種許可證最適合您的專案",
 
         // 添加許可證 /<user-name>/<repo-name>/community/license/new?branch=<branch name>&template=<template name>
             // 右側欄
                 "You』ll have a chance to review before committing a": "您將有機會在提交之前進行審查",
-                "file to a new branch or the root of your project.": "文件到新分支或項目的根目錄。",
+                "file to a new branch or the root of your project.": "文件到新分支或專案的根目錄。",
 
                 "To adopt": "采用",
                 ", enter your details. You』ll have a chance to review before committing a": "，輸入您的詳細信息。您將有機會在提交之前進行審查",
@@ -11988,12 +11988,12 @@ I18N["zh-TW"]["repository/community"] = { // 倉庫 -> 洞察 - 社區準則
                 "Learn more about repository licenses": "了解更多關於倉庫許可證的信息",
 
         // 添加行為準則 /<user-name>/<repo-name>/community/code-of-conduct/new
-            "Add a code of conduct to your project": "為您的項目添加行為準則",
-            "Choose a code of conduct to add to your project": "選擇要添加到項目中的行為準則",
+            "Add a code of conduct to your project": "為您的專案添加行為準則",
+            "Choose a code of conduct to add to your project": "選擇要添加到專案中的行為準則",
             "what a code of conduct is": "什麽是行為準則",
             "and how to enforce it.": "以及如何執行。",
             "Contributor Covenant": "貢獻者協議",
-                "Recommended for projects of all sizes": "建議用於各種規模的項目",
+                "Recommended for projects of all sizes": "建議用於各種規模的專案",
                 "Contact method": "聯系方式",
             "Citizen Code Of Conduct": "公民行為準則",
                 "Suitable for large communities and events": "適合大型社區和活動",
@@ -12445,7 +12445,7 @@ I18N["zh-TW"]["repository/settings"] = { // 倉庫設置 - 通常 /<user-name>/<
                 "to:": "為：",
                 // [/is already the branch name./, "已經是分支的名稱了。"],
                 // [/Your branch name will be/, "您的分支的名稱將重命名為"],
-                "Most projects name the default branch": "大多數項目將默認分支名為",
+                "Most projects name the default branch": "大多數專案將默認分支名為",
                 "Renaming this branch:": "重命名此分支：",
                     // 該分支存在來自其他分支的拉取請求時
                         "Will update": "將更新",
@@ -12507,9 +12507,9 @@ I18N["zh-TW"]["repository/settings"] = { // 倉庫設置 - 通常 /<user-name>/<
                     "Learn more about wikis": "了解更多關於 Wiki 的信息",
 
             // 議題
-            "Issues integrate lightweight task tracking into your repository. Keep projects on track with issue labels and milestones, and reference them in commit messages.": "議題將輕量級任務跟蹤集成到您的倉庫中。使用議題標簽和裏程碑保持項目正常運行，並在提交消息中引用它們。",
+            "Issues integrate lightweight task tracking into your repository. Keep projects on track with issue labels and milestones, and reference them in commit messages.": "議題將輕量級任務跟蹤集成到您的倉庫中。使用議題標簽和裏程碑保持專案正常運行，並在提交消息中引用它們。",
             "Get organized with issue templates": "使用議題模板進行組織",
-            "Give contributors issue templates that help you cut through the noise and help them push your project forward.": "為貢獻者提供議題模板，幫助您消除幹擾並幫助他們推進您的項目。",
+            "Give contributors issue templates that help you cut through the noise and help them push your project forward.": "為貢獻者提供議題模板，幫助您消除幹擾並幫助他們推進您的專案。",
             "Set up templates": "設置模板",
 
             "Allow forking": "允許復刻", // 組織倉庫
@@ -12519,12 +12519,12 @@ I18N["zh-TW"]["repository/settings"] = { // 倉庫設置 - 通常 /<user-name>/<
             "Sponsorships": "贊助",
             "Sponsorships help your community know how to financially support this repository.": "贊助可幫助您的社區了解如何在資金上支持此倉庫。",
             "Display a \"Sponsor\" button": "顯示 「贊助」 按鈕",
-            "Add links to GitHub Sponsors or third-party methods your repository accepts for financial contributions to your project.": "添加指向 GitHub 贊助者或您的倉庫接受的第三方收款鏈接，以便為您的項目提供資金捐助。",
+            "Add links to GitHub Sponsors or third-party methods your repository accepts for financial contributions to your project.": "添加指向 GitHub 贊助者或您的倉庫接受的第三方收款鏈接，以便為您的專案提供資金捐助。",
             "Set up sponsor button": "設置贊助按鈕",
             "Edit funding links": "編輯贊助鏈接",
 
-            // 項目
-            "Projects on GitHub help you organize and prioritize your work. You can create projects for specific feature work, comprehensive roadmaps, or even release checklists.": "GitHub 上的項目可以幫助您組織工作並確定其優先次序。您可以為特定的功能工作、全面的路線圖、甚至是發布清單創建項目",
+            // 專案
+            "Projects on GitHub help you organize and prioritize your work. You can create projects for specific feature work, comprehensive roadmaps, or even release checklists.": "GitHub 上的專案可以幫助您組織工作並確定其優先次序。您可以為特定的功能工作、全面的路線圖、甚至是發布清單創建專案",
 
             "Preserve this repository": "保留這個倉庫",
             "Include this code in the": "將此程式碼包含在",
@@ -12539,8 +12539,8 @@ I18N["zh-TW"]["repository/settings"] = { // 倉庫設置 - 通常 /<user-name>/<
             "Engage your community by having discussions right in your repository, where your community already lives": "通過在您的社區已經存在的倉庫中進行討論來吸引您的社區",
             "Set up discussions": "建立討論",
 
-            // 項目
-            "Projects on GitHub are created at the repository owner's level (organization or user) and can be linked to a repository's Projects tab. Projects are suitable for cross-repository development efforts such as feature work, complex product roadmaps or even Issue triage.": "GitHub 上的項目是在倉庫所有者級別（組織或用戶）創建的，並且可以鏈接到倉庫的項目選項卡。項目適用於跨倉庫的開發工作，例如功能工作、復雜的產品路線圖，甚至問題分流。",
+            // 專案
+            "Projects on GitHub are created at the repository owner's level (organization or user) and can be linked to a repository's Projects tab. Projects are suitable for cross-repository development efforts such as feature work, complex product roadmaps or even Issue triage.": "GitHub 上的專案是在倉庫所有者級別（組織或用戶）創建的，並且可以鏈接到倉庫的專案選項卡。專案適用於跨倉庫的開發工作，例如功能工作、復雜的產品路線圖，甚至問題分流。",
 
             // "Pull Requests": "拉取請求",
                 "When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled. If you have linear history requirement enabled on any protected branch, you must enable squashing or rebasing.": "當合並拉取請求時，您可以允許合並提交、壓縮或變基的任意組合。必須至少啟用一個選項。如果您在任何受保護分支上啟用了線性歷史要求，則必須啟用壓縮或變基。",
@@ -13278,11 +13278,11 @@ I18N["zh-TW"]["repository/settings/rules"] = { // 倉庫設置 - 規則 - 規則
                             "exclude": "排除",
                             "Property": "屬性",
                                 "Select property": "選擇屬性",
-                                    "Select an item": "選擇項目",
+                                    "Select an item": "選擇專案",
                                         "Search for properties": "搜索屬性",
 
                     // 倉庫
-                        "Select items": "選擇項目",
+                        "Select items": "選擇專案",
                             "Repos": "倉庫",
 
                 "Target": "目標",
@@ -13836,17 +13836,17 @@ I18N["zh-TW"]["repository/settings/hooks"] = { // 倉庫設置 - Web 鉤子 /<us
                         "GitHub Packages published or updated in a repository.": "倉庫中 GitHub 軟體包的發布或更新 。",
                     "Page builds": "構建 GitHub Pages",
                         "Pages site built.": "GitHub Pages 站點的建立。",
-                    "Project cards": "項目面板卡",
-                        "Project card created, updated, or deleted.": "項目面板卡的創建、更新或刪除。",
-                    "Project columns": "項目欄目",
-                        "Project column created, updated, moved or deleted.": "項目列目的創建、更新、移動或刪除。",
-                    "Project v2 items": "項目項 v2", // 組織設置
-                        "Project item created, edited, deleted, archived, restored, converted, or reordered. Feedback is welcome in": "項目條目的創建、編輯、刪除、歸檔、恢復、轉換或重新排序。歡迎提供反饋意見在",
+                    "Project cards": "專案面板卡",
+                        "Project card created, updated, or deleted.": "專案面板卡的創建、更新或刪除。",
+                    "Project columns": "專案欄目",
+                        "Project column created, updated, moved or deleted.": "專案列目的創建、更新、移動或刪除。",
+                    "Project v2 items": "專案項 v2", // 組織設置
+                        "Project item created, edited, deleted, archived, restored, converted, or reordered. Feedback is welcome in": "專案條目的創建、編輯、刪除、歸檔、恢復、轉換或重新排序。歡迎提供反饋意見在",
                         "this discussion": "這個討論",
-                    // "": "項目",
-                        "Project created, updated, or deleted.": "項目的創建、更新或刪除。",
-                    "Projects v2": "項目 v2", // 組織設置
-                        "Project created, updated, deleted, closed, or reopened. Feedback is welcome in": "項目的創建、更新、刪除、關閉或重新打開。歡迎提供反饋意見在",
+                    // "": "專案",
+                        "Project created, updated, or deleted.": "專案的創建、更新或刪除。",
+                    "Projects v2": "專案 v2", // 組織設置
+                        "Project created, updated, deleted, closed, or reopened. Feedback is welcome in": "專案的創建、更新、刪除、關閉或重新打開。歡迎提供反饋意見在",
                     "Pull request review comments": "拉取請求審查意見",
                         "Pull request diff comment created, edited, or deleted.": "拉取請求差異評論的創建、編輯或刪除。",
                     "Pull request review threads": "拉取請求的審查線程",
@@ -14198,10 +14198,10 @@ I18N["zh-TW"]["repository/settings/pages"] = { // 倉庫設置頁面(含組織�
         ...I18N["zh-TW"]["repository-settings-menu"]["static"],
 
         // GitHub Pages 頁面 /<user-name>/<repo-name>/settings/pages====================================
-            "is designed to host your personal, organization, or project pages from a GitHub repository.": "旨在從 GitHub 倉庫托管您的個人、組織或項目頁面。",
+            "is designed to host your personal, organization, or project pages from a GitHub repository.": "旨在從 GitHub 倉庫托管您的個人、組織或專案頁面。",
             // 私有庫 提醒
             "Upgrade or make this repository public to enable Pages": "升級或公開該倉庫，以啟用 GitHub Pages",
-            "GitHub Pages is designed to host your personal, organization, or project pages from a GitHub repository.": "GitHub Pages 旨在從 GitHub 倉庫中托管您的個人、組織或項目頁面。",
+            "GitHub Pages is designed to host your personal, organization, or project pages from a GitHub repository.": "GitHub Pages 旨在從 GitHub 倉庫中托管您的個人、組織或專案頁面。",
             // 存檔時 提醒
             "This repository has been archived. The associated GitHub Pages site remains published but settings are read-only.": "該倉庫已存檔。相關的 GitHub Pages 網站仍然發布，但設置是只讀的。",
 
@@ -14886,7 +14886,7 @@ I18N["zh-TW"]["repository/codespaces"] = { // 倉庫 - 程式碼空間界面 /<u
 I18N["zh-TW"]["repository/custom-properties"] = { // 倉庫 - 自定義屬性 https://github.com/<uesr-name>/<repo-name>/custom-properties
     "static": {
         "Custom properties": "自定義屬性",
-        "Custom properties allow you to decorate your repository with information such as compliance frameworks, data sensitivity, or project details.": "自定義屬性允許您為倉庫添加信息，例如合規框架、數據敏感性或項目詳情。",
+        "Custom properties allow you to decorate your repository with information such as compliance frameworks, data sensitivity, or project details.": "自定義屬性允許您為倉庫添加信息，例如合規框架、數據敏感性或專案詳情。",
 
         // 面板
         "No custom properties set for this repository.": "該倉庫尚未設置自定義屬性。",
@@ -14930,8 +14930,8 @@ I18N["zh-TW"]["homepage"] = { // 未登錄的首頁
         "Check out GitHub Codespaces": "查看 GitHub 程式碼空間",
 
         "GitHub Mobile and Copilot": "GitHub Mobile 和 Copilot",
-        //"fits your projects in your pocket, so you never miss a beat while on the go.": "讓您的項目盡在掌握，讓您在旅途中永不遺漏任何信息。",
-        "now let you manage projects and converse with your AI pair programmer on the go.": "讓您可以管理項目，並與您的 AI 結對程序員在旅途中交流。",
+        //"fits your projects in your pocket, so you never miss a beat while on the go.": "讓您的專案盡在掌握，讓您在旅途中永不遺漏任何信息。",
+        "now let you manage projects and converse with your AI pair programmer on the go.": "讓您可以管理專案，並與您的 AI 結對程序員在旅途中交流。",
         "Download GitHub Mobile": "下載 GitHub Mobile",
 
         "Application security": "應用安全",
@@ -14960,8 +14960,8 @@ I18N["zh-TW"]["homepage"] = { // 未登錄的首頁
         "Supercharge collaboration": "加強協作",
         "GitHub helps your teams work more efficiently together.": "GitHub 幫助您的團隊更高效地協作。",
 
-        "GitHub Issues and GitHub Projects": "GitHub 議題和 GitHub 項目",
-        "supply project management tools that adapt to your team alongside your code.": "提供了適合您的團隊和程式碼的項目管理工具。",
+        "GitHub Issues and GitHub Projects": "GitHub 議題和 GitHub 專案",
+        "supply project management tools that adapt to your team alongside your code.": "提供了適合您的團隊和程式碼的專案管理工具。",
         "Get started with GitHub Issues": "開始使用 GitHub 議題",
 
         "reduction in onboarding time with GitHub": "使用 GitHub 縮短入職時間",
@@ -14974,7 +14974,7 @@ I18N["zh-TW"]["homepage"] = { // 未登錄的首頁
         "Check out pull requests": "查看拉取請求",
 
         "GitHub Sponsors": "GitHub 贊助者",
-        "lets you support your favorite open source maintainers and projects.": "讓您能夠支持您喜歡的開源維護者和項目。",
+        "lets you support your favorite open source maintainers and projects.": "讓您能夠支持您喜歡的開源維護者和專案。",
         "Invest with GitHub Sponsors": "通過 GitHub 贊助者進行投資",
 
         "Over 100 million developers call GitHub home": "超過 1 億開發者把 GitHub 視為自己的家",
@@ -15010,7 +15010,7 @@ I18N["zh-TW"]["homepage"] = { // 未登錄的首頁
 
         "Company": "公司",
         "Customer stories": "客戶案例",
-        "The ReadME Project": "自述文件項目",
+        "The ReadME Project": "自述文件專案",
         "Careers": "職業",
         "Press": "新聞",
         "Inclusion": "包容性",
@@ -15897,7 +15897,7 @@ I18N["zh-TW"]["issues"] = { // 議題頁面
                 "Filter by author"             : "按作者篩選",
                 "Filter by or edit assignees"  : "按受理人篩選或編輯受理人",
                 "Filter by or edit labels"     : "按標簽篩選或編輯標簽",
-                "Filter by or edit projects"   : "按項目篩選或編輯項目",
+                "Filter by or edit projects"   : "按專案篩選或編輯專案",
                 "Filter by or edit milestones" : "按裏程碑篩選或編輯裏程碑",
                 "Link an issue or pull request from the same repository": "鏈接同一倉庫的議題或拉取請求",
                 "Reply (quoting selected text)": "答復（引用所選文本）",
@@ -16131,9 +16131,9 @@ I18N["zh-TW"]["search"] = { // 搜索頁面
                 "Report abuse": "舉報濫用",
 
                 // 右側欄
-                    "Sponsor open source projects you depend on": "贊助您依賴的開源項目",
+                    "Sponsor open source projects you depend on": "贊助您依賴的開源專案",
                     "Contributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.": "貢獻者們正在幕後努力，為每個人創造更好的開源環境——給予他們應有的幫助和認可",
-                    "Explore sponsorable projects": "探索可贊助項目",
+                    "Explore sponsorable projects": "探索可贊助專案",
 
                     "How can we improve search?": "我們如何改進搜索？",
                     "Give feedback": "提供反饋意見",
@@ -16740,7 +16740,7 @@ I18N["zh-TW"]["explore"] = { // 探索頁面
         [/([\d,]+) starred topics?/, "$1 個星標主題"],
         [/([\d,]+) starred repositories?/, "$1 個星標倉庫"],
         [/There are ([\d,]+) public repositories? matching this topic/, "有 $1 個公共倉庫與此主題相匹配"],
-        [/See the ([\d,]+) items? in this collection/, "查看該系列中的 $1 個項目"],
+        [/See the ([\d,]+) items? in this collection/, "查看該系列中的 $1 個專案"],
     ],
 };
 
@@ -16810,13 +16810,13 @@ I18N["zh-TW"]["trending"] = { // 熱門頁面
         "Get email updates": "獲取電子郵件更新",
         "Change email updates": "更改電子郵件更新", // 已設置郵件更新通知
 
-        "See what the GitHub community is most excited about today.": "看看 GitHub 社區今天最受關註的項目。",
-        "See what the GitHub community is most excited about this week.": "看看 GitHub 社區本周最受關註的項目。",
-        "See what the GitHub community is most excited about this month.": "看看 GitHub 社區本月最受關註的項目。",
+        "See what the GitHub community is most excited about today.": "看看 GitHub 社區今天最受關註的專案。",
+        "See what the GitHub community is most excited about this week.": "看看 GitHub 社區本周最受關註的專案。",
+        "See what the GitHub community is most excited about this month.": "看看 GitHub 社區本月最受關註的專案。",
 
-        "These are the developers building the hot tools today.": "這些是今天創建熱門項目的開發人員。",
-        "These are the developers building the hot tools this week.": "這些是本周創建熱門項目的開發人員。",
-        "These are the developers building the hot tools this month.": "這些是本月創建熱門項目的開發人員。",
+        "These are the developers building the hot tools today.": "這些是今天創建熱門專案的開發人員。",
+        "These are the developers building the hot tools this week.": "這些是本周創建熱門專案的開發人員。",
+        "These are the developers building the hot tools this month.": "這些是本月創建熱門專案的開發人員。",
 
         "Repositories": "倉庫",
         "Developers": "開發者",
@@ -16901,13 +16901,13 @@ I18N["zh-TW"]["events"] = { // 活動頁面
 I18N["zh-TW"]["sponsors"] = { // 贊助界面
     "static": {
         // 贊助者首頁 https://github.com/sponsors
-            "Invest in the software that powers your world": "投資驅動您世界的項目",
+            "Invest in the software that powers your world": "投資驅動您世界的專案",
             "See your top dependencies": "查看您的首要依賴項",
             "Get sponsored": "獲得贊助",
             "A new way to contribute": "為開源做出貢獻的",
             "to open source": "新方式",
             "Invest in your supply chain": "投資您的供應鏈",
-            "You depend on open source every day": "您每天都依賴於開源項目",
+            "You depend on open source every day": "您每天都依賴於開源專案",
             "Make open source careers possible": "使開源生涯成為可能",
             "Thanks to our partners": "感謝我們的合作夥伴",
             "Available in 103 regions": "可用於 103 個地區",
@@ -16915,7 +16915,7 @@ I18N["zh-TW"]["sponsors"] = { // 贊助界面
             "View country and region list": "查看國家和地區支持列表",
             "Anyone can sponsor, but you must reside in a supported region to receive funds.": "任何人都可以贊助，但您必須居住在受支持的地區才能獲得資金。",
             "Frequently asked questions": "常見問題",
-            "Invest in the projects you depend on": "投資您所依賴的項目",
+            "Invest in the projects you depend on": "投資您所依賴的專案",
 
         // 贊助者賬戶頁面 https://github.com/sponsors/accounts
             // 標題
@@ -17014,7 +17014,7 @@ I18N["zh-TW"]["sponsors"] = { // 贊助界面
                     "Choose a fiscal host:": "選擇一個財務托管機構：",
                     "Select a fiscal host": "選擇一個財務托管機構",
 
-                    "Fiscal host project profile URL:": "財務托管機構項目資料鏈接：",
+                    "Fiscal host project profile URL:": "財務托管機構專案資料鏈接：",
                         "Please include a link to your profile on your fiscal host's site, if available.": "如果有的話，請提供您在的財務托管機構上的個人資料鏈接。",
                     "e.g.,": "例如，",
             "Join waitlist": "加入等候名單",
@@ -17030,7 +17030,7 @@ I18N["zh-TW"]["sponsors"] = { // 贊助界面
             "Change email updates": "更改電子郵件更新", // 已設置郵件更新通知
 
             "Explore GitHub Sponsors": "探索 GitHub 贊助者",
-                "Fund the work of developers and projects you depend on.": "為您所依賴的開發者和項目提供資金。",
+                "Fund the work of developers and projects you depend on.": "為您所依賴的開發者和專案提供資金。",
 
             // 左側欄
                 "Explore as": "使用以下身份進行探索",
@@ -17062,7 +17062,7 @@ I18N["zh-TW"]["sponsors"] = { // 贊助界面
             "others sponsor": "位其他贊助者",
             // [/(\d+)% towards goal/, "實現目標的 $1%"],
 
-            "Explore people and projects": "探索人員和項目",
+            "Explore people and projects": "探索人員和專案",
             "Bulk Sponsor": "批量贊助",
                 "Sponsor multiple maintainers in one easy transaction.": "在一筆簡單的交易中贊助多位維護人員。",
                 "Get started": "開始",
@@ -17082,7 +17082,7 @@ I18N["zh-TW"]["sponsors"] = { // 贊助界面
 
             // [/Want to sponsor on behalf of ([^ ]+)?/, "想代表 $1 贊助嗎？"],
             "Talk to your organization about GitHub Sponsors": "與您的組織討論 GitHub 贊助者事宜",
-            "Share this discovery page with your team to start a conversation about investing in the people and projects you rely on.": "與您的團隊分享本發現頁面，並就投資於您所依賴的人員和項目展開討論。",
+            "Share this discovery page with your team to start a conversation about investing in the people and projects you rely on.": "與您的團隊分享本發現頁面，並就投資於您所依賴的人員和專案展開討論。",
             "Invest in open source software and we'll track your progress here!": "投資開源軟體，我們將在這裏跟蹤您的進度！",
     },
     "regexp": [ // 正則匹配
@@ -17315,10 +17315,10 @@ I18N["zh-TW"]["marketplace"] = { // GitHub 市場
                     "Monitoring apps": "監控應用",
                     "Monitoring actions": "監控操作",
                     "Monitor the impact of your code changes. Measure performance, track errors, and analyze your application.": "監控程式碼更改的影響。衡量性能、跟蹤錯誤並分析您的應用。",
-                "Project management": "項目管理",
-                    "Project management apps": "項目管理應用",
-                    "Project management actions": "項目管理操作",
-                    "Organize, manage, and track your project with tools that build on top of issues and pull requests.": "使用基於置頂議題和拉取請求的工具來組織、管理和跟蹤您的項目。",
+                "Project management": "專案管理",
+                    "Project management apps": "專案管理應用",
+                    "Project management actions": "專案管理操作",
+                    "Organize, manage, and track your project with tools that build on top of issues and pull requests.": "使用基於置頂議題和拉取請求的工具來組織、管理和跟蹤您的專案。",
                 "Publishing": "發布",
                     "Publishing apps": "發布應用",
                     "Publishing actions": "發布操作",
@@ -17364,7 +17364,7 @@ I18N["zh-TW"]["marketplace"] = { // GitHub 市場
             "Verification": "驗證",
                 "Verified Creator": "經驗證的創建者",
 
-            "Your items": "您的項目",
+            "Your items": "您的專案",
                 "Pending orders": "待處理訂單",
                 "Pending installations": "待安裝",
                 "Purchases": "購買",
@@ -17457,9 +17457,9 @@ I18N["zh-TW"]["marketplace"] = { // GitHub 市場
             "Pricing and setup": "定價與設置",
 
             "Open source": "開源",
-            "Free for open source projects": "對開源項目免費",
-            "Free for both open source and private projects": "對開源和私人項目免費",
-            "Unlimited private repositories": "無限製私有項目",
+            "Free for open source projects": "對開源專案免費",
+            "Free for both open source and private projects": "對開源和私人專案免費",
+            "Unlimited private repositories": "無限製私有專案",
             "Free Trial": "免費試用",
 
             "per seat": "每席位",
@@ -17541,7 +17541,7 @@ I18N["zh-TW"]["marketplace"] = { // GitHub 市場
         // 免費應用示例: https://github.com/marketplace/gitlocalize/order/MDIyOk1hcmtldHBsYWNlTGlzdGluZ1BsYW4zOTg=?account=maboloshi
             "Review your order": "審查您的訂單",
             "Free": "免費",
-            "For individuals, teams, and communities, public and private projects": "對於個人、團隊和社區，公共和私人項目",
+            "For individuals, teams, and communities, public and private projects": "對於個人、團隊和社區，公共和私人專案",
             "Total amount": "總金額",
 
             "An organization owner or billing manager must link their personal billing information with this organization account. You can switch to a business account to use your business』 billing information by": "組織所有者或賬單管理者必須將其個人賬單信息與該組織賬戶關聯。您可以切換到企業賬戶，以使用企業的賬單信息通過",
@@ -17821,7 +17821,7 @@ I18N["zh-TW"]["orgs"] = { // 組織頁面
                 // [/([^ ]+) doesn』t have any repositories that match./, "$1 沒有任何匹配的倉庫"],
                 "No repositories matched your search.": "沒有與您的搜索相匹配的倉庫。",
 
-                // 項目 狀態詞
+                // 專案 狀態詞
                 "Updated": "更新於",
                 "Forked from": "復刻自",
 
@@ -17881,7 +17881,7 @@ I18N["zh-TW"]["orgs"] = { // 組織頁面
             "View all repositories": "查看所有倉庫",
 
             // 設置置頂
-            "Edit pinned repositories": "設置置頂項目",
+            "Edit pinned repositories": "設置置頂專案",
             "Select up to six public repositories you'd like to show to anyone.": "最多選擇 6 個您想向任何人展示的公共倉庫。",
             "Select up to six public, internal, or private repositories you'd like to show only to members of the organization.": "最多選擇 6 個您想僅向組織成員展示的公共、內部或私有倉庫。",
             "No repositories or gists found.": "沒有發現倉庫或 Gists。",
@@ -17911,7 +17911,7 @@ I18N["zh-TW"]["orgs"] = { // 組織頁面
             "Discover new GitHub features": "發現 GitHub 的新功能",
                 "See all features": "查看所有功能",
                 "Client apps": "客戶端應用",
-                "Project management": "項目管理",
+                "Project management": "專案管理",
                 "Team administration": "團隊管理",
                 "Community": "社區",
 
@@ -18367,32 +18367,32 @@ I18N["zh-TW"]["orgs/settings/member_privileges"] = { // 組織設置 - 成員權
                         "Users with read access to repositories can create new discussions.": "對倉庫具有讀取權限的用戶可以創建新的討論。",
                         "Only users with at least triage access to repositories can create new discussions.": "只有至少對倉庫有分級權限的用戶才能創建新的討論。",
 
-                "Projects base permissions": "項目基本權限",
-                    "Projects created by members will default to the elected role below.": "成員創建的項目將默認為下面選定的角色。",
+                "Projects base permissions": "專案基本權限",
+                    "Projects created by members will default to the elected role below.": "成員創建的專案將默認為下面選定的角色。",
 
                     "No access": "無法訪問",
-                        "Members will only be able to see projects that are made public. To give an organization member additional access, they can be added as part of a team or as a collaborator.": "成員只能看到公開項目。要賦予組織成員更多訪問權限，可以將其添加為團隊成員或協作者。",
+                        "Members will only be able to see projects that are made public. To give an organization member additional access, they can be added as part of a team or as a collaborator.": "成員只能看到公開專案。要賦予組織成員更多訪問權限，可以將其添加為團隊成員或協作者。",
                         // 對話框
                             "Change base permissions to \"No access\"": "將基本權限改為 「無法訪問」",
-                                "You are about to change the base projects permission for this organization.": "您將更改該組織的基本項目權限",
-                                "This won't affect any existing projects.": "這不會影響任何現有項目",
+                                "You are about to change the base projects permission for this organization.": "您將更改該組織的基本專案權限",
+                                "This won't affect any existing projects.": "這不會影響任何現有專案",
                     // 只讀
-                        "Members can see projects.": "成員可以查看項目",
+                        "Members can see projects.": "成員可以查看專案",
                         // 對話框
                             "Change base permissions to \"Read\"": "將基本權限改為 「只讀」",
                     // 可寫
-                        "Members can see and make changes to projects.": "成員可以查看和修改項目",
+                        "Members can see and make changes to projects.": "成員可以查看和修改專案",
                         // 對話框
                             "Change base permissions to \"Write\"": "將基本權限改為 「可寫」",
                     // 管理員
-                        "Members can see, make changes to, and add new collaborators to projects.": "成員可以查看和修改項目，並可為項目添加新的協助者。",
+                        "Members can see, make changes to, and add new collaborators to projects.": "成員可以查看和修改專案，並可為專案添加新的協助者。",
                         // 對話框
-                            "You are about to change the base projects permission for this organization.": "您將更改該組織的基本項目權限",
+                            "You are about to change the base projects permission for this organization.": "您將更改該組織的基本專案權限",
                     // 頂部提醒
-                        "Base permission updated to \"None\" for projects.": "項目的基本權限已更新為 「無」。",
-                        "Base permission updated to \"Read\" for projects.": "項目的基本權限已更新為 「只讀」。",
-                        "Base permission updated to \"Write\" for projects.": "項目的基本權限已更新為 「可寫」。",
-                        "Base permission updated to \"Admin\" for projects.": "項目的基本權限已更新為 「管理員」。",
+                        "Base permission updated to \"None\" for projects.": "專案的基本權限已更新為 「無」。",
+                        "Base permission updated to \"Read\" for projects.": "專案的基本權限已更新為 「只讀」。",
+                        "Base permission updated to \"Write\" for projects.": "專案的基本權限已更新為 「可寫」。",
+                        "Base permission updated to \"Admin\" for projects.": "專案的基本權限已更新為 「管理員」。",
 
                 "Pages creation": "頁面創建",
                     "Members will be able to publish sites with only the selected access controls.": "成員將能夠發布僅只有選定的訪問控製的站點。",
@@ -18401,7 +18401,7 @@ I18N["zh-TW"]["orgs/settings/member_privileges"] = { // 組織設置 - 成員權
                     // "Private": "私有",
                         "Members will be able to create private sites, visible to anyone with permission.": "成員將能夠創建私有站點，對任何有權限的人可見。",
                     // 頂部提醒
-                        "Projects settings updated for this organization.": "該組織的項目設置已經更新。",
+                        "Projects settings updated for this organization.": "該組織的專案設置已經更新。",
 
                 "Integration access requests": "集成訪問請求",
                     "Allow integration requests from outside collaborators": "允許來自外部協作者的集成請求",
@@ -18457,7 +18457,7 @@ I18N["zh-TW"]["orgs/settings/teams"] = { // 組織設置 - 團隊討論
         ...I18N["zh-TW"]["orgs-settings-menu"]["static"],
 
         // 團隊討論 /organizations/<org-login>/settings/teams
-            "Team discussions provide a place for a team to have conversations that span across projects or repositories and that don』t belong in an issue or a pull request.": "團隊討論為團隊提供了一個進行跨項目或倉庫，且不屬於議題或拉取請求的對話的場所。",
+            "Team discussions provide a place for a team to have conversations that span across projects or repositories and that don』t belong in an issue or a pull request.": "團隊討論為團隊提供了一個進行跨專案或倉庫，且不屬於議題或拉取請求的對話的場所。",
             "Enable team discussions for this organization": "為此組織啟用團隊討論",
                 "This allows members to start discussions in any team in the": "這允許成員在任何團隊中開始討論，在",
             "organization.": "組織中。",
@@ -18994,24 +18994,24 @@ I18N["zh-TW"]["orgs/settings/discussions"] = { // 組織設置 - 討論
     ],
 };
 
-I18N["zh-TW"]["orgs/settings/projects"] = { // 組織設置 - 計劃 - 項目
+I18N["zh-TW"]["orgs/settings/projects"] = { // 組織設置 - 計劃 - 專案
     "static": { // 靜態翻譯
         ...I18N["zh-TW"]["orgs-settings-menu"]["static"],
 
-        // 項目 /organizations/<org-login>/settings/projects
-            "Projects on GitHub help you organize and prioritize your work. You can create projects for specific feature work, comprehensive roadmaps, or even release checklists.": "GitHub 上的項目可以幫助您組織和安排工作的優先級。您可以為特定的功能工作、全面的路線圖、甚至是發布清單創建項目。",
-            "Enable Projects for the organization": "啟用項目，為組織",
-                "This allows members to create projects for the": "允許成員創建項目，為",
-                "organization. Members can create projects to organize and track issues from any": "組織。成員可以創建項目來組織和跟蹤來自任何",
+        // 專案 /organizations/<org-login>/settings/projects
+            "Projects on GitHub help you organize and prioritize your work. You can create projects for specific feature work, comprehensive roadmaps, or even release checklists.": "GitHub 上的專案可以幫助您組織和安排工作的優先級。您可以為特定的功能工作、全面的路線圖、甚至是發布清單創建專案。",
+            "Enable Projects for the organization": "啟用專案，為組織",
+                "This allows members to create projects for the": "允許成員創建專案，為",
+                "organization. Members can create projects to organize and track issues from any": "組織。成員可以創建專案來組織和跟蹤來自任何",
                 "-owned repository.": "組織擁有的倉庫。",
-            "Allow members to change project visibilities for this organization": "允許成員更改此組織的項目可見性",
-                "If enabled, members with admin permissions on a project can make the project public or private. If disabled, only organization owners can make the project public or private. All projects are private by default.": "如果啟用，在項目上有管理權限的成員可以將項目設為公開或私有。如果禁用，則只有組織所有者可以將項目設為公開或私有。默認情況下，所有項目都是私有的。",
+            "Allow members to change project visibilities for this organization": "允許成員更改此組織的專案可見性",
+                "If enabled, members with admin permissions on a project can make the project public or private. If disabled, only organization owners can make the project public or private. All projects are private by default.": "如果啟用，在專案上有管理權限的成員可以將專案設為公開或私有。如果禁用，則只有組織所有者可以將專案設為公開或私有。默認情況下，所有專案都是私有的。",
 
             "Recommended templates": "推薦模板",
-                "Customize a selection of recommended project templates for this organization. These templates will be surfaced first when a member of the organization creates a new project.": "為此組織定製一系列推薦的項目模板。當組織成員創建新項目時，這些模板將首先出現。",
+                "Customize a selection of recommended project templates for this organization. These templates will be surfaced first when a member of the organization creates a new project.": "為此組織定製一系列推薦的專案模板。當組織成員創建新專案時，這些模板將首先出現。",
 
-                "Create your first GitHub project template": "創建第一個 GitHub 項目模板",
-                    "Templates can be used to quickly get started with a new project.": "模板可用於快速開始新項目。",
+                "Create your first GitHub project template": "創建第一個 GitHub 專案模板",
+                    "Templates can be used to quickly get started with a new project.": "模板可用於快速開始新專案。",
                 "New template": "新建模板",
     },
     "regexp": [ // 正則翻譯
@@ -19666,7 +19666,7 @@ I18N["zh-TW"]["orgs/settings/reminders"] = { // 組織設置 - 定時提醒
 
         // 定時提醒 /organizations/<org-login>/settings/reminders
             "No scheduled reminders created.": "未創建預定提醒。",
-            "To keep projects moving, you can now remind your teams about pull requests they need to review.": "為了保持項目進展，您現在可以提醒您的團隊關於他們需要審查的拉取請求。",
+            "To keep projects moving, you can now remind your teams about pull requests they need to review.": "為了保持專案進展，您現在可以提醒您的團隊關於他們需要審查的拉取請求。",
 
             "Connect a Slack workspace to get started": "連接 Slack 工作區以開始使用",
             // 對話框
@@ -19825,7 +19825,7 @@ I18N["zh-TW"]["orgs/settings/publisher"] = { // 組織設置 - GitHub 發布者�
     ],
 };
 
-I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
+I18N["zh-TW"]["projects"] = { // 專案頁面(含倉庫專案)
     "static": { // 靜態翻譯
         // >>>>>>>>>>>>>>>>>>倉庫 公共部分<<<<<<<<<<<<<<<<<<<<<<<<<<<
             // 頭部條
@@ -19875,7 +19875,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Pull requests": "拉取請求",
             "Discussions": "討論",
             "Actions": "操作",
-            "Projects": "項目",
+            "Projects": "專案",
             "Security": "安全",
             "Insights": "洞察",
             "Settings": "設置",
@@ -19890,7 +19890,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 "Go to Issues"               : "跳轉到議題",
                 "Go to Pull Requests"        : "跳轉到拉取請求",
                 "Go to Actions"              : "跳轉到操作",
-                "Go to Projects"             : "跳轉到項目",
+                "Go to Projects"             : "跳轉到專案",
                 "Go to Wiki"                 : "跳轉到 Wiki",
                 "Go to Discussions"          : "跳轉到討論",
 
@@ -19912,19 +19912,19 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
 
             "Loading details…": "載入細節…",
 
-        // 新建項目 https://github.com/new/project
-          //同 倉庫 新建項目頁面  /<user-name>/<repo-name>/projects/new
-            "Create a new classic project": "創建經典項目",
-            "Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.": "在這裏協調、跟蹤和更新您的工作，使項目保持透明，並按計劃進行。",
-            "Project board name": "項目面板名稱",
+        // 新建專案 https://github.com/new/project
+          //同 倉庫 新建專案頁面  /<user-name>/<repo-name>/projects/new
+            "Create a new classic project": "創建經典專案",
+            "Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.": "在這裏協調、跟蹤和更新您的工作，使專案保持透明，並按計劃進行。",
+            "Project board name": "專案面板名稱",
             "Description": "描述",
             "(optional)": "(可選)",
-            "Project template": "項目模板",
-            "Save yourself time with a pre-configured project board template.": "使用預先配置的項目面板模板可為您節省時間。",
+            "Project template": "專案模板",
+            "Save yourself time with a pre-configured project board template.": "使用預先配置的專案面板模板可為您節省時間。",
             "Template:": "模板：",
                 "Templates": "模板",
                 "None": "無",
-                    "Start from scratch with a completely blank project board. You can add columns and configure automation settings yourself.": "從一個完全空白的項目面板開始。您可以自己添加欄目並配置自動化設置。",
+                    "Start from scratch with a completely blank project board. You can add columns and configure automation settings yourself.": "從一個完全空白的專案面板開始。您可以自己添加欄目並配置自動化設置。",
                 "Basic kanban": "基礎看板",
                     "Basic kanban-style board with columns for To do, In progress and Done.": "基礎風格看板，帶有待辦、進行中和已完成等欄目。",
                 "Automated kanban": "自動化看板",
@@ -19935,43 +19935,43 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                     "Triage and prioritize bugs with columns for To do, High priority, Low priority, and Closed.": "使用待辦事項、高優先級、低優先級和已關閉的欄目對錯誤進行分類和優先級排序。",
             "Visibility": "可見性",
                 // "Public": "公共",
-                    "Anyone on the internet can see this project. You choose who can make changes.": "互聯網上的任何人都可以看到這個項目。您選擇誰可以進行更改。",
+                    "Anyone on the internet can see this project. You choose who can make changes.": "互聯網上的任何人都可以看到這個專案。您選擇誰可以進行更改。",
                 "Private": "私有",
-                    "You choose who can see and make changes to this project.": "您可以選擇誰可以查看此項目並對其進行更改。",
+                    "You choose who can see and make changes to this project.": "您可以選擇誰可以查看此專案並對其進行更改。",
             "Linked repositories": "關聯的倉庫",
                 "Search": "搜索",
-                "to link repositories to this project for more accurate suggestions and better search results.": "將倉庫關聯到此項目，以獲得更準確的建議和更好的搜索結果。",
+                "to link repositories to this project for more accurate suggestions and better search results.": "將倉庫關聯到此專案，以獲得更準確的建議和更好的搜索結果。",
                 "Search by repository name": "搜索倉庫名",
                 "You've reached the limit of 25 linked repositories.": "您已經達到了 25 個關聯倉庫的上限。",
                 "Linked repositories:": "關聯的倉庫",
                 "None yet!": "啥也木有！",
-            "Create project": "創建項目",
+            "Create project": "創建專案",
 
-        // 倉庫 項目頁面  /<user-name>/<repo-name>/projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            "Welcome to the all-new projects": "歡迎訪問全新的項目",
-            "Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.": "構建像電子表格一樣的項目表，給您一個實時的畫布來對議題和拉取請求進行篩選、排序和分組。通過自定義字段和保存的視圖，使它們符合您的需要。",
+        // 倉庫 專案頁面  /<user-name>/<repo-name>/projects >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            "Welcome to the all-new projects": "歡迎訪問全新的專案",
+            "Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.": "構建像電子表格一樣的專案表，給您一個實時的畫布來對議題和拉取請求進行篩選、排序和分組。通過自定義字段和保存的視圖，使它們符合您的需要。",
 
-            "This repository doesn't have any projects yet": "該倉庫目前沒有任何項目",
-            "Create a project": "創建一個項目",
+            "This repository doesn't have any projects yet": "該倉庫目前沒有任何專案",
+            "Create a project": "創建一個專案",
 
-            "Organize your issues with project boards": "使用項目面板組織您的議題",
-            "Did you know you can manage projects in the same place you keep your code? Set up a project board on GitHub to streamline and automate your workflow.": "您知道您可以在保存程式碼的同一個地方管理項目嗎？在 GitHub 上設置項目面板以簡化和自動化您的工作流程。",
+            "Organize your issues with project boards": "使用專案面板組織您的議題",
+            "Did you know you can manage projects in the same place you keep your code? Set up a project board on GitHub to streamline and automate your workflow.": "您知道您可以在保存程式碼的同一個地方管理專案嗎？在 GitHub 上設置專案面板以簡化和自動化您的工作流程。",
 
             "Sort tasks": "排序任務",
             "Add issues and pull requests to your board and prioritize them alongside note cards containing ideas or task lists.": "將議題和拉取請求添加到您的看板中，並將它們與包含想法或任務清單的筆記卡一起進行優先排序。",
-            "Plan your project": "規劃項目",
+            "Plan your project": "規劃專案",
             "Sort tasks into columns by status. You can label columns with status indicators like \"To Do\", \"In Progress\", and \"Done\".": "將任務按狀態分類成列。您可以用 「待辦」、「進行中」 和 「已完成」 等狀態指標給各欄貼上標簽。",
             "Automate your workflow": "自動化工作流程",
-            "Set up triggering events to save time on project management—we』ll move tasks into the right columns for you.": "設置觸發事件，以節省項目管理的時間——我們將為您把任務移到正確的欄目中。",
+            "Set up triggering events to save time on project management—we』ll move tasks into the right columns for you.": "設置觸發事件，以節省專案管理的時間——我們將為您把任務移到正確的欄目中。",
             "Track progress": "追蹤進度",
-            "Keep track of everything happening in your project and see exactly what』s changed since the last time you looked.": "追蹤項目中發生的一切，並準確查看自上次查看以來發生的變化。",
+            "Keep track of everything happening in your project and see exactly what』s changed since the last time you looked.": "追蹤專案中發生的一切，並準確查看自上次查看以來發生的變化。",
             "Share status": "共享狀態",
             "Each card has a unique URL, making it easy to share and discuss individual tasks with your team.": "每張卡片都有一個唯一的 URL，可以輕松地與您的團隊共享和討論個人任務。",
             "Wrap up": "結束工作",
-            "After you wrap up your work, close your project board to remove it from your active projects list. On to the next project!": "結束工作後，關閉項目面板，並從活動項目列表中刪除。進入下一個項目！",
+            "After you wrap up your work, close your project board to remove it from your active projects list. On to the next project!": "結束工作後，關閉專案面板，並從活動專案列表中刪除。進入下一個專案！",
 
             "Try the": "嘗試",
-            "new projects today.": "新版項目。",
+            "new projects today.": "新版專案。",
             "Repository access coming soon ✨": "倉庫訪問即將推出 ✨",
 
             "Sort": "排序",
@@ -19991,29 +19991,29 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Reopen": "重新打開",
 
             // 頂部提醒
-            "Project closed.": "項目已關閉。",
-            "Project reopened.": "項目已重新打開。",
+            "Project closed.": "專案已關閉。",
+            "Project reopened.": "專案已重新打開。",
 
         // https://github.com/users/<user-name>/projects/<id>
             // 鍵盤快捷鍵
-                "Project card shortcuts": "項目卡快捷鍵",
+                "Project card shortcuts": "專案卡快捷鍵",
                     "Open the issue or pull request associated with the focused card in the sidebar": "聚焦卡片的側邊欄中打開相關聯的議題或拉取請求",
                 "Moving a card": "移動卡片",
                     "Start moving the focused card": "開始移動聚焦卡片",
                     "Cancel the move in progress": "取消正在進行的移動",
                     "Complete the move in progress": "完成正在進行的移動",
                     "Move card down": "向下移動卡片",
-                    "Move card to the bottom of the column": "移動到項目欄底部",
+                    "Move card to the bottom of the column": "移動到專案欄底部",
                     "Move card up": "向上移動卡片",
-                    "Move card to the top of the column": "移動到項目欄頂部",
-                    "Move card to the bottom of the column on the left": "移動到左側項目欄底部",
-                    "Move card to the top of the column on the left": "移動到左側項目欄頂部",
-                    "Move card to the bottom of the leftmost column": "移動到最左側項目欄底部",
-                    "Move card to the top of the leftmost column": "移動到最左側項目欄頂部",
-                    "Move card to the bottom of the column on the right": "移動到右側項目欄底部",
-                    "Move card to the top of the column on the right": "移動到右側項目欄頂部",
-                    "Move card to the bottom of the rightmost column": "移動到最右側項目欄底部",
-                    "Move card to the top of the rightmost column": "移動到最右側項目欄頂部",
+                    "Move card to the top of the column": "移動到專案欄頂部",
+                    "Move card to the bottom of the column on the left": "移動到左側專案欄底部",
+                    "Move card to the top of the column on the left": "移動到左側專案欄頂部",
+                    "Move card to the bottom of the leftmost column": "移動到最左側專案欄底部",
+                    "Move card to the top of the leftmost column": "移動到最左側專案欄頂部",
+                    "Move card to the bottom of the column on the right": "移動到右側專案欄底部",
+                    "Move card to the top of the column on the right": "移動到右側專案欄頂部",
+                    "Move card to the bottom of the rightmost column": "移動到最右側專案欄底部",
+                    "Move card to the top of the rightmost column": "移動到最右側專案欄頂部",
                 "Moving a column": "移動欄目",
                     "Start moving the focused column": "開始移動聚焦欄目",
                     "Move column to the left": "將欄目移到左側",
@@ -20021,7 +20021,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                     "Move column to the right": "將欄目移到右側",
                     "Move column to the rightmost position": "將欄目移到最右側",
             // 頂部提醒
-            "Project created from Basic kanban template.": "已從基礎看板模板創建項目。",
+            "Project created from Basic kanban template.": "已從基礎看板模板創建專案。",
 
             "Updated": "更新於",
             "Filter cards": "篩選卡片",
@@ -20037,9 +20037,9 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Fullscreen": "全屏",
             "Exit fullscreen": "退出全屏",
             "Menu": "菜單",
-                "This project doesn』t have a description.": "該項目沒有描述。",
+                "This project doesn』t have a description.": "該專案沒有描述。",
                 "Add description": "添加描述",
-                "Close project": "關閉項目",
+                "Close project": "關閉專案",
                     "Are you sure you want to close": "您確定要關閉",
                 "Activity": "活動",
                 // ... 展開
@@ -20049,8 +20049,8 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 "Showing all activity": "顯示所有活動",
             // 活動 狀態詞
                 "added": "添加了",
-                "created the project": "創建了項目",
-                "updated the project": "更新了項目",
+                "created the project": "創建了專案",
+                "updated the project": "更新了專案",
                 "created the column": "創建了欄目",
                 "To do.": "待辦。",
                 "Done.": "已完成。",
@@ -20062,26 +20062,26 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 "From": "來自",
 
             // 編輯對話框
-                "Edit project": "編輯項目",
+                "Edit project": "編輯專案",
                 "Name": "名稱",
                 "Description": "描述",
-                "Track project progress": "跟蹤項目進度",
-                    "A progress bar will be displayed to help you visualize the overall progress of your project based on your automated To Do, In Progress, and Done columns.": "將顯示一個進度條，以幫助您根據您的自動化的待辦、進行中和已完成欄目，直觀地了解項目的總體進展。",
-                "Save project": "保存項目",
+                "Track project progress": "跟蹤專案進度",
+                    "A progress bar will be displayed to help you visualize the overall progress of your project based on your automated To Do, In Progress, and Done columns.": "將顯示一個進度條，以幫助您根據您的自動化的待辦、進行中和已完成欄目，直觀地了解專案的總體進展。",
+                "Save project": "保存專案",
                 // [/Delete/, "刪除"],
-                "Once you delete a project, there is no going back. Please be certain.": "刪除項目後，將無法撤回。請確認。",
-                "Delete project": "刪除項目",
+                "Once you delete a project, there is no going back. Please be certain.": "刪除專案後，將無法撤回。請確認。",
+                "Delete project": "刪除專案",
 
-            // 復製項目
-                "Copy project board": "復製項目面板",
-                "Your copy of this project includes column names and positions. Cards will not be copied.": "此項目的副本包括欄目名稱和位置。卡片不會被復製。",
+            // 復製專案
+                "Copy project board": "復製專案面板",
+                "Your copy of this project includes column names and positions. Cards will not be copied.": "此專案的副本包括欄目名稱和位置。卡片不會被復製。",
                 "Owner": "所有者",
                     "Choose an owner": "選擇所有者",
                     "Search organizations and repositories": "搜索組織和倉庫",
                     "Suggested": "建議",
                     "Everything else": "其他一切",
-                "Project board name": "項目面板名稱",
-                "Copy project": "復製項目",
+                "Project board name": "專案面板名稱",
+                "Copy project": "復製專案",
 
             // 存檔的卡片
                 "Archived cards": "存檔的卡片",
@@ -20094,14 +20094,14 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 "No archived cards": "無存檔卡片",
                 "You haven't archived any cards yet.": "您尚未歸檔任何卡片。",
 
-            "This project doesn』t have any columns or cards.": "該項目沒有任何欄目或卡片。",
+            "This project doesn』t have any columns or cards.": "該專案沒有任何欄目或卡片。",
 
             "Add a column": "添加欄目",
             "Add column": "添加欄目",
                 "Column name": "欄目名稱",
                 "Enter a column name (To Do, In Progress, Done)": "輸入欄目名稱（待辦、進行中、已完成）",
                 "Automation": "自動化",
-                "Choose a preset to enable progress tracking, automation, and better context sharing across your project.": "選擇預設值，以便在您的項目中實現進度跟蹤、自動化和更好的內容共享。",
+                "Choose a preset to enable progress tracking, automation, and better context sharing across your project.": "選擇預設值，以便在您的專案中實現進度跟蹤、自動化和更好的內容共享。",
                 "Loading…": "載入中…",
                 "Preset:": "預設：",
                     "Select type": "選擇類型",
@@ -20111,27 +20111,27 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                         "Planned but not started": "已計劃但未開始",
                         "Move issues here when…": "當…時，將議題移至此處",
                             "Newly added": "新添加的",
-                                "Issues will automatically move here when added to this project.": "添加到此項目時，議題將自動移至此處。",
+                                "Issues will automatically move here when added to this project.": "添加到此專案時，議題將自動移至此處。",
                             "Reopened": "重新打開",
-                                "If a closed issue in this project reopens, it will automatically move here.": "如果此項目中已關閉的議題重新打開，它將自動移至此處。",
+                                "If a closed issue in this project reopens, it will automatically move here.": "如果此專案中已關閉的議題重新打開，它將自動移至此處。",
                         "Move pull requests here when…": "當…時，將拉取請求移到此處",
-                            "Pull requests will automatically move here when added to this project.": "添加到此項目時，拉取請求將自動移至此處。",
-                            "If a closed pull request in this project reopens, it will automatically move here.": "如果此項目中已關閉的拉取請求重新打開，它將自動移至此處。",
+                            "Pull requests will automatically move here when added to this project.": "添加到此專案時，拉取請求將自動移至此處。",
+                            "If a closed pull request in this project reopens, it will automatically move here.": "如果此專案中已關閉的拉取請求重新打開，它將自動移至此處。",
                     "In progress": "進行中",
                         "Actively being worked on": "正在積極開展工作",
                         "Approved by reviewer": "由審查者批準",
-                        "Pull requests in this project will automatically move here when they meet the minimum number of required approving reviews. Recommended when another column has the": "當該項目中的拉取請求達到所需的最低批準審查數時，將自動移至此處。當另一欄啟用了 「",
+                        "Pull requests in this project will automatically move here when they meet the minimum number of required approving reviews. Recommended when another column has the": "當該專案中的拉取請求達到所需的最低批準審查數時，將自動移至此處。當另一欄啟用了 「",
                         "automation enabled.": "」 的自動化功能時推薦使用。",
                         "Pending approval by reviewer": "由審查者待批準",
-                        "Pull requests in this project will automatically move here when a reviewer requests changes, or it no longer meets the minimum number of required approving reviews. Recommended when another column has the": "當審查者請求更改或不再滿足所需的最小批準審查數時，此項目中的拉取請求將自動移至此處。當另一欄目啟用了 「",
+                        "Pull requests in this project will automatically move here when a reviewer requests changes, or it no longer meets the minimum number of required approving reviews. Recommended when another column has the": "當審查者請求更改或不再滿足所需的最小批準審查數時，此專案中的拉取請求將自動移至此處。當另一欄目啟用了 「",
                     "Done": "已完成",
-                        "Items are complete": "項目已完成",
+                        "Items are complete": "專案已完成",
                         "Closed": "已關閉",
-                            "If an open issue in this project is closed, it will automatically move here.": "如果該項目中的一個打開的議題被關閉，它將自動轉移到這裏。",
+                            "If an open issue in this project is closed, it will automatically move here.": "如果該專案中的一個打開的議題被關閉，它將自動轉移到這裏。",
                         "Merged": "已合並",
-                            "If an open pull request in this project is merged, it will automatically move here.": "如果該項目中的一個打開的拉取請求被合並，它將自動轉移到這裏。",
+                            "If an open pull request in this project is merged, it will automatically move here.": "如果該專案中的一個打開的拉取請求被合並，它將自動轉移到這裏。",
                         "Closed with unmerged commits": "已關閉的未合並的提交",
-                            "If an open pull request in this project is closed with unmerged commits, it will automatically move here.": "如果該項目中的一個打開的拉取請求因未合並提交而關閉，它將自動移到這裏。",
+                            "If an open pull request in this project is closed with unmerged commits, it will automatically move here.": "如果該專案中的一個打開的拉取請求因未合並提交而關閉，它將自動移到這裏。",
                 "Create column": "創建欄目",
 
             "Edit column": "編輯欄目",
@@ -20182,7 +20182,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 "Save note": "保存註釋",
             "Archive": "存檔",
             "Delete note": "刪除註釋",
-                "This will remove this note from the project": "這將從項目中刪除該註釋",
+                "This will remove this note from the project": "這將從專案中刪除該註釋",
             "New view": "新建視圖",
             "Layout": "布局",
             "Board": "面板",
@@ -20204,7 +20204,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Delete view": "刪除視圖",
             "Export view data": "導出視圖數據",
             "Assignees": "負責人",
-            "Project templates": "項目模板",
+            "Project templates": "專案模板",
             "Featured": "特色",
             "Iteration": "叠代",
             "Dates": "日期",
@@ -20212,14 +20212,14 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Truncate titles": "截斷標題",
             "Show date fields": "顯示日期字段",
             "Add status update": "添加狀態更新",
-            "Project details": "項目詳情",
+            "Project details": "專案詳情",
             "View more options": "查看更多選項",
             "Date fields": "日期字段",
             "Month": "月",
             "Quarter": "季度",
             "Year": "年",
             "Today": "今天",
-            "Add item": "添加項目",
+            "Add item": "添加專案",
             "Start typing to create a draft, or type # to select a repository": "開始輸入以創建草案，或輸入 # 選擇一個倉庫",
             "Scroll to previous date range": "滾動到上一個日期範圍",
             "Scroll to next date range": "滾動到下一個日期範圍",
@@ -20231,23 +20231,23 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "New field": "新建字段",
             "Column by": "欄目",
             "Workflows": "工作流",
-            "Archived items": "已存檔項目",
+            "Archived items": "已存檔專案",
             "Make a copy": "復製",
-            "GitHub Projects": "GitHub 項目",
+            "GitHub Projects": "GitHub 專案",
             "What』s new": "新功能",
-            "Project settings": "項目設置",
-            "Project name": "項目名稱",
+            "Project settings": "專案設置",
+            "Project name": "專案名稱",
             "Short description": "簡短描述",
             "More options": "更多選項",
-            "Make a copy of this project.": "復製此項目",
+            "Make a copy of this project.": "復製此專案",
             "Danger zone": "危險區",
-            "This project is currently private.": "此項目當前為私有.",
-            "Closing a project will disable its workflows & remove it from the list of open projects.": "關閉項目將禁用其工作流程，並將其從打開項目列表中刪除.",
-            "Close this project": "關閉此項目",
+            "This project is currently private.": "此專案當前為私有.",
+            "Closing a project will disable its workflows & remove it from the list of open projects.": "關閉專案將禁用其工作流程，並將其從打開專案列表中刪除.",
+            "Close this project": "關閉此專案",
             "Manage access": "管理訪問權限",
             "Who has access": "誰有訪問權限",
-            "Private project": "私有項目",
-            "Only those with access to this project can view it.": "只有有權訪問此項目的人才能查看它.",
+            "Private project": "私有專案",
+            "Only those with access to this project can view it.": "只有有權訪問此專案的人才能查看它.",
             "Invite collaborators": "邀請協作者",
             "Manage access": "管理訪問權限",
             "Custom fields": "自定義字段",
@@ -20267,11 +20267,11 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Make template": "製作模板",
             "Copy as template": "復製為模板",
             "Visibility": "可見性",
-            "Close project": "關閉項目",
-            "Delete project": "刪除項目",
-            "Delete this project": "刪除此項目",
+            "Close project": "關閉專案",
+            "Delete project": "刪除專案",
+            "Delete this project": "刪除此專案",
             "Status chart": "狀態圖表",
-            "This chart shows the current status for the total number of items in your project.": "此圖表顯示了項目中所有項目的當前狀態。",
+            "This chart shows the current status for the total number of items in your project.": "此圖表顯示了專案中所有專案的當前狀態。",
             "No data available": "無可用數據",
             "No results were returned.": "未返回任何結果。",
             "Default charts": "默認圖表",
@@ -20282,17 +20282,17 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "X-axis": "X 軸",
             "Y-axis": "Y 軸",
             "Save to new chart": "保存到新圖表",
-            "Add a project status update": "添加項目狀態更新",
+            "Add a project status update": "添加專案狀態更新",
             "Add update": "添加更新",
-            "Status updates are brief reports tracking your project's health and progress. Begin by adding an update.": "狀態更新是跟蹤項目健康和進度的簡要報告. 從添加更新開始.",
-            "Let everyone know what this project is about, how to use it and link to important resources.": "讓每個人都知道這個項目是關於什麽的，如何使用它，並鏈接到重要資源.",
-            "A short description about this project.": "關於此項目的簡短描述.",
+            "Status updates are brief reports tracking your project's health and progress. Begin by adding an update.": "狀態更新是跟蹤專案健康和進度的簡要報告. 從添加更新開始.",
+            "Let everyone know what this project is about, how to use it and link to important resources.": "讓每個人都知道這個專案是關於什麽的，如何使用它，並鏈接到重要資源.",
+            "A short description about this project.": "關於此專案的簡短描述.",
             "You can use": "您可以使用",
-            "to add an item": "來添加項目",
+            "to add an item": "來添加專案",
 
-        // 自動化看板模板項目 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
+        // 自動化看板模板專案 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
             // 頂部提醒
-            "Project created from Automated kanban template.": "已從自動化看板模板創建項目。",
+            "Project created from Automated kanban template.": "已從自動化看板模板創建專案。",
 
             "Automated as": "自動化為",
             "Manage": "管理",
@@ -20301,8 +20301,8 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "The": " ",
             "column is already using this rule.": "欄目已在使用此規則。",
 
-            // 復製項目面板 補充
-            "Your copy of this project includes column names, positions, and automation settings. Cards will not be copied.": "此項目的副本包括欄目名稱、位置和自動化設置。卡片不會被復製。",
+            // 復製專案面板 補充
+            "Your copy of this project includes column names, positions, and automation settings. Cards will not be copied.": "此專案的副本包括欄目名稱、位置和自動化設置。卡片不會被復製。",
             "Automation settings": "自動化設置",
             "Copy automation settings.": "復製自動化設置。",
             "Includes automation settings for": "包括自動化設置，關於",
@@ -20321,13 +20321,13 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "to the": "到",
             "column.": "欄目。",
 
-        // 自動看板與審查模板項目 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
+        // 自動看板與審查模板專案 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
             // 頂部提醒
-            "Project created from Automated kanban with reviews template.": "已從自動看板與審查模板創建項目。",
+            "Project created from Automated kanban with reviews template.": "已從自動看板與審查模板創建專案。",
 
-        // 錯誤分類模板項目 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
+        // 錯誤分類模板專案 https://github.com/users/<user-name>/projects/<id>?add_cards_query=is%3Aopen
             // 頂部提醒
-            "Project created from Bug triage template.": "已從錯誤分類模板創建項目。",
+            "Project created from Bug triage template.": "已從錯誤分類模板創建專案。",
 
             "Needs triage": "需要分流",
             "High priority": "高優先級",
@@ -20337,13 +20337,13 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
             "Collaboration settings": "協作設置",
                 "Options": "選項",
                     "Visibility": "可見性",
-                    "Visibility settings only impact the project itself. Project content that belongs to a repository the user does not have access to will be redacted.": "可見性設置只影響項目本身。屬於用戶無權訪問的倉庫的項目內容將被編輯。",
+                    "Visibility settings only impact the project itself. Project content that belongs to a repository the user does not have access to will be redacted.": "可見性設置只影響專案本身。屬於用戶無權訪問的倉庫的專案內容將被編輯。",
                     "Public": "公開",
-                        "Anyone on the internet can see this project. You choose who can make changes.": "互聯網上的任何人都可以看到這個項目。您選擇誰可以進行更改。",
+                        "Anyone on the internet can see this project. You choose who can make changes.": "互聯網上的任何人都可以看到這個專案。您選擇誰可以進行更改。",
                     "Private": "私密",
-                        "You choose who can see and make changes to this project.": "您可以選擇誰查看此項目並對其進行更改。",
+                        "You choose who can see and make changes to this project.": "您可以選擇誰查看此專案並對其進行更改。",
             // 協作者
-                "This project doesn』t have any collaborators yet. Use the form below to add a collaborator.": "該項目還沒有任何協作者。使用下面的表格添加協作者。",
+                "This project doesn』t have any collaborators yet. Use the form below to add a collaborator.": "該專案還沒有任何協作者。使用下面的表格添加協作者。",
                 "Search by username, full name or email address": "搜索用戶名、全名、或電子郵箱",
 
                 "You』ll only be able to find a GitHub user by their email address if they』ve chosen to list it publicly. Otherwise, use their username instead.": "只有當 GitHub 用戶選擇公開電子郵箱地址時，您才能通過他們的電子郵箱地址找到他們。否則，請使用他們的用戶名代替。",
@@ -20351,13 +20351,13 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
                 // [/isn』t a GitHub member/, "不是 GitHub 成員"],
             "Linked repositories": "關聯的倉庫",
                 "Link a repository": "關聯倉庫",
-                "Get more accurate suggestions and better search results by linking up to 25 repositories to this project.": "通過將多達 25 個倉庫關聯到這個項目，獲得更準確的建議和更好的搜索結果。",
+                "Get more accurate suggestions and better search results by linking up to 25 repositories to this project.": "通過將多達 25 個倉庫關聯到這個專案，獲得更準確的建議和更好的搜索結果。",
                 // [/(\d+) linked repositories/, "$1 個關聯倉庫"],
-                "This project doesn』t have any linked repositories yet.": "該項目暫無任何關聯的倉庫。",
+                "This project doesn』t have any linked repositories yet.": "該專案暫無任何關聯的倉庫。",
 
         // https://github.com/users/<user-name>/projects/<id>/edit
             "(optional)": "(可選)",
-            "Once you delete this project, there is no going back. Please be certain.": "一旦您刪除了這個項目，就再也無法恢復。請確認。",
+            "Once you delete this project, there is no going back. Please be certain.": "一旦您刪除了這個專案，就再也無法恢復。請確認。",
     },
     "regexp": [ // 正則翻譯
         [/View (\d+)/, "視圖 $1"],
@@ -20366,7 +20366,7 @@ I18N["zh-TW"]["projects"] = { // 項目頁面(含倉庫項目)
         [/Manage automation for/, "管理自動化"],
         [/Archive all cards in/, "存檔所有"],
         [/(\d+) linked repositories/, "$1 個關聯倉庫"],
-        [/([\d,]+) Open/, "$1 打開"], // 項目標簽卡
+        [/([\d,]+) Open/, "$1 打開"], // 專案標簽卡
         [/([\d,]+) Closed/, "$1 已關閉"],
         [/(\d+) tasks? done/, "$1 個任務完成"],
     ],
@@ -20393,7 +20393,7 @@ I18N["zh-TW"]["github-copilot/signup"] = { // GitHub Copilot 個人版獲取頁�
            "GitHub Copilot is powered by generative AI to help you code faster and happier!": "GitHub Copilot 是由生成式 AI 驅動的，旨在幫助您更快樂、更高效地編碼！",
            "Start your 30-day free trial": "開始 30 天免費試用",
                //"GitHub Copilot uses the GPT-3.5 Turbo model to offer coding suggestions.": "GitHub Copilot 使用 GPT-3.5 Turbo 模型提供編碼建議。",
-               "Chat with Copilot for assistance on a wide variety of scenarios, such as project-specific code explanations or help with debugging": "與 Copilot 聊天以獲取有關各種場景的幫助，例如特定於項目的程式碼解釋或調試幫助",
+               "Chat with Copilot for assistance on a wide variety of scenarios, such as project-specific code explanations or help with debugging": "與 Copilot 聊天以獲取有關各種場景的幫助，例如特定於專案的程式碼解釋或調試幫助",
                "Get code suggestions as you type in more than a dozen coding languages, including Python, JavaScript, TypeScript, Go, and Ruby": "支持超過十種編程語言的程式碼建議，包括 Python、JavaScript、TypeScript、Go 和 Ruby。",
                "Plugs into IDEs, including VS Code, Visual Studio, JetBrains IDEs, and Neovim": "可以與包括 VS Code、Visual Studio、Neovim 和 JetBrains 在內的集成開發環境（IDE）配合使用",
                "Sign up for an annual subscription and get two months free!": "註冊年度訂閱，可享受兩個月免費福利。",
@@ -20449,7 +20449,7 @@ I18N["zh-TW"]["codespaces"] = { // 程式碼空間頁面
                 "Created from a template": "通過模板創建",
 
             "Your instant dev environment": "您的即時開發環境",
-            "Go from code to commit faster on any project.": "在任何項目中，從程式碼到提交速度更快。",
+            "Go from code to commit faster on any project.": "在任何專案中，從程式碼到提交速度更快。",
             "Go to docs": "轉到文檔",
             "New codespace": "新建程式碼空間",
             "Explore quick start templates": "瀏覽快速入門模板",
@@ -20632,7 +20632,7 @@ I18N["zh-TW"]["features"] = {
         // 流水圖
         "Collaborative": "協作",
             "Coding": "編程",
-        "Contribute to projects quickly with automatic environment setup.": "通過自動環境設置快速為項目做出貢獻。",
+        "Contribute to projects quickly with automatic environment setup.": "通過自動環境設置快速為專案做出貢獻。",
         "Make sure you see the changes you care about.": "確保您看到您關註的變化。",
         "Build community around your code.": "圍繞您的程式碼建立社區。",
         // 列表
@@ -20807,7 +20807,7 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
                 "Release-based workflow": "基於發行版的工作流",
                     "Practice a release-based workflow and explore branching strategies.": "練習基於發布的工作流程，探索分支策略。",
                 "Connect the dots": "連接信息",
-                    "Find relevant conversations, commits, and projects in a repository.": "查找倉庫中的相關對話、提交和項目。",
+                    "Find relevant conversations, commits, and projects in a repository.": "查找倉庫中的相關對話、提交和專案。",
                 "Code with Codespaces": "使用程式碼空間編程",
                     "Develop code using GitHub Codespaces and Visual Studio Code.": "使用 GitHub 程式碼空間和 Visual Studio Code 開發程式碼。",
                 "Code with Copilot": "使用 Copilot 編程",
@@ -20816,9 +20816,9 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
                 "Hello GitHub Actions": "您好 GitHub 操作",
                     "Create a GitHub Action and use it in a workflow.": "創建 GitHub 操作並在工作流程中使用。",
                 "Test with Actions": "使用操作測試",
-                    "Create workflows that enable you to use Continuous Integration (CI) for your projects.": "創建工作流程，使您能夠在項目中使用持續集成 (CI)。",
+                    "Create workflows that enable you to use Continuous Integration (CI) for your projects.": "創建工作流程，使您能夠在專案中使用持續集成 (CI)。",
                 "Publish packages": "發布軟體包",
-                    "Use GitHub Actions to publish your project to a Docker image.": "使用 GitHub 操作將項目發布為 Docker 鏡像。",
+                    "Use GitHub Actions to publish your project to a Docker image.": "使用 GitHub 操作將專案發布為 Docker 鏡像。",
                 "Deploy to Azure": "部署到 Azure",
                     "Create a deployment workflow using GitHub Actions and Microsoft Azure.": "使用 GitHub 操作和 Microsoft Azure 創建部署工作流程。",
                 "Write JavaScript actions": "編寫 JavaScript 操作",
@@ -20859,8 +20859,8 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
         "Planning your course": "規劃課程",
             "Write down your learning goals": "寫下學習目標",
                 "Does your course give the learner something practical to work on?": "您的課程是否為學員提供了實用的學習內容？",
-                    "Learners prefer working on real projects over examples.": "相比示例，學員更喜歡實際項目。",
-                    "How can the learner use this project after they finish the course?": "完成課程後，學員如何使用該項目？",
+                    "Learners prefer working on real projects over examples.": "相比示例，學員更喜歡實際專案。",
+                    "How can the learner use this project after they finish the course?": "完成課程後，學員如何使用該專案？",
                 "What specific skill does the learner leave your course with?": "學員在結束課程後能掌握哪些具體技能？",
                     "Focus on what the learner will be able to do after they complete the course.": "重點是學員在完成課程後能夠做什麽。",
                 "Is an Actions-based course right for your goal?": "基於操作的課程適合您的目標嗎？",
@@ -20907,7 +20907,7 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
                 "Include the course title in sentence case, and a concise description in emphasis.": "用句子大小寫寫上課程名稱，並用著重號簡明扼要地描述。",
             "Writing your README: Start": "編寫自述文件：開始",
                 "A brief paragraph should describe the goal of the course, what the learner will learn, and why they should take the course.": "請用簡短的一段文字說明課程的目標、學員將學到什麽以及為什麽要學習該課程。",
-                "A brief list of the following items can help the learner decide if the course is right for them:": "以下項目的簡要列表可以幫助學習者確定該課程是否適合他們：",
+                "A brief list of the following items can help the learner decide if the course is right for them:": "以下專案的簡要列表可以幫助學習者確定該課程是否適合他們：",
                     "Who is this for": "這是給誰學的",
                     "What you』ll learn": "學習內容",
                     "What you』ll build": "構建內容",
@@ -20983,7 +20983,7 @@ I18N["zh-TW"]["skills"] = { // https://skills.github.com/
             "Keep everything you need in the one course repository.": "將您需要的一切都保存在一個課程倉庫內。",
             "If you need your courses to have limited access, create an organization for your courses, make your courses private, and invite the specific users that need these courses to your organization.": "如果您需要限製課程的訪問權限，請為您的課程創建一個組織，將您的課程設為私人課程，並邀請需要這些課程的特定用戶加入您的組織。",
             "Consider adding a Code of Conduct, contributing guide, and issue templates.": "考慮添加行為準則、貢獻指南和議題模板。",
-            "Keep the number of files and folders in the root directory short. More items in the root level means the README is further down the page.": "盡量減少根目錄中文件和文件夾的數量。根目錄中的項目越多，README 就越靠近頁面底部。",
+            "Keep the number of files and folders in the root directory short. More items in the root level means the README is further down the page.": "盡量減少根目錄中文件和文件夾的數量。根目錄中的專案越多，README 就越靠近頁面底部。",
             "Content": "內容",
                 "The more content you have, the more content you will have to update later. Be concise. Link to the GitHub Docs whenever you can.": "內容越多，以後需要更新的內容就越多。簡明扼要。盡可能鏈接到 GitHub 文檔。",
                 "Where does the learner go to get help? Add links to your README to let the learner know where to ask for help.": "學習者從哪裏獲得幫助？在 README 中添加鏈接，讓學習者知道到哪裏尋求幫助。",
