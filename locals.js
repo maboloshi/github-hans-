@@ -433,6 +433,8 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
         // 顶部提示
         "You only have a single verified email address. We recommend verifying at least one more email address to ensure you can recover your account if you lose access to your primary email.": "您只有一个经过验证的电子邮件地址。我们建议您至少再验证一个电子邮件地址，以确保在失去主邮箱访问权限时可以恢复账户。",
         "Email settings": "电子邮件设置",
+        "Your recovery codes have not been saved in the past year, Make sure you stil have them stored somewhere safe by viewing and downloading them again.": "如果您在过去一年中没有保存恢复密码，请确保将其保存在安全的地方，并再次查看和下载。",
+            "View recovery codes": "查看恢复码",
         // 底部红条
         "You can’t perform that action at this time.": "此时无法执行该操作。",
         // 速率限制 - 短时间频繁访问网页，至少包括 https://github.com/issues
