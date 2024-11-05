@@ -1,6 +1,8 @@
 # [GitHub 中文化插件][project-url]
 
 > 本项目源自: [52cik/github-hans](https://github.com/52cik/github-hans)
+>
+> 繁體中文用戶請前往[zh-TW 分支](https://github.com/maboloshi/github-chinese/tree/zh-TW)
 
 [![GitHub issues][issues-image]][issues-url]
 [![GitHub stars][stars-image]][stars-url]
