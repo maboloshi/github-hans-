@@ -48,7 +48,7 @@ I18N.conf = {
     rePagePath: /^\/($|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/signup|codespaces|developer\/register|features|security)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
-    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/usage)?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
+    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
     rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
@@ -337,6 +337,9 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         //"GitHub: Let’s build from here · GitHub": "GitHub: 让我们从这里开始",
         "GitHub · Build and ship software on a single, collaborative platform · GitHub": "GitHub · 在单一协作平台上构建和发布软件",
         "Topics on GitHub · GitHub": "GitHub 上的主题",
+        "Code security": "代码安全",
+        "Deploy keys": "部署密钥",
+        "Actions Performance Metrics": "操作数据看板",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -354,6 +357,8 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/New Issue/, "新建议题"],
         [/Issues?/, "议题"],
         [/Pull (R|r)equests?/, "拉取请求"],
+        [/Actions secrets · ([^ ]+)/, "操作机密 · $1"],
+        [/Actions settings · ([^ ]+)/, "操作设置 · $1"],
         [/Actions/, "操作"],
         [/Projects/, "项目"],
         [/Packages?/, "软件包"],
@@ -380,6 +385,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Sponsoring/, "捐助"],
         [/Stargazers/, "追星者"],
         [/Forks?/, "复刻"],
+        [/Settings · Tags · ([^ ]+)/, "设置 · 标签 · $1"],
         [/Tags?/, "标签"],
         [/Edit release/, "编辑发行版"],
         [/Releases?/, "发行版"],
@@ -412,9 +418,14 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Contributors to ([^ ]+)/, "贡献者 · $1"],
         [/([^ ]+) repositories^/, "$1 的仓库"],
         [/Create new page · ([^ ]+) Wiki/, "新建页面 · $1 的 Wiki"],
+        [/Settings · Branches · ([^ ]+)/, "设置 · 分支 · $1"],
+        [/Webhooks · Settings · ([^ ]+)/, "Web 钩子  · 设置 · $1"],
+        [/Environments · ([^ ]+)/, "环境 · $1"],
         [/Branches · ([^ ]+)/, "分支 · $1"],
         [/([^ ]+) · GitHub Topics/, "$1 · GitHub 主题"],
         [/New release · ([^ ]+)/, "新发行版 · $1"],
+        [/Codespaces secrets · ([^ ]+)/, "代码空间机密 · $1"],
+        [/Dependabot secrets · ([^ ]+)/, "Dependabot 机密 · $1"],
         ["_regexp_end", "end"]
     ],
 };
@@ -12320,6 +12331,7 @@ I18N["zh-CN"]["repository-insights-menu"] = { // 仓库 -> 洞察 - 公共部分
             // "Members": "成员",
             "Forks": "复刻",
             "Actions Usage Metrics": "操作使用情况",
+            "Actions Performance Metrics": "操作数据看板",
 
             "People": "成员", //组织仓库
 
@@ -13518,6 +13530,7 @@ I18N["zh-CN"]["repository/settings/branches"] = { // 仓库设置 - 分支 /<use
             "No branch protection rules defined yet.": "尚未定义分支保护规则。",
 
             "You haven't protected any of your branches": "您没有保护任何分支",
+            "Classic branch protections have not been configured": "未配置经典分支保护",
             "Define branch rules to disable force pushing, prevent branches from being deleted, or require pull requests before merging. Learn more about": "定义分支规则，以禁止强制推送、防止分支被删除或在合并前要求提交拉取请求。了解更多：",
             //"Define a protected branch rule to disable force pushing, prevent branches from being deleted, and optionally require status checks before merging.": "定义分支保护规则，以禁用强制推送，防止分支被删除，并可选择在合并前进行状态检查。",
             "repository rules": "仓库规则",
@@ -13716,6 +13729,7 @@ I18N["zh-CN"]["repository/settings/tag_protection"] = { // 仓库设置 - 标签
             "Protected tags can only be created or deleted by users with enhanced permissions defined by your organization owners.": "受保护的标签只能由具有由组织所有者定义的增强权限的用户创建或删除。",
             "Learn more about protected tags": "了解更多关于受保护标签的信息",
             "No protected tag rules exist yet": "尚无受保护的标签规则存在",
+            "Protected tags have been deprecated": "受保护的标签已弃用",
             "Go to rulesets to create new tag rules": "转到规则集创建新标签规则",
             "New rule": "新建规则",
             "Import to rulesets": "导入规则集",
@@ -14908,7 +14922,9 @@ I18N["zh-CN"]["repository/settings/pages"] = { // 仓库设置页面(含组织�
 
             "Visibility": "可见性",
                 "GitHub Enterprise": "GitHub 企业版",
-                "With a GitHub Enterprise account, you can restrict access to your GitHub Pages site by publishing it privately. You can use privately published sites to share your internal documentation or knowledge base with members of your enterprise.": "使用 GitHub 企业版账户，您可以通过私下发布来限制对 GitHub Pages 站点的访问。您可以使用私下发布的站点与企业成员共享您的内部文档或知识库。",
+                "With a GitHub Enterprise account, you can restrict access to your GitHub Pages site by publishing it privately. You can use privately published sites to share your internal documentation or knowledge base with members of your enterprise. You can try GitHub Enterprise risk-free for 30 days.": "使用 GitHub 企业版账户，您可以通过私下发布来限制对 GitHub Pages 站点的访问。您可以使用私下发布的站点与企业成员共享您的内部文档或知识库。 您可以免费试用 GitHub 企业版30 天。",
+                //"With a GitHub Enterprise account, you can restrict access to your GitHub Pages site by publishing it privately. You can use privately published sites to share your internal documentation or knowledge base with members of your enterprise.": "使用 GitHub 企业版账户，您可以通过私下发布来限制对 GitHub Pages 站点的访问。您可以使用私下发布的站点与企业成员共享您的内部文档或知识库。",
+                "Try GitHub Enterprise": "试用 GitHub 企业版",
                 "Try GitHub Enterprise risk-free for 30 days": "免费无风险试用 GitHub 企业版 30 天",
                 "Learn more about the visibility of your GitHub Pages site.": "了解更多关于 GitHub Pages 站点可见性的信息。",
 
@@ -15083,6 +15099,10 @@ I18N["zh-CN"]["repository/settings/security_analysis"] = { // 仓库设置 - 代
                         "limitations of autofix code suggestions": "自动修复代码建议限制的信息",
                         "On": "开",
                         "Off": "关",
+                    
+                    "Copilot Autofix for third-party tools": "适用于第三方工具的 Copilot 自动修复",
+                        "Suggest fixes for third-party alerts using AI. Ensure that these tools are properly configured or that an analysis is uploaded for this feature to work. Learn more about the": "使用人工智能对第三方警报提出修复建议。确保这些工具已正确配置或已上传分析，以便此功能正常工作。了解",
+                        "limitations of autofix code suggestions for third party tools": "第三方工具自动修复代码建议局限性",
 
                 "Protection rules": "保护规则",
                     "Pull request check failure": "拉取请求检查失败",
@@ -21841,6 +21861,114 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
         [/Showing data from (\d+)\/(\d+)\/(\d+) to/, "显示数据：从$1年$2月$3日至"],
         [/Total (minutes|job runs) across all workflows in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
             var typeKey = {'minutes': '总分钟数', 'job runs': '总工作运行数'};
+
+            var periodKey = {
+                "current week (mon-sun)": "本周（周一-周日）",
+                "current month": "本月",
+                "last month": "上个月",
+                "last 30 days": "最近30天",
+                "last 90 days": "最近90天",
+                "last year": "最近一年",};
+
+            return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
+        }],
+    ],
+};
+
+I18N["zh-CN"]["repository/actions/metrics/performance"] = {
+    "static": {
+        ...I18N["zh-CN"]["repository-public"]["static"],
+        ...I18N["zh-CN"]["repository-insights-menu"]["static"],
+
+        "Period": "周期",
+            "Current week (Mon-Sun)": "本周（周一-周日）",
+            "Current month": "本月",
+            "Last month": "上个月",
+            "Last 30 days": "最近30天",
+            "Last 90 days": "最近90天",
+            "Last year": "最近一年",
+
+        "Avg job run time": "平均作业运行时长",
+        "Avg job queue time": "平均作业等待时长",
+        "Job failure rate": "作业失败率",
+        "Failed job usage": "作业失败次数",
+
+        "<1s": "<1秒",
+
+        "Filter": "筛选",
+            "Search or filter": "搜索或筛选",
+            "Avg run time minutes": "平均运行时长",
+            "Avg queue time minutes": "平均等待时长",
+            "Failure rate": "失败率",
+            "Exclude": "排除",
+        "Download report": "下载报告",
+
+        // 高级帅选窗口
+            "Advanced filters": "高级筛选",
+                        "Build complex filter queries": "建立复杂的筛选器查询",
+                        "To start building your query add your first filter using the button below.": "要开始建立查询，请使用下面的按钮添加第一个筛选器。",
+
+                        "Qualifier": "限定",
+                        "Operator": "操作",
+                            "is not one of": "不包含",
+                            "is one of": "包含",
+                            "is": "是",
+                            "greater than": "大于",
+                            "less than": "小于",
+                            "greater than or equal to": "大于或等于",
+                            "less than or equal to": "小于或等于",
+                            "equal to": "等于",
+                            "between": "之间",
+                        "Value": "值",
+                            "Make a selection": "请选择",
+                            "Select items": "请选择项目",
+                            "Filter values": "筛选值",
+                            "Enter a number": "键入数字",
+                            "Enter search text": "键入任意文本",
+                                "Me": "我",
+                                "Signed-in user": "已登录用户",
+                        "Add a filter": "添加",
+                            "Text": "文本",
+                        "Apply": "应用",
+
+            // 关闭弹窗
+            "Discard changes?": "是否放弃更改？",
+            "You have unsaved changes. Are you sure you want to discard them?": "您有未保存的更改。您确定要放弃它们吗？",
+            "Keep editing": "继续编辑",
+            "Close and discard": "关闭并放弃",
+
+            //筛选器报错窗口
+            "Empty value for": "空值：",
+            "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
+
+        "Workflows": "工作流",
+        "Has job failures": "作业失败率",
+        "Avg run time": "平均运行时长",
+        "Failure rate": "失败率",
+        "Avg queue time": "平均等待时长",
+        "Jobs": "作业",
+            "Job": "作业",
+            "Job runs": "作业运行",
+        "Runtime OS": "操作系统",
+        "Runner type": "运行器类型",
+            "hosted": "托管",
+            "hosted-larger": "大型托管",
+            "self-hosted": "自托管",
+
+        // 无数据
+            "No table data available yet.": "还没有数据。",
+                "You don't have workflows on any of your organization repositories.": "您的任何组织仓库中都没有工作流程。",
+            "Get started with GitHub Actions": "快速开始",
+
+        "Workflow": "工作流",
+        "Workflow runs": "工作流运行",
+
+        "of": "/",
+    },
+    "regexp": [
+        ...I18N["zh-CN"]["repository/actions/metrics/usage"]["regexp"],
+        [/(Average run time of|Average queue time of|Failure rate across|Total minutes used across failed) jobs in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
+            var typeKey = {'Average run time of': '平均运行时长', 'Average queue time of': '平均等待时长', 'Failure rate across': '作业失败率', 'Total minutes used across failed': '作业失败次数'};
 
             var periodKey = {
                 "current week (mon-sun)": "本周（周一-周日）",
