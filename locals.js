@@ -21847,6 +21847,8 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
 
         "Workflows": "工作流",
+            "Row Actions": "更多", // 暂译
+            "View performance": "查看数据看板",
         "Jobs": "作业",
             "Job": "作业",
             "Job runs": "作业运行",
@@ -21971,6 +21973,8 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             "Get started with GitHub Actions": "快速开始",
 
         "Workflow": "工作流",
+            "Row Actions": "更多", // 暂译
+            "View usage": "查看使用情况",
         "Workflow runs": "工作流运行",
 
         "of": "/",
