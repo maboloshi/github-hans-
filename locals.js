@@ -12462,6 +12462,7 @@ I18N["zh-CN"]["repository/graphs/contributors"] = { // 仓库 -> 洞察 - 贡献
                     "All": "全部",
                     "Last month": "上月",
             // 日期
+                "Weekly from": " 每周从",
                 "From": "从",
             // 提交图表
                 "over time": "总览",
