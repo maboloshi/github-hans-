@@ -15669,7 +15669,7 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
         //GitHub Mobile and Copilot": "GitHub Mobile 和 Copilot",
         //"fits your projects in your pocket, so you never miss a beat while on the go.": "让您的项目尽在掌握，让您在旅途中永不遗漏任何信息。",
         //"now let you manage projects and converse with your AI pair programmer on the go.": "让您可以管理项目，并与您的 AI 结对程序员在旅途中交流。",
-        "Download GitHub Mobile": "下载 GitHub Mobile",
+        "Download GitHub Mobile": "下载 GitHub 移动端",
 
         //"Application security": "应用安全",
         //"Empower developers": "为开发者赋能",
