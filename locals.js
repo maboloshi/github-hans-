@@ -340,6 +340,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Code security": "代码安全",
         "Deploy keys": "部署密钥",
         "Actions Performance Metrics": "操作数据看板",
+        "GitHub Sitemap · GitHub": "GitHub 网站地图",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -15600,14 +15601,14 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
                 "Explore GitHub Advanced Security": "探索 GitHub 高级安全",
 
                 "Solve security debt.": "解决担保债务。",
-                    "Leverage AI-assisted security campaigns to reduce application vulnerabilities and zero-day attacks.": "利用人工智能辅助安全活动来减少应用程序漏洞和零日攻击。",
+                    "Leverage AI-assisted security campaigns to reduce application vulnerabilities and zero-day attacks.": "利用人工智能辅助安全活动来减少\n应用程序漏洞和零日攻击。",
                     "Discover security campaigns": "探索安全活动",
 
                 "Dependencies you can depend on.": "您可以依赖的依赖项。",
-                    "Update vulnerable dependencies with supported fixes for breaking changes.": "使用支持的修复程序更新易受攻击的依赖项以解决重大更改。",
+                    "Update vulnerable dependencies with supported fixes for breaking changes.": "使用支持的修复程序更新易受攻击的依赖项\n以解决重大更改。",
                     "Learn about Dependabot": "了解 Dependabot",
 
-                "Your secrets, your business: protected. ": "您的机密、您的业务：受到保护。",
+                "Your secrets, your business: protected.": "您的机密、您的业务：受到保护。",
                     "Detect, prevent, and remediate leaked secrets across your organization.": "检测、预防并补救整个组织内泄露的机密。",
 
                 "90% coverage": "90% 覆盖率",
@@ -15737,6 +15738,8 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
         "Platform": "平台",
         "Developer API": "开发者 API",
         "Education": "教育",
+        "GitHub Desktop": "GitHub 桌面端",
+        "GitHub Mobile": "GitHub 移动端",
 
         "Support": "支持",
         "Community Forum": "社区论坛",
