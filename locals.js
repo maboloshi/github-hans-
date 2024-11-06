@@ -1516,6 +1516,7 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "View organization": "查看组织", // 组织
         "Browse organization's repositories": "浏览组织的仓库", // 组织
         "Top repositories": "置顶仓库",
+        "Top Repositories": "置顶仓库", // 安卓UA
         "New": "新建",
         "Find a repository…": "搜索仓库…",
         "Show more": "显示更多",
