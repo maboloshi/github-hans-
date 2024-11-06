@@ -732,6 +732,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Use Markdown to format your comment": "使用 Markdown 格式编写评论",
                 "Add your comment here...": "在此添加您的评论...",
                 "Add your answer here...": "在此添加您的答复...", // 具体讨论页
+                "Text field is empty": "文本框为空",
             "Preview": "预览",
                 "Nothing to preview": "没有可预览的内容。",
                 "This file is empty.": "这是一个空文件。",
