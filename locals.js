@@ -15551,7 +15551,7 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
         "Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
 
         //"Email address": "电子邮箱地址",
-        //"Sign up for GitHub": "注册 GitHub",
+        "Sign up for GitHub": "注册 GitHub",
         //"Start a free enterprise trial": "开始免费试用企业版",
 
         "Try GitHub Copilot": "试用 GitHub Copilot",
