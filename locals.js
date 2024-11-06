@@ -6247,6 +6247,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
                 "View all branches": "查看全部分支",
                 "Find a tag": "查找标签",
                 "Tags": "标签",
+                "Tag": "标签",
                 "Search for a tag": "搜索标签",
                 "Nothing to show": "暂无",
                 "View all tags": "查看全部标签",
