@@ -76,6 +76,7 @@ I18N.conf = {
     ignoreSelectorPage: {
         'page-profile': [
             'span.p-nickname', // 用户昵称
+            'span.p-name', // 同上
         ],
         'page-profile/followers': [
             'span.f4.Link--primary',
