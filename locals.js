@@ -8749,6 +8749,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
         "ProTip!": "专业提示！",
             "to the end of URLs for Git’s plaintext views.": "到 Git 纯文本视图的 URL 结尾。",
+            "Add comments to specific lines under": "为以下特定行添加注释于",
 
     },
     "regexp": [ // 正则翻译
