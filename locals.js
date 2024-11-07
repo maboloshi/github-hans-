@@ -99,7 +99,6 @@ I18N.conf = {
             '.my-3.d-flex.flex-items-center', // 仓库简介中的链接
             'article.markdown-body', // 自述文件正文
             'li.mt-2',
-            'span.color-fg-muted', // 贡献者名称
         ],
         'repository/tree': [
             '.AppHeader-context-full', // 顶部 <username>/<repo_name>
