@@ -51,7 +51,7 @@ I18N.conf = {
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
-    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
+    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
 
     // 特定页面，启用`字符数据`监测
     characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob'],
@@ -1077,6 +1077,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Collaborators": "协作者",
             "collaborators": "协作者",
             "Sponsors": "赞助者",
+            "Sponsoring": "赞助者",
             "commit": "提交",
             "commits": "提交",
             "Organization": "组织",
@@ -9467,6 +9468,7 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Raw": "源码",
                 // 文件复制图标
                     "Copy raw file": "复制原始文件",
+                    "Copy raw content": "复制原始文件",
                 // 文件下载图标
                     "Download raw file": "下载原始文件",
                 // 文件编辑图标
@@ -9499,6 +9501,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Show hidden characters": "显示隐藏字符",
                 "Code view is read-only.": "代码视图只读。",
                     "Switch to the editor.": "切换到编辑器。",
+                
+            // 代码视图底部
+                "View remainder of file in raw view": "以原码视图查看文件剩余部分",
 
             // 正文部分
                 // csv 文件
@@ -21779,7 +21784,7 @@ I18N["zh-CN"]["skills"] = { // https://skills.github.com/
 I18N["zh-CN"]["orgs/sponsoring"] = { // https://github.com/orgs/<org-name>/sponsoring 赞助页
     "static": {
         //"hasn’t sponsored any users yet.": "尚未赞助任何人。",
-        //"'s sponsorships": "的赞助者",
+        "'s sponsorships": "的赞助者",
     },
     "regexp": [
         [/([^ ]+) hasn’t sponsored any users yet./, "$1 尚未赞助任何人。"],
