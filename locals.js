@@ -122,6 +122,7 @@ I18N.conf = {
         ],
         'repository/commit': [
             'td.blob-code', // 代码差异 分屏/同屏
+            'span.ws-pre-wrap',
         ],
         'repository/pull': [
             'td.blob-code', // 代码差异 分屏/同屏
