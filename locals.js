@@ -343,6 +343,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Deploy keys": "部署密钥",
         "Actions Performance Metrics": "操作数据看板",
         "GitHub Sitemap · GitHub": "GitHub 网站地图",
+        "Code search results": "代码搜索结果",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -645,8 +646,8 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Command Palette": "命令面板",
                     "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的命令面板，可以快速导航并跳转到您所在的组织或仓库，并搜索最近的议题、拉取请求、项目等等。您还可以执行节省时间的命令，而无需将手指从键盘上移开！",
                     "To open the command palette:": "打开命令面板：",
-                "Copilot Workspace for Pull Requests": "适用于拉伸请求的 Copilot 工作区",
-                    "Copilot Workspace is a Copilot-native coding environment that helps you land high-quality pull requests faster by allowing you to edit and run code from your pull request without leaving GitHub.com.": "Copilot Workspace 是 Copilot 的原生编码环境，允许您在不离开 GitHub.com 的情况下编辑和运行拉取请求中的代码，从而帮助您更快提交高质量的拉取请求。",
+                "Copilot Workspace for Pull Requests": "适用于拉取请求的 Copilot 工作区",
+                    "Copilot Workspace is a Copilot-native coding environment that helps you land high-quality pull requests faster by allowing you to edit and run code from your pull request without leaving GitHub.com.": "Copilot 工作区是 Copilot 的原生编码环境，允许您在不离开 GitHub.com 的情况下编辑和运行拉取请求中的代码，从而帮助您更快提交高质量的拉取请求。",
                     "Copilot Workspace is available to customers with access to the Copilot code review public preview.": "访问 Copilot 代码审查公开预览版的客户可使用 Copilot 工作区。",
                     "Sign up for the Copilot code review public preview": "注册参与 Copilot 代码审查公开预览",
                 "Copilot Immersive Enhancements": "Copilot 沉浸式增强",
@@ -9281,6 +9282,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
                 "Today": "今天",
             "Clear": "清除",
             "Browse repository at this point": "查看此时间点的仓库",
+            "View code at this point": "查看此时间点的代码",
 
             // 日历
                 "Su": "一",
