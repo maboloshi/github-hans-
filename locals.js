@@ -344,6 +344,8 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Actions Performance Metrics": "操作数据看板",
         "GitHub Sitemap · GitHub": "GitHub 网站地图",
         "Code search results": "代码搜索结果",
+        "Enterprises": "企业版",
+        "Blocked users": "黑名单",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -3312,6 +3314,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Your AI pair programmer": "您的人工智能助理程序员",
                     "Your AI powered pair programmer": "您的人工智能助理程序员",
                     "Enable GitHub Copilot": "启用 GitHub Copilot",
+                    "GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
                     "GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
 
                      // 组织设置
