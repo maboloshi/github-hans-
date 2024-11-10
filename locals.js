@@ -6167,6 +6167,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
 
             "people": "人", // 提交
             "committed": "提交于", // 提交浮窗
+            "authored": "撰写于",
 
             // 标签栏
             "Code": "代码",
