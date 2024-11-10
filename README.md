@@ -1,18 +1,20 @@
 # [GitHub 中文化插件][project-url]
 
 > 本项目源自: [52cik/github-hans](https://github.com/52cik/github-hans)
+>
+> 繁體中文用戶請前往[zh-TW 分支](https://github.com/maboloshi/github-chinese/tree/zh-TW)
 
-  [![GitHub issues][issues-image]][issues-url]
-  [![GitHub stars][stars-image]][stars-url]
-  [![GitHub forks][forks-image]][forks-url]
-  [![license GPL-3.0][license-image]][license-url]
-  [![GreasyFork installs][greasyFork-image]][greasyFork-url]
+[![GitHub issues][issues-image]][issues-url]
+[![GitHub stars][stars-image]][stars-url]
+[![GitHub forks][forks-image]][forks-url]
+[![license GPL-3.0][license-image]][license-url]
+[![GreasyFork installs][greasyFork-image]][greasyFork-url]
 
 <a href="https://hellogithub.com/repository/738d0abae49543f18d887a7e29ec9e90" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=738d0abae49543f18d887a7e29ec9e90&claim_uid=zepvSg6Vwl4EqMr&theme=dark" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=738d0abae49543f18d887a7e29ec9e90&claim_uid=zepvSg6Vwl4EqMr&theme=neutral" />
-    <img alt="Featured｜HelloGitHub" src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=738d0abae49543f18d887a7e29ec9e90&claim_uid=zepvSg6Vwl4EqMr&theme=neutral" style="width: 250px; height: 54px;" width="250" height="54" />
+    <img alt="Featured｜HelloGitHub" src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=738d0abae49543f18d887a7e29ec9e90&claim_uid=zepvSg6Vwl4EqMr&theme=neutral" style="width: 250px; height: 54px;" />
   </picture>
 </a>
 
@@ -30,7 +32,7 @@
 
 - 中文化 GitHub 菜单栏，标题，按钮等公共组件
 - 保留、完善正则功能
-- 除基础组件中文化外，还支持对 “项目描述” 进行人机翻译 (参考: [k1995/github-i18n-plugin](https://github.com/k1995/github-i18n-plugin))
+- 支持对 “项目描述” 进行人机翻译 (参考: [k1995/github-i18n-plugin](https://github.com/k1995/github-i18n-plugin))
 
 ## 🌐 浏览器与脚本管理器
 
@@ -42,49 +44,62 @@ Firefox 或 基于 Gecko 内核的浏览器   | [Tampermonkey][Tampermonkey] 或
 Via 浏览器（Android）                | 浏览器内自带
 
 ## 💽 安装
-1. 请先安装用户脚本管理器。
-1. 然后再点击链接之一，安装脚本即可。
-    - [GitHub 中文化插件 - GitHub 托管【开发版】（相对及时更新）][main.user.js]
-        > 注意: 
-        > 1. 当版本号未更新的情况下, 即使内容已更新, 用户脚本管理器依然会忽略, 需要手动安装获取更新
-        > 2. 目前, 已实现每周一凌晨自动更新开发版版本号
-    - [GitHub 中文化插件 - GreasyFork 托管【发布版】（仅大版本更新）][main(greasyfork).user.js]
-1. 刷新下页面，即可发现网站已中文化。
-> 需要视频教程的可以去看看[这里](https://github.com/maboloshi/github-chinese/discussions/133)收录的一些视频
 
-> [!Note]
+1. 安装用户脚本管理器。
+1. 然后再点击链接之一，安装脚本即可。
+    - [GitHub 中文化插件 - GitHub 托管【开发版】][main.user.js]
+    - [GitHub 中文化插件 - GreasyFork 托管【发布版】][main(greasyfork).user.js]
+1. 刷新下页面，即可发现网站已中文化。
+
+> [!NOTE]
+> 1. **开发版**：通常比**发布版**更早进入开发和测试阶段（重大版本更新前，还会专门创建新分支进行测试）。日常维护词库内容，并且词库版本号会在每周五凌晨自动更新。
+>    > 注意: 
+>    > - 如果版本号未更新，即使内容已更新，用户脚本管理器仍会忽略这些更新，需要手动安装以获取最新内容。
+> 1. **发布版**: 日常功能被冻结（除非由项目所有者进行更新）。通常在**开发版**词库版本号更新后的下周一凌晨，自动同步上一**开发版**的词库文件。通常情况下，**发布版**与**开发版**之间会存在一周的时间差。
+
+> [!TIP]
+> 1. 需要视频教程的可以去看看[【这里】](https://github.com/maboloshi/github-chinese/discussions/133)收录的一些视频
+
+> [!IMPORTANT]
 > ### 关于 “Chrome 127 及更高版本无法使用” 的问题
-> 原因是 Chrome 127 及更高版本，陆续切换到 Manifest V3，目前已知 [Tampermonkey][Tampermonkey] 5.2.0 及以上版本支持，详见 [#234](https://github.com/maboloshi/github-chinese/issues/234) 讨论
+> 这是由于 Chrome 127 及更高版本逐步切换到 Manifest V3。目前已知脚本管理器 [Tampermonkey][Tampermonkey] 5.2.0 及以上版本能够完美支持，而其他脚本管理器（如 Violentmonkey 等）可能无法正常运行此脚本。如果您使用的是其他脚本管理器，建议您改用支持 Manifest V3 的脚本管理器，或者将浏览器版本退回，等待相关脚本管理器开发者更新，或改用 Firefox 浏览器。详情请参阅 [#234](https://github.com/maboloshi/github-chinese/issues/234) 讨论。
 > #### 解决方案：
-> 1. 必须安装 [Tampermonkey][Tampermonkey] 5.2.0 及以上版本，其他脚本管理器暂不支持
-> 2. 必须在浏览器的 “扩展程序” 管理中开启 “开发者模式”
+> 1. 安装 [Tampermonkey][Tampermonkey] 5.2.0 或更高版本。
+> 1. 在浏览器的 “扩展程序” 管理中开启 “开发者模式”。
 
 ## 词库本地调试方法
-1. 需要安装用户脚本管理器 [Tampermonkey][Tampermonkey]，其他可能不支持。
-1. 在浏览器扩展管理中，开启 [Tampermonkey][Tampermonkey] 的 “允许访问文件网址” 如图：
 
-    <picture>
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/preview/允许访问文件网址-light.png"/>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/preview/允许访问文件网址-dark.png"/>
-      <img src="https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/preview/允许访问文件网址-light.png" width="75%" />
-    </picture>
-
+1. 安装用户脚本管理器 [Tampermonkey][Tampermonkey]。
+1. 在浏览器扩展管理中，开启 [Tampermonkey][Tampermonkey] 的 “允许访问文件网址”。
 1. 将修改的词库文件放到方便访问的本地位置。
-1. 安装 [GitHub 中文化插件 - GitHub 托管【开发版】（相对及时更新）][main.user.js]，实际 [GitHub 中文化插件 - GreasyFork 托管【发布版】（仅大版本更新）][main(greasyfork).user.js] 也可。
-1. 回到脚本管理器，修改词库文件路径，即类似 `// @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals.js?v1.9.0`
-   中网址改成本地路径格式如 `file:///D:/APP/github%E9%A1%B9%E7%9B%AE/github-chinese/locals.js`。
+1. 安装 [GitHub 中文化插件 - GitHub 托管【开发版】][main.user.js] 或 [GitHub 中文化插件 - GreasyFork 托管【发布版】][main(greasyfork).user.js]。
+1. 回到脚本管理器，修改词库文件路径，如将 `// @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals.js?v1.9.0` 改为本地路径格式如 `file:///D:/APP/github%E9%A1%B9%E7%9B%AE/github-chinese/locals.js`。
 
-  > [!TIP]
-  > 直接将词库文件拖到浏览器的地址栏，再复制地址栏的中地址即可。
+> [!TIP]
+> 直接将词库文件拖到浏览器的地址栏，再复制地址栏的中地址即可。
 
 ## 📝 更新说明
+
+### 2024-08-18 16:44:24
+
+更新至 1.9.3
+
+1. 新增功能：通过设置中文环境，自动本地化时间元素，仅保留`on`开头的时间正则，并停用时间元素监视
+1. 优化突变翻译处理：
+   - 引入`characterDataPage`规则，对特定页面启用`筛选字符数据`的变更
+   - 引入`ignoreMutationSelectorPage`规则，忽略特定突变元素
+1. 合并`reIgnoreClass，reIgnoreItemprop，ignoreId，ignoreTag`为`ignoreSelectorPage`规则，处理全局及特定页面，忽略特定元素
+1. 引入全局缓存模式，减少重复构建包括不限于基于`page`变化的忽略规则、正则规则数组等
+1. 调整：更新讯飞听见翻译引擎v2.0
+1. 优化：梳理、优化脚本
+1. 调整：调整词库语言代码为`zh-CN`, 与环境语言设置一致
 
 ### 2024-06-14 19:27:20
 
 更新至 1.9.2
 
 1. 适配`www.githubstatus.com`
-2. 适配`skills.github.com`
+1. 适配`skills.github.com`
 
 ### 2024-05-23 16:42:55
 
@@ -94,14 +109,14 @@ Via 浏览器（Android）                | 浏览器内自带
 
 ### 2023-12-09 20:46:16
 
+ 
 更新至 1.9.0
 
+> 其中, `1.9.0`: 主版本号(由项目所有者更新)
+
 1. 重新定义版本号规则, 如`1.9.0-2023-12-09`
-   其中, `1.9.0`: 主版本号(由项目所有者更新)
-         `2023-12-09`:词库发布日期(手动或按周期自动发布)
 1. 加强: [GitHub 托管【开发版】][main.user.js]每周一凌晨自动更新`词库`发布版本号
-1. 加强: [GreasyFork 托管【发布版】][main(greasyfork).user.js]每周五凌晨自动更新`词库`发布版本号,
-   词库内容同上一次[GitHub 托管【开发版】][main.user.js]
+1. 加强: [GreasyFork 托管【发布版】][main(greasyfork).user.js]每周五凌晨自动更新`词库`发布版本号, 词库内容同上一次[GitHub 托管【开发版】][main.user.js]
 1. 加强：在 `README.md` 中自动更新贡献者头像
 1. 更新: 忽略规则, 词条等
 
@@ -190,29 +205,29 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 更新至 1.7.8
 
 1. 紧急修复: GitHub 变更了`document.body`和`title`更新机制, 导致原有的`监测更新`规则部分失效, 目前使用`document.documentElement`监视整个页面 DOM 的变更
-2. 跳过`<HEAD>`标签
-3. `标题翻译`和`JS 筛选器`翻译, 依据 URL变化更新
+1. 跳过`<HEAD>`标签
+1. `标题翻译`和`JS 筛选器`翻译, 依据 URL变化更新
 
 ### 2022-06-26 16:41:58
 
 更新至 1.7.7
 
 1. 新增`时间元素翻译`功能
-2. 重写`页面标题翻译`函数
-3. 梳理`遍历节点`函数逻辑
-4. 优化`transPage`函数，默认翻译公共部分
-5. 调整`getPage`函数, 使`ClassName匹配规则`优先
-6. 优化`translate`函数, 跳过`不存在英文字母和符号,.`, 保留首尾空白部分等
-7. 部分函数重命名，使用`es6`新语法
-8. 日常更新词库和忽略规则，修复一个`JS 选择器规则`
+1. 重写`页面标题翻译`函数
+1. 梳理`遍历节点`函数逻辑
+1. 优化`transPage`函数，默认翻译公共部分
+1. 调整`getPage`函数, 使`ClassName匹配规则`优先
+1. 优化`translate`函数, 跳过`不存在英文字母和符号,.`, 保留首尾空白部分等
+1. 部分函数重命名，使用`es6`新语法
+1. 日常更新词库和忽略规则，修复一个`JS 选择器规则`
 
 ### 2022-05-12 13:53:46
 
 更新至 1.7.6
 
 1. 日常更新词库和忽略规则
-2. 添加手动开启/禁用正则翻译，添加切换菜单
-3. 优化翻译文本函数：避免已翻译词汇二次匹配，提高效率；局部翻译优先于全局
+1. 添加手动开启/禁用正则翻译，添加切换菜单
+1. 优化翻译文本函数：避免已翻译词汇二次匹配，提高效率；局部翻译优先于全局
 
 ### 2022-02-26 12:36:14
 
@@ -253,8 +268,8 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 ## ✔ 待办 (TODO)
 
 1. 添加 GitHub 名词解释，新手可能不太理解部分名词具体表达的意思，比如 `pull request`。
-2. 整理部分 [Git](https://git-scm.com/) & [GitHub](https://github.com/) 学习资料, 帮助新手**更快**上手。
-3. **本人英文渣渣，翻译非常困难，急需大家 PR 共同翻译**
+1. 整理部分 [Git](https://git-scm.com/) & [GitHub](https://github.com/) 学习资料, 帮助新手**更快**上手。
+1. **本人英文渣渣，翻译非常困难，急需大家 PR 共同翻译**
 
 ## ✨ 贡献
 
@@ -265,9 +280,9 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 ### 相关概念及资料文档:
 
 1. [Pro Git 第二版 简体中文](https://git-scm.com/book/zh/v2)
-2. [Pro Git: 翻译约定](https://github.com/progit/progit2-zh/blob/master/TRANSLATION_NOTES.asc)
-3. [Git 官方软件包的简体中文翻译](https://github.com/git/git/blob/master/po/zh_CN.po)
-4. [GitHub 词汇表官方译本](https://docs.github.com/cn/get-started/quickstart/github-glossary)
+1. [Pro Git: 翻译约定](https://github.com/progit/progit2-zh/blob/master/TRANSLATION_NOTES.asc)
+1. [Git 官方软件包的简体中文翻译](https://github.com/git/git/blob/master/po/zh_CN.po)
+1. [GitHub 词汇表官方译本](https://docs.github.com/cn/get-started/quickstart/github-glossary)
 
 ## 🎨 预览
 
@@ -339,8 +354,8 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 <a href="https://github.com/TC999" title="陈生杂物房">
   <img src="https://avatars.githubusercontent.com/u/88823709?v=4" width="42;" alt="陈生杂物房"/>
 </a>
-<a href="https://github.com/qznfbnj" title="[qzn to fb’s nj12]">
-  <img src="https://avatars.githubusercontent.com/u/100760086?v=4" width="42;" alt="[qzn to fb’s nj12]"/>
+<a href="https://github.com/qznfbnj" title="其智乃反不能及">
+  <img src="https://avatars.githubusercontent.com/u/100760086?v=4" width="42;" alt="其智乃反不能及"/>
 </a>
 <a href="https://github.com/pylover7" title="大叶子">
   <img src="https://avatars.githubusercontent.com/u/56282729?v=4" width="42;" alt="大叶子"/>
@@ -350,6 +365,9 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 </a>
 <a href="https://github.com/pecasha" title="Pecasha">
   <img src="https://avatars.githubusercontent.com/u/9607128?v=4" width="42;" alt="Pecasha"/>
+</a>
+<a href="https://github.com/buiawpkgew1" title="菾凴">
+  <img src="https://avatars.githubusercontent.com/u/71136405?v=4" width="42;" alt="菾凴"/>
 </a>
 <a href="https://github.com/3DMXM" title="小莫">
   <img src="https://avatars.githubusercontent.com/u/28587093?v=4" width="42;" alt="小莫"/>
@@ -368,6 +386,9 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 </a>
 <a href="https://github.com/heicks" title="create new ██████╗  ██╔══██╗ ██████╔╝ ██╔══██╗ ██████╔╝ ╚═════╝  　　██╗ 　  ██╗ 　　██║ 　  ██║ 　　██║  　 ██║ 　　██║  　 ██║ 　　╚█████╔╝  　　╚═════╝  ███████╗ ██╔════╝　 ██║████═╗　 ██║　   ██　║ ╚██████╔╝　 　╚══════╝">
   <img src="https://avatars.githubusercontent.com/u/12287943?v=4" width="42;" alt="create new ██████╗  ██╔══██╗ ██████╔╝ ██╔══██╗ ██████╔╝ ╚═════╝  　　██╗ 　  ██╗ 　　██║ 　  ██║ 　　██║  　 ██║ 　　██║  　 ██║ 　　╚█████╔╝  　　╚═════╝  ███████╗ ██╔════╝　 ██║████═╗　 ██║　   ██　║ ╚██████╔╝　 　╚══════╝"/>
+</a>
+<a href="https://github.com/KS-OTO" title="KS-OTO">
+  <img src="https://avatars.githubusercontent.com/u/6616413?v=4" width="42;" alt="KS-OTO"/>
 </a>
 <a href="https://github.com/swsoyee" title="InfinityLoop">
   <img src="https://avatars.githubusercontent.com/u/20528423?v=4" width="42;" alt="InfinityLoop"/>
