@@ -21803,17 +21803,17 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
         ...I18N["zh-CN"]["repository-insights-menu"]["static"],
 
         "Period": "周期",
-            "Current week (Mon-Sun)": "本周（周一-周日）",
+            "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
             "Current month": "本月",
             "Last month": "上个月",
-            "Last 30 days": "最近30天",
-            "Last 90 days": "最近90天",
+            "Last 30 days": "最近 30 天",
+            "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
 
         "Total minutes": "总分钟数",
-            //"Total minutes across all workflows in this organization for current month": "当月该组织所有工作流程的总时长",
+            // "Total minutes across all workflows in this organization for current month": "当月该组织所有工作流程的总时长",
         "Total job runs": "总工作运行",
-            //"Total job runs across all workflows in this organization for current month": "当月该组织所有工作流程的工作运行总数",
+            // "Total job runs across all workflows in this organization for current month": "当月该组织所有工作流程的工作运行总数",
 
         "Filter": "筛选",
             "Search or filter": "搜索或筛选",
@@ -21822,41 +21822,41 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
 
         // 高级帅选窗口
             "Advanced filters": "高级筛选",
-                        "Build complex filter queries": "建立复杂的筛选器查询",
-                        "To start building your query add your first filter using the button below.": "要开始建立查询，请使用下面的按钮添加第一个筛选器。",
+                "Build complex filter queries": "建立复杂的筛选器查询",
+                "To start building your query add your first filter using the button below.": "要开始建立查询，请使用下面的按钮添加第一个筛选器。",
 
-                        "Qualifier": "限定",
-                        "Operator": "操作",
-                            "is not one of": "不包含",
-                            "is one of": "包含",
-                            "is": "是",
-                            "greater than": "大于",
-                            "less than": "小于",
-                            "greater than or equal to": "大于或等于",
-                            "less than or equal to": "小于或等于",
-                            "equal to": "等于",
-                            "between": "之间",
-                        "Value": "值",
-                            "Make a selection": "请选择",
-                            "Select items": "请选择项目",
-                            "Filter values": "筛选值",
-                            "Enter a number": "键入数字",
-                            "Enter search text": "键入任意文本",
-                                "Me": "我",
-                                "Signed-in user": "已登录用户",
-                        "Add a filter": "添加",
-                            "Text": "文本",
-                        "Apply": "应用",
+                "Qualifier": "限定",
+                "Operator": "操作",
+                    "is not one of": "不包含",
+                    "is one of": "包含",
+                    "is": "是",
+                    "greater than": "大于",
+                    "less than": "小于",
+                    "greater than or equal to": "大于或等于",
+                    "less than or equal to": "小于或等于",
+                    "equal to": "等于",
+                    "between": "之间",
+                "Value": "值",
+                    "Make a selection": "请选择",
+                    "Select items": "请选择项目",
+                    "Filter values": "筛选值",
+                    "Enter a number": "键入数字",
+                    "Enter search text": "键入任意文本",
+                        "Me": "我",
+                        "Signed-in user": "已登录用户",
+                "Add a filter": "添加",
+                    "Text": "文本",
+                "Apply": "应用",
 
             // 关闭弹窗
-            "Discard changes?": "是否放弃更改？",
-            "You have unsaved changes. Are you sure you want to discard them?": "您有未保存的更改。您确定要放弃它们吗？",
-            "Keep editing": "继续编辑",
-            "Close and discard": "关闭并放弃",
+                "Discard changes?": "是否放弃更改？",
+                "You have unsaved changes. Are you sure you want to discard them?": "您有未保存的更改。您确定要放弃它们吗？",
+                "Keep editing": "继续编辑",
+                "Close and discard": "关闭并放弃",
 
-            //筛选器报错窗口
-            "Empty value for": "空值：",
-            "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
+            // 筛选器报错窗口
+                "Empty value for": "空值：",
+                "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
 
         "Workflows": "工作流",
             "Row Actions": "更多", // 暂译
@@ -21887,12 +21887,13 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             var typeKey = {'minutes': '总分钟数', 'job runs': '总工作运行数'};
 
             var periodKey = {
-                "current week (mon-sun)": "本周（周一-周日）",
+                "current week (mon-sun)": "本周（周一 ~ 周日）",
                 "current month": "本月",
                 "last month": "上个月",
-                "last 30 days": "最近30天",
-                "last 90 days": "最近90天",
-                "last year": "最近一年",};
+                "last 30 days": "最近 30 天",
+                "last 90 days": "最近 90 天",
+                "last year": "最近一年"
+            };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
         }],
@@ -21905,11 +21906,11 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
         ...I18N["zh-CN"]["repository-insights-menu"]["static"],
 
         "Period": "周期",
-            "Current week (Mon-Sun)": "本周（周一-周日）",
+            "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
             "Current month": "本月",
             "Last month": "上个月",
-            "Last 30 days": "最近30天",
-            "Last 90 days": "最近90天",
+            "Last 30 days": "最近 30 天",
+            "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
 
         "Avg job run time": "平均作业运行时长",
@@ -21929,41 +21930,41 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
 
         // 高级帅选窗口
             "Advanced filters": "高级筛选",
-                        "Build complex filter queries": "建立复杂的筛选器查询",
-                        "To start building your query add your first filter using the button below.": "要开始建立查询，请使用下面的按钮添加第一个筛选器。",
+                "Build complex filter queries": "建立复杂的筛选器查询",
+                "To start building your query add your first filter using the button below.": "要开始建立查询，请使用下面的按钮添加第一个筛选器。",
 
-                        "Qualifier": "限定",
-                        "Operator": "操作",
-                            "is not one of": "不包含",
-                            "is one of": "包含",
-                            "is": "是",
-                            "greater than": "大于",
-                            "less than": "小于",
-                            "greater than or equal to": "大于或等于",
-                            "less than or equal to": "小于或等于",
-                            "equal to": "等于",
-                            "between": "之间",
-                        "Value": "值",
-                            "Make a selection": "请选择",
-                            "Select items": "请选择项目",
-                            "Filter values": "筛选值",
-                            "Enter a number": "键入数字",
-                            "Enter search text": "键入任意文本",
-                                "Me": "我",
-                                "Signed-in user": "已登录用户",
-                        "Add a filter": "添加",
-                            "Text": "文本",
-                        "Apply": "应用",
+                "Qualifier": "限定",
+                "Operator": "操作",
+                    "is not one of": "不包含",
+                    "is one of": "包含",
+                    "is": "是",
+                    "greater than": "大于",
+                    "less than": "小于",
+                    "greater than or equal to": "大于或等于",
+                    "less than or equal to": "小于或等于",
+                    "equal to": "等于",
+                    "between": "之间",
+                "Value": "值",
+                    "Make a selection": "请选择",
+                    "Select items": "请选择项目",
+                    "Filter values": "筛选值",
+                    "Enter a number": "键入数字",
+                    "Enter search text": "键入任意文本",
+                        "Me": "我",
+                        "Signed-in user": "已登录用户",
+                "Add a filter": "添加",
+                    "Text": "文本",
+                "Apply": "应用",
 
             // 关闭弹窗
-            "Discard changes?": "是否放弃更改？",
-            "You have unsaved changes. Are you sure you want to discard them?": "您有未保存的更改。您确定要放弃它们吗？",
-            "Keep editing": "继续编辑",
-            "Close and discard": "关闭并放弃",
+                "Discard changes?": "是否放弃更改？",
+                "You have unsaved changes. Are you sure you want to discard them?": "您有未保存的更改。您确定要放弃它们吗？",
+                "Keep editing": "继续编辑",
+                "Close and discard": "关闭并放弃",
 
-            //筛选器报错窗口
-            "Empty value for": "空值：",
-            "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
+            // 筛选器报错窗口
+                "Empty value for": "空值：",
+                "Text will be ignored since log searching is not yet available:": "由于尚未提供日志搜索功能，文本将被忽略：",
 
         "Workflows": "工作流",
         "Has job failures": "作业失败率",
@@ -21997,12 +21998,13 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             var typeKey = {'Average run time of': '平均运行时长', 'Average queue time of': '平均等待时长', 'Failure rate across': '作业失败率', 'Total minutes used across failed': '作业失败次数'};
 
             var periodKey = {
-                "current week (mon-sun)": "本周（周一-周日）",
+                "current week (mon-sun)": "本周（周一 ~ 周日）",
                 "current month": "本月",
                 "last month": "上个月",
                 "last 30 days": "最近 30 天",
                 "last 90 days": "最近 90 天",
-                "last year": "最近一年",};
+                "last year": "最近一年"
+            };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
         }],
