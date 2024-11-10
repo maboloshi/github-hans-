@@ -21999,8 +21999,8 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
                 "current week (mon-sun)": "本周（周一-周日）",
                 "current month": "本月",
                 "last month": "上个月",
-                "last 30 days": "最近30天",
-                "last 90 days": "最近90天",
+                "last 30 days": "最近 30 天",
+                "last 90 days": "最近 90 天",
                 "last year": "最近一年",};
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
