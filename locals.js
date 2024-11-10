@@ -12503,6 +12503,7 @@ I18N["zh-CN"]["repository/graphs/contributors"] = { // 仓库 -> 洞察 - 贡献
 
             return user + ' 的' + contKey[cont];
         }],
+        //[/Week of (.+)/, "每周 $1"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
