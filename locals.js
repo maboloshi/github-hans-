@@ -8965,6 +8965,8 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "Large diffs are not rendered by default.": "默认情况下，大的差异不会被呈现。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Some generated files are not rendered by default. Learn more about": "某些生成的文件默认不会呈现。详细了解",
+                "how customized files appear on GitHub": "自定义文件在 GitHub 上的显示方式",
 
             // 提交相关
             "Copy the full SHA": "复制完整 SHA",
@@ -12822,10 +12824,15 @@ I18N["zh-CN"]["repository/network/dependencies"] = { // 仓库 -> 洞察 - 依�
     },
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
+        [/View Dependabot alerts?/, "查看 Dependabot 警报"],
         [/Detected automatically on (.+)/, "自动检测于$1"],
         [/(\d+) Total/, "$1 总计"],
         [/(\d+) vulnerabilities? found/, "发现 $1 个漏洞"],
         [/(\d+) more dependencies/, "更多 $1 个依赖项"],
+        [/(\d+) moderate · (\d+) total/, "$1 中风险 · $2 总计"],
+        [/(\d+) high · (\d+) total/, "$1 高风险 · $2 总计"],
+        [/(\d+) high/, "$1 高风险"],
+        [/(\d+) moderate/, "$1 中风险"],
         [/Load (\d+) more…/, "加载更多 $1个…"],
     ],
 };
@@ -18168,6 +18175,9 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Add webhooks for your app to notify you when specified events are triggered.": "为您的应用程序添加 Web 钩子，以便在触发指定事件时通知您。",
             "Submit your tool for review": "提交您的工具以供审核",
                 "Share your app or GitHub Action with millions of developers.": "与数百万开发者分享您的应用或 GitHub Action",
+            
+            // 搜索
+                "Search results": "搜索结果",
 
         // https://github.com/marketplace?type=
             "Search results": "搜索结果",
@@ -18521,6 +18531,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/(.*) is installed\. Click to configure.\?/, "$1 已安装。点击进行配置。"],
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
+        [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
     ],
 };
 I18N["zh-CN"]["apps"] = I18N["zh-CN"]["marketplace"];
