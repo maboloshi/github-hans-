@@ -14917,6 +14917,8 @@ I18N["zh-CN"]["repository/settings/pages"] = { // 仓库设置页面(含组织�
                 "Select folder": "选择文件夹",
                     "/ (root)": "/ (根目录)",
 
+                "No results found": "无结果",
+
                 "Learn how to": "了解如何",
                 "add a Jekyll theme": "添加 Jekyll 主题",
                 "to your site.": "到您的站点。",
