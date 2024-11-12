@@ -161,8 +161,8 @@ I18N.conf = {
             'div.js-blob-code-container', // 代码框
             'table.js-diff-table', // 代码差异
         ],
-        'search': [
-            'span.search-match', // 仓库名称
+        'topics': [
+            'h3.f3.color-fg-muted.text-normal.lh-condensed', // 仓库名称
         ],
         '*': [
             '.js-comment-body', '.js-preview-body',
