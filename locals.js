@@ -11451,7 +11451,7 @@ I18N["zh-CN"]["repository/releases"] = { // 仓库 - 发行版页面
                 "Select previous tag to compare": "选择上一个标签进行比较",
                     "Find previous tag": "筛选上一个标签",
             "Generate release notes": "生成发行版说明",
-                "Select a valid tag to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "选择一个有效的标签，以自动为该差异中的所有合并拉取请求和该版本的贡献者添加至说明", //原文有错误
+                "Select a valid tag to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "选择一个有效的标签，以自动为该差异中的所有合并拉取请求和该版本的贡献者添加至 Markdown 说明",
                 "Automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "自动为来自此差异和此发行版贡献者的所有已合并拉取请求，添加 Markdown 说明。",
                 "Clear existing notes to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "清除现有的注释，以自动添加来自此差异和此版本贡献者的所有合并的拉取请求的标记。",
 
