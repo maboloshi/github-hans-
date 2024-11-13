@@ -6766,6 +6766,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 文档栏目(仅 Andoid UA)
             "More": "更多",
+            "Menu": "菜单",
 
             // 自述文件(README.md)
             "Filter headings": "筛选标题",
