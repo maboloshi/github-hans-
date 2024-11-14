@@ -1914,6 +1914,20 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Forked from": "复刻自",
             "Updated": "更新于",
 
+            // 许可证
+                "GPL-3.0 License": "GPL-3.0 许可证",
+                "AGPL-3.0 License": "AGPL-3.0 许可证",
+                "LGPL-3.0 License": "LGPL-3.0 许可证",
+                "MIT License": "MIT 许可证",
+                "Apache-2.0 License": "Apache-2.0 许可证",
+                "OFL-1.1 License": "OFL-1.1 许可证",
+                "0BSD License": "0BSD 许可证",
+                "BSD-3-Clause License": "BSD-3-Clause 许可证",
+                "BSD 3-Clause \"New\" or \"Revised\" License": "BSD-3-Clause 许可证",
+                "CC0-1.0 License": "CC0-1.0 许可证",
+                "WTFPL License": "WTFPL 许可证",
+                "Unknown": "未知",
+
         // 标签栏
             "Sponsoring": "赞助",
     },
@@ -2291,6 +2305,7 @@ I18N["zh-CN"]["page-profile/repositories"] = { // 个人首页 - 仓库标签卡
         [/([^ ]+) doesn’t have any repositories that match./, "$1 没有任何匹配的仓库"], // 仓库标签卡
         [/Your repository \"([^ ]+)\" was successfully deleted./, "您的仓库 “$1” 已成功删除。"],
         [/(\d+) issues? needs? help/, "$1 个议题需要帮助"],
+        [/and (\d+) more/, "等 $1 人"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
     "selector": [ // 元素筛选器规则
@@ -9575,6 +9590,46 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Press": "按",
                 "again to open the browser's find menu": "打开浏览器的查找菜单",
                 "Search this file": "搜索此文件",
+            
+        // 中间栏 顶部 权限信息
+        "the": "为：", // 上半句走正则
+
+        // 许可证
+            "GPL-3.0 License": "GPL-3.0 许可证",
+            "AGPL-3.0 License": "AGPL-3.0 许可证",
+            "LGPL-3.0 License": "LGPL-3.0 许可证",
+            "MIT License": "MIT 许可证",
+            "Apache-2.0 License": "Apache-2.0 许可证",
+            "OFL-1.1 License": "OFL-1.1 许可证",
+            "0BSD License": "0BSD 许可证",
+            "BSD-3-Clause License": "BSD-3-Clause 许可证",
+            "BSD 3-Clause \"New\" or \"Revised\" License": "BSD-3-Clause 许可证",
+            "CC0-1.0 License": "CC0-1.0 许可证",
+            "WTFPL License": "WTFPL 许可证",
+            "Unknown": "未知",
+
+        "Permissions": "许可事项",
+        "Limitations": "限制条件",
+            "Commercial use": "商业用途",
+            "Modification": "修改",
+            "Distribution": "分布",
+            "Patent use": "专利使用",
+            "Private use": "私人使用",
+            "Trademark use": "商标使用",
+            "Liability": "责任",
+            "Warranty": "担保",
+            "Disclose source": "开源",
+            "Same license": "相同的许可证",
+        "Conditions": "条件",
+            "License and copyright notice": "许可和版权声明",
+            "State changes": "状态变化",
+            "License and copyright notice for source": "来源许可和版权声明",
+            "Network use is distribution": "网络使用即分发",
+            "Same license (library)": "相同的许可证（库）",
+            "Same license (file)": "相同的许可证（文件）",
+
+        "This is not legal advice.": "这并不是法律建议。",
+        "Learn more about repository licenses": "了解更多关于仓库许可证的信息",
 
     },
     "regexp": [ // 正则翻译
@@ -9586,6 +9641,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
         // 代码追溯页面
         [/(\d+) contributors?/, "$1 位贡献者"],
         [/(\d+) commits?/, "$1 个提交"],
+
+        // 许可证
+        [/([^ ]+) is licensed under/, "$1 的许可证"],
     ],
 };
 I18N["zh-CN"]["repository/blame"] = I18N["zh-CN"]["repository/blob"];
