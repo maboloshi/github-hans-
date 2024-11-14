@@ -1930,8 +1930,8 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
         [/contributed code to (\d+) repositor(y|ies) used in the/, "贡献于 $1 个仓库收录于"], // Mars 2020 Helicopter Mission.
         [/The (.+) achievement will now be hidden from your profile./, "现在，将从您的个人资料中隐藏 “$1” 成就。"],
         [/The (.+) achievement will now be shown in your profile./, "现在，将在您的个人资料中显示 “$1” 成就。"],
-        [/(\d+) repositories/, "$1 仓库"],
-        [/(\d+) members/, "$1 成员"],
+        [/(\d+) repositor(y|ies)/, "$1 仓库"],
+        [/(\d+) members?/, "$1 成员"],
         [/and (\d+) more/, "等 $1 人"],
         [/- (\d+)h (ahead|behind)/, function(all, num, compare){
             var compareKey = {ahead: '早', behind: '晚'};
