@@ -17570,6 +17570,7 @@ I18N["zh-CN"]["explore"] = { // 探索页面
         [/([\d,]+) starred repositories?/, "$1 个星标仓库"],
         [/There are ([\d,]+) public repositories? matching this topic/, "有 $1 个公共仓库与此主题相匹配"],
         [/See the ([\d,]+) items? in this collection/, "查看该系列中的 $1 个项目"],
+        [/Topic: ([^ ]+)/, "主题：$1"],
     ],
 };
 
@@ -17625,6 +17626,7 @@ I18N["zh-CN"]["topics"] = { // 探索-->主题页面
     "regexp": [ // 正则翻译
         [/followers?/, "个关注者"],
         [/Here are ([\d,]+) public repositories? matching this topic.../, "有 $1 个公共仓库与此主题相匹配"],
+        [/Topic: ([^ ]+)/, "主题：$1"],
     ],
 };
 
