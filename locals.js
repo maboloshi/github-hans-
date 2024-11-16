@@ -9356,6 +9356,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "There are no files selected for viewing": "没有更改",
 
             // 右侧
+            "Search within code": "在代码中搜索", // 不翻译
             "Top": "顶部",
             "Layout": "布局",
                 "Hide whitespace": "隐藏空白",
