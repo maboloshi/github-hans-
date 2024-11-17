@@ -141,6 +141,7 @@ I18N.conf = {
         'repository/actions': [
             'table.highlight', // 工作流程文件 源码视图
             'span.user-select-none',
+            'span.CheckStep-line-content',
         ],
         'repository/releases': [
             'div.markdown-body', // 发布版正文
@@ -9363,6 +9364,10 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "Layout": "布局",
                 "Hide whitespace": "隐藏空白",
                 "Compact line height": "自定义行高",
+
+                "View comments": "查看评论",
+                    "Loading comments": "加载评论中",
+                    "Comment on lines": "评论于行",
 
                 "Copy": "复制",
                 "Select all": "全选",
