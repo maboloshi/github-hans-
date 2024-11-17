@@ -140,6 +140,7 @@ I18N.conf = {
         ],
         'repository/actions': [
             'table.highlight', // 工作流程文件 源码视图
+            'span.user-select-none',
         ],
         'repository/releases': [
             'div.markdown-body', // 发布版正文
@@ -9753,7 +9754,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "to ask questions about this repository or get help.": "，询问关于这个仓库的问题或获得帮助。",
 
             "asked": "回复",
-            "started": "标星",
+            "started": "开始于",
             "· Unanswered": " · 未答复",
             "· Answered": " · 已答复",
 
