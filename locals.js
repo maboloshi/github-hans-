@@ -1917,6 +1917,7 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Updated": "更新于",
 
             // 许可证
+                "GNU General Public License v3.0": "GNU 通用公共许可证 v3.0",
                 "GPL-3.0 License": "GPL-3.0 许可证",
                 "AGPL-3.0 License": "AGPL-3.0 许可证",
                 "LGPL-3.0 License": "LGPL-3.0 许可证",
@@ -9603,6 +9604,7 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
         "the": "为：", // 上半句走正则
 
         // 许可证
+            "GNU General Public License v3.0": "GNU 通用公共许可证 v3.0",
             "GPL-3.0 License": "GPL-3.0 许可证",
             "AGPL-3.0 License": "AGPL-3.0 许可证",
             "LGPL-3.0 License": "LGPL-3.0 许可证",
@@ -11192,6 +11194,7 @@ I18N["zh-CN"]["repository/branches"] = { // 仓库 - 分支页面
                     "Choose a source branch": "选择源分支",
                 "Share feedback": "分享反馈",
             "Search branches…": "搜索分支…",
+            "Copy branch name to clipboard": "复制分支名到剪切板",
 
             "Default branch": "默认分支",
             "Switch default branch": "切换默认分支",
