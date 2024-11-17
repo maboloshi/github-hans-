@@ -9005,6 +9005,9 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "contributing guidelines": "贡献指南",
             "Reporting a security vulnerability?": "报告安全漏洞？",
             "Check out the project's": "查看本项目的",
+            "Looking for help?": "需要帮助？",
+                "Check out the project’s": "查看本项目的",
+                "instructions for getting support": "支持说明",
 
             "Checking mergeability…": "检查可合并性…",
             "Don’t worry, you can still create the pull request.": "别担心，您仍然可以创建拉取请求。",
@@ -10923,6 +10926,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                         "Deployment": "部署",
                         "Project management": "项目管理",
                         "Testing": "测试",
+                    "\/ Search results": "\/搜索结果",
                     "Browse all actions on the GitHub Marketplace": "浏览 GitHub 市场 上的所有 Actions",
 
                 // 底部栏补充
@@ -10991,6 +10995,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
         [/on this commit as/,"该提交以"],
         [/Commit changes?/, "提交更改"], // 提交对话框
         [/Your license is ready. Please review it below and either commit it to the ([^ ]+) branch or to a new branch./, "您的许可证已准备就绪。请在下面审查它并将其提交到 $1 分支或新分支。"],
+        [/Your search has returned (\d+) results?./, "您的搜索返回了 $1 条结果。"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
