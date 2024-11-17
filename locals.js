@@ -9096,7 +9096,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "to your": "向您的",
             "branch.": "分支添加新提交。",
             "You can always change this setting later.": "您可以随时更改这一设置。",
-            "Note: By granting write access, maintainers could potentially edit your repository's workflows to reveal values of secrets and gain access to other branches.": "注意：通过授予写入权限，维护者可能会编辑您仓库的工作流程以揭示机密值，并获取对其他分支的访问权限。", //死活不译
+            "Note: By granting write access, maintainers could potentially edit your repository's workflows to reveal values of secrets and gain access to other branches.": "注意：通过授予写入权限，维护者可能会编辑您仓库的工作流程以揭示机密值，并获取对其他分支的访问权限。",
             "Got it": "知道了",
         // 创建拉取请求 按钮下拉
             "Automatically requests reviews from code owners": "自动请求代码所有者进行审查",
@@ -9358,7 +9358,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "There are no files selected for viewing": "没有更改",
 
             // 右侧
-            "Search within code": "在代码中搜索", // 死活不翻译
+            "Search within code": "在代码中搜索",
             "Top": "顶部",
             "Layout": "布局",
                 "Hide whitespace": "隐藏空白",
