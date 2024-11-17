@@ -140,8 +140,8 @@ I18N.conf = {
         ],
         'repository/actions': [
             'table.highlight', // 工作流程文件 源码视图
-            'span.user-select-none',
-            'span.CheckStep-line-content',
+            'span.user-select-none', // 日志 - 作业名
+            'span.CheckStep-line-content', // 日志 - 具体内容
         ],
         'repository/releases': [
             'div.markdown-body', // 发布版正文
