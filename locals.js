@@ -15643,9 +15643,11 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
         //"Let’s build from here": "让我们从这里开始",
         //"The world’s leading AI-powered developer platform.": "全球领先的人工智能开发者平台。",
         "Build and ship software on a single, collaborative platform": "在单一协作平台上构建和发布软件",
-        "Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
+        "Join the world’s most widely adopted AI-powered developer platform.": "加入全球最广泛采用的人工智能开发者平台",
+        //"Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
 
         //"Email address": "电子邮箱地址",
+        "Enter your email": "键入邮箱地址",
         "Sign up for GitHub": "注册 GitHub",
         //"Start a free enterprise trial": "开始免费试用企业版",
 
