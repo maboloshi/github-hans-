@@ -10833,6 +10833,8 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
 
             // 提交对话框
                 "Commit changes": "提交更改",
+                    "There was an error committing your changes:": "在提交您的更改时出现错误：",
+                    "A file with the same name already exists. Please choose a different name and try again.": "已存在同名文件。请选择其他名称并重试。",
                 "Sign off and commit changes": "提交更改并签署",
                 "Propose changes": "提出更改建议", // 向他人仓库提交
                 "Sign off and propose changes": "提出更改建议并签署", // 向他人仓库提交
