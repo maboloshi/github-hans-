@@ -16493,6 +16493,8 @@ I18N["zh-CN"]["notifications"] = { // 通知页面
             "to mark it as Done.": "将其标记为 “已完成”。",
             "to mark it as Unread.": "将其标记为 “未读”。",
             "Create custom filters to quickly access your most important notifications.": "创建自定义筛选器以快速访问最重要的通知。",
+            "Filter by": "使用",
+            "to see what's new.": "查看新通知。",
     },
     "regexp": [ // 正则翻译
         [/(\d+) selected/, "$1 条被选中"],
@@ -18513,6 +18515,11 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Latest version": "最新发行版",
             "Use latest version": "使用最新发行版",
             "Choose a version": "选择发行版",
+                // 安装窗口
+                    "Installation": "安装",
+                    "Copy and paste the following snippet into your": "将以下代码段复制并粘贴到您的",
+                        "file.": "文件。",
+                    "Learn more about this action in": "了解有关该操作的更多信息，请访问",
 
             "Verified creator": "经验证的创建者",
             "GitHub has verified that this action was created by": "GitHub 已经验证该操作，创建由",
@@ -18618,6 +18625,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
         [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
+        [/Use (v\d+)/, "使用 $1"], // 右上角绿色按钮
     ],
 };
 I18N["zh-CN"]["apps"] = I18N["zh-CN"]["marketplace"];
