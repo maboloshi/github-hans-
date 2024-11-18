@@ -10878,6 +10878,10 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                 "Fork this repository": "复刻此仓库",
                     "Learn more about forks": "了解更多关于复刻的信息",
 
+                "You have unsaved changes on this file that can be restored.": "您可以恢复该文件上未保存的更改。",
+                    "Discard": "丢弃",
+                    "Restore": "恢复",
+
                 "You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork": "您正在对没有写入权限的项目进行更改。提交更改会将其写入您的复刻",
                 ", so you can send a pull request.": " 中的新分支，这样您就可以发送拉取请求。",
 
