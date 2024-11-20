@@ -18549,6 +18549,10 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Get started": "开始",
                 "Language:": "语言：",
                 "Chapters": "步骤",
+            "Get API key": "获取 API 密钥",
+
+            "Enter a message...": "键入信息...",
+                "Submit message": "发送",
 
             // 中间横条
             "README": "自述文件",
@@ -18567,6 +18571,70 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Undisclosed": "未公布",
             "Provider support": "供应商支持",
             "Tags": "标签",
+        
+        // GitHub 模型聊天页面 https://github.com/marketplace/models/<user-name>/<model-name>/playground
+            // 顶部栏
+            "Model:": "模型：",
+                "Close": "关闭",
+                "Switch model": "切换模型",
+                "View all models": "查看所有模型",
+            "Preset:": "预设：",
+                "Default": "默认",
+                "Edit preset": "编辑预设",
+                "Delete preset": "删除预设",
+                     // 弹窗
+                         "Are you sure you want to delete this preset?": "您确定要删除吗？",
+                "Create new preset": "新建预设",
+                    "Presets save your current parameters, chat history, and state.": "预设可保存当前参数、聊天记录和状态。",
+                    "Name": "名称",
+                        "Name is required": "需要名称",
+                    "Description": "简述",
+                    "Save chat history": "保存聊天历史",
+                        "Chat history in this preset will be saved and visible to others when shared.": " 此预设中的聊天记录将被保存，并在共享时对其他人可见。",
+                        "Note: Image attachments are not saved with the preset.": "注意：预设不保存图像附件。",
+                    "Enable sharing": "启用分享",
+                        "Anyone with the URL will be able to view and use this preset, but not edit. Presets are private by default.": "任何拥有该 URL 的人都可以查看和使用该预设，但不能进行编辑。预设默认为私有。",
+                    "Create preset": "新建",
+            "Raw": "源码",
+            // 聊天窗口
+                // 顶部横条
+                    "Restore last session": "恢复上次聊天",
+                    "Compare": "比较",
+                    "Reset chat history": "删除聊天",
+                // 状态
+                "Responding...": "响应中...",
+
+                "Type your prompt…": "键入提示词…",
+                    "Send now": "发送",
+            
+            // 参数设置
+                "Parameters": "参数",
+                "Hide parameters setting": "隐藏参数设置",
+                "Show parameters setting": "显示参数设置",
+                "System prompt": "系统提示词",
+                    "Set the context for the model response.": "设置模型响应的环境。",
+                "Max Tokens": "最大令牌",
+                    "Limit the maximum output tokens for the model response.": "限制模型响应的最大输出标记。",
+                "Temperature": "随机度",
+                    "Controls randomness in the response, use lower to be more deterministic.": "控制响应的随机性，使用较低值则更具确定性。",
+                "Top P": "最大概率",
+                    "Controls text diversity by selecting the most probable words until a set probability is reached.": "通过选择最有可能出现的词语来控制文本多样性，直到达到设定的概率。",
+                "Stop": "停止",
+                    "Force cutting the output when this string occurs.": " 当出现该字符串时，强制切断输出。",
+            // 模型比较
+                "Close model": "关闭",
+                "Show model info": "显示模型信息",
+                // 参数设置窗口
+                "Sync chat input and parameters": "同步聊天输入和参数",
+            // 详细信息
+                "Model details page": "详细信息",
+            
+            // 底部
+                "Azure hosted. AI powered, can make mistakes.": " Azure 托管。人工智能驱动，可能犯错。",
+                "Share feedback": "分享反馈",
+                ". Subject to": "。受",
+                "Product Terms": "产品条款",
+                ". Not intended for production/sensitive data.": "约束。不适用于生产/敏感数据。",
 
         // 加入模型内测页 https://github.com/marketplace/models/waitlist/join
             "GitHub Models waitlist": "GitHub 模型等待名单",
