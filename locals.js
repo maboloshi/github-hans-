@@ -10835,6 +10835,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                 "Commit changes": "提交更改",
                     "There was an error committing your changes:": "在提交您的更改时出现错误：",
                     "A file with the same name already exists. Please choose a different name and try again.": "已存在同名文件。请选择其他名称并重试。",
+                    "File could not be edited": "文件不能编辑",
                 "Sign off and commit changes": "提交更改并签署",
                 "Propose changes": "提出更改建议", // 向他人仓库提交
                 "Sign off and propose changes": "提出更改建议并签署", // 向他人仓库提交
@@ -10934,6 +10935,13 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                         "Testing": "测试",
                     "\/ Search results": "\/搜索结果",
                     "Browse all actions on the GitHub Marketplace": "浏览 GitHub 市场 上的所有 Actions",
+
+                    // 具体某个操作
+                        "View full Marketplace listing": "去市场查看详细信息", // 跳转去市场对应页面
+                        "Installation": "安装",
+                        "Copy and paste the following snippet into your": "将以下代码段复制并粘贴到您的",
+                            "file.": "文件。",
+                        "Version:": "版本：",
 
                 // 底部栏补充
                     "Space": "空格",
