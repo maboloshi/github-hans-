@@ -122,6 +122,7 @@ I18N.conf = {
         ],
         'repository/commit': [
             'td.blob-code', // 代码差异 分屏/同屏
+            'span.ws-pre-wrap', // 提交说明
         ],
         'repository/pull': [
             'td.blob-code', // 代码差异 分屏/同屏
@@ -160,8 +161,8 @@ I18N.conf = {
             'div.js-blob-code-container', // 代码框
             'table.js-diff-table', // 代码差异
         ],
-        'search': [
-            'span.search-match', // 仓库名称
+        'topics': [
+            'h3.f3.color-fg-muted.text-normal.lh-condensed', // 仓库名称
         ],
         '*': [
             '.js-comment-body', '.js-preview-body',
@@ -342,6 +343,9 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Deploy keys": "部署密钥",
         "Actions Performance Metrics": "操作数据看板",
         "GitHub Sitemap · GitHub": "GitHub 网站地图",
+        "Code search results": "代码搜索结果",
+        "Enterprises": "企业版",
+        "Blocked users": "黑名单",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -644,8 +648,8 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Command Palette": "命令面板",
                     "Quickly navigate and jump between your organizations or repositories and search recent issues, pull requests, projects and more with the new command palette. You can also execute time saving commands all without lifting your fingers off the keyboard!": "使用新的命令面板，可以快速导航并跳转到您所在的组织或仓库，并搜索最近的议题、拉取请求、项目等等。您还可以执行节省时间的命令，而无需将手指从键盘上移开！",
                     "To open the command palette:": "打开命令面板：",
-                "Copilot Workspace for Pull Requests": "适用于拉伸请求的 Copilot 工作区",
-                    "Copilot Workspace is a Copilot-native coding environment that helps you land high-quality pull requests faster by allowing you to edit and run code from your pull request without leaving GitHub.com.": "Copilot Workspace 是 Copilot 的原生编码环境，允许您在不离开 GitHub.com 的情况下编辑和运行拉取请求中的代码，从而帮助您更快提交高质量的拉取请求。",
+                "Copilot Workspace for Pull Requests": "适用于拉取请求的 Copilot 工作区",
+                    "Copilot Workspace is a Copilot-native coding environment that helps you land high-quality pull requests faster by allowing you to edit and run code from your pull request without leaving GitHub.com.": "Copilot 工作区是 Copilot 的原生编码环境，允许您在不离开 GitHub.com 的情况下编辑和运行拉取请求中的代码，从而帮助您更快提交高质量的拉取请求。",
                     "Copilot Workspace is available to customers with access to the Copilot code review public preview.": "访问 Copilot 代码审查公开预览版的客户可使用 Copilot 工作区。",
                     "Sign up for the Copilot code review public preview": "注册参与 Copilot 代码审查公开预览",
                 "Copilot Immersive Enhancements": "Copilot 沉浸式增强",
@@ -1910,6 +1914,20 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Forked from": "复刻自",
             "Updated": "更新于",
 
+            // 许可证
+                "GPL-3.0 License": "GPL-3.0 许可证",
+                "AGPL-3.0 License": "AGPL-3.0 许可证",
+                "LGPL-3.0 License": "LGPL-3.0 许可证",
+                "MIT License": "MIT 许可证",
+                "Apache-2.0 License": "Apache-2.0 许可证",
+                "OFL-1.1 License": "OFL-1.1 许可证",
+                "0BSD License": "0BSD 许可证",
+                "BSD-3-Clause License": "BSD-3-Clause 许可证",
+                "BSD 3-Clause \"New\" or \"Revised\" License": "BSD-3-Clause 许可证",
+                "CC0-1.0 License": "CC0-1.0 许可证",
+                "WTFPL License": "WTFPL 许可证",
+                "Unknown": "未知",
+
         // 标签栏
             "Sponsoring": "赞助",
     },
@@ -1926,8 +1944,8 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
         [/contributed code to (\d+) repositor(y|ies) used in the/, "贡献于 $1 个仓库收录于"], // Mars 2020 Helicopter Mission.
         [/The (.+) achievement will now be hidden from your profile./, "现在，将从您的个人资料中隐藏 “$1” 成就。"],
         [/The (.+) achievement will now be shown in your profile./, "现在，将在您的个人资料中显示 “$1” 成就。"],
-        [/(\d+) repositories/, "$1 仓库"],
-        [/(\d+) members/, "$1 成员"],
+        [/(\d+) repositor(y|ies)/, "$1 仓库"],
+        [/(\d+) members?/, "$1 成员"],
         [/and (\d+) more/, "等 $1 人"],
         [/- (\d+)h (ahead|behind)/, function(all, num, compare){
             var compareKey = {ahead: '早', behind: '晚'};
@@ -2287,6 +2305,7 @@ I18N["zh-CN"]["page-profile/repositories"] = { // 个人首页 - 仓库标签卡
         [/([^ ]+) doesn’t have any repositories that match./, "$1 没有任何匹配的仓库"], // 仓库标签卡
         [/Your repository \"([^ ]+)\" was successfully deleted./, "您的仓库 “$1” 已成功删除。"],
         [/(\d+) issues? needs? help/, "$1 个议题需要帮助"],
+        [/and (\d+) more/, "等 $1 人"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
     "selector": [ // 元素筛选器规则
@@ -3310,6 +3329,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Your AI pair programmer": "您的人工智能助理程序员",
                     "Your AI powered pair programmer": "您的人工智能助理程序员",
                     "Enable GitHub Copilot": "启用 GitHub Copilot",
+                    "GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
                     "GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
 
                      // 组织设置
@@ -6165,6 +6185,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
 
             "people": "人", // 提交
             "committed": "提交于", // 提交浮窗
+            "authored": "撰写于",
 
             // 标签栏
             "Code": "代码",
@@ -6760,6 +6781,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 文档栏目(仅 Andoid UA)
             "More": "更多",
+            "Menu": "菜单",
 
             // 自述文件(README.md)
             "Filter headings": "筛选标题",
@@ -8638,12 +8660,12 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Approve": "批准",
                     "Submit feedback approving these changes.": "批准，并提出反馈意见。",
                     "Submit feedback and approve merging these changes.": "提交反馈意见并批准合并这些更改。",
-                    "Pull request authors can’t approve their own pull request": "拉取请求作者无法批准自己的拉取请求",
+                    "Pull request authors can’t approve their own pull request.": "拉取请求作者无法批准自己的拉取请求。",
                     "Only users with explicit access to this repository may approve pull requests": "只有对这个仓库有明确访问权限的用户才能批准拉取请求",
                 "Request changes": "请求更改",
                     "Submit feedback suggesting changes.": "请求更改，并提出更改反馈意见。",
                     "Submit feedback that must be addressed before merging.": "提交合并前必须解决的反馈意见",
-                    "Pull request authors can’t request changes on their own pull request": "拉取请求作者不能在自己的拉取请求上请求更改",
+                    "Pull request authors can’t request changes on their own pull request.": "拉取请求作者不能在自己的拉取请求上请求更改。",
                     "Only users with explicit access to this repository may request changes to pull requests": "只有对这个仓库有明确访问权限的用户才能请求更改拉取请求",
                 "Abandon review": "放弃审核",
                 "Submit review": "提交审查",
@@ -8959,6 +8981,8 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "Large diffs are not rendered by default.": "默认情况下，大的差异不会被呈现。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Some generated files are not rendered by default. Learn more about": "某些生成的文件默认不会呈现。详细了解",
+                "how customized files appear on GitHub": "自定义文件在 GitHub 上的显示方式",
 
             // 提交相关
             "Copy the full SHA": "复制完整 SHA",
@@ -9280,6 +9304,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
                 "Today": "今天",
             "Clear": "清除",
             "Browse repository at this point": "查看此时间点的仓库",
+            "View code at this point": "查看此时间点的代码",
 
             // 日历
                 "Su": "一",
@@ -9565,6 +9590,46 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Press": "按",
                 "again to open the browser's find menu": "打开浏览器的查找菜单",
                 "Search this file": "搜索此文件",
+            
+        // 中间栏 顶部 权限信息
+        "the": "为：", // 上半句走正则
+
+        // 许可证
+            "GPL-3.0 License": "GPL-3.0 许可证",
+            "AGPL-3.0 License": "AGPL-3.0 许可证",
+            "LGPL-3.0 License": "LGPL-3.0 许可证",
+            "MIT License": "MIT 许可证",
+            "Apache-2.0 License": "Apache-2.0 许可证",
+            "OFL-1.1 License": "OFL-1.1 许可证",
+            "0BSD License": "0BSD 许可证",
+            "BSD-3-Clause License": "BSD-3-Clause 许可证",
+            "BSD 3-Clause \"New\" or \"Revised\" License": "BSD-3-Clause 许可证",
+            "CC0-1.0 License": "CC0-1.0 许可证",
+            "WTFPL License": "WTFPL 许可证",
+            "Unknown": "未知",
+
+        "Permissions": "许可事项",
+        "Limitations": "限制条件",
+            "Commercial use": "商业用途",
+            "Modification": "修改",
+            "Distribution": "分布",
+            "Patent use": "专利使用",
+            "Private use": "私人使用",
+            "Trademark use": "商标使用",
+            "Liability": "责任",
+            "Warranty": "担保",
+            "Disclose source": "开源",
+            "Same license": "相同的许可证",
+        "Conditions": "条件",
+            "License and copyright notice": "许可和版权声明",
+            "State changes": "状态变化",
+            "License and copyright notice for source": "来源许可和版权声明",
+            "Network use is distribution": "网络使用即分发",
+            "Same license (library)": "相同的许可证（库）",
+            "Same license (file)": "相同的许可证（文件）",
+
+        "This is not legal advice.": "这并不是法律建议。",
+        "Learn more about repository licenses": "了解更多关于仓库许可证的信息",
 
     },
     "regexp": [ // 正则翻译
@@ -9576,6 +9641,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
         // 代码追溯页面
         [/(\d+) contributors?/, "$1 位贡献者"],
         [/(\d+) commits?/, "$1 个提交"],
+
+        // 许可证
+        [/([^ ]+) is licensed under/, "$1 的许可证"],
     ],
 };
 I18N["zh-CN"]["repository/blame"] = I18N["zh-CN"]["repository/blob"];
@@ -11442,7 +11510,7 @@ I18N["zh-CN"]["repository/releases"] = { // 仓库 - 发行版页面
                 "Select previous tag to compare": "选择上一个标签进行比较",
                     "Find previous tag": "筛选上一个标签",
             "Generate release notes": "生成发行版说明",
-                "Select a valid tag to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "选择一个有效的标签，以自动为该差异中的所有合并拉取请求和该版本的贡献者添加至说明", //原文有错误
+                "Select a valid tag to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "选择一个有效的标签，以自动为该差异中的所有合并拉取请求和该版本的贡献者添加至 Markdown 说明",
                 "Automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "自动为来自此差异和此发行版贡献者的所有已合并拉取请求，添加 Markdown 说明。",
                 "Clear existing notes to automatically add the Markdown for all the merged pull requests from this diff and contributors of this release": "清除现有的注释，以自动添加来自此差异和此版本贡献者的所有合并的拉取请求的标记。",
 
@@ -12815,10 +12883,15 @@ I18N["zh-CN"]["repository/network/dependencies"] = { // 仓库 -> 洞察 - 依�
     },
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
+        [/View Dependabot alerts?/, "查看 Dependabot 警报"],
         [/Detected automatically on (.+)/, "自动检测于$1"],
         [/(\d+) Total/, "$1 总计"],
         [/(\d+) vulnerabilities? found/, "发现 $1 个漏洞"],
         [/(\d+) more dependencies/, "更多 $1 个依赖项"],
+        [/(\d+) moderate · (\d+) total/, "$1 中风险 · $2 总计"],
+        [/(\d+) high · (\d+) total/, "$1 高风险 · $2 总计"],
+        [/(\d+) high/, "$1 高风险"],
+        [/(\d+) moderate/, "$1 中风险"],
         [/Load (\d+) more…/, "加载更多 $1个…"],
     ],
 };
@@ -14902,6 +14975,8 @@ I18N["zh-CN"]["repository/settings/pages"] = { // 仓库设置页面(含组织�
                     "None": "无",
                 "Select folder": "选择文件夹",
                     "/ (root)": "/ (根目录)",
+
+                "No results found": "无结果",
 
                 "Learn how to": "了解如何",
                 "add a Jekyll theme": "添加 Jekyll 主题",
@@ -17495,6 +17570,7 @@ I18N["zh-CN"]["explore"] = { // 探索页面
         [/([\d,]+) starred repositories?/, "$1 个星标仓库"],
         [/There are ([\d,]+) public repositories? matching this topic/, "有 $1 个公共仓库与此主题相匹配"],
         [/See the ([\d,]+) items? in this collection/, "查看该系列中的 $1 个项目"],
+        [/Topic: ([^ ]+)/, "主题：$1"],
     ],
 };
 
@@ -17550,6 +17626,7 @@ I18N["zh-CN"]["topics"] = { // 探索-->主题页面
     "regexp": [ // 正则翻译
         [/followers?/, "个关注者"],
         [/Here are ([\d,]+) public repositories? matching this topic.../, "有 $1 个公共仓库与此主题相匹配"],
+        [/Topic: ([^ ]+)/, "主题：$1"],
     ],
 };
 
@@ -18161,6 +18238,9 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Add webhooks for your app to notify you when specified events are triggered.": "为您的应用程序添加 Web 钩子，以便在触发指定事件时通知您。",
             "Submit your tool for review": "提交您的工具以供审核",
                 "Share your app or GitHub Action with millions of developers.": "与数百万开发者分享您的应用或 GitHub Action",
+            
+            // 搜索
+                "Search results": "搜索结果",
 
         // https://github.com/marketplace?type=
             "Search results": "搜索结果",
@@ -18514,6 +18594,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/(.*) is installed\. Click to configure.\?/, "$1 已安装。点击进行配置。"],
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
+        [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
     ],
 };
 I18N["zh-CN"]["apps"] = I18N["zh-CN"]["marketplace"];
