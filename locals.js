@@ -9975,6 +9975,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Unmark as answer": "取消标记为答案",
             "Answer": "答案",
 
+            "This comment has been minimized.": "此评论被最小化。",
             "This comment was marked as off-topic.": "此评论被标记为偏离主题。",
             "Show comment": "显示评论",
             "Hide comment": "隐藏评论",
@@ -10175,7 +10176,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
         [/Delete section (.*)/, "删除栏目 “$1”"],
         [/Delete (.*) section/, "删除 “$1” 栏目"],
         [/(\d+) new suggested answers?/, "$1 个新的建议答案"],
-        [/This discussion was converted from issue/, "本讨论由以下议题转换而来"],
+        [/This discussion was converted from issue (#\d+) on (.+)/, "本讨论由以下议题转换而来：$1 ，$2"],
         [/(\d+) new comments?/, "$1 条新评论"],
         [/Show (\d+) more replies/, "显示剩余 $1 条答复"],
         [/(\d+) new/, "$1 新"],
@@ -16729,6 +16730,7 @@ I18N["zh-CN"]["issues"] = { // 议题页面
             "closed": "关闭",
 
         // "No results matched your search.": "没有符合您的搜索结果。",
+        "Search all issues": "搜索所有议题",
         // 筛选结果
         "No results matched your search.": "没有与您的搜索匹配的结果。",
         "You could search": "您可以搜索",
