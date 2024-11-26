@@ -8888,6 +8888,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) active deployments?/, "$1 个活动的部署"],
         [/Check failure on line (\d+)/, "第 $1 行检查失败："],
 
+        // 文件差异过大 参考 https://github.com/maboloshi/github-chinese/pull/306/files
+        [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "差异过大，不会显示 $1 行添加以及 $1 行删除。请使用本地 Git 客户端查看更改。"],
+
         // 解决冲突编辑器（似乎又是 F12 才会翻译）
         [/Search:/, "搜索："],
         [/\(Use \/re\/ syntax for regexp search\)/, "(使用 /re/ 进行正则搜索)"],
