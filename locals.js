@@ -3354,7 +3354,6 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "Total": "总价",
                 // 操作
                     "Usage minutes": "使用分钟数",
-                    "Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.": "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。",
                     "Price / minute": "单价 / 分钟",
                     "Ubuntu 2-core": "双核 Ubuntu",
                     "Windows 2-core": "双核 Windows",
@@ -3708,6 +3707,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/of (\d+\.\d{2}) included GB-month used/, "/ $1 GB/每月"],
         [/Last (\d+) days/, "最近 $1 天"],
         [/([^ ]+) support/, "$1 支持"],
+        [/Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners\. Windows 2-core and macOS 3-core runners consume included minutes at higher rates\. Your (\d+\.\d+) included minutes used consists of (.*)/, "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。您已使用的 $1 分钟包含分钟数由 $2 组成。"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
