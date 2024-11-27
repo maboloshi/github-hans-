@@ -6932,7 +6932,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 个人仓库 当前分支状态
             "This branch is": "该分支",
-            "ahead of": "领先与", // 新版仓库概述
+            "ahead of": "领先于", // 新版仓库概述
             "behind": "落后", // 新版仓库概述
             "This branch is up to date with": "该分支保持同步与", // 新版仓库概述
 
