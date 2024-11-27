@@ -6932,7 +6932,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 个人仓库 当前分支状态
             "This branch is": "该分支",
-            "ahead of": "领先与", // 新版仓库概述
+            "ahead of": "领先于", // 新版仓库概述
             "behind": "落后", // 新版仓库概述
             "This branch is up to date with": "该分支保持同步与", // 新版仓库概述
 
@@ -8891,6 +8891,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) active deployments?/, "$1 个活动的部署"],
         [/Check failure on line (\d+)/, "第 $1 行检查失败："],
 
+        // 文件差异过大 参考 https://github.com/maboloshi/github-chinese/pull/306/files
+        [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "差异过大，不会显示 $1 行添加以及 $1 行删除。请使用本地 Git 客户端查看更改。"],
+
         // 解决冲突编辑器（似乎又是 F12 才会翻译）
         [/Search:/, "搜索："],
         [/\(Use \/re\/ syntax for regexp search\)/, "(使用 /re/ 进行正则搜索)"],
@@ -9978,6 +9981,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Unmark as answer": "取消标记为答案",
             "Answer": "答案",
 
+            "This comment has been minimized.": "此评论被最小化。",
             "This comment was marked as off-topic.": "此评论被标记为偏离主题。",
             "Show comment": "显示评论",
             "Hide comment": "隐藏评论",
@@ -10178,7 +10182,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
         [/Delete section (.*)/, "删除栏目 “$1”"],
         [/Delete (.*) section/, "删除 “$1” 栏目"],
         [/(\d+) new suggested answers?/, "$1 个新的建议答案"],
-        [/This discussion was converted from issue/, "本讨论由以下议题转换而来"],
+        [/This discussion was converted from issue (#\d+) on (.+)/, "本讨论由以下议题转换而来：$1 ，$2"],
         [/(\d+) new comments?/, "$1 条新评论"],
         [/Show (\d+) more replies/, "显示剩余 $1 条答复"],
         [/(\d+) new/, "$1 新"],
@@ -14417,15 +14421,22 @@ I18N["zh-CN"]["repository/settings/actions"] = { // 仓库设置 - 操作 /<user
                 "Send secrets to workflows from fork pull requests.": "从复刻拉取请求，发送机密到工作流程",
                     "This tells Actions to send repository secrets to workflows from pull requests originating from repository forks.": "这告诉 Actions 发送仓库机密到工作流程，来自仓库复刻的拉取请求。",
 
+            "Approval for running fork pull request workflows from contributors": "允许贡献者运行复刻拉取请求工作流",
+                "Choose which subset of users will require approval before running workflows on their pull requests. Both the pull request author and the actor of the pull request event triggering the workflow will be checked to determine if approval is required. If approval is required, a user with write access to the repository must": "选择在拉取请求上运行工作流之前需要批准的用户子集。将检查拉取请求作者和触发工作流的拉取请求事件的行为者，以确定是否需要批准。如果需要批准，则必须由具有写权限的用户",
+                "approve the pull request workflow to be run.": "批准才能运行拉取请求工作流。",
             "Fork pull request workflows from outside collaborators": "从外部协作者，复刻拉取请求工作流程",
                 "Choose which subset of outside collaborators will require approval to run workflows on their pull requests.": "选择哪些外部协作者的子集需要批准才能对他们的拉取请求运行工作流程。",
                 "Learn more about approving workflow runs from public forks.": "了解更多关于批准来自公共复刻的工作流运行的信息。",
             "Require approval for first-time contributors who are new to GitHub": "要求对首次加入 GitHub 的贡献者进行批准审查",
                 "Only first-time contributors who recently created a GitHub account will require approval to run workflows.": "只有最近创建 GitHub 账户的首次贡献者才需要获得批准才能运行工作流程。",
+                "Only users who are both new on GitHub and who have never had a commit or pull request merged into this repository will require approval to run workflows.": "只有新加入 GitHub 和从未有提交或拉取请求合并到该仓库的用户才需要批准运行工作流。",
             "Require approval for first-time contributors": "要求对首次贡献者进行批准审查",
                 "Only first-time contributors will require approval to run workflows.": "只有首次贡献者才需要获得批准才能运行工作流程。",
+                "Only users who have never had a commit or pull request merged into this repository will require approval to run workflows.": "只有从未有提交或拉动请求合并到该仓库的用户才需要批准运行工作流。",
             "Require approval for all outside collaborators": "要求对所有外部协作者进行批准审查",
                 "All outside collaborators will always require approval to run workflows on their pull requests.": "所有外部协作者将始终需要批准才能在他们的拉取请求上运行工作流程。",
+            "Require approval for all external contributors": "要求对所有外部贡献者进行批准审查",
+                "All users that are not a member or owner of this repository will require approval to run workflows.": "所有不是该仓库成员或所有者的用户都需要获得批准才能运行工作流。",
 
             "Workflow permissions": "工作流程权限",
                 "Choose the default permissions granted to the GITHUB_TOKEN when running workflows in this repository. You can specify more granular permissions in the workflow using YAML.": "在仓库中运行工作流程时，选择授予 GITHUB_TOKEN 的默认权限。您可以使用 YAML 在工作流程中指定更细化的权限。",
@@ -16732,6 +16743,7 @@ I18N["zh-CN"]["issues"] = { // 议题页面
             "closed": "关闭",
 
         // "No results matched your search.": "没有符合您的搜索结果。",
+        "Search all issues": "搜索所有议题",
         // 筛选结果
         "No results matched your search.": "没有与您的搜索匹配的结果。",
         "You could search": "您可以搜索",
