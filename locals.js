@@ -3354,7 +3354,6 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "Total": "总价",
                 // 操作
                     "Usage minutes": "使用分钟数",
-                    "Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.": "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。",
                     "Price / minute": "单价 / 分钟",
                     "Ubuntu 2-core": "双核 Ubuntu",
                     "Windows 2-core": "双核 Windows",
@@ -3708,6 +3707,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/of (\d+\.\d{2}) included GB-month used/, "/ $1 GB/每月"],
         [/Last (\d+) days/, "最近 $1 天"],
         [/([^ ]+) support/, "$1 支持"],
+        [/Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners\. Windows 2-core and macOS 3-core runners consume included minutes at higher rates\. Your (\d+\.\d+) included minutes used consists of (.*)/, "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。您已使用的 $1 分钟包含分钟数由 $2 组成。"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
@@ -6932,7 +6932,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 个人仓库 当前分支状态
             "This branch is": "该分支",
-            "ahead of": "领先与", // 新版仓库概述
+            "ahead of": "领先于", // 新版仓库概述
             "behind": "落后", // 新版仓库概述
             "This branch is up to date with": "该分支保持同步与", // 新版仓库概述
 
@@ -8778,6 +8778,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         "ProTip!": "专业提示！",
             "to the end of URLs for Git’s plaintext views.": "到 Git 纯文本视图的 URL 结尾。",
             "Add comments to specific lines under": "为以下特定行添加注释于",
+        "Switch back to the classic merge experience": "切换回经典的合并界面",
+        "Try the new merge experience": "尝试新的合并界面",
 
     },
     "regexp": [ // 正则翻译
@@ -8832,7 +8834,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) reviews? requesting changes by reviewers with write access/, "$1 项审查，要求有写入权限的审查者进行更改"], // 拉取请求
         [/(\d+) changes? requested/, "$1 项更改请求"],
         [/This pull request closes issue (#\d+)./, "该拉取请求将关闭议题 $1。"], // 死活不翻译
-
+        [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "$1 处增加，$2 处删除未显示，因为差异太大。请使用本地 Git 客户端查看这些更改。"],
+        
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
         [/pushed a commit to ([^ ]+) that referenced this pull request/, " 向 $1 推送一次提交，其中引用了此拉取请求"],
