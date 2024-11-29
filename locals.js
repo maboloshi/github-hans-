@@ -12788,14 +12788,18 @@ I18N["zh-CN"]["repository/graphs/traffic"] = { // 仓库 -> 洞察 - 流量
 
             "Referring sites": "引荐网站",
             "Site": "站点",
+            "Domains": "域名",
             "Views": "浏览",
             "Unique visitors": "唯一访客",
+            "Unique Visits": "唯一访问",
             "views": "次浏览",
             "view": "次浏览",
+            "Visits": "访问",
             "unique visitors": "个唯一访客",
             "unique visitor": "个唯一访客",
             "Popular content": "热门内容",
             "Content": "内容",
+            "Path": "路径",
 
             "We don’t have enough data to show anything useful.": "我们没有足够的数据来显示任何有用的东西。",
             "It usually takes about a week to populate this graph.": "通常需要一周左右的时间来填充此图表。",
