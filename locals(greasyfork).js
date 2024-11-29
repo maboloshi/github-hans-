@@ -140,6 +140,8 @@ I18N.conf = {
         ],
         'repository/actions': [
             'table.highlight', // 工作流程文件 源码视图
+            'span.user-select-none', // 日志 - 作业名
+            'span.CheckStep-line-content', // 日志 - 具体内容
         ],
         'repository/releases': [
             'div.markdown-body', // 发布版正文
@@ -1915,17 +1917,19 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Updated": "更新于",
 
             // 许可证
+                "GNU General Public License v3.0": "GNU 通用公共许可证 v3.0",
                 "GPL-3.0 License": "GPL-3.0 许可证",
                 "AGPL-3.0 License": "AGPL-3.0 许可证",
                 "LGPL-3.0 License": "LGPL-3.0 许可证",
                 "MIT License": "MIT 许可证",
-                "Apache-2.0 License": "Apache-2.0 许可证",
+                "Apache License 2.0": "Apache-2.0 许可证",
                 "OFL-1.1 License": "OFL-1.1 许可证",
                 "0BSD License": "0BSD 许可证",
                 "BSD-3-Clause License": "BSD-3-Clause 许可证",
                 "BSD 3-Clause \"New\" or \"Revised\" License": "BSD-3-Clause 许可证",
                 "CC0-1.0 License": "CC0-1.0 许可证",
                 "WTFPL License": "WTFPL 许可证",
+                "Other": "其他",
                 "Unknown": "未知",
 
         // 标签栏
@@ -9001,6 +9005,9 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "contributing guidelines": "贡献指南",
             "Reporting a security vulnerability?": "报告安全漏洞？",
             "Check out the project's": "查看本项目的",
+            "Looking for help?": "需要帮助？",
+                "Check out the project’s": "查看本项目的",
+                "instructions for getting support": "支持说明",
 
             "Checking mergeability…": "检查可合并性…",
             "Don’t worry, you can still create the pull request.": "别担心，您仍然可以创建拉取请求。",
@@ -9095,6 +9102,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "to your": "向您的",
             "branch.": "分支添加新提交。",
             "You can always change this setting later.": "您可以随时更改这一设置。",
+            "Note: By granting write access, maintainers could potentially edit your repository's workflows to reveal values of secrets and gain access to other branches.": "注意：通过授予写入权限，维护者可能会编辑您仓库的工作流程以揭示机密值，并获取对其他分支的访问权限。",
             "Got it": "知道了",
         // 创建拉取请求 按钮下拉
             "Automatically requests reviews from code owners": "自动请求代码所有者进行审查",
@@ -9356,10 +9364,15 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "There are no files selected for viewing": "没有更改",
 
             // 右侧
+            "Search within code": "在代码中搜索",
             "Top": "顶部",
             "Layout": "布局",
                 "Hide whitespace": "隐藏空白",
                 "Compact line height": "自定义行高",
+
+                "View comments": "查看评论",
+                    "Loading comments": "加载评论中",
+                    "Comment on lines": "评论于行",
 
                 "Copy": "复制",
                 "Select all": "全选",
@@ -9595,11 +9608,12 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
         "the": "为：", // 上半句走正则
 
         // 许可证
+            "GNU General Public License v3.0": "GNU 通用公共许可证 v3.0",
             "GPL-3.0 License": "GPL-3.0 许可证",
             "AGPL-3.0 License": "AGPL-3.0 许可证",
             "LGPL-3.0 License": "LGPL-3.0 许可证",
             "MIT License": "MIT 许可证",
-            "Apache-2.0 License": "Apache-2.0 许可证",
+            "Apache License 2.0": "Apache-2.0 许可证",
             "OFL-1.1 License": "OFL-1.1 许可证",
             "0BSD License": "0BSD 许可证",
             "BSD-3-Clause License": "BSD-3-Clause 许可证",
@@ -9751,7 +9765,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "to ask questions about this repository or get help.": "，询问关于这个仓库的问题或获得帮助。",
 
             "asked": "回复",
-            "started": "标星",
+            "started": "开始于",
             "· Unanswered": " · 未答复",
             "· Answered": " · 已答复",
 
@@ -10819,6 +10833,9 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
 
             // 提交对话框
                 "Commit changes": "提交更改",
+                    "There was an error committing your changes:": "在提交您的更改时出现错误：",
+                    "A file with the same name already exists. Please choose a different name and try again.": "已存在同名文件。请选择其他名称并重试。",
+                    "File could not be edited": "文件不能编辑",
                 "Sign off and commit changes": "提交更改并签署",
                 "Propose changes": "提出更改建议", // 向他人仓库提交
                 "Sign off and propose changes": "提出更改建议并签署", // 向他人仓库提交
@@ -10863,6 +10880,10 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                     "Sorry, you’re not able to edit this repository directly—you need to fork it and propose your changes from there instead.": "抱歉，您无法直接编辑此仓库——您需要将其复刻并从那里提出您的更改。",
                 "Fork this repository": "复刻此仓库",
                     "Learn more about forks": "了解更多关于复刻的信息",
+
+                "You have unsaved changes on this file that can be restored.": "您可以恢复该文件上未保存的更改。",
+                    "Discard": "丢弃",
+                    "Restore": "恢复",
 
                 "You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork": "您正在对没有写入权限的项目进行更改。提交更改会将其写入您的复刻",
                 ", so you can send a pull request.": " 中的新分支，这样您就可以发送拉取请求。",
@@ -10912,7 +10933,15 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                         "Deployment": "部署",
                         "Project management": "项目管理",
                         "Testing": "测试",
+                    "\/ Search results": "\/搜索结果",
                     "Browse all actions on the GitHub Marketplace": "浏览 GitHub 市场 上的所有 Actions",
+
+                    // 具体某个操作
+                        "View full Marketplace listing": "去市场查看详细信息", // 跳转去市场对应页面
+                        "Installation": "安装",
+                        "Copy and paste the following snippet into your": "将以下代码段复制并粘贴到您的",
+                            "file.": "文件。",
+                        "Version:": "版本：",
 
                 // 底部栏补充
                     "Space": "空格",
@@ -10980,6 +11009,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
         [/on this commit as/,"该提交以"],
         [/Commit changes?/, "提交更改"], // 提交对话框
         [/Your license is ready. Please review it below and either commit it to the ([^ ]+) branch or to a new branch./, "您的许可证已准备就绪。请在下面审查它并将其提交到 $1 分支或新分支。"],
+        [/Your search has returned (\d+) results?./, "您的搜索返回了 $1 条结果。"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
@@ -11184,6 +11214,7 @@ I18N["zh-CN"]["repository/branches"] = { // 仓库 - 分支页面
                     "Choose a source branch": "选择源分支",
                 "Share feedback": "分享反馈",
             "Search branches…": "搜索分支…",
+            "Copy branch name to clipboard": "复制分支名到剪切板",
 
             "Default branch": "默认分支",
             "Switch default branch": "切换默认分支",
@@ -15635,9 +15666,11 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
         //"Let’s build from here": "让我们从这里开始",
         //"The world’s leading AI-powered developer platform.": "全球领先的人工智能开发者平台。",
         "Build and ship software on a single, collaborative platform": "在单一协作平台上构建和发布软件",
-        "Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
+        "Join the world’s most widely adopted AI-powered developer platform.": "加入全球最广泛采用的人工智能开发者平台",
+        //"Join the world’s most widely adopted AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.": "加入全球最广泛采用的人工智能开发者平台，在这里，数百万的开发人员、企业和最大的开源社区构建推动人类进步的软件。",
 
         //"Email address": "电子邮箱地址",
+        "Enter your email": "键入邮箱地址",
         "Sign up for GitHub": "注册 GitHub",
         //"Start a free enterprise trial": "开始免费试用企业版",
 
@@ -16470,6 +16503,8 @@ I18N["zh-CN"]["notifications"] = { // 通知页面
             "to mark it as Done.": "将其标记为 “已完成”。",
             "to mark it as Unread.": "将其标记为 “未读”。",
             "Create custom filters to quickly access your most important notifications.": "创建自定义筛选器以快速访问最重要的通知。",
+            "Filter by": "使用",
+            "to see what's new.": "查看新通知。",
     },
     "regexp": [ // 正则翻译
         [/(\d+) selected/, "$1 条被选中"],
@@ -18490,6 +18525,11 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Latest version": "最新发行版",
             "Use latest version": "使用最新发行版",
             "Choose a version": "选择发行版",
+                // 安装窗口
+                    "Installation": "安装",
+                    "Copy and paste the following snippet into your": "将以下代码段复制并粘贴到您的",
+                        "file.": "文件。",
+                    "Learn more about this action in": "了解有关该操作的更多信息，请访问",
 
             "Verified creator": "经验证的创建者",
             "GitHub has verified that this action was created by": "GitHub 已经验证该操作，创建由",
@@ -18509,6 +18549,10 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Get started": "开始",
                 "Language:": "语言：",
                 "Chapters": "步骤",
+            "Get API key": "获取 API 密钥",
+
+            "Enter a message...": "键入信息...",
+                "Submit message": "发送",
 
             // 中间横条
             "README": "自述文件",
@@ -18527,6 +18571,70 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Undisclosed": "未公布",
             "Provider support": "供应商支持",
             "Tags": "标签",
+        
+        // GitHub 模型聊天页面 https://github.com/marketplace/models/<user-name>/<model-name>/playground
+            // 顶部栏
+            "Model:": "模型：",
+                "Close": "关闭",
+                "Switch model": "切换模型",
+                "View all models": "查看所有模型",
+            "Preset:": "预设：",
+                "Default": "默认",
+                "Edit preset": "编辑预设",
+                "Delete preset": "删除预设",
+                     // 弹窗
+                         "Are you sure you want to delete this preset?": "您确定要删除吗？",
+                "Create new preset": "新建预设",
+                    "Presets save your current parameters, chat history, and state.": "预设可保存当前参数、聊天记录和状态。",
+                    "Name": "名称",
+                        "Name is required": "需要名称",
+                    "Description": "简述",
+                    "Save chat history": "保存聊天历史",
+                        "Chat history in this preset will be saved and visible to others when shared.": " 此预设中的聊天记录将被保存，并在共享时对其他人可见。",
+                        "Note: Image attachments are not saved with the preset.": "注意：预设不保存图像附件。",
+                    "Enable sharing": "启用分享",
+                        "Anyone with the URL will be able to view and use this preset, but not edit. Presets are private by default.": "任何拥有该 URL 的人都可以查看和使用该预设，但不能进行编辑。预设默认为私有。",
+                    "Create preset": "新建",
+            "Raw": "源码",
+            // 聊天窗口
+                // 顶部横条
+                    "Restore last session": "恢复上次聊天",
+                    "Compare": "比较",
+                    "Reset chat history": "删除聊天",
+                // 状态
+                "Responding...": "响应中...",
+
+                "Type your prompt…": "键入提示词…",
+                    "Send now": "发送",
+            
+            // 参数设置
+                "Parameters": "参数",
+                "Hide parameters setting": "隐藏参数设置",
+                "Show parameters setting": "显示参数设置",
+                "System prompt": "系统提示词",
+                    "Set the context for the model response.": "设置模型响应的环境。",
+                "Max Tokens": "最大令牌",
+                    "Limit the maximum output tokens for the model response.": "限制模型响应的最大输出标记。",
+                "Temperature": "随机度",
+                    "Controls randomness in the response, use lower to be more deterministic.": "控制响应的随机性，使用较低值则更具确定性。",
+                "Top P": "最大概率",
+                    "Controls text diversity by selecting the most probable words until a set probability is reached.": "通过选择最有可能出现的词语来控制文本多样性，直到达到设定的概率。",
+                "Stop": "停止",
+                    "Force cutting the output when this string occurs.": " 当出现该字符串时，强制切断输出。",
+            // 模型比较
+                "Close model": "关闭",
+                "Show model info": "显示模型信息",
+                // 参数设置窗口
+                "Sync chat input and parameters": "同步聊天输入和参数",
+            // 详细信息
+                "Model details page": "详细信息",
+            
+            // 底部
+                "Azure hosted. AI powered, can make mistakes.": " Azure 托管。人工智能驱动，可能犯错。",
+                "Share feedback": "分享反馈",
+                ". Subject to": "。受",
+                "Product Terms": "产品条款",
+                ". Not intended for production/sensitive data.": "约束。不适用于生产/敏感数据。",
 
         // 加入模型内测页 https://github.com/marketplace/models/waitlist/join
             "GitHub Models waitlist": "GitHub 模型等待名单",
@@ -18595,6 +18703,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
         [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
+        [/Use (v\d+)/, "使用 $1"], // 右上角绿色按钮
     ],
 };
 I18N["zh-CN"]["apps"] = I18N["zh-CN"]["marketplace"];
