@@ -6438,6 +6438,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         [/This user has been invited to collaborate on the ([^ ]+) repository./, "该用户已被邀请在 $1 仓库上进行协作。"],
         [/You are the owner of the (.*) repository./, "您是 $1 仓库的所有者。"],
         [/This user is the owner of the (.*) repository./, "该用户是 $1 仓库的所有者。"],
+        [/You have been invited to collaborate on the (.*) repository./, "您已受邀参与 $1 仓库的协作。"],
         [/You have previously committed to the (.*) repository./, "您之前有提交到 $1 仓库。"],
         [/This user has previously committed to the (.*) repository./, "该用户之前有提交到 $1 仓库。"],
         [/This repository has been archived by the owner on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is now read-only./, function(all, m , d ,y){
