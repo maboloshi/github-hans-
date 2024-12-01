@@ -9000,6 +9000,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "Binary file not shown.": "不显示二进制文件。",
             "Some generated files are not rendered by default. Learn more about": "某些生成的文件默认不会呈现。详细了解",
                 "how customized files appear on GitHub": "自定义文件在 GitHub 上的显示方式",
+            "Empty file.": "空文件。",
 
             // 提交相关
             "Copy the full SHA": "复制完整 SHA",
