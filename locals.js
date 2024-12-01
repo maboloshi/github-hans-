@@ -9487,6 +9487,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Draft a release": "起草发布",
             // 工作流程文件 /blob/<brach>/.github/workflows/xxxx.yml
                 "View Runs": "查看运行情况",
+            // 议题模板 /blob/<brach>/.github/ISSUE_TEMPLATE/xxxx.yml
+                "This file is used as an Issue Form template.": "该文件是议题表单模板",
+                "Give Feedback.": "提交反馈。",
             // 添加文件按钮, 文件夹模式下
                 "Add file": "添加文件",
             // 三个点
@@ -10970,6 +10973,50 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
 
             // 编辑 LICENSE 许可证文件
                 "Choose a license template": "选择许可证模板",
+            
+            // 编辑 议题表单模板文件 .github/ISSUE_TEMPLATE/xxxx.yml
+                // 顶部提示
+                "Looks like this file is an issue template. Need help?": "此文件是一个议题模板。需要帮助？",
+                "Learn more about issue templates.": "了解更多关于议题模板的信息。",
+                "Give feedback.": "提交反馈。",
+                // 右侧帮助说明
+                "Top-level configuration options": "顶层配置选项",
+                    "Required Fields": "必填项",
+                        "(String): The template's name. Must be unique across all templates, including Markdown templates.": "（字符串）模板名。不能与其他模板名重复，包括 Markdown 模板",
+                        "(String): A description of this template's intended use. This will be shown in the issue template chooser interface.": "(字符串）：该模板预期用途的说明。这将显示在议题模板选择界面中。",
+                    "Optional Fields": "可选项",
+                        "(Array or String): This issue will be automatically assigned to these users. Can be array of usernames or comma-delimited string, e.g. \"monalisa,nat\"": "(数组或字符串）：此议题将自动分配给这些用户。可以是用户名数组或以逗号分隔的字符串，例如 “monalisa,nat”。",
+                        "(Array or String): This issue will automatically receive these labels upon creation. Can be array of labels or comma-delimited string, e.g. \"bug,needs-triage\"": "(数组或字符串）：该议题在创建时将自动接收这些标签。可以是标签数组或以逗号分隔的字符串，例如 “bug,needs-triage”（错误，需要分流）。",
+                        "(Array or String): This issue will be automatically added to these projects. Can be array of projects or comma-delimited string, e.g. \"github\/1,github\/2\"": "(数组或字符串）：该议题将自动添加到这些项目中。可以是项目数组或以逗号分隔的字符串，如 “github\/1,github\/2”。",
+                        "(String): Default title that will be pre-populated in the issue submission form.": "(字符串）：将在议题表单中预填的默认标题。",
+                        "(Array): Definition of user inputs.": "(数组）：用户输入的定义。",
+                "Input type configuration options": "输入类型配置项",
+                    // Markdown
+                        "Markdown blocks contain arbitrary text that a maintainer can add to a template, to provide extra context or guidance to a contributor. Supports Markdown formatting. This text will": "Markdown 块包含任意文本，维护者可将其添加到模板中，为贡献者提供额外的上下文或指导。支持 Markdown 格式。这些文本",
+                        "not be rendered in the submitted issue body": "不会在提交的议题正文中呈现。",
+                        // 必填项
+                            "(String): The text that will be rendered. Markdown formatting is supported.": "(字符串）：将渲染的文本。支持 Markdown 格式。",
+                        "Tip #1: YAML processing will cause the hash symbol to be treated as a comment. To insert Markdown headers, wrap your text in quotes.": "提示 1：YAML 处理会将哈希符号视为注释。要插入 Markdown 标题，请用引号将文本包起来。",
+                        "Tip #2: For multi-line text, you can use the pipe operator.": "提示 2：对于多行文本，可以使用管道运算符。",
+                        "Example": "示例",
+                    "Input": "输入",
+                        "Inputs are single-line form input fields. Contributors may use markdown formatting in their responses.": "输入为单行表单输入字段。贡献者可在回复中使用标记符格式。",
+                        "Required Attributes": "必要属性",
+                            "(String): A brief description of the expected user input.": "(字符串）： 预期用户输入的简要说明。",
+                        "Optional Attributes": "可选属性",
+                            "(String): Extra context or guidance about filling out this form input. Supports Markdown.": "(字符串）：有关填写此表单输入的额外上下文或指导。支持 Markdown。",
+                            "(String): Renders as semi-transparent \"placeholder\" element in the input field when it's empty.": "(字符串）：当输入框为空时，渲染为半透明的 “placeholder”元素。",
+                            "(String): Default text that is pre-populated in the input field.": "(字符串）：输入字段中预填的默认文本。",
+                        // ID
+                            "(String): Optional unique identifier. Can only contain alphanumeric characters,": "(字符串）：可选的唯一标识符。只能包含字母数字字符、",
+                        "Validations": "验证",
+                            "(Boolean): If": "(布尔值）：若",
+                            ", the form will not be submittable until this is filled out. Only for public repositories.": "，则填写此信息后才能提交表格。仅适用于公共仓库。",
+                    "Textarea": "文本区域",
+                        "Very similar to inputs, textareas are multiple-line form input fields. Typically used if you'd like a contributor to provide an answer longer than a few words. Contributors may use markdown formatting in their responses.": "文本区域与输入非常相似，都是多行表单输入字段。如果希望贡献者提供长于几个单词的答案，通常会使用文本区域。贡献者可以在回复中使用标记符格式。",
+                        // 可选属性
+                            "(String): If a value is provided, user-submitted text will be formatted into a codeblock automatically.": "(字符串）：如果提供该值，用户提交的文本将自动格式化为代码块。",
+                    "Dropdown": "下拉菜单",
 
             // 查找工具栏
                 "Find": "查找",
