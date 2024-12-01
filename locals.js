@@ -3359,6 +3359,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Ubuntu 2-core": "双核 Ubuntu",
                     "Windows 2-core": "双核 Windows",
                     "macOS 3-core": "三核 macOS",
+                    "Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.": "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。",
                 // 软件包
                     "Data transfer out": "数据转出",
                     "Data transfer out (rounded)": "数据转出（四舍五入）",
