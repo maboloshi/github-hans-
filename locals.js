@@ -11017,6 +11017,21 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                         // 可选属性
                             "(String): If a value is provided, user-submitted text will be formatted into a codeblock automatically.": "(字符串）：如果提供该值，用户提交的文本将自动格式化为代码块。",
                     "Dropdown": "下拉菜单",
+                        "Users can select their answer from options defined by the maintainer.": "用户可以从维护者定义的选项中选择答案。",
+                            "(String Array): Set of values that user can select from to answer. Cannot be empty, and all choices must be distinct.": "(字符串数组）：用户可从中选择回答的一组值。不能为空，且所有选择必须是不同的。",
+                        // 可选属性
+                            ", users can submit multiple selections.": "则用户可提交多选项。",
+                        // 验证
+                            ", the form will not be submittable until at least one choice is selected. Only for public repositories.": "则至少选择一个选项后才能提交表单。仅适用于公共仓库。",
+                    "Checkboxes": "勾选框",
+                    "A group of one or more checkboxes. This will be saved as a Markdown checkbox, and will continue to support interactive updating.": "由一个或多个复选框组成的组。这将被保存为 Markdown 复选框，并将继续支持交互式更新。",
+                        "(Array): Set of values that user can select from to answer. Cannot be empty. Each item must have a": "(数组）：用户可从中选择回答的数值集合。不能为空。每个项目必须有一个",
+                        ", described below.": "，如下所述。",
+                    "Within each item in": "对于任何带",
+                        ", the following fields are supported:": "元素则支持以下字段：",
+                        "(String): The text that will appear beside the checkbox. Markdown is supported for bold or italic text formatting, and hyperlinks.": "(字符串）：复选框旁边显示的文本。Markdown 支持粗体或斜体文本格式以及超链接。",
+                    "Optional": "可选",
+                        "(Boolean): If required, the form will not be submittable unless checked. Only for public repositories.": "(布尔值）：如果需要，除非选中，否则表单将无法提交。仅适用于公共仓库。",
 
             // 查找工具栏
                 "Find": "查找",
