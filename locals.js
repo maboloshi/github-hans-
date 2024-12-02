@@ -9225,6 +9225,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "Binary file not shown.": "不显示二进制文件",
             "Empty file.": "空文件。",
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
+            "Whitespace-only changes.": "空文件。",
 
             "Load diff": "载入差异",
             "Load Diff": "载入差异",
