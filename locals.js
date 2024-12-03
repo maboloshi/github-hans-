@@ -17730,6 +17730,7 @@ I18N["zh-CN"]["topics"] = { // 探索-->主题页面
         // github.com/topics/<某主题>
             "Created by": "创建者",
             "Released": "发布于",
+            "Latest release": "最新发行",
 
             "Related Topics": "相关主题",
             "Updated": "更新于",
