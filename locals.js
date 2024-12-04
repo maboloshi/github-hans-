@@ -10552,6 +10552,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
             // 状态
                 "Success": "成功",
                 "Failure": "失败",
+                "Startup failure": "失败",
                 "Cancelled": "取消",
                 "Action required": "请求操作",
             "Total duration": "总时长",
