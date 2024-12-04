@@ -340,6 +340,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         //"Rate limit · GitHub": "速率限制 · GitHub",
         //"GitHub: Let’s build from here · GitHub": "GitHub: 让我们从这里开始",
         "GitHub · Build and ship software on a single, collaborative platform · GitHub": "GitHub · 在单一协作平台上构建和发布软件",
+        "GitHub · Build and ship software on a single, collaborative platform": "GitHub · 在单一协作平台上构建和发布软件",
         "Topics on GitHub · GitHub": "GitHub 上的主题",
         "Code security": "代码安全",
         "Deploy keys": "部署密钥",
