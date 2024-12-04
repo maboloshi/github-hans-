@@ -12740,6 +12740,8 @@ I18N["zh-CN"]["repository/graphs/community"] = { // 仓库 -> 洞察 - 社区
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         [/(\d+) pull requests? created/, "$1 个拉取请求创建"],
         [/(\d+) issues? created/, "$1 个议题创建"],
+        [/(\d+) discussions? created/, "$1 个讨论创建"],
+        [/(\d+) contributors?/, "$1 贡献者"],
     ],
 };
 
