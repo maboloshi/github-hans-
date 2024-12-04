@@ -8412,6 +8412,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Required": "必须",
             "Unresolved conversations": "未解决的讨论",
                 // [/(\d+) conversations? must be resolved before merging./, "合并之前必须解决 $1 个对话。"],
+            "No conflicts with base branch": "与基础分支没有冲突",
+                "Changes can be cleanly merged.": "更改可以被干净地合并。",
             "Merging is blocked": "合并被阻止",
                 "The base branch requires all conversations on code to be resolved.": "基础分支要求解决所有关于代码的对话。",
                 "The base branch requires all commits to be signed.": "基础分支要求所有提交都经过签名。",
@@ -8471,6 +8473,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "to merge this pull request.": "合并此拉取请求。",
 
             "Merge pull request": "合并拉取请求",
+                "Merging is blocked due to failing merge requirements": "由于未满足合并要求，合并已被阻止。",
             // 合并拉取请求 按钮下拉
                 "Create a merge commit": "创建合并提交",
                     "All commits from this branch will be added to the base branch via a merge commit.": "该分支的所有提交都将通过合并提交加入到基础分支中。",
