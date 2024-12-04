@@ -10300,6 +10300,8 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                     "Deployments": "部署",
                     "Attestations": "证书",
                     "Runners": "运行器",
+                    "Usage metrics": "使用情况",
+                    "Performance metrics": "数据看板",
                 "Disabled": "已禁用",
 
                 // 顶部提醒
