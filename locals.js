@@ -13607,6 +13607,8 @@ I18N["zh-CN"]["repository/settings/access"] = { // 仓库设置 - 协作者/(组
 
             "Who has access": "谁有权访问",
             "public repository": "公共仓库",
+            "Public repository": "公共仓库",
+            "This repository is public and visible to anyone": "该仓库是公开的，对任何人都可见",
             "This repository is public and visible to anyone.": "该仓库是公开的，对任何人都可见。",
             "private repository": "私有仓库",
             "Only those with access to this repository can view it.": "只有拥有该仓库访问权的用户才能查看。",
