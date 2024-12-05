@@ -8539,7 +8539,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
 
                 "Checkout via command line": "通过命令行检出",
+                "Checkout via the command line": "通过命令行检出", // 新版合并界面
                 "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果该分支上的冲突过于复杂，无法在 Web 编辑器中解决，您可以通过命令行检出来解决冲突。",
+                "If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.": "如果不想使用合并按钮或无法执行自动合并，可以在命令行上执行手动合并。但若基本分支受到保护，则不适用以下步骤。", //新版合并界面
                 "Step 1:": "第 1 步：",
                     "From your project repository, check out a new branch and test the changes.": "从项目仓库中，检出新分支并测试更改。",
                     "Clone the repository or update your local repository with the latest changes.": "克隆仓库或使用最新更改更新本地仓库。",
