@@ -8512,6 +8512,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Closed with unmerged commits": "已关闭的未合并的提交",
 
             "Pull request successfully merged and closed": "拉取请求已成功合并并关闭",
+                "You're all set — the": "一切就绪",
+                "branch has been merged and deleted.": "分支已合并并删除。",
             "Delete branch": "删除分支",
             "Restore branch": "恢复分支",
 
@@ -9240,7 +9242,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "Binary file not shown.": "不显示二进制文件",
             "Empty file.": "空文件。",
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
-            "Whitespace-only changes.": "空文件。",
+            "Whitespace-only changes.": "仅空白字符更改。",
 
             "Load diff": "载入差异",
             "Load Diff": "载入差异",
