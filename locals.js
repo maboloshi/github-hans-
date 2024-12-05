@@ -15797,6 +15797,7 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
 
         "Try GitHub Copilot": "试用 GitHub Copilot",
             "30 days free": "30天免费",
+        "Explore upcoming releases": "探索即将发布的产品", // 已登录
 
         // 代码
             "Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.": "使用嵌入在整个工作流程中的 GitHub Copilot 快速、更安全地构建代码。",
@@ -16005,13 +16006,7 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
     ],
 };
 
-I18N["zh-CN"]["home"] = { // 就是未登录时显示的页面
-    "static": {
-        ...I18N["zh-CN"]["homepage"]["static"],
-        "Explore upcoming releases": "探索即将发布的产品",
-    },
-    "regexp": [],
-}; 
+I18N["zh-CN"]["home"] = I18N["zh-CN"]["homepage"];
 
 I18N["zh-CN"]["session-authentication"] = { // 登录页 包含(/login, /session, /sessions/two-factor, sessions/recovery, /sessions/recovery/token, /password_reset等)
     "static": { // 静态翻译
