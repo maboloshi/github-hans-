@@ -8489,6 +8489,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                     "Failed to load repo merge settings": "无法加载仓库合并设置",
 
             //确认合并 对话框
+                // 新版合并界面
+                "Commit header": "提交标题",
+                "Commit message": "提交信息",
+                "This commit will be authored by": "此提交的作者是",
             "Confirm merge": "确认合并",
             "Confirm squash and merge": "确认压缩合并",
             "Confirm rebase and merge": "确认变基合并",
@@ -8497,6 +8501,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "You can also": "您也可以",
             "open this in GitHub Desktop": "在 GitHub Desktop 中打开",
             "or view": "，或查看",
+            "You can also merge this with the command line, view": "您也可以使用命令行合并，查看",
             "command line instructions": "命令行指令",
 
             // "Merged": "已合并",
@@ -8799,6 +8804,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
     },
     "regexp": [ // 正则翻译
+        [/The (\d+) commits? from this branch will be rebased and added to the base branch./, "该分支的 $1 次提交将变基并添加到基本分支。"],
         [/([^ ]+):([^ ]+)% was force-pushed and no longer has any new commits./, "$1:$2 分支被强制推送，现在没有新的提交。"], // 放这里是因为跟现有词条冲突
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
