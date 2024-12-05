@@ -8425,6 +8425,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "View rules": "查看规则",
                 // 新版合并界面
                 "Merge is not an allowed merge method in this repository.": "合并不是此仓库允许的合并方法。",
+                "Pull request cannot be merged because it has a merge conflict.": "由于存在合并冲突，无法合并拉取请求。",
             "Merging can be performed automatically once the requested changes are addressed.": "一旦请求的更改得到解决，合并就可以自动执行。",
             "This branch is out-of-date with the base branch": "此分支相比基础分支已过时",
                 "Merge the latest changes from": "将",
@@ -8533,6 +8534,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "You’re all set—the": "一切就绪 —",
             "branch can be safely deleted.": "分支可以被安全删除。",
             "This branch has conflicts that must be resolved": "该分支存在冲突，必须解决",
+                "Resolve conflicts then push again. These conflicts are too complex to resolve in the web editor. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "解决冲突后再次推送。这些冲突过于复杂，无法在 Web 编辑器中解决。当该拉取请求存在合并冲突时，操作工作流将不会触发该拉取请求的活动。",
                 "Use the command line": "使用命令行",
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
 
