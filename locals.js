@@ -8537,6 +8537,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Resolve conflicts then push again. These conflicts are too complex to resolve in the web editor. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "解决冲突后再次推送。这些冲突过于复杂，无法在 Web 编辑器中解决。当该拉取请求存在合并冲突时，操作工作流将不会触发该拉取请求的活动。",
                 "Use the command line": "使用命令行",
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
+                "or the command line to resolve conflicts before continuing. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "或通过命令行解决冲突。在此拉取请求仍存在合并冲突的情况下，操作工作流不会因该拉取请求的活动而触发。",
 
                 "Checkout via command line": "通过命令行检出",
                 "Checkout via the command line": "通过命令行检出", // 新版合并界面
