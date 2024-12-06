@@ -434,6 +434,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/New release · ([^ ]+)/, "新发行版 · $1"],
         [/Codespaces secrets · ([^ ]+)/, "代码空间机密 · $1"],
         [/Dependabot secrets · ([^ ]+)/, "Dependabot 机密 · $1"],
+        [/Invitation to join ([^ ]+)/, "加入 $1 邀请"],
         ["_regexp_end", "end"]
     ],
 };
@@ -3354,7 +3355,6 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "Total": "总价",
                 // 操作
                     "Usage minutes": "使用分钟数",
-                    "Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.": "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。",
                     "Price / minute": "单价 / 分钟",
                     "Ubuntu 2-core": "双核 Ubuntu",
                     "Windows 2-core": "双核 Windows",
@@ -3708,6 +3708,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/of (\d+\.\d{2}) included GB-month used/, "/ $1 GB/每月"],
         [/Last (\d+) days/, "最近 $1 天"],
         [/([^ ]+) support/, "$1 支持"],
+        [/Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners\. Windows 2-core and macOS 3-core runners consume included minutes at higher rates\. Your (\d+\.\d+) included minutes used consists of (.*)/, "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。您已使用的 $1 分钟包含分钟数由 $2 组成。"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
@@ -6152,6 +6153,8 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
 
             // 顶部提示
             "Sorry, that branch already exists.": "抱歉，该分支已存在。",
+            "has invited you to collaborate on this repository": "邀请您成为该仓库协作者",
+                "View invitation": "查看",
 
             // 仓库违反 DMCA
             "Repository unavailable due to DMCA takedown.": "由于 DMCA 删除，仓库不可用。",
@@ -6435,6 +6438,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         [/This user has been invited to collaborate on the ([^ ]+) repository./, "该用户已被邀请在 $1 仓库上进行协作。"],
         [/You are the owner of the (.*) repository./, "您是 $1 仓库的所有者。"],
         [/This user is the owner of the (.*) repository./, "该用户是 $1 仓库的所有者。"],
+        [/You have been invited to collaborate on the (.*) repository./, "您已受邀参与 $1 仓库的协作。"],
         [/You have previously committed to the (.*) repository./, "您之前有提交到 $1 仓库。"],
         [/This user has previously committed to the (.*) repository./, "该用户之前有提交到 $1 仓库。"],
         [/This repository has been archived by the owner on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is now read-only./, function(all, m , d ,y){
@@ -6459,6 +6463,8 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
 
             return reactedKey[reacted];
         }],
+        // 成为协作者提示
+        [/You now have push access to the ([^ ]+) repository./, "您现在拥有推送至 $1 仓库的权限"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
@@ -6932,7 +6938,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             // 个人仓库 当前分支状态
             "This branch is": "该分支",
-            "ahead of": "领先与", // 新版仓库概述
+            "ahead of": "领先于", // 新版仓库概述
             "behind": "落后", // 新版仓库概述
             "This branch is up to date with": "该分支保持同步与", // 新版仓库概述
 
@@ -8778,6 +8784,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         "ProTip!": "专业提示！",
             "to the end of URLs for Git’s plaintext views.": "到 Git 纯文本视图的 URL 结尾。",
             "Add comments to specific lines under": "为以下特定行添加注释于",
+        "Switch back to the classic merge experience": "切换回经典的合并界面",
+        "Try the new merge experience": "尝试新的合并界面",
 
     },
     "regexp": [ // 正则翻译
@@ -8832,7 +8840,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) reviews? requesting changes by reviewers with write access/, "$1 项审查，要求有写入权限的审查者进行更改"], // 拉取请求
         [/(\d+) changes? requested/, "$1 项更改请求"],
         [/This pull request closes issue (#\d+)./, "该拉取请求将关闭议题 $1。"], // 死活不翻译
-
+        [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "$1 处增加，$2 处删除未显示，因为差异太大。请使用本地 Git 客户端查看这些更改。"],
+        
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
         [/pushed a commit to ([^ ]+) that referenced this pull request/, " 向 $1 推送一次提交，其中引用了此拉取请求"],
@@ -8887,6 +8896,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/([^ ]+) requested changes/, "$1 要求更改"],
         [/(\d+) active deployments?/, "$1 个活动的部署"],
         [/Check failure on line (\d+)/, "第 $1 行检查失败："],
+
+        // 文件差异过大 参考 https://github.com/maboloshi/github-chinese/pull/306/files
+        [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "差异过大，不会显示 $1 行添加以及 $1 行删除。请使用本地 Git 客户端查看更改。"],
 
         // 解决冲突编辑器（似乎又是 F12 才会翻译）
         [/Search:/, "搜索："],
@@ -9143,6 +9155,11 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
         "View file": "查看文件",
         "Edit file": "编辑文件",
         "Delete file": "删除文件",
+
+        // 加载差异失败
+        "This comparison is taking too long to generate.": "生成比较结果的时间过长。",
+        "Unfortunately it looks like we can’t render this comparison for you right now. It might be too big, or there might be something weird with your repository.": "不幸的是，我们现在无法为您提供这种比较。它可能太大了，或者您的仓库有什么奇怪的地方。",
+        "You can try running this command locally to see the comparison on your machine:": "您可以尝试在本地运行此命令以查看比较结果：",
 
     },
     "regexp": [ // 正则翻译
@@ -9975,6 +9992,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Unmark as answer": "取消标记为答案",
             "Answer": "答案",
 
+            "This comment has been minimized.": "此评论被最小化。",
             "This comment was marked as off-topic.": "此评论被标记为偏离主题。",
             "Show comment": "显示评论",
             "Hide comment": "隐藏评论",
@@ -10175,7 +10193,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
         [/Delete section (.*)/, "删除栏目 “$1”"],
         [/Delete (.*) section/, "删除 “$1” 栏目"],
         [/(\d+) new suggested answers?/, "$1 个新的建议答案"],
-        [/This discussion was converted from issue/, "本讨论由以下议题转换而来"],
+        [/This discussion was converted from issue (#\d+) on (.+)/, "本讨论由以下议题转换而来：$1 ，$2"],
         [/(\d+) new comments?/, "$1 条新评论"],
         [/Show (\d+) more replies/, "显示剩余 $1 条答复"],
         [/(\d+) new/, "$1 新"],
@@ -12410,8 +12428,10 @@ I18N["zh-CN"]["repository/invitations"] = { // 仓库 - 接受邀请页面
 
         // 接受邀请 /<user-name>/<repo-name>/invitations
             "invited you to collaborate": "邀请您进行协作",
+            "invited you to collaborate on": "邀请您进行协作",
             "Accept invitation": "接受邀请",
             "Decline": "拒绝",
+            "Decline invitation": "拒绝",
             "Owners": "所有者",
             "Your public profile information": "您的公开个人资料信息",
             "Certain activity": "某些活动",
@@ -12424,6 +12444,7 @@ I18N["zh-CN"]["repository/invitations"] = { // 仓库 - 接受邀请页面
     },
     "regexp": [ // 正则翻译
         [/of ([^ ]+) will be able to see:/, "$1 将能够看到："], // 邀请页
+        [/Block ([^ ]+)/, "拉黑 $1"],
     ],
 };
 
@@ -12767,14 +12788,18 @@ I18N["zh-CN"]["repository/graphs/traffic"] = { // 仓库 -> 洞察 - 流量
 
             "Referring sites": "引荐网站",
             "Site": "站点",
+            "Domains": "域名",
             "Views": "浏览",
             "Unique visitors": "唯一访客",
+            "Unique Visits": "唯一访问",
             "views": "次浏览",
             "view": "次浏览",
+            "Visits": "访问",
             "unique visitors": "个唯一访客",
             "unique visitor": "个唯一访客",
             "Popular content": "热门内容",
             "Content": "内容",
+            "Path": "路径",
 
             "We don’t have enough data to show anything useful.": "我们没有足够的数据来显示任何有用的东西。",
             "It usually takes about a week to populate this graph.": "通常需要一周左右的时间来填充此图表。",
@@ -14414,15 +14439,22 @@ I18N["zh-CN"]["repository/settings/actions"] = { // 仓库设置 - 操作 /<user
                 "Send secrets to workflows from fork pull requests.": "从复刻拉取请求，发送机密到工作流程",
                     "This tells Actions to send repository secrets to workflows from pull requests originating from repository forks.": "这告诉 Actions 发送仓库机密到工作流程，来自仓库复刻的拉取请求。",
 
+            "Approval for running fork pull request workflows from contributors": "允许贡献者运行复刻拉取请求工作流",
+                "Choose which subset of users will require approval before running workflows on their pull requests. Both the pull request author and the actor of the pull request event triggering the workflow will be checked to determine if approval is required. If approval is required, a user with write access to the repository must": "选择在拉取请求上运行工作流之前需要批准的用户子集。将检查拉取请求作者和触发工作流的拉取请求事件的行为者，以确定是否需要批准。如果需要批准，则必须由具有写权限的用户",
+                "approve the pull request workflow to be run.": "批准才能运行拉取请求工作流。",
             "Fork pull request workflows from outside collaborators": "从外部协作者，复刻拉取请求工作流程",
                 "Choose which subset of outside collaborators will require approval to run workflows on their pull requests.": "选择哪些外部协作者的子集需要批准才能对他们的拉取请求运行工作流程。",
                 "Learn more about approving workflow runs from public forks.": "了解更多关于批准来自公共复刻的工作流运行的信息。",
             "Require approval for first-time contributors who are new to GitHub": "要求对首次加入 GitHub 的贡献者进行批准审查",
                 "Only first-time contributors who recently created a GitHub account will require approval to run workflows.": "只有最近创建 GitHub 账户的首次贡献者才需要获得批准才能运行工作流程。",
+                "Only users who are both new on GitHub and who have never had a commit or pull request merged into this repository will require approval to run workflows.": "只有新加入 GitHub 和从未有提交或拉取请求合并到该仓库的用户才需要批准运行工作流。",
             "Require approval for first-time contributors": "要求对首次贡献者进行批准审查",
                 "Only first-time contributors will require approval to run workflows.": "只有首次贡献者才需要获得批准才能运行工作流程。",
+                "Only users who have never had a commit or pull request merged into this repository will require approval to run workflows.": "只有从未有提交或拉动请求合并到该仓库的用户才需要批准运行工作流。",
             "Require approval for all outside collaborators": "要求对所有外部协作者进行批准审查",
                 "All outside collaborators will always require approval to run workflows on their pull requests.": "所有外部协作者将始终需要批准才能在他们的拉取请求上运行工作流程。",
+            "Require approval for all external contributors": "要求对所有外部贡献者进行批准审查",
+                "All users that are not a member or owner of this repository will require approval to run workflows.": "所有不是该仓库成员或所有者的用户都需要获得批准才能运行工作流。",
 
             "Workflow permissions": "工作流程权限",
                 "Choose the default permissions granted to the GITHUB_TOKEN when running workflows in this repository. You can specify more granular permissions in the workflow using YAML.": "在仓库中运行工作流程时，选择授予 GITHUB_TOKEN 的默认权限。您可以使用 YAML 在工作流程中指定更细化的权限。",
@@ -16729,6 +16761,7 @@ I18N["zh-CN"]["issues"] = { // 议题页面
             "closed": "关闭",
 
         // "No results matched your search.": "没有符合您的搜索结果。",
+        "Search all issues": "搜索所有议题",
         // 筛选结果
         "No results matched your search.": "没有与您的搜索匹配的结果。",
         "You could search": "您可以搜索",
