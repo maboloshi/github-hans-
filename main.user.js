@@ -160,6 +160,10 @@
                     transElement(node, 'title'); // title 属性
                     break;
 
+                case "SPAN":
+                    transElement(node, 'title'); // title 属性
+                    break;
+
                 default:
                     // 仅当 元素存在'tooltipped'样式 aria-label 才起效果
                     if (/tooltipped/.test(node.className)) transElement(node, 'ariaLabel'); // 带提示的元素，类似 tooltip 效果的
