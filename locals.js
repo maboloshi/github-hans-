@@ -7690,6 +7690,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
             // 置顶议题
             "Pinned issues": "置顶议题",
+            "Drag to reorder": "拖拽排序",
 
             "ProTip!": "专业提示！",
                 "Find everything you created by searching": "查找您创建的所有内容，使用",
@@ -8515,6 +8516,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Pull request successfully merged and closed": "拉取请求已成功合并并关闭",
                 "You're all set — the": "一切就绪",
                 "branch has been merged and deleted.": "分支已合并并删除。",
+                "You're all set — the branch has been merged.": "一切就绪 - 该分支已合并。",
             "Delete branch": "删除分支",
             "Restore branch": "恢复分支",
 
@@ -9263,6 +9265,8 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Diff is too big to render. To view,": "差异过大，",
+            "check out this pull request locally.": "请在本地查看拉取请求。",
 
             // 修改的文件 左侧 展开按钮
             "Expand all": "展开全部",
