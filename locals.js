@@ -10005,6 +10005,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Category": "分类",
 
             "You are a maintainer on this repository.": "您是这个仓库的维护者。",
+            "You are the author of this discussion.": "您是这个讨论的作者。",
 
             // [/(\d+) answers?/, "$1 位答复者"],
             "Return to top": "返回顶部",
