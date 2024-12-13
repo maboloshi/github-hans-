@@ -45,7 +45,7 @@ I18N.conf = {
      * 导入仓库 /new/import
      * ...
      */
-    rePagePath: /^\/($|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/signup|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
+    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/signup|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
@@ -340,6 +340,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         //"Rate limit · GitHub": "速率限制 · GitHub",
         //"GitHub: Let’s build from here · GitHub": "GitHub: 让我们从这里开始",
         "GitHub · Build and ship software on a single, collaborative platform · GitHub": "GitHub · 在单一协作平台上构建和发布软件",
+        "GitHub · Build and ship software on a single, collaborative platform": "GitHub · 在单一协作平台上构建和发布软件",
         "Topics on GitHub · GitHub": "GitHub 上的主题",
         "Code security": "代码安全",
         "Deploy keys": "部署密钥",
@@ -659,11 +660,13 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                     // 在 GitHub Copilot 上的 Copilot Chat 沉浸式模式中探索增强的体验。该测试版在专用聊天界面中引入了改进的互动和更智能的建议，专为专注、深入的对话而设计。
                     "Discover an enhanced experience in the immersive mode of Copilot Chat, available at": "在",
                     ". This beta introduces improved interaction and smarter suggestions within a dedicated chat interface designed for focused, in-depth conversations.": "上的 Copilot 沉浸聊天模式中探索增强的体验。该测试版在专用聊天界面中引入了改进的互动和更智能的建议，专为专注、深入的对话而设计。",
-                "New Commit Details Page": "新提交详情页",
+                "New Commit Details Page": "新版提交详情页",
                     "New version of the commit details page that lets you quickly understand and navigate the changes in a commit. Improves filtering, commenting (with new floating comments and comment counts on the file tree), keyboard navigation, and more.": "新版提交详细信息页面可让您快速了解和浏览提交中的更改。改进了过滤、注释（文件树中新增了浮动注释和注释计数）、键盘导航等功能。",
                 "Rich Jupyter Notebook Diffs": "Jupyter Notebook 的丰富差异视图",
                     "Enables rich diffs of Jupyter Notebooks in pull requests": "在拉取请求中启用 Jupyter Notebook 的丰富差异视图",
                     "Note: commenting on rich diff views of notebooks is not yet supported": "注意：尚不支持对 Jupyter Notebook 的丰富差异视图进行评论",
+                "New merge experience": "新合并体验",
+                    "Improved merge experience on the pull request page that helps you better understand the state of your pull request and get it merged faster!": "改进了拉取请求页面上的合并体验，可帮助您更好地了解拉取请求的状态，更快地完成合并！",
                 "New Pull Request Commits Experience": "新拉取请求提交体验",
                     "The pull request commits page has been refreshed to improve performance, improve consistency with other pages, and to make the page more accessible!": "拉取请求提交页面已被刷新，以提高性能，改善与其他页面的一致性，并使页面更易于访问！",
                 "Enhanced Repos Insights Views": "仓库洞察增强视图",
@@ -679,6 +682,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 // 出错提示
                     "Sorry, something went wrong and we were not able to fetch the feature previews": "对不起，出了点问题，我们无法获取功能预览",
             "Settings": "设置",
+            "GitHub Website": "GitHub 首页", // 非仪表板页
             "GitHub Docs": "GitHub 文档",
             "GitHub Support": "GitHub 支持",
             "GitHub Community": "GitHub 社区",
@@ -3359,6 +3363,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Ubuntu 2-core": "双核 Ubuntu",
                     "Windows 2-core": "双核 Windows",
                     "macOS 3-core": "三核 macOS",
+                    "Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners. Windows 2-core and macOS 3-core runners consume included minutes at higher rates.": "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。",
                 // 软件包
                     "Data transfer out": "数据转出",
                     "Data transfer out (rounded)": "数据转出（四舍五入）",
@@ -8411,11 +8416,16 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Required": "必须",
             "Unresolved conversations": "未解决的讨论",
                 // [/(\d+) conversations? must be resolved before merging./, "合并之前必须解决 $1 个对话。"],
+            "No conflicts with base branch": "与基础分支没有冲突",
+                "Changes can be cleanly merged.": "更改可以被干净地合并。",
             "Merging is blocked": "合并被阻止",
                 "The base branch requires all conversations on code to be resolved.": "基础分支要求解决所有关于代码的对话。",
                 "The base branch requires all commits to be signed.": "基础分支要求所有提交都经过签名。",
                 "Learn more about signing commits.": "了解更多关于签名提交的信息。",
                 "View rules": "查看规则",
+                // 新版合并界面
+                "Merge is not an allowed merge method in this repository.": "合并不是此仓库允许的合并方法。",
+                "Pull request cannot be merged because it has a merge conflict.": "由于存在合并冲突，无法合并拉取请求。",
             "Merging can be performed automatically once the requested changes are addressed.": "一旦请求的更改得到解决，合并就可以自动执行。",
             "This branch is out-of-date with the base branch": "此分支相比基础分支已过时",
                 "Merge the latest changes from": "将",
@@ -8468,6 +8478,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "to merge this pull request.": "合并此拉取请求。",
 
             "Merge pull request": "合并拉取请求",
+                "Merging is blocked due to failing merge requirements": "由于未满足合并要求，合并已被阻止。",
             // 合并拉取请求 按钮下拉
                 "Create a merge commit": "创建合并提交",
                     "All commits from this branch will be added to the base branch via a merge commit.": "该分支的所有提交都将通过合并提交加入到基础分支中。",
@@ -8479,6 +8490,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                     "Failed to load repo merge settings": "无法加载仓库合并设置",
 
             //确认合并 对话框
+                // 新版合并界面
+                "Commit header": "提交标题",
+                "Commit message": "提交信息",
+                "This commit will be authored by": "此提交的作者是",
             "Confirm merge": "确认合并",
             "Confirm squash and merge": "确认压缩合并",
             "Confirm rebase and merge": "确认变基合并",
@@ -8487,6 +8502,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "You can also": "您也可以",
             "open this in GitHub Desktop": "在 GitHub Desktop 中打开",
             "or view": "，或查看",
+            "You can also merge this with the command line, view": "您也可以使用命令行合并，查看",
             "command line instructions": "命令行指令",
 
             // "Merged": "已合并",
@@ -8497,6 +8513,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Closed with unmerged commits": "已关闭的未合并的提交",
 
             "Pull request successfully merged and closed": "拉取请求已成功合并并关闭",
+                "You're all set — the": "一切就绪",
+                "branch has been merged and deleted.": "分支已合并并删除。",
             "Delete branch": "删除分支",
             "Restore branch": "恢复分支",
 
@@ -8516,11 +8534,14 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "You’re all set—the": "一切就绪 —",
             "branch can be safely deleted.": "分支可以被安全删除。",
             "This branch has conflicts that must be resolved": "该分支存在冲突，必须解决",
+                "Resolve conflicts then push again. These conflicts are too complex to resolve in the web editor. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "解决冲突后再次推送。这些冲突过于复杂，无法在 Web 编辑器中解决。当该拉取请求存在合并冲突时，操作工作流将不会触发该拉取请求的活动。",
                 "Use the command line": "使用命令行",
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
 
                 "Checkout via command line": "通过命令行检出",
+                "Checkout via the command line": "通过命令行检出", // 新版合并界面
                 "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果该分支上的冲突过于复杂，无法在 Web 编辑器中解决，您可以通过命令行检出来解决冲突。",
+                "If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.": "如果不想使用合并按钮或无法执行自动合并，可以在命令行上执行手动合并。但若基本分支受到保护，则不适用以下步骤。", //新版合并界面
                 "Step 1:": "第 1 步：",
                     "From your project repository, check out a new branch and test the changes.": "从项目仓库中，检出新分支并测试更改。",
                     "Clone the repository or update your local repository with the latest changes.": "克隆仓库或使用最新更改更新本地仓库。",
@@ -8789,6 +8810,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
     },
     "regexp": [ // 正则翻译
+        [/The (\d+) commits? from this branch will be rebased and added to the base branch./, "该分支的 $1 次提交将变基并添加到基本分支。"],
         [/([^ ]+):([^ ]+)% was force-pushed and no longer has any new commits./, "$1:$2 分支被强制推送，现在没有新的提交。"], // 放这里是因为跟现有词条冲突
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
@@ -8897,6 +8919,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) active deployments?/, "$1 个活动的部署"],
         [/Check failure on line (\d+)/, "第 $1 行检查失败："],
 
+        // 命令行解决冲突页面
+        [/Copy (.+?) to clipboard/, "复制 $1 到剪切板"],
+
         // 文件差异过大 参考 https://github.com/maboloshi/github-chinese/pull/306/files
         [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "差异过大，不会显示 $1 行添加以及 $1 行删除。请使用本地 Git 客户端查看更改。"],
 
@@ -8999,6 +9024,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             "Binary file not shown.": "不显示二进制文件。",
             "Some generated files are not rendered by default. Learn more about": "某些生成的文件默认不会呈现。详细了解",
                 "how customized files appear on GitHub": "自定义文件在 GitHub 上的显示方式",
+            "Empty file.": "空文件。",
 
             // 提交相关
             "Copy the full SHA": "复制完整 SHA",
@@ -9223,6 +9249,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "Binary file not shown.": "不显示二进制文件",
             "Empty file.": "空文件。",
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
+            "Whitespace-only changes.": "仅空白字符更改。",
 
             "Load diff": "载入差异",
             "Load Diff": "载入差异",
@@ -9485,6 +9512,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Draft a release": "起草发布",
             // 工作流程文件 /blob/<brach>/.github/workflows/xxxx.yml
                 "View Runs": "查看运行情况",
+            // 议题模板 /blob/<brach>/.github/ISSUE_TEMPLATE/xxxx.yml
+                "This file is used as an Issue Form template.": "该文件是议题表单模板",
+                "Give Feedback.": "提交反馈。",
             // 添加文件按钮, 文件夹模式下
                 "Add file": "添加文件",
             // 三个点
@@ -10294,6 +10324,8 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                     "Deployments": "部署",
                     "Attestations": "证书",
                     "Runners": "运行器",
+                    "Usage metrics": "使用情况",
+                    "Performance metrics": "数据看板",
                 "Disabled": "已禁用",
 
                 // 顶部提醒
@@ -10546,6 +10578,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
             // 状态
                 "Success": "成功",
                 "Failure": "失败",
+                "Startup failure": "失败",
                 "Cancelled": "取消",
                 "Action required": "请求操作",
             "Total duration": "总时长",
@@ -10968,6 +11001,65 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
 
             // 编辑 LICENSE 许可证文件
                 "Choose a license template": "选择许可证模板",
+            
+            // 编辑 议题表单模板文件 .github/ISSUE_TEMPLATE/xxxx.yml
+                // 顶部提示
+                "Looks like this file is an issue template. Need help?": "此文件是一个议题模板。需要帮助？",
+                "Learn more about issue templates.": "了解更多关于议题模板的信息。",
+                "Give feedback.": "提交反馈。",
+                // 右侧帮助说明
+                "Top-level configuration options": "顶层配置选项",
+                    "Required Fields": "必填项",
+                        "(String): The template's name. Must be unique across all templates, including Markdown templates.": "（字符串）模板名。不能与其他模板名重复，包括 Markdown 模板",
+                        "(String): A description of this template's intended use. This will be shown in the issue template chooser interface.": "(字符串）：该模板预期用途的说明。这将显示在议题模板选择界面中。",
+                    "Optional Fields": "可选项",
+                        "(Array or String): This issue will be automatically assigned to these users. Can be array of usernames or comma-delimited string, e.g. \"monalisa,nat\"": "(数组或字符串）：此议题将自动分配给这些用户。可以是用户名数组或以逗号分隔的字符串，例如 “monalisa,nat”。",
+                        "(Array or String): This issue will automatically receive these labels upon creation. Can be array of labels or comma-delimited string, e.g. \"bug,needs-triage\"": "(数组或字符串）：该议题在创建时将自动接收这些标签。可以是标签数组或以逗号分隔的字符串，例如 “bug,needs-triage”（错误，需要分流）。",
+                        "(Array or String): This issue will be automatically added to these projects. Can be array of projects or comma-delimited string, e.g. \"github\/1,github\/2\"": "(数组或字符串）：该议题将自动添加到这些项目中。可以是项目数组或以逗号分隔的字符串，如 “github\/1,github\/2”。",
+                        "(String): Default title that will be pre-populated in the issue submission form.": "(字符串）：将在议题表单中预填的默认标题。",
+                        "(Array): Definition of user inputs.": "(数组）：用户输入的定义。",
+                "Input type configuration options": "输入类型配置项",
+                    // Markdown
+                        "Markdown blocks contain arbitrary text that a maintainer can add to a template, to provide extra context or guidance to a contributor. Supports Markdown formatting. This text will": "Markdown 块包含任意文本，维护者可将其添加到模板中，为贡献者提供额外的上下文或指导。支持 Markdown 格式。这些文本",
+                        "not be rendered in the submitted issue body": "不会在提交的议题正文中呈现。",
+                        // 必填项
+                            "(String): The text that will be rendered. Markdown formatting is supported.": "(字符串）：将渲染的文本。支持 Markdown 格式。",
+                        "Tip #1: YAML processing will cause the hash symbol to be treated as a comment. To insert Markdown headers, wrap your text in quotes.": "提示 1：YAML 处理会将哈希符号视为注释。要插入 Markdown 标题，请用引号将文本包起来。",
+                        "Tip #2: For multi-line text, you can use the pipe operator.": "提示 2：对于多行文本，可以使用管道运算符。",
+                        "Example": "示例",
+                    "Input": "输入",
+                        "Inputs are single-line form input fields. Contributors may use markdown formatting in their responses.": "输入为单行表单输入字段。贡献者可在回复中使用标记符格式。",
+                        "Required Attributes": "必要属性",
+                            "(String): A brief description of the expected user input.": "(字符串）： 预期用户输入的简要说明。",
+                        "Optional Attributes": "可选属性",
+                            "(String): Extra context or guidance about filling out this form input. Supports Markdown.": "(字符串）：有关填写此表单输入的额外上下文或指导。支持 Markdown。",
+                            "(String): Renders as semi-transparent \"placeholder\" element in the input field when it's empty.": "(字符串）：当输入框为空时，渲染为半透明的 “placeholder”元素。",
+                            "(String): Default text that is pre-populated in the input field.": "(字符串）：输入字段中预填的默认文本。",
+                        // ID
+                            "(String): Optional unique identifier. Can only contain alphanumeric characters,": "(字符串）：可选的唯一标识符。只能包含字母数字字符、",
+                        "Validations": "验证",
+                            "(Boolean): If": "(布尔值）：若",
+                            ", the form will not be submittable until this is filled out. Only for public repositories.": "，则填写此信息后才能提交表格。仅适用于公共仓库。",
+                    "Textarea": "文本区域",
+                        "Very similar to inputs, textareas are multiple-line form input fields. Typically used if you'd like a contributor to provide an answer longer than a few words. Contributors may use markdown formatting in their responses.": "文本区域与输入非常相似，都是多行表单输入字段。如果希望贡献者提供长于几个单词的答案，通常会使用文本区域。贡献者可以在回复中使用标记符格式。",
+                        // 可选属性
+                            "(String): If a value is provided, user-submitted text will be formatted into a codeblock automatically.": "(字符串）：如果提供该值，用户提交的文本将自动格式化为代码块。",
+                    "Dropdown": "下拉菜单",
+                        "Users can select their answer from options defined by the maintainer.": "用户可以从维护者定义的选项中选择答案。",
+                            "(String Array): Set of values that user can select from to answer. Cannot be empty, and all choices must be distinct.": "(字符串数组）：用户可从中选择回答的一组值。不能为空，且所有选择必须是不同的。",
+                        // 可选属性
+                            ", users can submit multiple selections.": "则用户可提交多选项。",
+                        // 验证
+                            ", the form will not be submittable until at least one choice is selected. Only for public repositories.": "则至少选择一个选项后才能提交表单。仅适用于公共仓库。",
+                    "Checkboxes": "勾选框",
+                    "A group of one or more checkboxes. This will be saved as a Markdown checkbox, and will continue to support interactive updating.": "由一个或多个复选框组成的组。这将被保存为 Markdown 复选框，并将继续支持交互式更新。",
+                        "(Array): Set of values that user can select from to answer. Cannot be empty. Each item must have a": "(数组）：用户可从中选择回答的数值集合。不能为空。每个项目必须有一个",
+                        ", described below.": "，如下所述。",
+                    "Within each item in": "对于任何带",
+                        ", the following fields are supported:": "元素则支持以下字段：",
+                        "(String): The text that will appear beside the checkbox. Markdown is supported for bold or italic text formatting, and hyperlinks.": "(字符串）：复选框旁边显示的文本。Markdown 支持粗体或斜体文本格式以及超链接。",
+                    "Optional": "可选",
+                        "(Boolean): If required, the form will not be submittable unless checked. Only for public repositories.": "(布尔值）：如果需要，除非选中，否则表单将无法提交。仅适用于公共仓库。",
 
             // 查找工具栏
                 "Find": "查找",
@@ -12672,6 +12764,8 @@ I18N["zh-CN"]["repository/graphs/community"] = { // 仓库 -> 洞察 - 社区
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         [/(\d+) pull requests? created/, "$1 个拉取请求创建"],
         [/(\d+) issues? created/, "$1 个议题创建"],
+        [/(\d+) discussions? created/, "$1 个讨论创建"],
+        [/(\d+) contributors?/, "$1 贡献者"],
     ],
 };
 
@@ -13520,6 +13614,8 @@ I18N["zh-CN"]["repository/settings/access"] = { // 仓库设置 - 协作者/(组
 
             "Who has access": "谁有权访问",
             "public repository": "公共仓库",
+            "Public repository": "公共仓库",
+            "This repository is public and visible to anyone": "该仓库是公开的，对任何人都可见",
             "This repository is public and visible to anyone.": "该仓库是公开的，对任何人都可见。",
             "private repository": "私有仓库",
             "Only those with access to this repository can view it.": "只有拥有该仓库访问权的用户才能查看。",
@@ -15708,6 +15804,7 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
 
         "Try GitHub Copilot": "试用 GitHub Copilot",
             "30 days free": "30天免费",
+        "Explore upcoming releases": "探索即将发布的产品", // 已登录
 
         // 代码
             "Build code quickly and more securely with GitHub Copilot embedded throughout your workflows.": "使用嵌入在整个工作流程中的 GitHub Copilot 快速、更安全地构建代码。",
@@ -15915,6 +16012,8 @@ I18N["zh-CN"]["homepage"] = { // 未登录的首页
     "regexp": [ // 正则翻译
     ],
 };
+
+I18N["zh-CN"]["home"] = I18N["zh-CN"]["homepage"];
 
 I18N["zh-CN"]["session-authentication"] = { // 登录页 包含(/login, /session, /sessions/two-factor, sessions/recovery, /sessions/recovery/token, /password_reset等)
     "static": { // 静态翻译
@@ -17665,6 +17764,7 @@ I18N["zh-CN"]["topics"] = { // 探索-->主题页面
         // github.com/topics/<某主题>
             "Created by": "创建者",
             "Released": "发布于",
+            "Latest release": "最新发行",
 
             "Related Topics": "相关主题",
             "Updated": "更新于",
