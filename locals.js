@@ -12980,6 +12980,7 @@ I18N["zh-CN"]["repository/graphs/code-frequency"] = { // 仓库 -> 洞察 - 代�
             // 图表本体
                 "Date": "日期",
                 "Frequency": "频率",
+                "Values": "值",
 
     },
     "regexp": [ // 正则翻译
@@ -22140,6 +22141,19 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
+            "Custom": "自定义",
+
+            // 自定义日期
+                "Custom date range (UTC)": "自定义日期范围(UTC)",
+                "Choose dates": "选择日期",
+                // 日历
+                    "Su": "一",
+                    "Mo": "二",
+                    "Tu": "三",
+                    "We": "四",
+                    "Th": "五",
+                    "Fr": "六",
+                    "Sa": "日",
 
         "Total minutes": "总分钟数",
             // "Total minutes across all workflows in this organization for current month": "当月该组织所有工作流程的总时长",
@@ -22200,6 +22214,7 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             "hosted": "托管",
             "hosted-larger": "大型托管",
             "self-hosted": "自托管",
+        "Runner labels": "运行器标签",
 
         // 无数据
             "No table data available yet.": "还没有数据。",
@@ -22214,7 +22229,7 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
     },
     "regexp": [
         [/Showing data from (\d+)\/(\d+)\/(\d+) to/, "显示数据：从$1年$2月$3日至"],
-        [/Total (minutes|job runs) across all workflows in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
+        [/Total (minutes|job runs) across all workflows in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year|custom)/, function(all, type, period){
             var typeKey = {'minutes': '总分钟数', 'job runs': '总工作运行数'};
 
             var periodKey = {
@@ -22223,10 +22238,23 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
                 "last month": "上个月",
                 "last 30 days": "最近 30 天",
                 "last 90 days": "最近 90 天",
-                "last year": "最近一年"
+                "last year": "最近一年",
+                "custom": "自定义时间段",
             };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
+        }],
+        [/Period: (Current week \(Mon-Sun\)|Current month|Last month|Last 30 days|Last 90 days|Last year|Custom)/, function(all, period){
+            var periodKey = {
+                "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
+                "Current month": "本月",
+                "Last month": "上个月",
+                "Last 30 days": "最近 30 天",
+                "Last 90 days": "最近 90 天",
+                "Last year": "最近一年",
+                "Custom": "自定义",
+            };
+            return '范围：' + periodKey[period];
         }],
     ],
 };
@@ -22243,6 +22271,18 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
+            "Custom": "自定义",
+            // 自定义日期
+            "Custom date range (UTC)": "自定义日期范围(UTC)",
+            "Choose dates": "选择日期",
+            // 日历
+                "Su": "一",
+                "Mo": "二",
+                "Tu": "三",
+                "We": "四",
+                "Th": "五",
+                "Fr": "六",
+                "Sa": "日",
 
         "Avg job run time": "平均作业运行时长",
         "Avg job queue time": "平均作业等待时长",
@@ -22310,6 +22350,7 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             "hosted": "托管",
             "hosted-larger": "大型托管",
             "self-hosted": "自托管",
+        "Runner labels": "运行器标签",
 
         // 无数据
             "No table data available yet.": "还没有数据。",
@@ -22325,7 +22366,7 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
     },
     "regexp": [
         ...I18N["zh-CN"]["repository/actions/metrics/usage"]["regexp"],
-        [/(Average run time of|Average queue time of|Failure rate across|Total minutes used across failed) jobs in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
+        [/(Average run time of|Average queue time of|Failure rate across|Total minutes used across failed) jobs in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year|custom)/, function(all, type, period){
             var typeKey = {'Average run time of': '平均运行时长', 'Average queue time of': '平均等待时长', 'Failure rate across': '作业失败率', 'Total minutes used across failed': '作业失败次数'};
 
             var periodKey = {
@@ -22334,7 +22375,8 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
                 "last month": "上个月",
                 "last 30 days": "最近 30 天",
                 "last 90 days": "最近 90 天",
-                "last year": "最近一年"
+                "last year": "最近一年",
+                "custom": "自定义时间段",
             };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
