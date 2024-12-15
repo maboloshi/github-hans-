@@ -8514,6 +8514,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Revert": "还原",
                 "Create a new pull request to revert these changes": "创建一个新的拉取请求以恢复这些更改",
             "Closed with unmerged commits": "已关闭的未合并的提交",
+                "This pull request is closed.": "此拉取请求已关闭。",
 
             "Pull request successfully merged and closed": "拉取请求已成功合并并关闭",
                 "You're all set — the": "一切就绪",
