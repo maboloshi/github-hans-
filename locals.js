@@ -8505,6 +8505,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "or view": "，或查看",
             "You can also merge this with the command line, view": "您也可以使用命令行合并，查看",
             "command line instructions": "命令行指令",
+            "You can also merge this with the command line.": "您也可以使用命令行合并，",
+            "View command line instructions.": "查看命令行指令。",
 
             // "Merged": "已合并",
             "View details": "查看详情",
