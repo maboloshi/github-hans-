@@ -17844,6 +17844,10 @@ I18N["zh-CN"]["trending"] = { // 热门页面
             "Filter spoken languages": "筛选母语",
             "Clear spoken language": "清除母语",
             "Any": "任何",
+            // 弹窗
+            "Filter by spoken language": "使用母语筛选",
+                "Select your preferred spoken language in order to see matching trending results.": "选择您喜欢的母语以查看匹配的趋势结果。",
+                "Got it!": "确定",
         "Language:": "语言：",
             "Select a language": "选择语言：",
             "Filter languages": "筛选语言",
