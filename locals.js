@@ -616,6 +616,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "New project": "新建项目",
                 "This organization": "本组织", // 组织
                 "New team": "新建团队", // 组织
+        // 右上角 Copilot 下拉菜单
+            "Chat with Copilot": "与 Copilot 聊天",
+            "Open Copilot…": "打开 Copilot…",
+                "New conversation in": "新聊天",
+                    "Immersive": "沉浸式",
+                "Open with": "打开于",
 
         // 右上角个人图标下拉菜单
             "Account switcher": "账户切换",
