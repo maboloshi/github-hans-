@@ -1295,6 +1295,8 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
 
     },
     "regexp": [ // 正则翻译
+        // Copilot 窗口
+        [/Chatting about ([^ ]+)/, "关于 $1 的对话"],
         /**
          * 匹配时间格式
          *
@@ -6589,8 +6591,6 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         }],
         // 成为协作者提示
         [/You now have push access to the ([^ ]+) repository./, "您现在拥有推送至 $1 仓库的权限"],
-        // Copilot 窗口
-        [/Chatting about ([^ ]+)/, "关于 $1 的对话"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
