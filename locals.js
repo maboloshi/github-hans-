@@ -6196,6 +6196,105 @@ I18N["zh-CN"]["settings/tokens"] = { // 设置 - 开发者设置/个人访问令
 };
 I18N["zh-CN"]["settings/personal-access-tokens"] = I18N["zh-CN"]["settings/tokens"];
 
+I18N["zh-CN"]["copilot"] = {
+    "static": {
+        // 错误
+            "Conversation failed to load": "加载失败",
+                "Reload the page": "重载页面。",
+                "to try again.": " ",
+        // 左侧边栏
+            "Open sidebar": "打开侧边栏",
+            "Close sidebar": "关闭侧边栏",
+            "New conversation": "新聊天",
+
+            // 时间
+                "Today": "今天",
+
+            // 无对话
+            "No conversations yet": "还没有对话",
+            "Ask Copilot anything on the right to start your first conversation.": "向 Copilot 提出任何问题，开始第一次对话。",
+
+            // 某条对话
+                "Manage conversation": "管理",
+                    "Rename": "重命名",
+                        "Rename conversation": "重命名对话",
+                    // 删除
+                        "Delete conversation": "删除对话",
+                        "Are you sure you want to delete this conversation? This action cannot be undone.": "您确定要删除这段对话吗？此操作无法撤销。",
+
+        // 中间
+            // 模型选择窗
+                "Models": "模型",
+                // Claude 3.5
+                    "Enable Claude 3.5 Sonnet": "启用 Claude 3.5 Sonnet",
+                        "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
+                        "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
+            "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+
+            "Copy code": "复制代码",
+            "Copied!": "复制成功！",
+
+            "Good response": "点赞",
+            "Bad response": "点踩",
+
+            "Scroll to bottom": "滚动至底部",
+        
+        // 右侧
+            "Open menu": "菜单",
+                // 反馈
+                    "Rate your experience": "反馈",
+                        // 四个表情
+                            "Love it": "优",
+                            "It’s ok": "良",
+                            "Not great": "中",
+                            "Hate it": "差",
+                        
+                        "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
+                        
+                        "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
+                        "Privacy Policy": "隐私政策",
+                        "Send": "发送",
+        // 聊天窗口
+        "Install Copilot in your favorite code editor": "安装 Copilot 到您的代码编辑器",
+            "Copilot is available for a multitude of editors to fit your needs": "Copilot 可用于多种编辑器，以满足您的需求",
+            "Dismiss banner": "关闭",
+
+            "Remove topic": "移除主题",
+            "Remove": "移除",
+            "Attachments options": "附件选项",
+                "Remove attachments": "移除附件",
+
+            "Ask Copilot": "询问 Copilot",
+            "Add attachment": "添加附件",
+                "Files and symbols…": "文件和符号…",
+                    "First attach a repository": "请先附加仓库",
+                    "Attach files and symbols": "附加文件和符号",
+                        "Choose which files and symbols you want to chat about. Use fewer references for more accurate responses.": "选择您想要讨论的文件和符号。使用较少的参考资料即可获得更准确的回复。",
+                        "Search files and symbols": "搜索文件和符号",
+                        "Current attachments": "当前附件",
+                        "Symbols": "符号",
+                "Repository…": "仓库…",
+                    "Attach a repository": "附加仓库",
+                        "Search repositories": "搜索仓库",
+                        "Fetching repositories…": "正在获取仓库",
+                    "Close": "关闭",
+                "Extension…": "扩展…",
+                "Extension": "扩展",
+                    "Extensions": "扩展",
+                        "Chat with your favorite tools and services": "使用您最喜欢的工具和服务聊天",
+                        "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
+                        "Browse marketplace": "前往市场",
+            "Send now": "发送",
+
+        // 了解世界领先的人工智能开发工具的所有优势。
+        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
+        "Discover all the": "了解世界领先的人工智能开发工具的所有",
+            "benefits": "优势",
+            "of the world’s leading AI developer tool.": "。",
+    },
+    "regexp":[],
+};
+
 // 仓库相关==
 I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
     "static": { // 静态翻译
@@ -6463,7 +6562,36 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
             "You must be signed in to star a repository": "您必须登录后才能星标仓库",
             "You must be signed in to add this repository to a list": "您必须登录后才能将此仓库添加到列表中",
             "You must be logged in to vote": "您必须登录后才能投票",
+        // Copilot 窗口
+            // 顶部
+            "All repositories": "所有仓库",
+            "Back": "返回",
+            "Conversation options": "选项",
+                "Delete conversation": "删除对话",
+                "View all conversations": "查看全部对话",
+                    "Active conversations": "最近对话",
+                    // 删除
+                        "Are you sure? This can’t be undone.": "您确定吗？此操作无法撤销。",
+            "Take conversation to immersive": "全屏对话",
+            "Close chat": "关闭",
 
+            "public": "公共",
+            "repository": "仓库",
+
+            "Ask Copilot": "询问 Copilot",
+                "Select a repository to get started. Ask questions about your codebase to get answers fast and learn your way around.": "选择一个仓库即可开始。询问有关代码库的问题，以快速获得答案并了解相关知识。",
+                "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+            "Search repositories to chat about": "搜索要讨论的仓库",
+            "Recent repositories": "最近访问",
+            "General purpose chat": "普通对话",
+
+            "Loading Conversation": "加载中",
+            "Chatting about code and programming": "讨论关于代码和编程",
+            // 对话框
+            "Ask about the repository:": "询问关于此仓库的信息：",
+            "Attach files or symbols": "附加文件或符号",
+            "Add an extension": "添加扩展",
+        ...I18N["zh-CN"]["copilot"]["static"],
     },
     "regexp": [ // 正则翻译
         [/Started (\d+) discussions? in this repository in the past day/, "过去一天内在此仓库中开启了 $1 个讨论"], // 用户 浮动信息卡
@@ -6521,6 +6649,8 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         }],
         // 成为协作者提示
         [/You now have push access to the ([^ ]+) repository./, "您现在拥有推送至 $1 仓库的权限"],
+        // Copilot 窗口
+        [/Chatting about ([^ ]+)/, "关于 $1 的对话"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
@@ -22440,105 +22570,6 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
         }],
     ],
-};
-
-I18N["zh-CN"]["copilot"] = {
-    "static": {
-        // 错误
-            "Conversation failed to load": "加载失败",
-                "Reload the page": "重载页面。",
-                "to try again.": " ",
-        // 左侧边栏
-            "Open sidebar": "打开侧边栏",
-            "Close sidebar": "关闭侧边栏",
-            "New conversation": "新聊天",
-
-            // 时间
-                "Today": "今天",
-
-            // 无对话
-            "No conversations yet": "还没有对话",
-            "Ask Copilot anything on the right to start your first conversation.": "向 Copilot 提出任何问题，开始第一次对话。",
-
-            // 某条对话
-                "Manage conversation": "管理",
-                    "Rename": "重命名",
-                        "Rename conversation": "重命名对话",
-                    // 删除
-                        "Delete conversation": "删除对话",
-                        "Are you sure you want to delete this conversation? This action cannot be undone.": "您确定要删除这段对话吗？此操作无法撤销。",
-
-        // 中间
-            // 模型选择窗
-                "Models": "模型",
-                // Claude 3.5
-                    "Enable Claude 3.5 Sonnet": "启用 Claude 3.5 Sonnet",
-                        "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
-                        "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
-            "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
-
-            "Copy code": "复制代码",
-            "Copied!": "复制成功！",
-
-            "Good response": "点赞",
-            "Bad response": "点踩",
-
-            "Scroll to bottom": "滚动至底部",
-        
-        // 右侧
-            "Open menu": "菜单",
-                // 反馈
-                    "Rate your experience": "反馈",
-                        // 四个表情
-                            "Love it": "优",
-                            "It’s ok": "良",
-                            "Not great": "中",
-                            "Hate it": "差",
-                        
-                        "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
-                        
-                        "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
-                        "Privacy Policy": "隐私政策",
-                        "Send": "发送",
-        // 聊天窗口
-        "Install Copilot in your favorite code editor": "安装 Copilot 到您的代码编辑器",
-            "Copilot is available for a multitude of editors to fit your needs": "Copilot 可用于多种编辑器，以满足您的需求",
-            "Dismiss banner": "关闭",
-
-            "Remove topic": "移除主题",
-            "Remove": "移除",
-            "Attachments options": "附件选项",
-                "Remove attachments": "移除附件",
-
-            "Ask Copilot": "询问 Copilot",
-            "Add attachment": "添加附件",
-                "Files and symbols…": "文件和符号…",
-                    "First attach a repository": "请先附加仓库",
-                    "Attach files and symbols": "附加文件和符号",
-                        "Choose which files and symbols you want to chat about. Use fewer references for more accurate responses.": "选择您想要讨论的文件和符号。使用较少的参考资料即可获得更准确的回复。",
-                        "Search files and symbols": "搜索文件和符号",
-                        "Current attachments": "当前附件",
-                        "Symbols": "符号",
-                "Repository…": "仓库…",
-                    "Attach a repository": "附加仓库",
-                        "Search repositories": "搜索仓库",
-                        "Fetching repositories…": "正在获取仓库",
-                    "Close": "关闭",
-                "Extension…": "扩展…",
-                "Extension": "扩展",
-                    "Extensions": "扩展",
-                        "Chat with your favorite tools and services": "使用您最喜欢的工具和服务聊天",
-                        "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
-                        "Browse marketplace": "前往市场",
-            "Send now": "发送",
-
-        // 了解世界领先的人工智能开发工具的所有优势。
-        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
-        "Discover all the": "了解世界领先的人工智能开发工具的所有",
-            "benefits": "优势",
-            "of the world’s leading AI developer tool.": "。",
-    },
-    "regexp":[],
 };
 
 I18N["zh-CN"]["sitemap"] = { // 网站地图页，仅匹配公共部分
