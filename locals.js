@@ -1508,6 +1508,7 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         //顶部 GPT 聊天窗口
         "Ask Copilot": "询问 Copilot",
         "Send": "发送",
+        "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
         // 新手帮助
         "Learn Git and GitHub without any code!": "了解 Git 和 GitHub 无需任何代码！",
         "Using the Hello World guide, you’ll create a repository, start a branch,": "使用 Hello World 指南，您将创建一个仓库，开始一个分支，",
