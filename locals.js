@@ -22454,8 +22454,6 @@ I18N["zh-CN"]["copilot"] = {
                     // 删除
                         "Delete conversation": "删除对话",
                         "Are you sure you want to delete this conversation? This action cannot be undone.": "您确定要删除这段对话吗？此操作无法撤销。",
-        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
-
 
         // 中间
             // 模型选择窗
@@ -22522,6 +22520,7 @@ I18N["zh-CN"]["copilot"] = {
             "Send now": "发送",
 
         // 了解世界领先的人工智能开发工具的所有优势。
+        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
         "Discover all the": "了解世界领先的人工智能开发工具的所有",
             "benefits": "优势",
             "of the world’s leading AI developer tool.": "。",
