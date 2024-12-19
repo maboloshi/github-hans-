@@ -3348,9 +3348,15 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 // "GitHub Copilot": "",
                     "Your AI pair programmer": "您的人工智能助理程序员",
                     "Your AI powered pair programmer": "您的人工智能助理程序员",
-                    "Enable GitHub Copilot": "启用 GitHub Copilot",
-                    "GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
-                    "GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
+                    "Upgrade to Copilot Pro": "升级至 Pro",
+                    "Active subscription": "已激活订阅",
+                        "Copilot Free": "免费版",
+                    "You can upgrade to Copilot Pro at any time. Check out this": "您可以随时升级到 Copilot Pro。详情请查看",
+                    "documentation": "文档",
+                    "for more details.": "。",
+                    //"Enable GitHub Copilot": "启用 GitHub Copilot",
+                    //"GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
+                    //"GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
 
                      // 组织设置
                     "Learn more about Copilot Business": "了解更多关于 GitHub Copilot 商业版的信息",
