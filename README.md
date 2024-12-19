@@ -348,9 +348,6 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 <a href="https://github.com/52cik" title="楼教主">
   <img src="https://avatars.githubusercontent.com/u/5033310?v=4" width="42;" alt="楼教主"/>
 </a>
-<a href="https://github.com/wuyuncheng-26" title="是小胖呀26">
-  <img src="https://avatars.githubusercontent.com/u/122529705?v=4" width="42;" alt="是小胖呀26"/>
-</a>
 <a href="https://github.com/TC999" title="陈生杂物房">
   <img src="https://avatars.githubusercontent.com/u/88823709?v=4" width="42;" alt="陈生杂物房"/>
 </a>
@@ -366,8 +363,17 @@ GitHub 的 ajax 载入方式逐步从 [defunkt/jquery-pjax](https://github.com/d
 <a href="https://github.com/pecasha" title="Pecasha">
   <img src="https://avatars.githubusercontent.com/u/9607128?v=4" width="42;" alt="Pecasha"/>
 </a>
+<a href="https://github.com/ChinaGodMan" title="人民的勤务员">
+  <img src="https://avatars.githubusercontent.com/u/96548841?v=4" width="42;" alt="人民的勤务员"/>
+</a>
 <a href="https://github.com/buiawpkgew1" title="菾凴">
   <img src="https://avatars.githubusercontent.com/u/71136405?v=4" width="42;" alt="菾凴"/>
+</a>
+<a href="https://github.com/wyc-26" title="wyc-26">
+  <img src="https://avatars.githubusercontent.com/u/154735436?v=4" width="42;" alt="wyc-26"/>
+</a>
+<a href="https://github.com/YiShengJunn" title="益生君">
+  <img src="https://avatars.githubusercontent.com/u/134821571?v=4" width="42;" alt="益生君"/>
 </a>
 <a href="https://github.com/3DMXM" title="小莫">
   <img src="https://avatars.githubusercontent.com/u/28587093?v=4" width="42;" alt="小莫"/>
