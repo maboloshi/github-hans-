@@ -1223,6 +1223,75 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Tibetan": "藏文",
             "Vietnamese": "越南文",
             "Zhuang, Chuang": "壮文", // 存疑
+        
+        // Copilot 窗口
+            // 顶部
+            "All repositories": "所有仓库",
+            "Back": "返回",
+            "Conversation options": "选项",
+                "Delete conversation": "删除对话",
+                "View all conversations": "查看全部对话",
+                    "Active conversations": "最近对话",
+                    // 删除
+                        "Are you sure? This can’t be undone.": "您确定吗？此操作无法撤销。",
+            "Take conversation to immersive": "全屏对话",
+            "Close chat": "关闭",
+
+            "public": "公共",
+            "repository": "仓库",
+
+            "Ask Copilot": "询问 Copilot",
+                "Select a repository to get started. Ask questions about your codebase to get answers fast and learn your way around.": "选择一个仓库即可开始。询问有关代码库的问题，以快速获得答案并了解相关知识。",
+                "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+            "Search repositories to chat about": "搜索要讨论的仓库",
+            "Recent repositories": "最近访问",
+            "General purpose chat": "普通对话",
+
+            "Loading Conversation": "加载中",
+            "Chatting about code and programming": "讨论关于代码和编程",
+            // 对话框
+            "Ask about the repository:": "询问关于此仓库的信息：",
+            "Attach files or symbols": "附加文件或符号",
+            "Add an extension": "添加扩展",
+                "Files and symbols…": "文件和符号…",
+                    "First attach a repository": "请先附加仓库",
+                    "Attach files and symbols": "附加文件和符号",
+                        "Choose which files and symbols you want to chat about. Use fewer references for more accurate responses.": "选择您想要讨论的文件和符号。使用较少的参考资料即可获得更准确的回复。",
+                        "Search files and symbols": "搜索文件和符号",
+                        "Current attachments": "当前附件",
+                        "Symbols": "符号",
+                "Repository…": "仓库…",
+                    "Attach a repository": "附加仓库",
+                        "Search repositories": "搜索仓库",
+                        "Fetching repositories…": "正在获取仓库",
+                    "Close": "关闭",
+                "Extension…": "扩展…",
+                "Extension": "扩展",
+                    "Extensions": "扩展",
+                        "Chat with your favorite tools and services": "使用您最喜欢的工具和服务聊天",
+                        "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
+                        "Browse marketplace": "前往市场",
+            "Send now": "发送",
+            // 反馈
+            "Rate your experience": "反馈",
+            // 四个表情
+                "Love it": "优",
+                "It’s ok": "良",
+                "Not great": "中",
+                "Hate it": "差",
+            
+            "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
+            
+            "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
+            "Privacy Policy": "隐私政策",
+            "Send": "发送",
+            "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+
+            "Copy code": "复制代码",
+            "Copied!": "复制成功！",
+
+            "Good response": "点赞",
+            "Bad response": "点踩",
 
     },
     "regexp": [ // 正则翻译
@@ -6463,74 +6532,6 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
             "You must be signed in to star a repository": "您必须登录后才能星标仓库",
             "You must be signed in to add this repository to a list": "您必须登录后才能将此仓库添加到列表中",
             "You must be logged in to vote": "您必须登录后才能投票",
-        // Copilot 窗口
-            // 顶部
-            "All repositories": "所有仓库",
-            "Back": "返回",
-            "Conversation options": "选项",
-                "Delete conversation": "删除对话",
-                "View all conversations": "查看全部对话",
-                    "Active conversations": "最近对话",
-                    // 删除
-                        "Are you sure? This can’t be undone.": "您确定吗？此操作无法撤销。",
-            "Take conversation to immersive": "全屏对话",
-            "Close chat": "关闭",
-
-            "public": "公共",
-            "repository": "仓库",
-
-            "Ask Copilot": "询问 Copilot",
-                "Select a repository to get started. Ask questions about your codebase to get answers fast and learn your way around.": "选择一个仓库即可开始。询问有关代码库的问题，以快速获得答案并了解相关知识。",
-                "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
-            "Search repositories to chat about": "搜索要讨论的仓库",
-            "Recent repositories": "最近访问",
-            "General purpose chat": "普通对话",
-
-            "Loading Conversation": "加载中",
-            "Chatting about code and programming": "讨论关于代码和编程",
-            // 对话框
-            "Ask about the repository:": "询问关于此仓库的信息：",
-            "Attach files or symbols": "附加文件或符号",
-            "Add an extension": "添加扩展",
-                "Files and symbols…": "文件和符号…",
-                    "First attach a repository": "请先附加仓库",
-                    "Attach files and symbols": "附加文件和符号",
-                        "Choose which files and symbols you want to chat about. Use fewer references for more accurate responses.": "选择您想要讨论的文件和符号。使用较少的参考资料即可获得更准确的回复。",
-                        "Search files and symbols": "搜索文件和符号",
-                        "Current attachments": "当前附件",
-                        "Symbols": "符号",
-                "Repository…": "仓库…",
-                    "Attach a repository": "附加仓库",
-                        "Search repositories": "搜索仓库",
-                        "Fetching repositories…": "正在获取仓库",
-                    "Close": "关闭",
-                "Extension…": "扩展…",
-                "Extension": "扩展",
-                    "Extensions": "扩展",
-                        "Chat with your favorite tools and services": "使用您最喜欢的工具和服务聊天",
-                        "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
-                        "Browse marketplace": "前往市场",
-            "Send now": "发送",
-            // 反馈
-            "Rate your experience": "反馈",
-            // 四个表情
-                "Love it": "优",
-                "It’s ok": "良",
-                "Not great": "中",
-                "Hate it": "差",
-            
-            "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
-            
-            "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
-            "Privacy Policy": "隐私政策",
-            "Send": "发送",
-            "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
-
-            "Copy code": "复制代码",
-            "Copied!": "复制成功！",
-
-            "Good response": "点赞",
-            "Bad response": "点踩",
     },
     "regexp": [ // 正则翻译
         [/Started (\d+) discussions? in this repository in the past day/, "过去一天内在此仓库中开启了 $1 个讨论"], // 用户 浮动信息卡
