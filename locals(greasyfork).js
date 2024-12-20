@@ -7690,6 +7690,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
             // 置顶议题
             "Pinned issues": "置顶议题",
+            "Drag to reorder": "拖拽排序",
 
             "ProTip!": "专业提示！",
                 "Find everything you created by searching": "查找您创建的所有内容，使用",
@@ -8504,6 +8505,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "or view": "，或查看",
             "You can also merge this with the command line, view": "您也可以使用命令行合并，查看",
             "command line instructions": "命令行指令",
+            "You can also merge this with the command line.": "您也可以使用命令行合并，",
+            "View command line instructions.": "查看命令行指令。",
 
             // "Merged": "已合并",
             "View details": "查看详情",
@@ -8511,10 +8514,12 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Revert": "还原",
                 "Create a new pull request to revert these changes": "创建一个新的拉取请求以恢复这些更改",
             "Closed with unmerged commits": "已关闭的未合并的提交",
+                "This pull request is closed.": "此拉取请求已关闭。",
 
             "Pull request successfully merged and closed": "拉取请求已成功合并并关闭",
                 "You're all set — the": "一切就绪",
                 "branch has been merged and deleted.": "分支已合并并删除。",
+                "You're all set — the branch has been merged.": "一切就绪 - 该分支已合并。",
             "Delete branch": "删除分支",
             "Restore branch": "恢复分支",
 
@@ -8537,6 +8542,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Resolve conflicts then push again. These conflicts are too complex to resolve in the web editor. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "解决冲突后再次推送。这些冲突过于复杂，无法在 Web 编辑器中解决。当该拉取请求存在合并冲突时，操作工作流将不会触发该拉取请求的活动。",
                 "Use the command line": "使用命令行",
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
+                "or the command line to resolve conflicts before continuing. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "或通过命令行解决冲突。在此拉取请求仍存在合并冲突的情况下，操作工作流不会因该拉取请求的活动而触发。",
 
                 "Checkout via command line": "通过命令行检出",
                 "Checkout via the command line": "通过命令行检出", // 新版合并界面
@@ -8867,6 +8873,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
         [/pushed a commit to ([^ ]+) that referenced this pull request/, " 向 $1 推送一次提交，其中引用了此拉取请求"],
+        [/Missing successful active ([^ ]+) deployment./, "未成功激活 $1 部署。"], // 新本合并页面
 
         [/(\d+) in progress checks?/, "$1 个正在进行的检查"],
         [/(\d+) skipped and (\d+) successful checks?/, "$1 个跳过, $2 个成功检查"],
@@ -9261,6 +9268,8 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Diff is too big to render. To view,": "差异过大，",
+            "check out this pull request locally.": "请在本地查看拉取请求。",
 
             // 修改的文件 左侧 展开按钮
             "Expand all": "展开全部",
@@ -9997,6 +10006,9 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Maintainer": "维护者",
             "Discussion options": "讨论选项",
             "Category": "分类",
+
+            "You are a maintainer on this repository.": "您是这个仓库的维护者。",
+            "You are the author of this discussion.": "您是这个讨论的作者。",
 
             // [/(\d+) answers?/, "$1 位答复者"],
             "Return to top": "返回顶部",
@@ -12971,6 +12983,7 @@ I18N["zh-CN"]["repository/graphs/code-frequency"] = { // 仓库 -> 洞察 - 代�
             // 图表本体
                 "Date": "日期",
                 "Frequency": "频率",
+                "Values": "值",
 
     },
     "regexp": [ // 正则翻译
@@ -22131,6 +22144,19 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
+            "Custom": "自定义",
+
+            // 自定义日期
+                "Custom date range (UTC)": "自定义日期范围(UTC)",
+                "Choose dates": "选择日期",
+                // 日历
+                    "Su": "一",
+                    "Mo": "二",
+                    "Tu": "三",
+                    "We": "四",
+                    "Th": "五",
+                    "Fr": "六",
+                    "Sa": "日",
 
         "Total minutes": "总分钟数",
             // "Total minutes across all workflows in this organization for current month": "当月该组织所有工作流程的总时长",
@@ -22191,6 +22217,7 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
             "hosted": "托管",
             "hosted-larger": "大型托管",
             "self-hosted": "自托管",
+        "Runner labels": "运行器标签",
 
         // 无数据
             "No table data available yet.": "还没有数据。",
@@ -22205,7 +22232,7 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
     },
     "regexp": [
         [/Showing data from (\d+)\/(\d+)\/(\d+) to/, "显示数据：从$1年$2月$3日至"],
-        [/Total (minutes|job runs) across all workflows in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
+        [/Total (minutes|job runs) across all workflows in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year|custom)/, function(all, type, period){
             var typeKey = {'minutes': '总分钟数', 'job runs': '总工作运行数'};
 
             var periodKey = {
@@ -22214,10 +22241,23 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
                 "last month": "上个月",
                 "last 30 days": "最近 30 天",
                 "last 90 days": "最近 90 天",
-                "last year": "最近一年"
+                "last year": "最近一年",
+                "custom": "自定义时间段",
             };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
+        }],
+        [/Period: (Current week \(Mon-Sun\)|Current month|Last month|Last 30 days|Last 90 days|Last year|Custom)/, function(all, period){
+            var periodKey = {
+                "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
+                "Current month": "本月",
+                "Last month": "上个月",
+                "Last 30 days": "最近 30 天",
+                "Last 90 days": "最近 90 天",
+                "Last year": "最近一年",
+                "Custom": "自定义",
+            };
+            return '范围：' + periodKey[period];
         }],
     ],
 };
@@ -22234,6 +22274,18 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
             "Last year": "最近一年",
+            "Custom": "自定义",
+            // 自定义日期
+            "Custom date range (UTC)": "自定义日期范围(UTC)",
+            "Choose dates": "选择日期",
+            // 日历
+                "Su": "一",
+                "Mo": "二",
+                "Tu": "三",
+                "We": "四",
+                "Th": "五",
+                "Fr": "六",
+                "Sa": "日",
 
         "Avg job run time": "平均作业运行时长",
         "Avg job queue time": "平均作业等待时长",
@@ -22301,6 +22353,7 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
             "hosted": "托管",
             "hosted-larger": "大型托管",
             "self-hosted": "自托管",
+        "Runner labels": "运行器标签",
 
         // 无数据
             "No table data available yet.": "还没有数据。",
@@ -22316,7 +22369,7 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
     },
     "regexp": [
         ...I18N["zh-CN"]["repository/actions/metrics/usage"]["regexp"],
-        [/(Average run time of|Average queue time of|Failure rate across|Total minutes used across failed) jobs in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year)/, function(all, type, period){
+        [/(Average run time of|Average queue time of|Failure rate across|Total minutes used across failed) jobs in this organization for (current week \(mon-sun\)|current month|last month|last 30 days|last 90 days|last year|custom)/, function(all, type, period){
             var typeKey = {'Average run time of': '平均运行时长', 'Average queue time of': '平均等待时长', 'Failure rate across': '作业失败率', 'Total minutes used across failed': '作业失败次数'};
 
             var periodKey = {
@@ -22325,7 +22378,8 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
                 "last month": "上个月",
                 "last 30 days": "最近 30 天",
                 "last 90 days": "最近 90 天",
-                "last year": "最近一年"
+                "last year": "最近一年",
+                "custom": "自定义时间段",
             };
 
             return periodKey[period] + '该组织所有工作流程的' + typeKey[type];
