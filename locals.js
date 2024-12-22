@@ -350,6 +350,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Enterprises": "企业版",
         "Blocked users": "黑名单",
         "New conversation · GitHub Copilot": "新聊天 · GitHub Copilot",
+        "Models · GitHub Marketplace": "模型 · GitHub 市场",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -18811,6 +18812,22 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Open issues": "打开议题",
             "is not certified by GitHub. It is provided by a third-party and is governed by separate terms of service, privacy policy, and support documentation.": "未经 GitHub 认证。它由第三方提供，并受单独的服务条款、隐私政策和支持文档的约束。",
 
+        // GitHub 模型集合页 https://github.com/marketplace/models
+            "Select a Model": "选择模型",
+            
+            "Welcome to GitHub Models": "欢迎访问 GiHub 模型",
+                "A catalog and playground of AI models to help you build AI features and products.": "一个AI模型目录和运行场，帮助您构建AI特性和产品。",
+
+            "Model switching:": "模型切换：",
+                "A single API key for all models & billing.": "一个 API 密钥适用于所有模型和计费。",
+            "Quick personal setup:": "快速个人设置：",
+                "GitHub PAT to install models in your projects.": "使用 GitHub 个人访问令牌（PAT）在您的项目中安装模型。",
+            "Free to start:": "免费开始：",
+                "No charges until you hit our rate limits.": "在达到速率制限之前不收费。",
+
+            "Select a model to get started, or": "选择一个模型开始，或",
+                "explore the full model catalog": "浏览完整模型目录",
+
         // GitHub 模型页面 https://github.com/marketplace/models/<user-name>/<model-name>
             "You're already on the waitlist! We'll send you an email once your access is granted.": "GitHub 模型限量公开测试将有名额限制。如果您获准访问，您将收到一封电子邮件。",
             "You're already on the waitlist! We'll send you an email once your access is granted": "GitHub 模型限量公开测试将有名额限制。如果您获准访问，您将收到一封电子邮件",
@@ -18867,23 +18884,43 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                         "Anyone with the URL will be able to view and use this preset, but not edit. Presets are private by default.": "任何拥有该 URL 的人都可以查看和使用该预设，但不能进行编辑。预设默认为私有。",
                     "Create preset": "新建",
             "Raw": "源码",
+            "Input:": "输入：",
+            "• Output:": "• 输出：",
+            "ms": "毫秒",
             // 聊天窗口
                 // 顶部横条
                     "Restore last session": "恢复上次聊天",
                     "Compare": "比较",
+                        "Select model": "选择模型",
                     "Reset chat history": "删除聊天",
-                // 状态
+                // 中间
                 "Responding...": "响应中...",
+                "Positive": "点赞",
+                "Negative": "点踩",
+                "Regenerate": "重新生成",
+                "Edit message": "编辑信息",
 
+                "Attach an image": "附加图像",
+                    "Remove": "移除",
                 "Type your prompt…": "键入提示词…",
                     "Send now": "发送",
             
             // 参数设置
                 "Parameters": "参数",
+                "Reset to default inputs": "重置",
                 "Hide parameters setting": "隐藏参数设置",
                 "Show parameters setting": "显示参数设置",
                 "System prompt": "系统提示词",
-                    "Set the context for the model response.": "设置模型响应的环境。",
+                    //"Set the context for the model response.": "设置模型响应的环境。",
+                    "You are a helpful assistant...": "你是一位助理...", // 默认提示词
+                "Improve prompt": "增强提示词",
+                    "Adjust your prompt with specific suggestions or simply click to enhance your prompt.": "根据具体建议调整，或者简单地点击以增强您的提示词。",
+                    "Current prompt": "原提示词",
+                    "What would you like to improve? (optional)": "您想增强什么内容？（可选）",
+                        "Eg: explain X for a beginner and write responses in nested bullets.": "例如：为初学者解释 X ，并用嵌套项目符号编写回应。",
+                "Response format": "响应格式",
+                    "Text": "文本",
+                    "Set the format for the model response.": "设置模型响应的格式。",
                 "Max Tokens": "最大令牌",
                     "Limit the maximum output tokens for the model response.": "限制模型响应的最大输出标记。",
                 "Temperature": "随机度",
