@@ -18895,10 +18895,12 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                     "Reset chat history": "删除聊天",
                 // 中间
                 "Responding...": "响应中...",
-                "Positive": "点赞",
-                "Negative": "点踩",
-                "Regenerate": "重新生成",
-                "Edit message": "编辑信息",
+                "An error occurred. Please try again.": "发生错误，请重试。",
+
+                    "Positive": "点赞",
+                    "Negative": "点踩",
+                    "Regenerate": "重新生成",
+                    "Edit message": "编辑信息",
 
                 "Attach an image": "附加图像",
                     "Remove": "移除",
