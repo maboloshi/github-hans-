@@ -4660,8 +4660,10 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Buy Copilot Business": "购买 GitHub Copilot 企业版",
             "Owner": "所有者",
         // 新界面
-            "Copilot Free is active for your account": "您的账户已启用 Copilot 免费版",
-                "Responses are capped at 2,000 code completions and 50 chat messages per month.": "回复上限为每月 2,000 次代码完成和 50 条聊天信息。",
+            "You are using Copilot for free": "您正在使用 Copilot 免费版",
+                "Responses are limited to 2,000 code completions and 50 chat messages per month.": "回复上限为每月 2,000 次代码完成和 50 条聊天信息。",
+            //"Copilot Free is active for your account": "您的账户已启用 Copilot 免费版",
+                //"Responses are capped at 2,000 code completions and 50 chat messages per month.": "回复上限为每月 2,000 次代码完成和 50 条聊天信息。",
             "Get unlimited usage with Copilot Pro": "通过 Copilot Pro 无限制使用",
                 "Unlimited messages and interactions": "信息和互动无限制",
                 "Access to the latest models": "访问最新模型",
@@ -4670,7 +4672,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             
             "Copilot policies": "Copilot 规则",
                 "Copilot in github.com": "github.com 中的 Copilot",
-                    "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot Chat，但无预览功能。",
+                    "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot 聊天，但无预览功能。",
                     "Learn more about Copilot in github.com": "了解更多",
                 "Suggestions matching public code (duplication detection filter)": "建议匹配公共代码（重复检测过滤器）",
                     "Copilot can allow or block suggestions matching public code. Learn more about": "Copilot 可允许或阻止与公共代码匹配的建议。了解更多关于",
@@ -4679,10 +4681,15 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                         "GitHub Copilot will show suggestions matching public code.": "GitHub Copilot 将显示与公共代码匹配的建议。",
                     "Blocked": "阻止",
                         "GitHub Copilot won't show suggestions matching public code.": "GitHub Copilot 不会显示与公共代码匹配的建议。",
-                "Allow GitHub to use my code snippets from the code editor for product improvements *": "允许 GitHub 将代码编辑器中的代码片段用于产品改进 *",
-                    "Allow GitHub, its affiliates and third parties to use my code snippets to research and improve GitHub Copilot suggestions, related models and product features. More information in": "允许 GitHub、其附属机构和第三方使用我的代码片段来研究和改进 GitHub Copilot 建议、相关模型和产品功能。更多",
+                "Allow GitHub to use my data for product improvements": "允许 GitHub 将数据用于产品改进",
+                //"Allow GitHub to use my code snippets from the code editor for product improvements": "允许 GitHub 将代码编辑器中的代码片段用于产品改进",
+                    "Allow GitHub, its affiliates and third parties to use my data, including Prompts, Suggestions, and Code Snippets, for product improvements. More information in the": "允许GitHub、其关联公司和第三方使用我的数据，包括提示、建议和代码片段，以改进产品。更多信息请查看",
+                    //"Allow GitHub, its affiliates and third parties to use my code snippets to research and improve GitHub Copilot suggestions, related models and product features. More information in the": "允许 GitHub、其附属机构和第三方使用我的代码片段来研究和改进 GitHub Copilot 建议、相关模型和产品功能。更多",
                     "About GitHub Copilot privacy.": "关于 GitHub Copilot 隐私的信息。",
-                "Anthropic Claude 3.5 Sonnet in Copilot": "Claude 3.5 中的 Copilot", // 简化部分名称
+                "Allow GitHub to use my data for AI model training": "允许 GitHub 将数据用于训练 AI 模型",
+                    "Allow GitHub, its affiliates and third parties to use my data, including Prompts, Suggestions, and Code Snippets, for AI model training. More information in the": "允许GitHub、其关联公司和第三方使用我的数据，包括提示、建议和代码片段，以训练 AI 模型。更多信息请查看",
+                "Copilot access to Bing": "访问必应", // 下面还有词条未添加
+                "Anthropic Claude 3.5 Sonnet in Copilot": "Claude 3.5 模型", // 简化部分名称
                     "You can use the latest Claude 3.5 Sonnet model.": "您可以使用最新 Claude 3.5 Sonnet 模型。",
                     "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet.": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
                     "Select an option": "选择",
