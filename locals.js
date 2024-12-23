@@ -9732,6 +9732,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Executable File": "可执行文件",
                 "executable file": "可执行文件",
 
+                // Copilot
+                "Ask Copilot about this file": "与 Copilot 讨论此文件",
+
                 "Raw": "源码",
                 // 文件复制图标
                     "Copy raw file": "复制原始文件",
