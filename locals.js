@@ -1357,11 +1357,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
          * 正则中的 ?? 前面的字符 重复0次或1次
          * 正则中的 ?: 非捕获符号(即关闭圆括号的捕获能力) 使用方法 (?: 匹配规则) -->该匹配不会被捕获 为 $数字
          */
-        [/(^Updated |^Commits on |^Joined on |on )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
+        [/(^Updated |^Commits on |^Joined on |on |^Submitted )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
             var prefixKey = {
                 "Updated "   : "更新于 ",
                 "Commits on ": "提交于 ",
                 "Joined on " : "加入于 ",
+                "Submitted ": "提交于",
             };
             var weekKey = {
                 "Sun"  : "周日",
@@ -22834,6 +22835,19 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "in your account settings - or select another school.": "- 或选择其他学校。",
                         "When you click \"Continue\" you will be prompted to share your location with us. Providing your current location helps us verify your affiliation with your chosen school.": "点击 “继续 ”后，系统会提示您与我们共享您的位置。提供您的当前位置有助于我们核实您与所选学校的关联。",
                         "Continue": "继续",
+                        
+                        // 提交历史
+                            "You've already submitted": "您已提交申请",  // 后续正则
+
+                            "rejected": "驳回",
+                                "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
+                                "What happened?": "发生了什么？",
+                                    "Suggested proof to expedite your approval:": "建议提供证明，以加快审批：",
+                                "Have questions?": "有疑问？",
+                                    "Please seek help via our": "请通过我们的",
+                                    "Student Developer Pack Application FAQ": "学生开发包申请常见问题",
+                                    "or visit the": "或访问",
+                                    "GitHub Education Community.": "GitHub 教育社区。",
                     
                         "Get help": "获取帮助",
                             "Common questions about applying for your academic discount.": "关于申请学术折扣的常见问题。",
@@ -22860,11 +22874,44 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "Please upload proof of your academic status.": "请上传您的学籍证明。",
                         "Snap a picture of your qualifying proof of current academic status using your HD webcam or smartphone camera.": "使用高清摄像头或智能手机摄像头拍下您当前学历的合格证明照片。",
                         "Take a picture": "拍照",
-                        "Error: Could not access your webcam": "错误：无法访问您的网络摄像头",
+                            "Take photo": "拍照",
+                            "Reset": "重置",
+                            "Error: Could not access your webcam": "错误：无法访问您的网络摄像头",
+                            "camera2 1, facing front": "镜头2 1，前摄",
+                            "camera2 0, facing back": "镜头2 0，后摄",
+                            "Uploading…": "上传中…",
+                            "Thanks for uploading your photo. Please complete the form and submit when you're ready.": "感谢您上传照片。请填写表格并提交。",
                     
                     "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
                         "Process my application": "处理申请",
+                        "Processing your application": "处理中",
                         "Processing information...": "处理中...",
+                    
+                    // 上传失败
+                        "Your application cannot be reviewed until you fix the following:": "您的申请将不被审查直到解决以下问题：",
+                            "Please use your device camera to submit your academic affiliation documents. If you’re having trouble using your device camera, please allow camera access for the application website on your browser. The steps for this will vary depending on which browser you are using. Information on browsers supported by GitHub can be found": "请使用设备摄像头提交您的学术关系文件。如果您在使用设备摄像头时遇到困难，请在浏览器上允许摄像头访问申请网站。具体步骤视您使用的浏览器而定。有关 GitHub 支持的浏览器信息，请点击",
+                                "here": "此处",
+                                ". You may also try applying from a different computer or mobile device.": "。您也可以尝试换一台电脑或移动设备申请。",
+                            "Please ensure that your academic affiliation document contains your last name exactly as it appears in your": "请确保您的学籍文件中的姓氏与",
+                                "GitHub billing information": "GitHub 账单信息",
+                                ". If you have only a single legal name, enter it in both the first and last name fields of your GitHub billing information.": "中的姓氏完全一致。如果您只有一个合法姓名，请在 GitHub 账单信息的姓和名栏中同时输入。",
+                            "The image you selected does not appear to contain your school name. Your complete school name must appear in your document, not only the school logo. You may include multiple documents together. If your official document is not in English then you may photograph the original next to an English translation.": "您选择的图片似乎不包含您的学校名称。文件中必须包含完整的校名，而不仅仅是校徽。您可以将多份文件放在一起。如果您的官方文件不是英文的，您可以将原件与英文翻译件放在一起拍照。",
+                            "Please ensure that your academic affiliation document contains your first name exactly as it appears in your": "请确保您的学术关系文件中的姓名与",
+                                //"GitHub billing information": "",
+                                ". Variations of your name and nicknames are unacceptable.": "中的姓名完全一致。请勿使用不同的姓名和昵称。",
+                            "You are unlikely to be verified until you have completed your": "在完成",
+                                "GitHub user profile": "GitHub 用户资料",
+                                "with your full name exactly as it appears in your academic affiliation document. Please do not use a variation of your name or a nickname. Once you have updated your profile information log out and log back into GitHub before re-applying.": "之前，您不可能通过验证。请不要使用姓名的变体或昵称。更新个人档案信息后，请退出并重新登录 GitHub，然后再重新申请。",
+            // https://education.github.com/discount_requests/数字/completed 成功
+                "Get benefits": "获取福利",
+
+                "Thanks for submitting!": "感谢提交！",
+                    "Be sure to check your email. If you don't hear from us within the hour, you should receive an email from us in less than": "请务必查看您的电子邮件。如果您在一小时内没有收到我们的回复，您应该会在",
+                    "5 days": "5 天内",
+                    ". Have an Octotastic day!": "收到我们的电子邮件。祝您度过愉快的一天！",
     },
-    "regexp":[],
+    "regexp":[
+        [/(\d+) requests?/, "$1 次"],
+        //[/Submitted (.+)/, "提交于 $1"],
+    ],
 };
