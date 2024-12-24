@@ -1365,7 +1365,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Updated "   : "更新于 ",
                 "Commits on ": "提交于 ",
                 "Joined on " : "加入于 ",
-                "Submitted ": "提交于",
+                "Submitted ": "提交于 ",
             };
             var weekKey = {
                 "Sun"  : "周日",
