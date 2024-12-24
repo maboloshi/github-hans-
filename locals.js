@@ -45,7 +45,7 @@ I18N.conf = {
      * 导入仓库 /new/import
      * ...
      */
-    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
+    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap|education)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
@@ -354,6 +354,9 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Blocked users": "黑名单",
         "New conversation · GitHub Copilot": "新聊天 · GitHub Copilot",
         "Models · GitHub Marketplace": "模型 · GitHub 市场",
+        "GitHub Education": "GitHub 教育",
+        "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
+        "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育  ",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -22729,6 +22732,103 @@ I18N["zh-CN"]["copilot"] = {
 I18N["zh-CN"]["sitemap"] = { // 网站地图页，仅匹配公共部分
     "static": {
         ...I18N["zh-CN"]["homepage"]["static"],
+    },
+    "regexp":[],
+};
+
+I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
+    "static": {
+        ...I18N["zh-CN"]["homepage"]["static"],
+        // 顶栏
+            "Students": "学生",
+            "Teachers": "教师",
+            "Schools": "学校",
+        
+        "GitHub Education": "GitHub 教育",
+        "Empowering the next generation of developers": "增强新一代开发人员的能力",
+            "GitHub Education bridges the gap between coding education and a tech career, and is accessible to everyone globally at no cost.": "GitHub 教育在编程教育和技术职业之间架起了一座桥梁，全球每个人都可以免费使用。",
+        "Join GitHub Education": "加入 GitHub 教育",
+        // 教育包申请 https://education.github.com/pack
+            // 右上角菜单
+                "Your benefits application": "我的福利",
+                "Your GitHub.com profile": "我的个人资料",
+                "Education Docs": "教育文档",
+                "Education Support": "教育支持",
+                "Sign out of GitHub Education": "退出 GitHub 教育",
+            // 顶部提示
+                "We're still processing your application. Once this is complete you will have access to the student developer pack offers.": "我们仍在处理您的申请。一旦处理完毕，您就可以获得学生开发包优惠。",
+
+            "GitHub Student Developer Pack": "GitHub 学生开发包",
+                "Learn to ship software like a pro.": "学习如何像专业人士一样开发软件。",
+                "There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why we created the GitHub Student Developer Pack with some of our partners and friends.": "没有替代品可以代替亲身实践的经验。但对于大多数学生来说，现实世界中的工具可能成本过高。这就是为什么我们与一些合作伙伴和朋友一起创建了GitHub 学生开发包。",
+            "Sign up for Student Developer Pack": "获取学生包",
+            "Love the pack? Spread the word": "喜欢吗？分享给朋友！",
+            // 后续内容完全用不到直接不翻
+
+            // https://education.github.com/discount_requests/application
+                "Benefits application": "优惠",
+                "Access free GitHub Education benefits": "获取免费 GitHub 教育福利",
+                    "Complete the fields below to unlock tools and resources for your educational journey": "填写以下字段，为您的教育之旅解锁工具和资源",
+                
+                "Select your role in education": "选择身份",
+                    "Teacher": "教师",
+                    "Student": "学生",
+                    "School": "学校",
+
+                    // 学生
+                    "Enhance your tech skills with real-world tools": "利用现实世界中的工具提高您的技能",
+                        "STUDENT": "学生",
+                            "FREE GitHub Pro while you are a student": "学生期间免费使用 GitHub 专业版",
+                            "Valuable GitHub Student Developer Pack partner offers": "宝贵的 GitHub 学生开发包合作伙伴优惠",
+                            "GitHub Campus Expert training for qualified applicants": "为合格申请者提供 GitHub 校园专家培训",
+                        "To qualify for student benefits, you must:": "您必须具备以下条件：",
+                            "Have a GitHub account.": "持有 GitHub 账号。",
+                            "Be at least 13 years old.": "大于 13 岁。",
+                            "Be currently enrolled in a degree or diploma granting course of study from a recognized educational institution.": "目前就读于认可教育机构的学位或文凭课程。",
+                            "Be able to provide documentation from your school which demonstrates your current student status.": "能够提供学校出具的证明您当前学生身份的文件。",
+                        "Before you begin:": "在开始之前：",
+                            "Check that you are using a": "检查您使用的是",
+                                "supported browser": "受支持的浏览器",
+                                ", and that location services are not blocked by your browser or platform.": "，且您的浏览器或平台未阻止定位服务。",
+                            "Complete your GitHub account": "在 GitHub 帐户",
+                                "billing information": "账单信息",
+                                "with your full legal name as it appears on your academic affiliation documentation. (You do not have to add a payment method.)": "中填写您的法定全名，与您的学历证明材料上的姓名一致。(无需添加支付方式）。",
+                            "Verify": "验证",
+                                "your academic email address on your GitHub account, if your school provides one.": "您的教育邮箱于 GitHub，如果您的学校提供。",
+                            "Secure your GitHub account with": "保护您的 GitHub 账户安全，使用",
+                                "two-factor authentication": "双重身份验证",
+                                ". (We recommend using the": "。（我们推荐使用",
+                                "app.)": "。）",
+                            "Personalize": "个性化",
+                                "your public GitHub Profile with your photo, your name, your pronouns, and more.": "您的 GitHub 简介，使用照片、姓名、代词等。",
+                            "Generate a README for your public GitHub Profile,": "为您的公共 GitHub 简介生成 README，",
+                                "customize it with your interests": "根据您的兴趣进行定制",
+                                ", and publish it for the world to see.": "，然后公开。",
+                        "Offer availability:": "可提供优惠：",
+                            "All partner offers are subject to the partner company's terms and conditions and may not be available in all regions.": "所有合作伙伴优惠均受合作伙伴公司的条款和条件限制，可能不适用于所有地区。",
+
+                        "Application": "应用",
+                            "Required fields are marked with an asterisk": "带星号的为必填项",
+                        "What is the name of your school?": "您的学校名称",
+                            "Note:": "注：",
+                            "If your school is not listed, then enter the full school name and continue. You will be asked to provide further information about your school on the next page.": "如果您的学校不在列表中，请输入学校全名并继续。下一页将要求您提供有关贵校的更多信息。",
+                            "A minimum of two characters is required to find your school.": "查找学校至少需要两个字符。",
+                            // 窗口
+                            "We require applicants of": "我们要求",
+                            "to use one of these school-issued email addresses to apply:": "的申请人使用其中一个学校发布的电子邮件地址进行申请：",
+                            "add and verify your": "添加并验证",
+                            "school-issued email address": "学校提供的电子邮件地址",
+                            "in your account settings – or a contact email if you do not have one. Once your email is verified, refresh this page.": "到您的 GitHub 账户。一旦您的电子邮件通过验证，请刷新此页面。",
+                            "Add an email address": "添加电子邮件",
+                        "When you click \"Continue\" you will be prompted to share your location with us. Providing your current location helps us verify your affiliation with your chosen school.": "点击 “继续 ”后，系统会提示您与我们共享您的位置。提供您的当前位置有助于我们核实您与所选学校的关联。",
+                        "Continue": "继续",
+                    
+                        "Get help": "获取帮助",
+                            "Common questions about applying for your academic discount.": "关于申请学术折扣的常见问题。",
+                        // 学生
+                            "Learn about GitHub's programs": "了解 GitHub 计划",
+                        // 教师
+                            "Discover GitHub's resources": "探索 GitHub 资源",
     },
     "regexp":[],
 };
