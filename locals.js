@@ -317,6 +317,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Runner Groups": "运行器组",
         "Packages": "软件包",
         "Package": "软件包",
+        "Payment Information": "支付信息",
         "Security": "安全",
         "Verified & approved domains": "经验证和批准的域名",
         "Add a Pages verified domain": "添加一个经验证的 GitHub Pages 域名",
@@ -356,7 +357,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Models · GitHub Marketplace": "模型 · GitHub 市场",
         "GitHub Education": "GitHub 教育",
         "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
-        "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育  ",
+        "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -3594,14 +3595,22 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
             "First name": "名字",
             "Last name": "姓氏",
+            "Add your business information to show on every invoice": "添加您的企业信息，在每张发票上显示",
             "Address (P.O. box, company name, c/o)": "地址（邮政信箱、公司名称、c/o）",
+            "Address": "地址",
+                "(Street, P.O. box)": "（邮政信箱、c/o）",
             "Address line 2 (Apartment, suite, unit)": "地址第 2 行（公寓、套房、单元）",
+            "Address line 2": "地址第 2 行",
+                "(Apartment, suite, unit)": "（公寓、套房、单元）",
             "City": "城市",
             "Postal/Zip code": "邮政编码",
                 "Required for certain countries": "某些国家/地区需要",
+                "(9-digit zip code for US)": "(美国为 9 位邮政编码）",
             "Country/Region": "国家/地区",
                 "Choose your country": "选择您所在的国家/地区",
             "State/Province": "州/省",
+            "VAT/GST ID": "增值税/消费税编号",
+            "Save billing information": "保存",
             "You have not added any billing information.": "您尚未添加账单方式。",
 
             "Payment method": "支付方式",
@@ -3629,6 +3638,17 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "For your security, do not include any confidential or financial information (like credit card numbers).": "为了您的安全，请勿包含任何机密或财务信息（如信用卡号）。",
             "Full business name or address of record": "企业全称或记录地址",
             "Save contact information": "保存联系信息",
+
+            "Invoice": "发票",
+                "Receive an invoice for your GitHub purchases": "接收 GitHub 购物发票",
+
+                "The data from Billing Information, such as your address and VAT/GST ID will appear on your invoices.": "账单信息中的数据，如您的地址和增值税/消费税 ID，将显示在您的发票上。",
+                "Update your information displayed on your invoices in the": "更新发票上显示信息中的",
+                "billing information section": "账单信息栏",
+
+                "Automatically receive an invoice alongside the payment receipt": "在收到付款收据的同时自动接收发票",
+                    "* Enables invoices for all NEW payments.": "* 为所有新付款启用发票。",
+                "Save invoice preference": "保存发票首选项",
 
         // 支付方式 https://github.com/settings/billing/payment
             "/ Payment method": "/ 支付方式",
