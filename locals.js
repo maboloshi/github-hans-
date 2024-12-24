@@ -1606,6 +1606,11 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "or": "或者",
         "Learn more about Git and GitHub": "了解更多关于 Git 和 GitHub 的信息",
 
+        // 教育版
+        "Join GitHub Education!": "加入 GitHub 教育！",
+            "GitHub Education opens doors to new skills, tools, and a collaborative community eager to drive innovation. Join us and build a foundation for your future in technology.": "GitHub 教育为您打开通往新技能、新工具以及渴望推动创新的协作社区的大门。加入我们，为您的技术未来打下基础。",
+        "Join GitHub Education": "加入 GitHub 教育",
+
         // 组织
         // [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"],
         // [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"],
@@ -22807,7 +22812,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                         "Offer availability:": "可提供优惠：",
                             "All partner offers are subject to the partner company's terms and conditions and may not be available in all regions.": "所有合作伙伴优惠均受合作伙伴公司的条款和条件限制，可能不适用于所有地区。",
 
-                        "Application": "应用",
+                        "Application": "申请",
                             "Required fields are marked with an asterisk": "带星号的为必填项",
                         "What is the name of your school?": "您的学校名称",
                             "Note:": "注：",
@@ -22820,6 +22825,13 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "school-issued email address": "学校提供的电子邮件地址",
                             "in your account settings – or a contact email if you do not have one. Once your email is verified, refresh this page.": "到您的 GitHub 账户。一旦您的电子邮件通过验证，请刷新此页面。",
                             "Add an email address": "添加电子邮件",
+                            // 验证通过
+                            "You have verified the email address": "您已在 GitHub 上验证邮件",
+                            "on your GitHub account. That academic domain is associated with the school": "。该域名属于：",
+                            "Select this school": "选择此学校",
+                            "We chose this school based on your email. If this isn't your school, please": "我们根据您的电子邮件选择了这所学校。如果这不是您的学校，请在账户设置中",
+                            "add and verify another": "添加并验证其他",
+                            "in your account settings - or select another school.": "- 或选择其他学校。",
                         "When you click \"Continue\" you will be prompted to share your location with us. Providing your current location helps us verify your affiliation with your chosen school.": "点击 “继续 ”后，系统会提示您与我们共享您的位置。提供您的当前位置有助于我们核实您与所选学校的关联。",
                         "Continue": "继续",
                     
@@ -22829,6 +22841,30 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "Learn about GitHub's programs": "了解 GitHub 计划",
                         // 教师
                             "Discover GitHub's resources": "探索 GitHub 资源",
+                    
+            // https://education.github.com/discount_requests/数字/additional_information
+                "Upload proof": "上传证明",
+
+                "Upload proof of your academic status": "上传学籍证明",
+                "We need a little more proof to verify your academic status.": "还需要一点证明验证学籍状态。",
+                "What we need to see:": "我们需要查看：",
+                    "Your student ID": "您的学生证",
+                        "Your ID should": "您的学生证需要",
+                        "include a date": "包含日期",
+                        "that verifies your current enrollment. Make sure the image is clear and easy to read; if it looks blurry, please take a new photo and upload it again.": "，以证明您当前的注册情况。请确保图像清晰易读；如果图像模糊，请重新拍摄照片并上传。",
+                    "Or another form of proof": "或其他证明",
+                        "If you don't have a student ID, or it doesn't include a date, you can upload a letter on school letterhead or any documentation": "如果您没有学生证，或者学生证上没有日期，您可以上传一封印有学校信笺抬头的信件或任何能证明您",
+                        "with a date": "当前注册日期",
+                        "that demonstrates your current enrollment.": "的文件。",
+                    
+                    "Please upload proof of your academic status.": "请上传您的学籍证明。",
+                        "Snap a picture of your qualifying proof of current academic status using your HD webcam or smartphone camera.": "使用高清摄像头或智能手机摄像头拍下您当前学历的合格证明照片。",
+                        "Take a picture": "拍照",
+                        "Error: Could not access your webcam": "错误：无法访问您的网络摄像头",
+                    
+                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
+                        "Process my application": "处理申请",
+                        "Processing information...": "处理中...",
     },
     "regexp":[],
 };
