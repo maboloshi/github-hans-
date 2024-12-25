@@ -22935,6 +22935,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     
                     // 上传失败
                         "Your application cannot be reviewed until you fix the following:": "您的申请将不被审查直到解决以下问题：",
+                            "You must configure your browser and operating system to allow location access. You may not use a VPN. If you believe that our information about your school is incomplete or incorrect, then please select ‘My selected school has incorrect or incomplete information e.g. domains or campus location’ option when submitting a GitHub Education support ticket.": "您必须配置您的浏览器和操作系统以允许位置访问。您不得使用VPN。如果您认为我们关于您学校的资料不完整或不正确，请在提交GitHub 教育支持工单时选择“我选择的学校信息有误或不完整，例如域名或校园位置”选项。",
                             "Please use your device camera to submit your academic affiliation documents. If you’re having trouble using your device camera, please allow camera access for the application website on your browser. The steps for this will vary depending on which browser you are using. Information on browsers supported by GitHub can be found": "请使用设备摄像头提交您的学术关系文件。如果您在使用设备摄像头时遇到困难，请在浏览器上允许摄像头访问申请网站。具体步骤视您使用的浏览器而定。有关 GitHub 支持的浏览器信息，请点击",
                                 "here": "此处",
                                 ". You may also try applying from a different computer or mobile device.": "。您也可以尝试换一台电脑或移动设备申请。",
