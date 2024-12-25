@@ -3598,7 +3598,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "Add your business information to show on every invoice": "添加您的企业信息，在每张发票上显示",
             "Address (P.O. box, company name, c/o)": "地址（邮政信箱、公司名称、c/o）",
             "Address": "地址",
-                "(Street, P.O. box)": "（邮政信箱、c/o）",
+                "(Street, P.O. box)": "（街道，邮政信箱）",
             "Address line 2 (Apartment, suite, unit)": "地址第 2 行（公寓、套房、单元）",
             "Address line 2": "地址第 2 行",
                 "(Apartment, suite, unit)": "（公寓、套房、单元）",
@@ -3610,7 +3610,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "Choose your country": "选择您所在的国家/地区",
             "State/Province": "州/省",
             "VAT/GST ID": "增值税/消费税编号",
-            "Save billing information": "保存",
+            "Save billing information": "保存账单信息",
             "You have not added any billing information.": "您尚未添加账单方式。",
 
             "Payment method": "支付方式",
@@ -8585,6 +8585,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "closed this": "已关闭",
             "reopened this": "已重新打开",
             "closed this by deleting the head repository": "已关闭因仓库已删除",
+            "Requested changes": "请求更改",
 
             //
             "This branch has not been deployed": "该分支尚未部署",
@@ -9094,9 +9095,11 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) review requesting changes by reviewers? with write access./, "$1 个请求审查更改由具有写入权限的审查者进行审查。"],
         [/(\d+) approvals?/, "$1 项批准"],
         [/(\d+) reviews? requesting changes by reviewers with write access/, "$1 项审查，要求有写入权限的审查者进行更改"], // 拉取请求
+        [/(\d+) changes? requested by reviewers with write access/, "具有写入权限的审查者提出 $1 项更改请求"],
         [/(\d+) changes? requested/, "$1 项更改请求"],
         [/This pull request closes issue (#\d+)./, "该拉取请求将关闭议题 $1。"], // 死活不翻译
         [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "$1 处增加，$2 处删除未显示，因为差异太大。请使用本地 Git 客户端查看这些更改。"],
+        [/(\d+) requested change/, "$1 项请求更改"],
 
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
