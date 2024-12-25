@@ -6622,7 +6622,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         [/([^ ]+) requested changes, you commented/, "$1 要求更改，您发表评论"], // 拉取请求 浮动信息卡
         [/(\d+) successful checks?/, "$1 个成功的检查"],
         [/(\d+) successful/, "$1 成功"],
-        [/(@\S+)\s+generated\s+this\s+status\./, "$1 创建了这个状态"],
+        [/(@\S+) generated this status\./, "$1 创建了这个状态"],
         [/Successful in (\d+)s/, "在 $1 秒内成功"],
         [/Successful in (\d+)m/, "在 $1 分内成功"],
         [/(\d+) failing checks?/, "$1 个失败的检查"],
