@@ -3427,6 +3427,9 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         ...I18N["zh-CN"]["settings-menu"]["static"],
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"], // 组织设置
 
+        // 顶部提示
+            "Successfully updated billing information.": "成功更新支付信息。",
+
         // 账单和计划 https://github.com/settings/billing/summary
             "Billing summary": "账单摘要",
             "Your next payment": "您的下一次应付款",
@@ -8857,6 +8860,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Edit file": "编辑文件",
             "Delete file": "删除文件",
             "Open in desktop": "在 GitHub Desktop 中打开",
+            "Copilot is not available for this file type": "Copilot 不支持此文件类型",
 
             // 上一页
             "You are viewing the earliest commit": "您正在查看最早的提交",
@@ -8960,6 +8964,13 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Display the source diff": "显示源差异",
+            "Display the rich diff": "显示富差异",
+                "Added": "增加",
+                "Deleted": "删除",
+                "2-up": "并排",
+                "Swipe": "拖拽",
+                "Onion Skin": "渐变",
 
             "These merge commits were added into this branch cleanly.": "这些合并提交已被干净利落地添加到该分支中。",
                 "There are no new changes to show.": "没有任何新的变化。",
@@ -8971,6 +8982,17 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             // 代码评论
                 "Comment on lines": "评论行",
                 "Commenting on lines": "评论行",
+            
+            // Copilot 菜单
+                "Ask Copilot about this diff": "与 Copilot 讨论此差异",
+                    "Copilot is not available for this file type": "Copilot 不支持此文件类型",
+                "Ask Copilot about this file-diff": "与 Copilot 讨论此文件差异",
+                "Copilot menu": "Copilot 菜单",
+                    "Explain": "解释",
+                    "Attach to current thread": "附加到当前主题",
+                
+                "Select files to discuss": "选择文件讨论",
+                    "Copilot is not available for this file": "Copilot 不支持此文件",
 
             // 建议更改
                 "Suggested change": "建议更改",
@@ -17860,6 +17882,7 @@ I18N["zh-CN"]["login/oauth"] = { // 应用授权
 
         // 第五页 即将跳转到 重定向页面
             "You are being redirected to the authorized application.": "您将被重定向到授权的应用。",
+            "If your browser does not redirect you back, please visit": "",
             "If your browser does not redirect you back, please": "如果您的浏览器没有将您重定向回来，请",
             "click here": "点击这里",
             "to continue.": "继续。",
@@ -22894,6 +22917,8 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                     "Student Developer Pack Application FAQ": "学生开发包申请常见问题",
                                     "or visit the": "或访问",
                                     "GitHub Education Community.": "GitHub 教育社区。",
+                            
+                            "pending": "排队",
                     
                         "Get help": "获取帮助",
                             "Common questions about applying for your academic discount.": "关于申请学术折扣的常见问题。",
@@ -22927,6 +22952,10 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "camera2 0, facing back": "镜头2 0，后摄",
                             "Uploading…": "上传中…",
                             "Thanks for uploading your photo. Please complete the form and submit when you're ready.": "感谢您上传照片。请填写表格并提交。",
+                            // 未拍照直接提交
+                                "Please upload proof of your current school affiliation": "请上传您目前所在学校的证明",
+                                "Please upload proof of your current school affiliation that is less than 1MB in size": "请上传小于 1MB 的照片",
+                                "Binary data can't be blank": "二进制数据不能为空",
                     
                     "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
                         "Process my application": "处理申请",
