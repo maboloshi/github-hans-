@@ -1775,6 +1775,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "followed": "关注了",
         "added a repository to": "已将仓库添加到",
         "contributed to": "贡献给",
+            // 现在会显示拉取请求状态
+            "Merged": "已合并",
 
         "your repository": "您的仓库",
 
@@ -1889,6 +1891,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         // 继任者相关
         [/You are now the designated successor for ([^ ]+)'s account./, "您现在是 $1 的指定继任者了。"],
         [/You have declined to become the designated successor for ([^ ]+)'s account./, "您已经谢绝了成为 $1 账户指定继任者的邀请。"],
+        // 拉取请求状态
+        [/merged (\d+) commits?/, "合并 $1 个提交"],
     ],
 };
 I18N["zh-CN"]["dashboard"] = I18N["zh-CN"]["page-dashboard"];
