@@ -5032,6 +5032,7 @@ I18N["zh-CN"]["settings/installations"] = { // 设置 - 应用/安装的 GitHub 
 
             // "Installed GitHub Apps": "安装的 GitHub 应用",
                 "GitHub Apps augment and extend your workflows on GitHub with commercial, open source, and homegrown tools.": "GitHub 应用通过商业、开源和自主开发的工具来增强和扩展您在 GitHub 上的工作流程。",
+                "Permission updates requested.": "待处理的 GitHub 权限请求",
 
             "Pending GitHub Apps installation requests": "待处理的 GitHub 应用安装请求", // 组织设置
                 "Members in your organization can request that GitHub Apps be installed. Pending requests are listed below.": "您组织中的成员可以请求安装 GitHub 应用。下面列出了待处理的请求。",
@@ -6657,6 +6658,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         [/([^ ]+) requested changes, you commented/, "$1 要求更改，您发表评论"], // 拉取请求 浮动信息卡
         [/(\d+) successful checks?/, "$1 个成功的检查"],
         [/(\d+) successful/, "$1 成功"],
+        [/(@\S+) generated this status\./, "$1 创建了这个状态"],
         [/Successful in (\d+)s/, "在 $1 秒内成功"],
         [/Successful in (\d+)m/, "在 $1 分内成功"],
         [/(\d+) failing checks?/, "$1 个失败的检查"],
