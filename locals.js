@@ -1294,6 +1294,27 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
 
             "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
 
+            // 响应状态
+                "Copilot is responding…": "Copilot 响应中…",
+                "creating plan": "创建计划中",
+                "getting data": "获取数据中",
+                "Using the GitHub API to search pull requests": "正在使用 GitHub API 搜索拉取请求",
+                    "Copilot used the": "Copilot 已使用",
+                    "Issue API": "议题 API",
+                    "tool": "工具",
+            
+            // 引用
+                "More reference options": "更多引用选项",
+                    "Attach to chat": "附加至聊天",
+                    "Raw": "源码",
+                    "Show content": "显示内容",
+                        "above": "上方",
+                        "below": "下方",
+                    "Reference details": "引用信息",
+                        "contributor": "贡献者",
+                        "contributors": "贡献者",
+                        "updated": "更新于",
+
             "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
             "Privacy Policy": "隐私政策",
             "Send": "发送",
@@ -1309,6 +1330,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
     "regexp": [ // 正则翻译
         // Copilot 窗口
         [/Chatting about ([^ ]+)/, "关于 $1 的对话"],
+        //[/Public code references from 4 repositories/, ""],
+        [/Public code references from (\d+) repositor(y|ies)/, "公共代码，引用自 $1 个仓库"],
+        [/(\d+) references?/, "$1 条引用"],
+        [/(\d+) lines? \((\d+) loc\) ·/, "$1 行（$2 非空行）·"],  // loc = 代码行（line of code）= 行数 - 空行数（lines - blank lines）
+        [/Using the GitHub API to search for issues assigned to user ([^ ]+)/, "使用 GitHub API 搜索分配给用户 $1 的议题"],
+        [/Chatting with (\d+) attachments?/, "附件 $1 个"],
         /**
          * 匹配时间格式
          *
@@ -22720,6 +22747,7 @@ I18N["zh-CN"]["copilot"] = {
 
             // 时间
                 "Today": "今天",
+                "Last 30 days": "最近 30 天",
 
             // 无对话
             "No conversations yet": "还没有对话",
@@ -22910,6 +22938,11 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                         // 提交历史
                             "You've already submitted": "您已提交申请",  // 后续正则
 
+                            "approved": "批准",
+                                "Congrats! Your request for": "恭喜！您的申请",
+                                "was approved and your benefits will be available": "已获批准，福利将很快发放。",
+                                "soon": "常见问题", // 该处链接指向 https://github.com/orgs/community/discussions/111352#user-content-how-long-after-ive-been-approved-will-i-receive-my-academic-benefits
+                                
                             "rejected": "驳回",
                                 "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
                                 "What happened?": "发生了什么？",
@@ -22990,6 +23023,23 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
+        [/Hi, ([^ ]+)! You were last verified as a on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
+            var monthKey = {
+                "Jan": "1月",
+                "Feb": "2月",
+                "Mar": "3月",
+                "Apr": "4月",
+                "May": "5月",
+                "Jun": "6月",
+                "Jul": "7月",
+                "Aug": "8月",
+                "Sep": "9月",
+                "Oct": "10月",
+                "Nov": "11月",
+                "Dec": "12月"
+            };
+            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+    }],
         //[/Submitted (.+)/, "提交于 $1"],
     ],
 };
