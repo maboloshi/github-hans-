@@ -23028,6 +23028,86 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "Be sure to check your email. If you don't hear from us within the hour, you should receive an email from us in less than": "请务必查看您的电子邮件。如果您在一小时内没有收到我们的回复，您应该会在",
                     "5 days": "5 天内",
                     ". Have an Octotastic day!": "收到我们的电子邮件。祝您度过愉快的一天！",
+                
+            // https://education.github.com/onboardings/new 申请批准后出现
+                "Welcome to GitHub Education!": "欢迎来到 GitHub 教育！",
+                    "GitHub Education offers resources and programs to help students achieve their career goals.": "GitHub 教育提供各种资源和计划，帮助学生实现职业目标。",
+                    "To get started, please answer two questions so we can add a learning path to your Education dashboard to help you with your goals.": "要开始学习，请回答两个问题，以便我们在您的教育仪表板上添加学习路径，帮助您实现目标。",
+                
+                "Question 1 of 2": "问题 1/2",
+                    "In the next 4-6 months, which of the following are you hoping to accomplish? Select two that apply best.": "在未来 4-6 个月内，您希望实现以下哪些目标？请选择最适合的两项。",
+                        "Understanding how to use GitHub": "了解如何使用 GitHub",
+                        "Refining my skills in a particular topic (coding, gaming, design, big data, artifical intelligence, etc.)": "提高我在某一特定领域（编码、游戏、设计、大数据、人工智能等）的技能",
+                        "Connecting with other students who have similar interests": "与其他兴趣相投的学生建立联系",
+                        "Developing career readiness skills": "培养职业准备技能",
+                        "Two selections are required to continue.": "必须选两项。",
+                "Question 2 of 2": "问题 2/2",
+                    "Which topics are of interest to you? Select all that apply.": "您对哪些主题感兴趣？请选择所有适用选项。",
+                        "GitHub features and products": "GitHub 功能和产品",
+                        "Building a professional identity on GitHub": "在 GitHub 上打造专业身份",
+                        "Understanding emerging technologies in a particular field of interest (web development, gaming, design, data, engineering, robotics, etc.)": "了解特定兴趣领域（网络开发、游戏、设计、数据、工程、机器人技术等）的新兴技术",
+                        "Finding people, projects, and communities to connect with": "寻找可以联系的人、项目和社区",
+                        "Speaking at a conference": "在会议上发言",
+                        "Gaining skills to start a great career": "掌握技能，开始美好的职业生涯",
+                "Skip this question": "跳过",
+
+                "Here's our recommendation!": "这是我们的推荐！",
+                    "Continue with our recommended learning path for you, or select another one. Based on your selection,": "继续我们为您推荐的学习路径，或选择其他路径。根据您的选择，",
+                    "we will display a learning path on your dashboard": "我们将在您的仪表板上显示学习路径，",
+                    "to help you get started.": "帮助您开始学习。",
+
+                    "Get Started with GitHub": "GitHub 入门",
+                        "With this learning path, you will learn how to make your first profile README and find other student repositories.": "通过本学习路径，您将学会如何制作第一个配置文件 README 和查找其他学生资源库。",
+                    "Recommended": "推荐",
+                    "GitHub Deep Dive": "深入了解 GitHub",
+                        "Go deeper on how to use codespaces and the GitHub flow to create a web application.": "深入了解如何使用代码空间和 GitHub 流程创建网络应用程序。",
+                    "Continue to Dashboard": "在仪表板继续",
+            
+            // https://education.github.com/learner/learn
+                // 顶部提示
+                "Your onboarding preferences have been saved!": "您的入职首选项已保存！",
+                // 左侧
+                    "Your request was approved.": "您的申请已批准。",
+                        "Your benefits will be available soon.": "您的福利即将发放。",
+
+                    "Learn new skills": "学习新技能",
+                        "Access learning resources from GitHub Education.": "从 GitHub 教育获取学习资源。",
+                    "Find opportunities": "寻找机遇",
+                        "Power up your skillset with real-world projects.": "通过实际项目增强您的技能。",
+                    "Get connected": "获得联系",
+                        "Discover other learners and build your network.": "发现其他学习者，建立自己的网络。",
+                // 中间
+                    "Learning path": "学习途径",
+                        "Intro to GitHub": "GitHub 介绍",
+                            "GitHub flow is a lightweight, branch-based workflow. In this Experience you'll learn the basics of the GitHub Flow including creating and making changes to branches within a repository, as well as creating and merging pull requests. The GitHub flow is useful for everyone, not just developers.": "GitHub 工作流是一种基于分支的轻量级工作流。在本体验中，您将学习 GitHub 工作流的基础知识，包括创建和修改版本库中的分支，以及创建和合并拉取请求。GitHub 工作流不仅对开发人员有用，对每个人都有用。",
+                            "Go to Intro to GitHub": "前往 GitHub 介绍",
+                        "Primer: Codespaces": "入门：代码空间",
+                            "Wondering how to get started with Codespaces? This Primer makes it easy by giving you the templates, videos and step-by-step resources you need to get you started running, testing, debugging and pushing code using this instant cloud developer environment.": "想知道如何开始使用代码空间吗？本入门指南为您提供模板、视频和分步资源，让您轻松开始运行、测试、调试和推送代码。",
+                            "Go to Primer: Codespaces": "前往入门：代码空间",
+                    "Not what you were looking for? Check out our": "还没有找到您想要的？请查看我们的",
+                        "other learning paths.": "其他学习路径。",
+                    
+                    "Student Developer Pack offers": "学生开发包提供",
+                        "Your Student Developer Pack will be ready soon!": "您的学生开发包即将就绪！",
+                            "We will notify you via email when your": "我们将通过电子邮件通知，当您可以使用",
+                                "Experiences": "体验",
+                                "offers": "优惠",
+                                "become": " ",
+                                "available to you.": "时。",
+                // 右侧
+                    // 右上角图标菜单
+                    "Update your location": "更新您的位置",
+
+                    // 看板
+                    "Enabling Copilot": "启用 Copilot",
+                        "To ensure your free Copilot benefit is enabled, redeem by going to this link.": "要确保您的免费 Copilot 优惠已启用，请访问此链接进行兑换。",
+
+                    "Updates in Learn New Skills": "学习新技能的更新内容",
+                        "No new updates": "无更新",
+                    
+                    "Claimed offers": "已申请优惠",
+                        "Your explored offers failed to load, please refresh the page to see this content.": "加载失败，请刷新页面以查看此内容。",
+                    
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
