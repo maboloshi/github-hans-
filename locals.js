@@ -23108,6 +23108,30 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "Claimed offers": "已申请优惠",
                         "Your explored offers failed to load, please refresh the page to see this content.": "加载失败，请刷新页面以查看此内容。",
                     
+            // https://education.github.com/learner/opportunities
+                "Community Exchange": "社区交流",
+                    "Community Exchange is a collection of student repositories for teaching, learning and collaborating.": "社区交流是一个用于教学、学习和合作的学生资源库。",
+                    "Go to Community Exchange": "前往社区交流",
+                "Updates in Find Opportunities": "寻找机遇的更新内容",
+            
+            // https://education.github.com/learner/connect
+                "Events": "事件",
+                    "View more events": "查看更多",
+                    "See more": "详情",
+                "GitHub Education Live": "GitHub 教育直播",
+                    "Go to Twitch": "前往 Twitch",
+
+                // 右侧
+                    "Updates in Get Connected": "获得联系更新内容",
+                    "Campus Expert": "校园专家",
+                        "Campus Experts are student leaders that strive to build diverse and inclusive technical communities.": "校园专家是学生领袖，他们努力建设多元化和包容性的技术社区。",
+
+                        "Follow your Expert": "关注专家",
+                        "Follow student leaders trained by GitHub to get help with hackathons & events": "关注由 GitHub 培训的学生领袖，在黑客马拉松和活动中获得帮助",
+                    
+                    "Education blog": "教育博客",
+                        "View more": "查看更多",
+                     
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
@@ -23129,5 +23153,6 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
             return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
     }],
         //[/Submitted (.+)/, "提交于 $1"],
+        [/(\d+) views?/, "$1 次观看"],
     ],
 };
