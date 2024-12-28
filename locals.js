@@ -3311,6 +3311,7 @@ I18N["zh-CN"]["settings/accessibility"] = { // 设置 - 无障碍
                 "Command mode": "命令模式",
                     "control + shift + k (default)": "control + shift + k (默认)",
                 "Save keyboard shortcut preferences": "保存键盘快捷键首选项",
+                "Save command palette preferences": "保存命令面板首选项",
 
             // 顶部提醒
             "Keyboard shortcut preference successfully saved.": "键盘快捷键首选项已成功保存。",
