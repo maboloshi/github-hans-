@@ -17914,9 +17914,10 @@ I18N["zh-CN"]["login/oauth"] = { // 应用授权
 
         // 第五页 即将跳转到 重定向页面
             "You are being redirected to the authorized application.": "您将被重定向到授权的应用。",
-            "If your browser does not redirect you back, please visit": "",
+            "If your browser does not redirect you back, please visit": "如果您的浏览器没有将您重定向回来，请",
             "If your browser does not redirect you back, please": "如果您的浏览器没有将您重定向回来，请",
             "click here": "点击这里",
+            "this setup page": "点击这里",
             "to continue.": "继续。",
             "would like permission to:": "希望获得以下许可：",
             "Know which resources you can access": "了解您可以访问哪些资源",
