@@ -22759,6 +22759,7 @@ I18N["zh-CN"]["copilot"] = {
 
             // 时间
                 "Today": "今天",
+                "Yesterday": "昨天",
                 "Last 30 days": "最近 30 天",
 
             // 无对话
