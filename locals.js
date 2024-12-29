@@ -1300,6 +1300,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "creating plan": "创建计划中",
                 "getting data": "获取数据中",
                 "Using the GitHub API to search pull requests": "正在使用 GitHub API 搜索拉取请求",
+                "Using the GitHub API to get latest release": "正在使用 GitHub API 获取最新发行版",
                     "Copilot used the": "Copilot 已使用",
                     "Issue API": "议题 API",
                     "tool": "工具",
