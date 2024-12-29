@@ -358,7 +358,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "GitHub Education": "GitHub 教育",
         "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
         "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
-        "Signup to GitHub Copilot": "获取 GitHub Copilot",
+        "Signup to GitHub Copilot": "注册 GitHub Copilot",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
