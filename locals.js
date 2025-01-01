@@ -7865,6 +7865,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
             "contributing guidelines": "贡献指南",
             "security policy": "安全政策",
             "code of conduct": "行为准则",
+            "contributing guidelines": "贡献准则",
 
             // 被锁定
                 "This conversation has been locked as": "此对话已锁定为",
@@ -10362,6 +10363,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Remember, contributions to this repository should follow its": "请记住，对该仓库的贡献应遵循",
             "Remember, contributions to this repository should follow our": "请记住，对该仓库的贡献应遵循我们的",
             "code of conduct": "行为准则",
+            "contributing guidelines": "贡献准则",
 
             // [/(\d+) new suggested answers?/, "$1 个新的建议答案"],
             "Answer selected": "已选择答案",
@@ -10857,6 +10859,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
 
             //"Latest attempt": "最后运行",
             //"Attempt": "运行",
+            "Explain error": "解释错误",
             //右侧按钮
             "View workflow runs": "查看工作流程运行",
             "Workflow run options": "工作流程运行选项",
