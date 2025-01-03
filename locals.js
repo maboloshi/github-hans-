@@ -23009,7 +23009,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "Please upload proof of your current school affiliation that is less than 1MB in size": "请上传小于 1MB 的照片",
                                 "Binary data can't be blank": "二进制数据不能为空",
                     
-                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
+                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
                         "Process my application": "处理申请",
                         "Processing your application": "处理中",
                         "Processing information...": "处理中...",
