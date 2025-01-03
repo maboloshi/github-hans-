@@ -3058,6 +3058,9 @@ I18N["zh-CN"]["settings/profile"] = { // 设置 - 个人资料
             "Update preferences": "更新设置",
 
             "Profile settings": "个人资料设置",
+                "Display PRO badge": "显示 PRO 勋章",
+                    "This will display the": "将会显示",
+                    "badge on your public profile page.": "徽章在您的个人资料中。",
                 "Show Achievements on my profile": "在我的个人资料上显示成就",
                     "Your achievements will be shown on your profile.": "您的成就将显示在您的个人资料中。",
 
@@ -22960,6 +22963,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "Congrats! Your request for": "恭喜！您的申请",
                                 "was approved and your benefits will be available": "已获批准，福利将很快发放。",
                                 "soon": "常见问题", // 该处链接指向 https://github.com/orgs/community/discussions/111352#user-content-how-long-after-ive-been-approved-will-i-receive-my-academic-benefits
+                                "was approved and your benefits are now available.": "已获批准且福利已发放。",
                                 
                             "rejected": "驳回",
                                 "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
@@ -23161,7 +23165,24 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                 "Dec": "12月"
             };
             return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
-    }],
+        }],
+        [/Hi, ([^ ]+)! You were last verified as a student on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
+            var monthKey = {
+                "Jan": "1月",
+                "Feb": "2月",
+                "Mar": "3月",
+                "Apr": "4月",
+                "May": "5月",
+                "Jun": "6月",
+                "Jul": "7月",
+                "Aug": "8月",
+                "Sep": "9月",
+                "Oct": "10月",
+                "Nov": "11月",
+                "Dec": "12月"
+            };
+            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+        }],
         //[/Submitted (.+)/, "提交于 $1"],
         [/(\d+) views?/, "$1 次观看"],
     ],
