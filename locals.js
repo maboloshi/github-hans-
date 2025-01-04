@@ -3059,7 +3059,7 @@ I18N["zh-CN"]["settings/profile"] = { // 设置 - 个人资料
             "Update preferences": "更新设置",
 
             "Profile settings": "个人资料设置",
-                "Display PRO badge": "显示 PRO 勋章",
+                "Display PRO badge": "显示 PRO 徽章",
                     "This will display the": "将会显示",
                     "badge on your public profile page.": "徽章在您的个人资料中。",
                 "Show Achievements on my profile": "在我的个人资料上显示成就",
@@ -21889,6 +21889,13 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
                     "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot Chat，但无预览功能。",
                     "Learn more about Copilot in github.com": "了解更多关于在 github.com 中使用 Copilot 的信息",
                 "Copilot in the CLI": "在 CLI 中使用 Copilot",
+                    "You can use": "您可以使用",
+                    "GitHub Copilot for assistance in terminal": "GitHub Copilot 终端辅助工具",
+                "Copilot Chat in the IDE": "在 IDE 中使用 Copilot Chat",
+                    "GitHub Copilot Chat in the IDE": "在 IDE 中使用 Copilot Chat",
+                    "to explain a piece of code, propose bug fixes, or generate unit tests in a chat interface from your editor.": "在编辑器的聊天界面上解释代码、提出错误修复建议或生成单元测试。",
+                "Copilot Chat in GitHub Mobile": "在 GitHub Mobile 中使用 Copilot Chat",
+                    "personalized to a codebase.": "，个性化代码。",
                 "Suggestions matching public code (duplication detection filter)": "公共代码匹配的建议（重复检测过滤器）",
                     "Copilot can allow or block suggestions matching public code. Learn more about": "Copilot 可允许或阻止与公共代码匹配的建议。了解更多关于",
                     "code suggestions": "代码建议",
@@ -21921,6 +21928,15 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
             "For more information about the data your organization receives regarding your use of GitHub Copilot, please review": "如需了解贵机构在使用 GitHub Copilot 时会收到哪些数据，请查看",
                 "GitHub's Privacy Statement": "GitHub 的《隐私声明》",
             "Save and complete setup": "保存并继续",
+        
+        // https://github.com/github-copilot/signup/settings
+            "GitHub Copilot is now ready": "GitHub Copilot 已就绪",
+                "Add it to your editor and start building.": "添加至您的编辑器并开始构建",
+
+            "Install the GitHub Copilot extension": "安装 GitHub Copilot 扩展",
+                "You can now use GitHub Copilot on the GitHub website. To use Copilot in your IDE, you first need to install the GitHub Copilot extension. To install for your preferred code editor, check out these Getting Started guides:": "您现在可以在 GitHub 网站上使用 GitHub Copilot。要在 IDE 中使用 Copilot，您需要安装 GitHub Copilot 扩展。请查看这些入门指南：",
+            
+            "If you have the extension already installed for your code editor and have it open, please restart your editor in order to access GitHub Copilot.": "如果您的代码编辑器中已经安装了扩展并且是打开状态，请重启您的编辑器以使用 GitHub Copilot。",
 
     },
     "regexp": [ // 正则翻译
