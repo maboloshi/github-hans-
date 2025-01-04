@@ -22853,6 +22853,7 @@ I18N["zh-CN"]["copilot"] = {
                         "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
                         "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "了解更多关于 GitHub Copilot 如何为 Claude 3.5 Sonnet 提供服务。",
             "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+            "Get file": "获取文件",
 
             "Copy code": "复制代码",
             "Copied!": "复制成功！",
@@ -22915,7 +22916,9 @@ I18N["zh-CN"]["copilot"] = {
             "benefits": "优势",
             "of the world’s leading AI developer tool.": "。",
     },
-    "regexp":[],
+    "regexp":[
+        [/Using results for “([^ ]+)” in ([^ ]+)/, "使用 $2 中“$1”的结果"],
+    ],
 };
 
 I18N["zh-CN"]["sitemap"] = { // 网站地图页，仅匹配公共部分
