@@ -23268,10 +23268,11 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
             return `您好，`+ user + `！您最近于${translatedDate}学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。`;
             //return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
         }],
-        [/Submitted (.+)/, (match, p1) => { // p1为(.+)
+        [/(Submitted|Verified since) (.+)/, (match, opt, p1) => { // p1为(.+)
+            var optKey = {"Submitted": "提交于", "Verified since": "验证自",};
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
-            return `提交于${translatedDate}`;
+            return optKey[opt] + `${translatedDate}`;
         }],
         //[/Verified since (.+)/, "验证自 $1"],
         [/(\d+) views?/, "$1 次观看"],
