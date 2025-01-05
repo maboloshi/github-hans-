@@ -13081,7 +13081,11 @@ I18N["zh-CN"]["repository/graphs/contributors"] = { // 仓库 -> 洞察 - 贡献
 
             return user + ' 的' + contKey[cont];
         }],
-        //[/Week of (.+)/, "每周 $1"],
+        [/Week of (.+)/, (match, p1) => { // p1为(.+)
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `${translatedDate}当周`;
+        }],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
