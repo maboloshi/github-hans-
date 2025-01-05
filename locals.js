@@ -359,6 +359,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
         "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
         "Signup to GitHub Copilot": "注册 GitHub Copilot",
+        "Device Activation": "设备激活",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -22854,9 +22855,14 @@ I18N["zh-CN"]["copilot"] = {
                         "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "了解更多关于 GitHub Copilot 如何为 Claude 3.5 Sonnet 提供服务。",
                 // o1
                     "Model capabilities": "模型限制",
+                    "Limited capabilities (o1-mini)": "功能限制（o1-mini）",
                     "Limited capabilities (o1)": "功能限制（o1）",
                         "While this model is better at reasoning, it is generally slower for everyday tasks and has limited capabilities in retrieving external data. Here are a few of the common actions that are not supported:": "虽然这种模型的推理能力更强，但在执行日常任务时通常速度较慢，而且检索外部数据的能力有限。以下是一些不支持的常见操作：",
                         "Not supported": "不支持",
+                            "Using knowledge bases": "使用知识库",
+                            "Retrieving issues": "检索议题",
+                            "Retrieving pull requests": "检索拉取请求",
+                            "Retrieving discussions": "检索讨论",
             "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
             "Get file": "获取文件",
 
