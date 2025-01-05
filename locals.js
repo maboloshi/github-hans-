@@ -1855,6 +1855,11 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "The world’s fair of software is here.": "世界软件博览会就在这里。",
         "The GitHub Universe call for sessions is now open! Apply to share your expertise by submitting a session proposal today. Plus, get 35% off your tickets to GitHub Universe only for a limited time.": "GitHub Universe 的会议征集现已开启！立即提交您的会议提案，分享您的专业知识。此外，现在限时可享 35% 的 GitHub Universe 会议门票折扣。",
 
+        // 教育看板（申请教育包才有
+        "Learn. Collaborate. Grow.": "学习，协作，成长。",
+        "GitHub Education gives you the tools and community support to take on tech challenges and turn them into opportunities.  Your future in tech starts here!": "GitHub 教育提供工具和社区支持，帮助您应对技术挑战并将其转化为机遇。您科技领域的未来从这里开始！",
+        "Go to GitHub Education": "前往 GitHub 教育",
+
         // 用户 浮动信息卡
         "Member of": "隶属组织",
         // [/, and (\d+) more/, "，以及其他 $1 个组织"],
