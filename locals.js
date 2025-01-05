@@ -23251,39 +23251,17 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
-        [/Hi, ([^ ]+)! You were last verified as a on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
-            var monthKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"
-            };
-            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+        [/Hi, ([^ ]+)! You were last verified as a on (.+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, (match, user, p1) => {
+                const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+                const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+                return `您好，`+ user + `！您最近于${translatedDate}验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。`;
+            // return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
         }],
-        [/Hi, ([^ ]+)! You were last verified as a student on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
-            var monthKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"
-            };
-            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+        [/Hi, ([^ ]+)! You were last verified as a student on (.+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, (match, user, p1)=> {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `您好，`+ user + `！您最近于${translatedDate}学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。`;
+            //return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
         }],
         //[/Submitted (.+)/, "提交于 $1"],
         //[/Verified since (.+)/, "验证自 $1"],
