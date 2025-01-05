@@ -360,6 +360,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
         "Signup to GitHub Copilot": "注册 GitHub Copilot",
         "Device Activation": "设备激活",
+        "Spending Limit": "支付限额",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -1396,8 +1397,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Updated "   : "更新于 ",
                 "Commits on ": "提交于 ",
                 "Joined on " : "加入于 ",
-                "Submitted ": "提交于 ",
-                "Verified since ": "验证于 ",
+                "Submitted ": "提交于 ", // 教育
             };
             var weekKey = {
                 "Sun"  : "周日",
@@ -3485,6 +3485,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
             "Current plan": "当前计划",
                 "Compare all plans": "比较所有计划",
+                    "per month": "每月",
 
                 "GitHub Free": "GitHub 免费",
                 "The basics for all developers": "基础计划（所有开发者）",
@@ -3497,6 +3498,15 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "120 core-hours of Codespaces compute per developer": "每位开发者拥有 120 个核心小时的代码空间计算能力",
                 "15GB of Codespaces storage per developer": "每位开发者拥有 15GB 的代码空间存储空间",
                 "Community support": "社区支持",
+                // pro
+                    "Downgrade to Free": "降级至免费版",
+                "3,000 Actions minutes/month": "每月 3,000 分钟 GitHub Actions",
+                "2GB of Packages storage": "2GB 的包存储空间",
+                "180 core-hours of Codespaces compute": "180 个核心小时的代码空间计算能力",
+                "20GB of Codespaces storage": "20GB 的代码空间存储空间",
+                "Code owners, required reviewers, GitHub Pages,": "代码所有者、所需审核者、GitHub Pages，",
+                "and more": "以及更多",
+                "advanced tools": "高级工具",
 
                 "Not included:": "不包含：",
                 "Free Codespaces usage per organization": "每个组织的免费代码空间使用量",
@@ -3527,6 +3537,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Active subscription": "已激活订阅",
                         "Copilot Free": "免费版",
                     "You can upgrade to Copilot Pro at any time. Check out this": "您可以随时升级到 Copilot Pro。详情请查看",
+                    "You are eligible to use GitHub Copilot for free.": "您有资格免费使用 GitHub Copilot。",
                     "documentation": "文档",
                     "for more details.": "。",
                     //"Enable GitHub Copilot": "启用 GitHub Copilot",
@@ -3624,12 +3635,22 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "To manage metered billing for this account through Microsoft Azure an Azure Subscription ID must be added to your account.": "通过 Microsoft Azure 管理此账户的计量计费，必须将 Azure 订阅 ID 添加到您的账户中。",
 
         // 支付信息 https://github.com/settings/billing/payment_information
+            // pro
+                "Your recurring charges & discounts": "您的定期费用和折扣",
+                    "GitHub Coupon": "GitHub 优惠券",
+                        "* Discount applies for GitHub Pro": "* 适用于 GitHub Pro 的折扣",
+
             "Billing & plans": "账单和计划",
             "/ Payment information": "/ 支付信息",
 
             "Please update your billing information in order to add a payment method.": "请更新您的账单信息，以便添加支付方式。",
 
             "Billing information": "账单信息",
+                "Remove": "移除",
+                    "Remove your billing information?": "确定移除账单信息？",
+                    "You are about to remove the billing information for this account.": "您即将删除此账户的账单信息。",
+                    "Are you sure you want to do this?": "您确定要这样做吗？",
+                    "Remove billing information": "移除账单信息",
             // 组织设置
             "An organization owner's personal billing information must be linked with this organization account.": "组织所有者的个人账单信息必须与该组织账户关联。",
             "Update your billing information": "更新您的账单信息",
@@ -3668,6 +3689,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "Coupon": "优惠劵",
             "Redeem a coupon": "兑换优惠券",
             "You don't have an active coupon.": "您没有有效的优惠券。",
+            "* Discount only applies for GitHub Pro": "* 优惠仅限 GitHub Pro。",
 
             "Additional Information": "附加信息",
                 "Add specific contact or tax information to your receipts, like your full business name, VAT/GST identification number, or address of record here. We’ll make sure it shows up on every receipt.": "在您的收据上添加具体的联系方式或税务信息，例如您的企业全称、VAT/GST 识别号码或记录地址。我们将确保它显示在每张收据上。",
@@ -3723,6 +3745,9 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
             "Payment method is missing": "缺失支付方式",
             "You can’t increase the spending limits until you set up a valid payment method.": "在您设置有效的支付方式之前，您无法提高支出限额。",
+                // 教育认证
+                "Coupons do not apply to any overages.": "优惠券不适用于任何超额部分。",
+                    "Any incurred overages will be paid in full by the added payment method.": "任何超额费用都将通过添加的付款方式全额支付。",
             "Add payment method": "添加支付方式",
 
             "Actions & Packages": "操作与软件包",
@@ -3910,10 +3935,11 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
     },
     "regexp": [ // 正则翻译
         [/We're preparing your report! We’ll send an email to ([^@]+@[^\n]+) when it’s ready./, "我们正在准备您的报告！完成后，我们将发送电子邮件至 $1。"], //顶部提醒
-        [/Included minutes quota resets? in (\d+) days./, "包含的分钟配额将在 $1 天之内重置"],
-        [/Data transfer quota resets? in (\d+) days./, "数据传输配额将在 $1 天之内重置"],
-        [/Included quotas resets? in (\d+) days./, "包含的配额将在 $1 天之内重置"],
-        [/Bandwidth quota resets? in (\d+) days./, "带宽使用配额将在 $1 天之内重置"],
+        [/Included minutes quota resets? in (\d+) days?./, "包含的分钟配额将在 $1 天之内重置"],
+        [/Data transfer quota resets? in (\d+) days?./, "数据传输配额将在 $1 天之内重置"],
+        //[/Included minutes quota resets/, ""],
+        [/Included quotas resets? in (\d+) days?./, "包含的配额将在 $1 天之内重置"],
+        [/Bandwidth quota resets? in (\d+) days?./, "带宽使用配额将在 $1 天之内重置"],
         [/In addition to your personal account, you manage (\d+) organizations?./, "除了您的个人账户之外，您还管理 $1 个组织。"],
         [/Leaving it at (\$\d+\.\d{2}) will avoid any extra expenses/, "将其限制在 $1 美元将避免任何额外的费用。"],
         [/isn’t a GitHub member/, "不是 GitHub 成员"], // 组织设置
@@ -3925,6 +3951,30 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/Last (\d+) days/, "最近 $1 天"],
         [/([^ ]+) support/, "$1 支持"],
         [/Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners\. Windows 2-core and macOS 3-core runners consume included minutes at higher rates\. Your (\d+\.\d+) included minutes used consists of (.*)/, "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。您已使用的 $1 分钟包含分钟数由 $2 组成。"],
+        [/(\$\d+\.\d{2}) off per month for (\d+) years/, "每月优惠 $1，为期 $2 年"],
+        [/(\$\d+\.\d{2})\/month/, "$1/月"],
+        [/(\$\d+\.\d{2}) off \/ month/, "-$1/月"],
+        //[/(Due by|until|On|Expires) (Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (\d+), (\d+)/, function(all, opt, month, day, yesr){
+        //    var monthKey = {
+        //        "Jan": "1月", "Feb": "2月", "Mar": "3月", "Apr": "4月", "May": "5月", "Jun": "6月", "Jul": "7月", "Aug": "8月", "Sep": "9月", "Oct": "10月", "Nov": "11月", "Dec": "12月"
+        //    };
+        //    var optKey = {
+        //        "Due by": "截止", "until": "直到", "On": "开始", "Expires": "到期"
+        //    };
+        //    return year + '年' + monthKey[month] + day + '日 ' + optKey[opt];
+        //}],
+        //[/Due by (.+)/, "$1 截止"],
+        [/(Due by|On|Expires) (.+)/, (match, opt, p1) => {
+            var optKey = {"Due by": "截止", "On": "开始", "Expires": "到期"};
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `${translatedDate}` + optKey[opt];
+        }],
+        [/until (.+)/, (match, p1) => { // p1为(.+)
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `直到 ${translatedDate}`; // 这里写翻译结果
+        }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
