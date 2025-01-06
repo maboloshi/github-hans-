@@ -10835,6 +10835,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                     "Workflow run was successfully requested.": "工作流程已成功请求运行。",
 
             "This scheduled workflow is disabled because there hasn't been activity in this repository for at least 60 days.": "此计划工作流程已禁用，因为此仓库至少 60 天没有活动。",
+            "This scheduled workflow is disabled because there hasn't been activity in this repository for at least 60 days. Enable this workflow to resume scheduled runs.": "此计划的工作流程已禁用，因为此仓库至少有 60 天没有活动。启用此工作流程可恢复计划运行。",
             "This scheduled workflow is disabled because scheduled workflows are disabled by default in forks.": "此计划工作流程已被禁用，因为计划工作流程在复刻仓库中默认被禁用。",
             "This workflow was disabled manually.": "工作流程已被手动禁用。",
             "This workflow is": "此工作流程正在等待维护者",
