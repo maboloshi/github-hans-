@@ -3975,10 +3975,10 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
             return `${translatedDate}` + optKey[opt];
         }],
-        [/until (.+)/, (match, p1) => { // p1为(.+)
+        [/until (.+)./, (match, p1) => { // p1为(.+)
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
-            return `直到 ${translatedDate}`; // 这里写翻译结果
+            return `直到 ${translatedDate}。`; // 这里写翻译结果
         }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
@@ -8129,6 +8129,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "Create a branch": "创建分支",
                     "for this issue or link a pull request.": "为这个议题或关联一个拉取请求",
                     "When branches are created from issues, their pull requests are automatically linked.": "当从议题中创建分支时，它们的拉取请求会自动关联。",
+                    "Open in Workspace": "在工作区打开",
+
+                    // 参与者数大于2
+                        "and others": "等",
 
                     // 下拉
                     "Link a pull request from this repository": "关联来自此仓库的拉取请求",
@@ -9178,22 +9182,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
         // 新版 PR 提交页
         [/wants to merge (\d+) commits? into/, "希望合并 $1 条提交到"],
-        [/Commits on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+)/, function (all, mon, day, year){
-            var monKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"};
-
-            return '提交于' + year + '年' + monKey[mon] + day + '日';
+        [/Commits on (.+)/,  (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `提交于${translatedDate}`;
         }],
 
         // 具体某条拉取请求
