@@ -6392,6 +6392,7 @@ I18N["zh-CN"]["settings/tokens"] = { // 设置 - 开发者设置/个人访问令
             "Manage enterprise runners and runner groups": "管理企业运行器和运行器组",
             "Read and write enterprise billing data": "读写企业计费数据",
             "Read enterprise profile data": "读取企业个人数据",
+            "Provisioning of users and groups via SCIM": "通过 SCIM 配置用户和组",
             "Full control of audit log": "完全控制审核日志",
             "Read access of audit log": "读取审核日志",
             "Full control of codespaces": "完全控制代码空间",
