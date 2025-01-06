@@ -15837,6 +15837,7 @@ I18N["zh-CN"]["repository/settings/secrets"] = { // 仓库设置 - 机密 /<user
 
             // 顶部提醒
             "Failed to add secret. Secret names can only contain alphanumeric characters ([a-z], [A-Z], [0-9]) or underscores (_). Spaces are not allowed. Must start with a letter ([a-z], [A-Z]) or underscores (_).": "添加机密失败。机密名称只能包含字母数字字符（[a-z]、[A-Z]、[0-9]）或下划线 (_)。不允许有空格。必须以字母 ([a-z], [A-Z]) 或下划线 (_) 开头。",
+            "Secret names must not start with GITHUB_.": "机密名称不能以“GITHUB_”开头。",
 
             "Environment secrets": "环境机密",
                 "This environment has no secrets.": "此环境尚无机密。",
