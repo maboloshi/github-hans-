@@ -8470,6 +8470,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Marked pull request as ready for review.": "标记拉取请求为可审核。",
                 "Your review was submitted successfully.": "您的审查已成功提交。",
                 "requested your review on this pull request.": "请求审核此拉取请求。",
+                // Dependabot 打开的拉取请求
+                    "Merging this pull request will resolve": "合并此拉取请求将解决", // 后面警报数走正则
+                    //"on rollup including a": "，包括 1 个",
+                    "severity alert.": "风险警报。",
 
             // 快捷键
                 "Edit pull request title": "编辑拉取请求标题",
@@ -9182,6 +9186,11 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/([^ ]+):([^ ]+)% was force-pushed and no longer has any new commits./, "$1:$2 分支被强制推送，现在没有新的提交。"], // 放这里是因为跟现有词条冲突
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
+        // Dependabot 打开的拉取请求
+        [/This pull request resolved a Dependabot alert on ([^ ]+)./, "此拉取请求解决了 1 个 Dependabot 警报，在 $1 上。"],
+        [/(\d+) Dependabot alerts?/, "$1 个 Dependabot 警报"],
+        [/on ([^ ]+) including a/, "在 $1 上，包括 1 个"],
+        [/on ([^ ]+)./, "在 $1 上。"],
 
         // 提交时展开收缩的描述
         [/Show description for ([a-f0-9]{7})/, "显示提交 $1 的描述"],
@@ -16981,6 +16990,8 @@ I18N["zh-CN"]["notifications"] = { // 通知页面
             "Create custom filters to quickly access your most important notifications.": "创建自定义筛选器以快速访问最重要的通知。",
             "Filter by": "使用",
             "to see what's new.": "查看新通知。",
+            "then bulk select and mark all as": "然后批量选择并将所有内容标记为",
+            "to clean up your inbox.": "以清理收件箱。",
     },
     "regexp": [ // 正则翻译
         [/(\d+) selected/, "$1 条被选中"],
