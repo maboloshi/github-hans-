@@ -2216,22 +2216,11 @@ I18N["zh-CN"]["page-profile"] = { // 个人首页
         [/([\d,]+) contributions? in (\d+) in ([^ ]+)/, "在 $2 年中向 $3, 贡献 $1 次"],
         [/([\d,]+) contributions? in (\d+)/, "在 $2 年中贡献 $1 次"],
         [/(\d+) contributions? in private repositor(y|ies)/, "私有仓库 $1 个贡献"],
-        [/(\d+|No) contribution(?:s)? on (January|February|March|April|May|June|July|August|September|October|November|December) (\d+)(?:st|nd|rd|th)./, function (all, number, month , day) {
-            var monthKey = {
-                "January"   : "1月",
-                "February"  : "2月",
-                "March"     : "3月",
-                "April"     : "4月",
-                "May"       : "5月",
-                "June"      : "6月",
-                "July"      : "7月",
-                "August"    : "8月",
-                "September" : "9月",
-                "October"   : "10月",
-                "November"  : "11月",
-                "December"  : "12月",
-            };
-            return number === 'No' ? monthKey[month] + day + "日，"+ "无贡献"  : monthKey[month] + day + "日，" + number + " 次贡献";
+        [/(\d+|No) contribution(?:s)? on (.+)(?:st|nd|rd|th)./, (match, number, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            //return optKey[opt] + `${translatedDate}`;
+            return number === 'No' ? `${translatedDate}，无贡献` : `${translatedDate}，` + number + ` 次贡献`;
         }],// 贡献日历
         //[/A graph representing ([^ ]+)'s contributions from ( .+) to ( .+)./, "$1 从 $2 到 $3 的贡献图。"],
         [/and (\d+) other repositor(y|ies)/, "和 $1 个其他仓库"], // 活动概览
