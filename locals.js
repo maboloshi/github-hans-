@@ -5415,6 +5415,7 @@ I18N["zh-CN"]["settings/security-log"] = { // 设置 - 安全日志
     },
     "regexp": [ // 正则翻译
         [/Found (\d+) events?/, "发现 $1 个活动"],
+        [/View ([^ ]+)'s profile/, "查看 $1 的资料"],
     ],
 };
 

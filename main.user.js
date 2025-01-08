@@ -159,6 +159,7 @@
 
                 case "A":
                     transElement(node, 'title'); // title 属性
+                    transElement(node, 'ariaLabel'); // aria-label 属性
                     break;
 
                 case "SPAN":
