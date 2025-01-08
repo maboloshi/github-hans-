@@ -19573,23 +19573,10 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         [/(\d+) pe(?:ople|rson) in the ([^ ]+) organization/, "$2 组织中的 $1 位成员"],
         [/(\d+) security managers? in the ([^ ]+) organization/, "$2 组织中的 $1 位安全管理员"],
         [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
-        [/Invited on ([^ ]+) (\d+), (\d+)/, function(all, month, day, year){
-            var monthKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"
-            };
-
-            return '邀请于' + year + '年' + monthKey[month] + day + '日';
+        [/Invited on (.+)/, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `邀请于${translatedDate}`;
         }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
    ],
