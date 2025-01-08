@@ -19440,6 +19440,7 @@ I18N["zh-CN"]["orgs/packages"] = I18N["zh-CN"]["page-profile/packages"];
 
 I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
     "static": { // 静态翻译
+        ...I18N["zh-CN"]["orgs-public"]["static"],
 
         // 成员标签页 https://github.com/orgs/<orgs-name>/people
             // 左侧栏
@@ -19476,10 +19477,12 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
 
             "Owner": "所有者",
             "Owners have full access to teams, settings, and repositories.": "所有者拥有对团队、设置和仓库的完全访问权限。",
-            // [/0 teams/, ""],
+            // [/(\d+) teams?/, "$1 团队"],
+            // [/(\d+) roles?/, "$1 角色"],
 
             "Member settings": "成员设置",
             "Manage": "管理",
+            "Change role…": "切换角色…",
             "Convert to outside collaborator…": "转为外部协作者…",
             "Remove from organization…": "从组织移除…",
 
@@ -19528,6 +19531,9 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
             "There aren't any pending collaborators.": "暂无任何待定的协作者",
 
         // 待定邀请 https://github.com/orgs/<orgs-name>/people/pending_invitations
+            // 顶部提醒
+                // [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+
             "Find an invitation…": "搜索邀请…",
 
             "Role": "角色",
@@ -19545,6 +19551,9 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
 
             "No matching invitations.": "暂无匹配的邀请。",
 
+            "Edit invitation": "编辑邀请",
+            "Cancel invitation": "取消邀请",
+
         // 失败邀请 https://github.com/orgs/<orgs-name>/people/failed_invitations
             // [/(\d+) Failed invitations?/, "个失败邀请"],
             "No failed invitations.": "暂无失败邀请。",
@@ -19555,6 +19564,7 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
     },
     "regexp": [ // 正则翻译
         [/(\d+) teams?/, "$1 团队"],
+        [/(\d+) roles?/, "$1 角色"],
         [/(\d+) invitations?/, "$1 邀请"],
         [/(\d+) Failed invitations?/, "$1 失败邀请"],
         [/Invite a member to/, "邀请成员加入"],
@@ -19562,6 +19572,25 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         [/Removing (\d+) members? from/, "移除 $1 名成员，从"],
         [/(\d+) pe(?:ople|rson) in the ([^ ]+) organization/, "$2 组织中的 $1 位成员"],
         [/(\d+) security managers? in the ([^ ]+) organization/, "$2 组织中的 $1 位安全管理员"],
+        [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+        [/Invited on ([^ ]+) (\d+), (\d+)/, function(all, month, day, year){
+            var monthKey = {
+                "Jan": "1月",
+                "Feb": "2月",
+                "Mar": "3月",
+                "Apr": "4月",
+                "May": "5月",
+                "Jun": "6月",
+                "Jul": "7月",
+                "Aug": "8月",
+                "Sep": "9月",
+                "Oct": "10月",
+                "Nov": "11月",
+                "Dec": "12月"
+            };
+
+            return '邀请于' + year + '年' + monthKey[month] + day + '日';
+        }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
    ],
 };
