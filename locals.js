@@ -1653,6 +1653,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         // 组织
         // [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"],
         // [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"],
+        "Welcome to the": "欢迎来到",
+        "View your teams": "查看您的团队",
         "View and create teams": "查看并创建团队",
         "See all owners": "查看全部所有者",
         "You've been added to the": "您已被添加至",
@@ -1908,6 +1910,7 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"], // 组织
         [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"], // 组织
         [/Edit ([^ ]+)’s settings/, "编辑 $1 的设置"], // 组织
+        [/Check out ([^ ]+)’s public profile/, "查看 $1 的公开资料"], // 组织
         [/and (\d+) more/, "和另外 $1 个"],
         [/You're seeing this because you collaborated with ([^ ]+)/, "您看到这个是因为您与 $1 有过合作"],
         [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您星标了 $1"],
