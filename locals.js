@@ -51,7 +51,7 @@ I18N.conf = {
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
-    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
+    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|invitation|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
 
     // 特定页面，启用`字符数据`监测
     characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob'],
@@ -19377,6 +19377,9 @@ I18N["zh-CN"]["orgs"] = { // 组织页面
             "No repositories or gists found.": "没有发现仓库或 Gists。",
             // 顶部提醒
             "You’re not a member of any teams in this organization.": "您不是该组织中任何团队的成员。",
+            "invited you to join the": "邀请您加入",
+            "organization": "组织",
+            "View invitation": "查看邀请",
 
             // 新组织 入门任务
             "We think you’re gonna like it here.": "我们认为您会喜欢这里的。",
@@ -22578,6 +22581,35 @@ I18N["zh-CN"]["orgs/sponsoring"] = { // https://github.com/orgs/<org-name>/spons
     },
     "regexp": [
         [/([^ ]+) hasn’t sponsored any users yet./, "$1 尚未赞助任何人。"],
+        ...I18N["zh-CN"]["orgs-public"]["regexp"],
+    ],
+};
+I18N["zh-CN"]["orgs/invitation"] = {
+    "static": {
+        "You’ve been invited to the": "您被邀请加入",
+            "organization!": "组织！",
+
+        "Invited by": "邀请者：",
+
+        "Decline": "拒绝",
+
+        // 组织权限
+            "If you have": "您的",
+                "two-factor authentication": "双重身份验证（2FA）",
+                "enabled or not": "是否启用",
+            "Your public profile information": "您的公开信息",
+            "Certain activity": "某些活动",
+                "within this organization": "在该组织内",
+            "Country of request origin": "请求来源国家/地区",
+            "Your access level to repositories within the organization": "您对组织内仓库的访问级别",
+            "Your IP address": "您的 IP 地址",
+        
+        "Opt out": "拒绝",
+            "of future invitations from this organization.": "该组织未来的邀请。",
+    },
+    "regexp": [
+        [/Join ([^ ]+)/, "加入 $1"],
+        [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
