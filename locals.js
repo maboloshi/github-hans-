@@ -448,6 +448,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Codespaces secrets · ([^ ]+)/, "代码空间机密 · $1"],
         [/Dependabot secrets · ([^ ]+)/, "Dependabot 机密 · $1"],
         [/Invitation to join ([^ ]+)/, "加入 $1 邀请"],
+        [/Security Managers for · ([^ ]+)/, "$1 中的安全管理员"],
         ["_regexp_end", "end"]
     ],
 };
@@ -19448,6 +19449,7 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
             "Pending collaborators": "待定协作者",
             "Invitations": "邀请",
             "Failed invitations": "失败邀请",
+            "Security Managers": "安全管理员",
 
             "Find a member…": "搜索成员…",
 
@@ -19546,6 +19548,9 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         // 失败邀请 https://github.com/orgs/<orgs-name>/people/failed_invitations
             // [/(\d+) Failed invitations?/, "个失败邀请"],
             "No failed invitations.": "暂无失败邀请。",
+        
+        // 安全管理 https://github.com/orgs/<orgs-name>/people/security_managers
+            "Find a security manager…": "搜索安全管理员…",
 
     },
     "regexp": [ // 正则翻译
@@ -19555,6 +19560,8 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         [/Invite a member to/, "邀请成员加入"],
         [/Convert ([^ ]+) to outside collaborator?/, "将 $1 转换为外部协作者？"],
         [/Removing (\d+) members? from/, "移除 $1 名成员，从"],
+        [/(\d+) pe(?:ople|rson) in the ([^ ]+) organization/, "$2 组织中的 $1 位成员"],
+        [/(\d+) security managers? in the ([^ ]+) organization/, "$2 组织中的 $1 位安全管理员"],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
    ],
 };
