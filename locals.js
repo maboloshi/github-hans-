@@ -418,6 +418,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Sponsor @([^ ]+) on GitHub Sponsors/, "在 GitHub 上赞助 $1"],
         [/OAuth applications/, "OAuth 应用"],
         [/People · Pending Collaborators/, "成员 · 待定协作者"],
+        [/Members · People · ([^ ]+)/, "成员 · $1"],
         [/People/, "成员"],
         [/Outside collaborators/, "外部协作者"],
         [/New Discussion/, "新讨论"],
@@ -448,7 +449,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Codespaces secrets · ([^ ]+)/, "代码空间机密 · $1"],
         [/Dependabot secrets · ([^ ]+)/, "Dependabot 机密 · $1"],
         [/Invitation to join ([^ ]+)/, "加入 $1 邀请"],
-        [/Security Managers for · ([^ ]+)/, "$1 中的安全管理员"],
+        [/Security Managers for · ([^ ]+)/, "安全管理员 · $1"],
         ["_regexp_end", "end"]
     ],
 };
