@@ -6831,6 +6831,9 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
                 "in the": "在",
                 "directory to get started.": "目录下以便开始工作。",
 
+                // 组织仓库
+                "You may not create private repositories by organization policy.": "根据组织政策，您不能创建私有仓库。",
+
             "Description": "描述",
                 "(optional)": "(可选)",
             "Public": "公共",
