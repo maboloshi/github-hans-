@@ -4411,6 +4411,7 @@ I18N["zh-CN"]["settings/organizations"] = { // 设置 - 组织
             "You are not a member of any organizations.": "您暂无任何组织。",
 
             "Owner": "所有者",
+            "Member": "成员",
             "Compare plans": "比较计划",
             "Leave": "离开",
 
