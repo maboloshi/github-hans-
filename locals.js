@@ -4794,6 +4794,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Cancelling...": "撤销中...",
             "Buy Copilot Business": "购买 GitHub Copilot 企业版",
             "Owner": "所有者",
+            "Member": "成员",
 
         // 免费版
             "You are using Copilot for free": "您正在使用 Copilot 免费版",
