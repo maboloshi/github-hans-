@@ -10080,6 +10080,9 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
 
         // 讨论页面 /<user-name>/<repo-name>/discussions
         // 组织讨论页 /orgs/<orgs-name>/discussions
+            // 顶部提示
+                "You can't perform that action at this time.": "您现在不能执行该操作。",
+
             "Start a new discussion": "开始新的讨论",
             "Get started by creating the first": "开始吧，为您的社区创建",
             "discussion for your community.": "第一个讨论。",
