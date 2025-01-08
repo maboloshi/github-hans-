@@ -22113,6 +22113,9 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
             "2-core • 8GB RAM • 32GB": "双核 • 8GB 内存 • 32GB 硬盘",
             "4-core • 16GB RAM • 32GB": "四核 • 16GB 内存 • 32GB 硬盘",
 
+            // 状态
+                "No changes": "没有更改",
+
         // https://github.com/codespaces/templates
             "Choose a template": "选择模版",
             "Start a codespace from a template and get to developing with the power of a virtual machine in the cloud.": "从模板开始创建代码空间，然后利用云中虚拟机的能力进行开发。",
@@ -22125,11 +22128,17 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
                 "To be cloned into your codespace": "要被克隆到您的代码空间",
                 "Select a repository": "选择仓库",
                 "Search for a repository": "查找仓库",
+                "Select repository": "选择仓库",
             "Branch": "分支",
                 "This branch will be checked out on creation": "创建时将显示此分支",
                 "Default branch": "默认分支",
+                "Default Branch": "默认分支",
                 "Select branch": "选择分支",
                 "Find a branch": "查找分支",
+                "Switch branches": "切换分支",
+                "Find a branch...": "查找分支...",
+                "default": "默认",
+                "branches": "分支",
             "Region": "区域",
                 "Your codespace will run in the selected region": "您的代码空间将在所选区域运行",
                 "US East": "美国东部",
@@ -22182,6 +22191,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         [/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
         [/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
         [/Codespace "([^ ]+)" stopped./, "代码空间 “$1” 停止。"],
+        [/Codespace "([^ ]+)" deleted./, "代码空间 “$1” 删除。"],
         [/Your codespace "([^ ]+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
         [/Are you sure you want to delete/, "您确定要删除"],
     ],
