@@ -637,6 +637,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Chat with Copilot": "与 Copilot 聊天",
             "Open Copilot…": "打开 Copilot…",
                 "New conversation in": "新聊天",
+                "New conversation": "新聊天",
                     "Immersive": "沉浸式",
                 "Open with": "打开于",
 
