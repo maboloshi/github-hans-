@@ -3944,8 +3944,8 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/Leaving it at (\$\d+\.\d{2}) will avoid any extra expenses/, "将其限制在 $1 美元将避免任何额外的费用。"],
         [/isn’t a GitHub member/, "不是 GitHub 成员"], // 组织设置
         [/of ([\d,]+\.\d{2}) min included/, "/ $1 分钟"],
-        [/GB of ([^ ]+) GB included/, "/ $1 GB "],
-        [/of ([^ ]+) GB( included)?/, "/ $1 GB"],
+        [/(?:GB )?of ([^ ]+) GB(?: included)?/, "/ $1 GB"],
+        //[/of ([^ ]+) GB( included)?/, "/ $1 GB"],
         [/of (\d+\.\d{2}) included core hours used/, "/ $1 核心小时数"],
         [/of (\d+\.\d{2}) included GB-month used/, "/ $1 GB/每月"],
         [/Last (\d+) days/, "最近 $1 天"],
@@ -3965,7 +3965,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         //}],
         //[/Due by (.+)/, "$1 截止"],
         [/(Due by|On|Expires) (.+)/, (match, opt, p1) => {
-            var optKey = {"Due by": "截止", "On": "开始", "Expires": "到期"};
+            var optKey = {"Due by": "月结", "On": "开始", "Expires": "到期"};
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
             return `${translatedDate}` + optKey[opt];
@@ -22190,10 +22190,15 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         [/Last used 大约 (\d+) 小时之前/, "上次使用大约 $1 小时以前"],
         [/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
         [/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
-        [/Codespace "([^ ]+)" stopped./, "代码空间 “$1” 停止。"],
-        [/Codespace "([^ ]+)" deleted./, "代码空间 “$1” 删除。"],
-        [/Your codespace "([^ ]+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
+        [/Codespace "(.+)" stopped./, "代码空间 “$1” 停止。"],
+        [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
+        [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
         [/Are you sure you want to delete/, "您确定要删除"],
+        [/Last used (.+)/, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `最后使用 ${translatedDate}`;
+        }],
     ],
 };
 
