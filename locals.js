@@ -22351,8 +22351,14 @@ I18N["zh-CN"]["status"] = { // GitHub Status
                         "Get the": "获取",
                         "Atom Feed": "Atom 反馈",
                         "RSS Feed": "RSS 反馈",
+            "Current Status: GitHub.com": "当前状态：GitHub.com",
             "All Systems Operational": "所有系统运行正常",
             "Normal": "正常",
+                "Operational": "运行",
+            "Incident": "故障",
+                "Major Outage": "重大故障",
+            "Degraded": "降级",
+                "Partial Outage": "部分中断",
             "Git Operations": "Git 操作",
                 "Performance of git clones, pulls, pushes, and associated operations": "git 克隆、拉取、推送和相关操作的性能",
             "API Requests": "API 请求",
@@ -22371,6 +22377,7 @@ I18N["zh-CN"]["status"] = { // GitHub Status
                 "Frontend application and API servers for Pages builds": "用于页面构建的前端应用程序和应用程序接口服务器",
             // 代码空间
                 "Orchestration and Compute for GitHub Codespaces": "GitHub 代码空间的协调与计算",
+            "For the status of GitHub Enterprise Cloud - EU, please visit:": "有关 GitHub 企业云的状态，请访问",
             "Current Status": "当前状态",
             "Incident History": "历史事故",
 
