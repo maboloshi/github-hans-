@@ -48,7 +48,7 @@ I18N.conf = {
     rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap|education)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
-    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
+    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications|key_links)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
     rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|invitation|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
@@ -13665,6 +13665,7 @@ I18N["zh-CN"]["repository-settings-menu"] = { // 仓库设置公共部分
             "Integrations": "集成",
                 "GitHub Apps": "GitHub 应用",
                 "Email notifications": "邮件通知",
+                "Autolink references": "自动链接引用",
 
     },
     "regexp": [ // 正则翻译
@@ -16001,6 +16002,37 @@ I18N["zh-CN"]["repository/settings/notifications"] = { // 仓库设置 - 邮件�
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
+};
+
+I18N["zh-CN"]["repository/settings/key_links"] = { // 仓库设置 - 自动链接引用 /<user-name>/<repo-name>/settings/key_links
+    "static": { // 静态翻译
+        ...I18N["zh-CN"]["repository-public"]["static"],
+        ...I18N["zh-CN"]["repository-settings-menu"]["static"],
+
+        "Add autolink reference": "添加自动链接引用",
+
+        "References to GitHub issues, pull requests, and commits are automatically converted into links. Configure your own autolink references for non-GitHub URLs.": "GitHub 问题、拉取请求和提交的引用会自动转换为链接。为非 GitHub URL 配置您自己的自动链接引用。",
+            "Learn more about automatic autolinks.": "了解更多有关自动链接的信息。",
+        "Autolinks can be either alphanumeric or numeric.": "自动链接可以是字母或数字。",
+            "Read more about the differences between the two.": "了解两者之间的区别。",
+
+        "No custom autolink references have been created yet.": "尚未创建自定义自动链接引用。",
+
+        // 新建 <user-name>/<repo-name>/settings/key_links/new
+            "/ Add new": "/ 新建",
+                "Alphanumeric": "字母数字",
+                    "Alphanumeric autolinks match": "匹配",
+                    ". They are not case sensitive.": "。不区分大小写。",
+                "Numeric": "纯数字",
+                    "Numeric autolinks only match": "只匹配",
+
+                "Reference prefix": "引用前缀",
+                    "This prefix appended by a string will generate a link any time it is found in an issue, pull request, or commit.": "这段前缀加上一个字符串后，在议题、拉取请求或提交中找到时将生成一个链接。",
+                "Target URL": "目标链接",
+                    "The URL must contain": "该链接必须包含",
+                    "for the reference number.": "作为引用编号。",
+    },
+    "regexp": [],
 };
 
 I18N["zh-CN"]["repository/transfer"] = { // 转让仓库
