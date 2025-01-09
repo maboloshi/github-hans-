@@ -361,6 +361,8 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Signup to GitHub Copilot": "注册 GitHub Copilot",
         "Device Activation": "设备激活",
         "Spending Limit": "支付限额",
+        "Autolink references": "自动链接引用",
+        "Add autolink reference": "添加自动链接引用",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -16019,7 +16021,7 @@ I18N["zh-CN"]["repository/settings/key_links"] = { // 仓库设置 - 自动链�
         "No custom autolink references have been created yet.": "尚未创建自定义自动链接引用。",
 
         // 新建 <user-name>/<repo-name>/settings/key_links/new
-            "/ Add new": "/ 新建",
+            "/ Add new": "/ 添加",
                 "Alphanumeric": "字母数字",
                     "Alphanumeric autolinks match": "匹配",
                     ". They are not case sensitive.": "。不区分大小写。",
