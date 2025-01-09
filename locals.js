@@ -22118,6 +22118,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
 
             // 状态
                 "No changes": "没有更改",
+                "This codespace has uncommitted changes": "此代码空间有未提交的更改",
 
         // https://github.com/codespaces/templates
             "Choose a template": "选择模版",
