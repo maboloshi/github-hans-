@@ -22198,6 +22198,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
         [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
         [/Are you sure you want to delete/, "您确定要删除"],
+        [/(.+) has unpushed changes, are you sure you want to delete\?/, "$1 有未提交更改，您确定要删除吗？"],
         [/Last used (.+)/, (match, p1) => {
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
