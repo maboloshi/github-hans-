@@ -3491,6 +3491,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
                 "GitHub Free": "GitHub 免费",
                 "The basics for all developers": "基础计划（所有开发者）",
+                //"GitHub Pro": "GitHub 专业",
 
                 "The basics for organizations and developers": "组织和开发者的基本计划", // 组织设置
                 "Unlimited public/private repos": "无限的公共/私有仓库",
