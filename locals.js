@@ -1958,6 +1958,7 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Joined": "加入于",
             "Achievements": "成就",
             "Highlights": "高光时刻",
+                "Label: Pro": "标签：专业版",
             "Developer Program Member": "开发者计划成员",
             "Organizations": "组织",
             "Block or Report": "拉黑或举报",
@@ -22187,10 +22188,10 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
     "regexp": [
         [/By ([^ ]+)/, "$1 发布"],
         [/Owned by ([^ ]+)/, "拥有者为 $1"],
-        [/Last used (\d+) days ago/, "上次使用 $1 天前"],
-        [/Last used 大约 (\d+) 小时之前/, "上次使用大约 $1 小时以前"],
-        [/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
-        [/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
+        //[/Last used (\d+) days ago/, "上次使用 $1 天前"],
+        //[/Last used 大约 (\d+) 小时之前/, "上次使用大约 $1 小时以前"],
+        //[/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
+        //[/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
         [/Codespace "(.+)" stopped./, "代码空间 “$1” 停止。"],
         [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
         [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
@@ -22198,7 +22199,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         [/Last used (.+)/, (match, p1) => {
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
-            return `最后使用 ${translatedDate}`;
+            return `最后使用${translatedDate}`;
         }],
     ],
 };
