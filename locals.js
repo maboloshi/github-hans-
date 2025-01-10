@@ -9197,7 +9197,11 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
     "regexp": [ // 正则翻译
         [/The (\d+) commits? from this branch will be rebased and added to the base branch./, "该分支的 $1 次提交将变基并添加到基本分支。"],
         [/([^ ]+):([^ ]+)% was force-pushed and no longer has any new commits./, "$1:$2 分支被强制推送，现在没有新的提交。"], // 放这里是因为跟现有词条冲突
-        
+        // Dependabot 打开的拉取请求
+        [/This pull request resolved a Dependabot alert on ([^ ]+)./, "此拉取请求解决了 1 个 Dependabot 警报，在 $1 上。"],
+        [/(\d+) Dependabot alerts?/, "$1 个 Dependabot 警报"],
+        [/^on ([^ ]+) including a/, "在 $1 上，包括 1 个"],
+        [/^on ([^ ]+)./, "在 $1 上。"],
 
         // 提交时展开收缩的描述
         [/Show description for ([a-f0-9]{7})/, "显示提交 $1 的描述"],
@@ -9210,12 +9214,6 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
             return `提交于${translatedDate}`;
         }],
-
-        // Dependabot 打开的拉取请求
-        [/This pull request resolved a Dependabot alert on ([^ ]+)./, "此拉取请求解决了 1 个 Dependabot 警报，在 $1 上。"],
-        [/(\d+) Dependabot alerts?/, "$1 个 Dependabot 警报"],
-        [/on ([^ ]+) including a/, "在 $1 上，包括 1 个"],
-        [/on ([^ ]+)./, "在 $1 上。"],
 
         // 具体某条拉取请求
         [/edited by ([^ ]+)/, "由 $1 编辑"],
