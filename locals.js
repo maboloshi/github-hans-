@@ -8774,6 +8774,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 // 新版合并界面
                 "Merge is not an allowed merge method in this repository.": "合并不是此仓库允许的合并方法。",
                 "Pull request cannot be merged because it has a merge conflict.": "由于存在合并冲突，无法合并拉取请求。",
+                "User does not have push access to the repository.": "用户没有权限推送到此仓库。",
             "Merging can be performed automatically once the requested changes are addressed.": "一旦请求的更改得到解决，合并就可以自动执行。",
             "This branch is out-of-date with the base branch": "此分支相比基础分支已过时",
                 "Merge the latest changes from": "将",
