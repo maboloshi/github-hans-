@@ -8953,7 +8953,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                    "Generate": "生成",
                    "Summary": "总结",
                    "Generate a summary of the changes in this pull request.": "生成此拉取请求的更改摘要。",
-                "Summarizing changes… this might take 1 minute": "总结更改…这可能需要 1 分钟",
+                "Summarizing changes… this might take a minute": "总结更改…这可能需要 1 分钟",
 
         // 拉取请求 --> 提交 标签卡 /<user-name>/<repo-name>/pull/<id>/commits
             // 顶部提示
