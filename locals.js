@@ -8971,6 +8971,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             // 修改的文件 左侧 展开按钮
             "Expand all": "展开全部",
             "Expand All": "展开全部",
+            "Collapse expanded lines": "折叠展开行",
             "Expand Up": "向上展开",
             "Expand Down": "向下展开",
 
