@@ -8672,6 +8672,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "stale review": "陈旧审查",
             "via": "通过",
             "force-pushed": "强制推送",
+            "enabled auto-merge (squash)": "启用自动合并（压缩）",
             "the": " ",
             "branch from": "分支从",
             "and others": "和其他成员",
