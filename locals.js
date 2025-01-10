@@ -16015,7 +16015,7 @@ I18N["zh-CN"]["repository/settings/notifications"] = { // 仓库设置 - 邮件�
     ],
 };
 
-I18N["zh-CN"]["repository/settings/key_links"] = { // 仓库设置 - 自动链接引用 /<user-name>/<repo-name>/settings/key_links
+I18N["zh-CN"]["repository/settings/key_links"] = { // 仓库设置 - 自动链接引用（注：只有专业版有） /<user-name>/<repo-name>/settings/key_links
     "static": { // 静态翻译
         ...I18N["zh-CN"]["repository-public"]["static"],
         ...I18N["zh-CN"]["repository-settings-menu"]["static"],
