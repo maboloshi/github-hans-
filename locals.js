@@ -22764,6 +22764,13 @@ I18N["zh-CN"]["orgs/invitation"] = {
     ],
 };
 
+I18N["zh-CN"]["organizations/plan"] = {
+    "static": {
+        "Pick a plan for your organization": "为您的组织选择计划",
+    },
+    "regexp": [],
+};
+
 I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操作使用情况
     "static": {
         ...I18N["zh-CN"]["repository-public"]["static"],
