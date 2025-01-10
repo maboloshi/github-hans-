@@ -9682,6 +9682,8 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
 
             "commented on": "评论于",
 
+            "Paste, drop, or click to add files": "粘贴、拖放或点击添加文件",
+
             // 隐藏评论
             "Choose a reason for hiding this comment": "选择隐藏此评论原因",
             "The reason will be displayed to describe this comment to others.": "将显示原因，以便向其他人描述此评论。",
