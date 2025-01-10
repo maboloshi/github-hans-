@@ -23082,6 +23082,10 @@ I18N["zh-CN"]["copilot"] = {
                         "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
                         "Browse marketplace": "前往市场",
             "Send now": "发送",
+        
+        // 漏洞相关
+            "Path Injection": "路径注入",
+                "Unvalidated input in path value creation risks unintended file/directory access": "创建路径值时输入的无效信息可能会导致意外文件/目录访问",
 
         // 了解世界领先的人工智能开发工具的所有优势。
         "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
@@ -23091,6 +23095,7 @@ I18N["zh-CN"]["copilot"] = {
     },
     "regexp":[
         [/Using results for “([^ ]+)” in ([^ ]+)/, "使用 $2 中“$1”的结果"],
+        [/(\d+) vulnerability detected/, "检测到 $1 个漏洞"],
     ],
 };
 
