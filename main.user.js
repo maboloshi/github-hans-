@@ -111,7 +111,7 @@
             characterData: true,
             subtree: true,
             childList: true,
-            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm'], // 仅观察特定属性变化
+            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm', 'data-visible-text'], // 仅观察特定属性变化
         });
     }
 
@@ -164,7 +164,8 @@
 
                 case "SPAN":
                     transElement(node, 'title'); // title 属性
-                    transElement(node, 'ariaLabel');
+                    if (/tooltipped/.test(node.className)) transElement(node, 'ariaLabel');
+                    transElement(node.dataset, 'visibleText'); // 按钮提示
                     break;
 
                 default:
