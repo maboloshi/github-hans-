@@ -8774,7 +8774,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 // 新版合并界面
                 "Merge is not an allowed merge method in this repository.": "合并不是此仓库允许的合并方法。",
                 "Pull request cannot be merged because it has a merge conflict.": "由于存在合并冲突，无法合并拉取请求。",
-                "User does not have push access to the repository.": "用户没有权限推送到此仓库。",
+                "User does not have push access to the repository.": "用户无权推送到此仓库。",
+                "You're not authorized to push to this branch. Visit https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches for more information.": "您无权推送到该分支。请访问 https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches 了解更多信息。",
             "Merging can be performed automatically once the requested changes are addressed.": "一旦请求的更改得到解决，合并就可以自动执行。",
             "This branch is out-of-date with the base branch": "此分支相比基础分支已过时",
                 "Merge the latest changes from": "将",
@@ -11819,9 +11820,10 @@ I18N["zh-CN"]["repository/branches"] = { // 仓库 - 分支页面
                 "Copy branch name to clipboard": "将分支名称复制到剪贴板",
                 "This branch is protected by branch protections": "该分支受分支保护的保护",
 
-                "Activity": "活动",
-                "View rules": "查看规则",
-                    "There are no rulesets associated with this branch.": "该分支没有相关的规则集。",
+                "Branch menu": "分支菜单",
+                    "Activity": "活动",
+                    "View rules": "查看规则",
+                        "There are no rulesets associated with this branch.": "该分支没有相关的规则集。",
 
                 "View more branches": "查看更多分支",
 
