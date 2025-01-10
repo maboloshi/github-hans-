@@ -3486,6 +3486,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "Manage spending limit": "管理支出限额",
             "View payment history": "查看支付记录",
             "Switch to yearly billing": "切换到按年计费",
+            "Switch to monthly billing": "切换到月度计费",
 
             "Current plan": "当前计划",
                 "Compare all plans": "比较所有计划",
@@ -3939,6 +3940,8 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
     },
     "regexp": [ // 正则翻译
+        [/The plan change was successful. @([^ ]+) has been updated to the pro yearly plan./, "计划变更成功。@$1 已更新为专业版年度计费。"],
+        [/The plan change was successful. @([^ ]+) has been updated to the pro monthly plan./, "计划变更成功。@$1 已更新为专业版月度计费。"],
         [/We're preparing your report! We’ll send an email to ([^@]+@[^\n]+) when it’s ready./, "我们正在准备您的报告！完成后，我们将发送电子邮件至 $1。"], //顶部提醒
         [/Included minutes quota resets? in (\d+) days?./, "包含的分钟配额将在 $1 天之内重置"],
         [/Data transfer quota resets? in (\d+) days?./, "数据传输配额将在 $1 天之内重置"],
@@ -3959,6 +3962,8 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         [/(\$\d+\.\d{2}) off per month for (\d+) years/, "每月优惠 $1，为期 $2 年"],
         [/(\$\d+\.\d{2})\/month/, "$1/月"],
         [/(\$\d+\.\d{2}) off \/ month/, "-$1/月"],
+        [/(\$\d+\.\d{2})\/year/, "$1/年"],
+        [/(\$\d+\.\d{2}) off \/ year/, "-$1/年"],
         //[/(Due by|until|On|Expires) (Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (\d+), (\d+)/, function(all, opt, month, day, yesr){
         //    var monthKey = {
         //        "Jan": "1月", "Feb": "2月", "Mar": "3月", "Apr": "4月", "May": "5月", "Jun": "6月", "Jul": "7月", "Aug": "8月", "Sep": "9月", "Oct": "10月", "Nov": "11月", "Dec": "12月"
@@ -3970,7 +3975,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         //}],
         //[/Due by (.+)/, "$1 截止"],
         [/(Due by|On|Expires) (.+)/, (match, opt, p1) => {
-            var optKey = {"Due by": "月结", "On": "开始", "Expires": "到期"};
+            var optKey = {"Due by": "结算", "On": "开始", "Expires": "到期"};
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
             return `${translatedDate}` + optKey[opt];
@@ -7210,6 +7215,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                         "What are codespaces?": "什么是代码空间？",
                     "No codespaces": "尚无代码空间",
                     "You don't have any codespaces with this repository checked out": "您没有检出此仓库的任何代码空间",
+                    "Opening in codespace": "正在打开代码空间",
                     //[/Create codespace on ([^ ]+)/, "在 $1 上创建代码空间"],
                     "Learn more about codespaces...": "了解更多关于代码空间的信息...",
                     "Codespace usage for this repository is paid for by": "该仓库的代码空间使用费由以下人员支付",
@@ -18604,6 +18610,40 @@ I18N["zh-CN"]["account/choose"] = { // 账户升级选择
             "Try GitHub Enterprise": "试用 GitHub 企业版",
     },
     "regexp": [ // 正则翻译
+    ],
+};
+
+I18N["zh-CN"]["account/upgrade"] = { // 账户
+    "static": {
+        "Change how often your account is billed": "更改您账户的计费频率",
+
+        "Back to billing settings": "返回账单设置",
+
+        "Change duration to": "切换周期至",
+
+        "Pay yearly": "按年支付",
+        "/ year": "/年",
+        "Pay monthly": "按月支付",
+        "/ month": "/月",
+
+        "Payment frequency": "支付频率",
+            "Total amount": "总计",
+
+        "Billing information": "账单信息",
+            "Personal account": "个人账户",
+
+            "Change your account's billing cycle": "更改计费周期",
+        
+        "By clicking “Change your account's billing cycle”, you agree to our": "通过点击“更改计费周期”，您同意我们的",
+        "Terms of Service": "服务条款",
+        ". We’ll occasionally send you account-related emails.": "我们会偶尔发送与账户相关的电子邮件。",
+    },
+    "regexp": [
+        [/Payment due (.+)/, (match, p1) => {
+        const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+        const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+        return `${translatedDate}结算`;
+        }],
     ],
 };
 
