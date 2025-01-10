@@ -9853,7 +9853,9 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
         [/View checks?/, "查看检查"], // Android UA
         [/Add a comment on line (L|R)(\d+)/, "在 $1$2 行添加评论"], // 新版提交详情页
         [/Start conversation on line (L|R)(\d+)/, "在 $1$2 行开始讨论"], // 新版提交详情页
-        [/expand all lines: ([^ ]+)/, "展开全部： $1"],
+        [/expand all lines: ([^ ]+)/, "展开全部：$1"],
+        [/collapse file: ([^ ]+)/, "折叠文件：$1"],
+        [/collapse non diff lines: ([^ ]+)/, "折叠无差异行：$1"],
     ],
 };
 
