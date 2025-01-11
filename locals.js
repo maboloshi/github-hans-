@@ -13105,6 +13105,7 @@ I18N["zh-CN"]["repository/graphs/contributors"] = { // 仓库 -> 洞察 - 贡献
                     // 表格窗口
                         "Commits over time": "提交总览",
                         "DateTime": "日期时间",
+                        "Week of": "周",
 
         ...I18N["zh-CN"]["repository-public"]["static"],
         ...I18N["zh-CN"]["repository-insights-menu"]["static"],
