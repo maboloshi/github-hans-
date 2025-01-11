@@ -6959,6 +6959,7 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
 
             // "Owners": "所有者",
                 "Choose an owner": "选择所有者",
+                    "(fork already exists)": "(复刻已存在)",
             // "Repository name": "仓库名称",
 
                 // "The repository": "仓库",
