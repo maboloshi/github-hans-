@@ -7158,6 +7158,8 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
 
             "Go to file": "转到文件",
                 "No matches found": "未找到匹配项",
+                "Go to folder": "转到文件夹",
+                "See all results": "查看所有结果",
             "Add file": "添加文件",
                 // 添加文件 下拉菜单
                 "Create new file": "新建文件",
@@ -7514,6 +7516,8 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                 // 搜索框
                     "Go to file": "转到文件",
                         "No matches found": "未找到匹配项",
+                        "Go to folder": "转到文件夹",
+                        "See all results": "查看所有结果",
 
             "Add file": "添加文件",
                 // 添加文件 下拉菜单
@@ -7590,6 +7594,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
             var licKey = {'Unknown': '未知'};
             return licKey[lic] + '和另外' + num + '个许可证';
         }],
+        [/First (\d+) files? shown./, "显示前 $1 个文件。"],
     ],
 };
 I18N["zh-CN"]["repository/tree"] = I18N["zh-CN"]["repository"];
@@ -9901,6 +9906,8 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 // 搜索框
                     "Go to file": "转到文件",
                         "No matches found": "未找到匹配项",
+                        "Go to folder": "转到文件夹",
+                        "See all results": "查看所有结果",
 
             // Action的 action.yml 文件
                 "You can publish this Action to the GitHub Marketplace": "您可以将此 Action 发布到 GitHub 市场",
@@ -10103,6 +10110,8 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
 
         // 许可证
         [/([^ ]+) is licensed under/, "$1 的许可证"],
+
+        [/First (\d+) files? shown./, "显示前 $1 个文件。"],
     ],
 };
 I18N["zh-CN"]["repository/blame"] = I18N["zh-CN"]["repository/blob"];
@@ -11257,6 +11266,8 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
                 // 搜索框
                     "Go to file": "转到文件",
                         "No matches found": "未找到匹配项",
+                        "Go to folder": "转到文件夹",
+                        "See all results": "查看所有结果",
 
             "Name your file...": "文件名...",
             "in": "在",
@@ -11528,6 +11539,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
         [/Commit changes?/, "提交更改"], // 提交对话框
         [/Your license is ready. Please review it below and either commit it to the ([^ ]+) branch or to a new branch./, "您的许可证已准备就绪。请在下面审查它并将其提交到 $1 分支或新分支。"],
         [/Your search has returned (\d+) results?./, "您的搜索返回了 $1 条结果。"],
+        [/First (\d+) files? shown./, "显示前 $1 个文件。"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
