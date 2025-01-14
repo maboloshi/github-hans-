@@ -1,0 +1,18 @@
+name: 转换为台湾正体（簡體到臺灣正體）
+on:
+  workflow_dispatch:
+jobs:
+  zh-tw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 仓库初始化
+        uses: actions/checkout@v3
+      - name: 安装 OPENCC
+        run: sudo apt-get install opencc
+      - name: 转换
+        run: opencc -i locals.js -o zh-tw.js -c s2tw.json
+      - name: 上传文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-zh-TW
+          path: zh-tw.js
