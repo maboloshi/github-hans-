@@ -63,7 +63,7 @@ I18N.conf = {
         'repository/pull': ["td.blob-code"], // 代码差异 分屏/同屏
         'repository/compare': ["tbody"], // 代码差异
         'repository/commit': ["td.blob-code"], // 代码差异 分屏/同屏
-        'repository/blob': ["#highlighted-line-menu-positioner"], // 代码视图 存在
+        'repository/blob': ["#highlighted-line-menu-positioner", ".Text__StyledText-sc-17v1xeu-0"], // 代码视图 存在
         'repository/blame': ["#highlighted-line-menu-positioner"], // 代码视图
         'repository': [".AppHeader-context", "table"], //  "article.markdown-body",
         'repository/releases': [".Box-footer"], // 附件清单
@@ -1311,7 +1311,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                     "Copilot used the": "Copilot 已使用",
                     "Issue API": "议题 API",
                     "tool": "工具",
-            
+
             // 引用
                 "More reference options": "更多引用选项",
                     "Attach to chat": "附加至聊天",
@@ -7286,7 +7286,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                             "Update codespace": "更新代码空间",
                         "Stop codespace": "停止代码空间",
                     "No changes": "未更改",
-                
+
                 // Copilot
                     "Describe a task...": "描述任务...",
                     "Start task": "开始任务",
@@ -9134,7 +9134,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             // 代码评论
                 "Comment on lines": "评论行",
                 "Commenting on lines": "评论行",
-            
+
             // Copilot 菜单
                 "Ask Copilot about this diff": "与 Copilot 讨论此差异",
                     "Copilot is not available for this file type": "Copilot 不支持此文件类型",
@@ -9142,7 +9142,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Copilot menu": "Copilot 菜单",
                     "Explain": "解释",
                     "Attach to current thread": "附加到当前主题",
-                
+
                 "Select files to discuss": "选择文件讨论",
                     "Copilot is not available for this file": "Copilot 不支持此文件",
 
@@ -18669,7 +18669,7 @@ I18N["zh-CN"]["account/upgrade"] = { // 账户
             "Personal account": "个人账户",
 
             "Change your account's billing cycle": "更改计费周期",
-        
+
         "By clicking “Change your account's billing cycle”, you agree to our": "通过点击“更改计费周期”，您同意我们的",
         "Terms of Service": "服务条款",
         ". We’ll occasionally send you account-related emails.": "我们会偶尔发送与账户相关的电子邮件。",
@@ -19661,7 +19661,7 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         // 失败邀请 https://github.com/orgs/<orgs-name>/people/failed_invitations
             // [/(\d+) Failed invitations?/, "个失败邀请"],
             "No failed invitations.": "暂无失败邀请。",
-        
+
         // 安全管理 https://github.com/orgs/<orgs-name>/people/security_managers
             "Find a security manager…": "搜索安全管理员…",
 
@@ -22166,14 +22166,14 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
             // 此处引用 I18N["zh-CN"]["settings/copilot"]部分词条
 
             "Save and complete setup": "保存并继续",
-        
+
         // https://github.com/github-copilot/signup/settings
             "GitHub Copilot is now ready": "GitHub Copilot 已就绪",
                 "Add it to your editor and start building.": "添加至您的编辑器并开始构建",
 
             "Install the GitHub Copilot extension": "安装 GitHub Copilot 扩展",
                 "You can now use GitHub Copilot on the GitHub website. To use Copilot in your IDE, you first need to install the GitHub Copilot extension. To install for your preferred code editor, check out these Getting Started guides:": "您现在可以在 GitHub 网站上使用 GitHub Copilot。要在 IDE 中使用 Copilot，您需要安装 GitHub Copilot 扩展。请查看这些入门指南：",
-            
+
             "If you have the extension already installed for your code editor and have it open, please restart your editor in order to access GitHub Copilot.": "如果您的代码编辑器中已经安装了扩展并且是打开状态，请重启您的编辑器以使用 GitHub Copilot。",
 
     },
@@ -23210,7 +23210,7 @@ I18N["zh-CN"]["copilot"] = {
                         "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
                         "Browse marketplace": "前往市场",
             "Send now": "发送",
-        
+
         // 漏洞相关
             "Path Injection": "路径注入",
                 "Unvalidated input in path value creation risks unintended file/directory access": "创建路径值时输入的无效信息可能会导致意外文件/目录访问",
@@ -23241,7 +23241,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
             "Students": "学生",
             "Teachers": "教师",
             "Schools": "学校",
-        
+
         "GitHub Education": "GitHub 教育",
         "Empowering the next generation of developers": "增强新一代开发人员的能力",
             "GitHub Education bridges the gap between coding education and a tech career, and is accessible to everyone globally at no cost.": "GitHub 教育在编程教育和技术职业之间架起了一座桥梁，全球每个人都可以免费使用。",
@@ -23267,7 +23267,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                 "Benefits application": "优惠",
                 "Access free GitHub Education benefits": "获取免费 GitHub 教育福利",
                     "Complete the fields below to unlock tools and resources for your educational journey": "填写以下字段，为您的教育之旅解锁工具和资源",
-                
+
                 "Select your role in education": "选择身份",
                     "Teacher": "教师",
                     "Student": "学生",
@@ -23327,7 +23327,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "in your account settings - or select another school.": "- 或选择其他学校。",
                         "When you click \"Continue\" you will be prompted to share your location with us. Providing your current location helps us verify your affiliation with your chosen school.": "点击 “继续 ”后，系统会提示您与我们共享您的位置。提供您的当前位置有助于我们核实您与所选学校的关联。",
                         "Continue": "继续",
-                        
+
                         // 提交历史
                             "You've already submitted": "您已提交申请",  // 后续正则
 
@@ -23336,7 +23336,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "was approved and your benefits will be available": "已获批准，福利将很快发放。",
                                 "soon": "常见问题", // 该处链接指向 https://github.com/orgs/community/discussions/111352#user-content-how-long-after-ive-been-approved-will-i-receive-my-academic-benefits
                                 "was approved and your benefits are now available.": "已获批准且福利已发放。",
-                                
+
                             "rejected": "驳回",
                                 "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
                                 "What happened?": "发生了什么？",
@@ -23346,16 +23346,16 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                     "Student Developer Pack Application FAQ": "学生开发包申请常见问题",
                                     "or visit the": "或访问",
                                     "GitHub Education Community.": "GitHub 教育社区。",
-                            
+
                             "pending": "排队",
-                    
+
                         "Get help": "获取帮助",
                             "Common questions about applying for your academic discount.": "关于申请学术折扣的常见问题。",
                         // 学生
                             "Learn about GitHub's programs": "了解 GitHub 计划",
                         // 教师
                             "Discover GitHub's resources": "探索 GitHub 资源",
-                    
+
             // https://education.github.com/discount_requests/数字/additional_information
                 "Upload proof": "上传证明",
 
@@ -23370,7 +23370,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                         "If you don't have a student ID, or it doesn't include a date, you can upload a letter on school letterhead or any documentation": "如果您没有学生证，或者学生证上没有日期，您可以上传一封印有学校信笺抬头的信件或任何能证明您",
                         "with a date": "当前注册日期",
                         "that demonstrates your current enrollment.": "的文件。",
-                    
+
                     "Please upload proof of your academic status.": "请上传您的学籍证明。",
                         "Snap a picture of your qualifying proof of current academic status using your HD webcam or smartphone camera.": "使用高清摄像头或智能手机摄像头拍下您当前学历的合格证明照片。",
                         "Take a picture": "拍照",
@@ -23385,12 +23385,12 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "Please upload proof of your current school affiliation": "请上传您目前所在学校的证明",
                                 "Please upload proof of your current school affiliation that is less than 1MB in size": "请上传小于 1MB 的照片",
                                 "Binary data can't be blank": "二进制数据不能为空",
-                    
+
                     "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
                         "Process my application": "处理申请",
                         "Processing your application": "处理中",
                         "Processing information...": "处理中...",
-                    
+
                     // 上传失败
                         "Your application cannot be reviewed until you fix the following:": "您的申请将不被审查直到解决以下问题：",
                             "You must configure your browser and operating system to allow location access. You may not use a VPN. If you believe that our information about your school is incomplete or incorrect, then please select ‘My selected school has incorrect or incomplete information e.g. domains or campus location’ option when submitting a GitHub Education support ticket.": "您必须配置您的浏览器和操作系统以允许位置访问。您不得使用VPN。如果您认为我们关于您学校的资料不完整或不正确，请在提交GitHub 教育支持工单时选择“我选择的学校信息有误或不完整，例如域名或校园位置”选项。",
@@ -23414,12 +23414,12 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "Be sure to check your email. If you don't hear from us within the hour, you should receive an email from us in less than": "请务必查看您的电子邮件。如果您在一小时内没有收到我们的回复，您应该会在",
                     "5 days": "5 天内",
                     ". Have an Octotastic day!": "收到我们的电子邮件。祝您度过愉快的一天！",
-                
+
             // https://education.github.com/onboardings/new 申请批准后出现
                 "Welcome to GitHub Education!": "欢迎来到 GitHub 教育！",
                     "GitHub Education offers resources and programs to help students achieve their career goals.": "GitHub 教育提供各种资源和计划，帮助学生实现职业目标。",
                     "To get started, please answer two questions so we can add a learning path to your Education dashboard to help you with your goals.": "要开始学习，请回答两个问题，以便我们在您的教育仪表板上添加学习路径，帮助您实现目标。",
-                
+
                 "Question 1 of 2": "问题 1/2",
                     "In the next 4-6 months, which of the following are you hoping to accomplish? Select two that apply best.": "在未来 4-6 个月内，您希望实现以下哪些目标？请选择最适合的两项。",
                         "Understanding how to use GitHub": "了解如何使用 GitHub",
@@ -23448,7 +23448,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "GitHub Deep Dive": "深入了解 GitHub",
                         "Go deeper on how to use codespaces and the GitHub flow to create a web application.": "深入了解如何使用代码空间和 GitHub 流程创建网络应用程序。",
                     "Continue to Dashboard": "在仪表板继续",
-            
+
             // https://education.github.com/learner/learn
                 // 顶部提示
                 "Your onboarding preferences have been saved!": "您的入职首选项已保存！",
@@ -23481,7 +23481,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                             "Go to Primer: Codespaces": "前往入门：代码空间",
                     "Not what you were looking for? Check out our": "还没有找到您想要的？请查看我们的",
                         "other learning paths.": "其他学习路径。",
-                    
+
                     "Student Developer Pack offers": "学生开发包提供",
                         "Your Student Developer Pack will be ready soon!": "您的学生开发包即将就绪！",
                             "We will notify you via email when your": "我们将通过电子邮件通知，当您可以使用",
@@ -23502,16 +23502,16 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
 
                     "Updates in Learn New Skills": "学习新技能的更新内容",
                         "No new updates": "无更新",
-                    
+
                     "Claimed offers": "已申请优惠",
                         "Your explored offers failed to load, please refresh the page to see this content.": "加载失败，请刷新页面以查看此内容。",
-                    
+
             // https://education.github.com/learner/opportunities
                 "Community Exchange": "社区交流",
                     "Community Exchange is a collection of student repositories for teaching, learning and collaborating.": "社区交流是一个用于教学、学习和合作的学生资源库。",
                     "Go to Community Exchange": "前往社区交流",
                 "Updates in Find Opportunities": "寻找机遇的更新内容",
-            
+
             // https://education.github.com/learner/connect
                 "Events": "事件",
                     "View more events": "查看更多",
@@ -23526,10 +23526,10 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
 
                         "Follow your Expert": "关注专家",
                         "Follow student leaders trained by GitHub to get help with hackathons & events": "关注由 GitHub 培训的学生领袖，在黑客马拉松和活动中获得帮助",
-                    
+
                     "Education blog": "教育博客",
                         "View more": "查看更多",
-                     
+
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
