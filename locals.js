@@ -22377,6 +22377,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
             return `最后使用${translatedDate}`;
         }],
+        [/This codespace is (\d+) commits? ahead of remote/, "此代码空间 $1 条提交领先远端"],
     ],
 };
 
