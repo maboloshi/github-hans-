@@ -9679,6 +9679,10 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
             "Whitespace-only changes.": "仅空白字符更改。",
 
+            "Some content is hidden": "某些内容被隐藏",
+                "Large Commits have some content hidden by default. Use the searchbox below for content that may be hidden.": "大型提交默认隐藏部分内容。使用下面的搜索框查找可能隐藏的内容。",
+            "Dismiss banner": "关闭",
+
             "Load diff": "载入差异",
             "Load Diff": "载入差异",
             "This file was deleted.": "该文件已被删除",
