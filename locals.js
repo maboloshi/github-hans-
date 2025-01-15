@@ -7967,6 +7967,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
             // 被锁定
                 "This conversation has been locked as": "此对话已锁定为",
                     "and limited to collaborators.": "，并限制与协作者对话。",
+                "You can't perform this action at this time.": "您此时不能操作。",
 
             // 底部赞助
                 "Show your support for": "通过赞助来表达您对",
@@ -8919,11 +8920,14 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Use the command line": "使用命令行",
                 "to resolve conflicts before continuing.": "解决冲突后再继续。",
                 "or the command line to resolve conflicts before continuing. Actions workflows will not trigger on activity from this pull request while it has merge conflicts.": "或通过命令行解决冲突。在此拉取请求仍存在合并冲突的情况下，操作工作流不会因该拉取请求的活动而触发。",
+                "or the command line to resolve conflicts before continuing.": "或通过命令行解决冲突后再继续。",
+                "Use the command line to resolve conflicts before continuing.": "使用命令行解决冲突后再继续。",
 
                 "Checkout via command line": "通过命令行检出",
                 "Checkout via the command line": "通过命令行检出", // 新版合并界面
                 "If the conflicts on this branch are too complex to resolve in the web editor, you can check it out via command line to resolve the conflicts.": "如果该分支上的冲突过于复杂，无法在 Web 编辑器中解决，您可以通过命令行检出来解决冲突。",
                 "If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.": "如果不想使用合并按钮或无法执行自动合并，可以在命令行上执行手动合并。但若基本分支受到保护，则不适用以下步骤。", //新版合并界面
+                "Step": "步骤", // 新版合并界面
                 "Step 1:": "第 1 步：",
                     "From your project repository, check out a new branch and test the changes.": "从项目仓库中，检出新分支并测试更改。",
                     "Clone the repository or update your local repository with the latest changes.": "克隆仓库或使用最新更改更新本地仓库。",
@@ -8939,6 +8943,12 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                         "for step-by-step instructions on resolving merge conflicts.": "的分步说明。",
                 "Step 5:": "第 5 步：",
                     "Push the changes.": "推送更改。",
+                // 新版合并界面 复制按钮
+                    "Copy clone URL": "复制克隆链接",
+                    "Copy clone command": "复制克隆命令",
+                    "Copy checkout command": "复制切换命令",
+                    "Copy merge command": "复制合并命令",
+                    "Copy push command": "复制推送命令",
 
             "Resolve conflicts": "解决冲突",
                 "Use the": "使用",
@@ -9473,6 +9483,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
             // "No commit comments for this range": "该范围变更没有提交注释",
 
             "Reviewers": "审查者",
+                "No reviews": "未经审查",
                 "Loading suggestions…": "载入推荐…",
                 // [/([^ ]+) left review comments/, "$1 发表了审查意见"],
                 // [/At least (\d+) approving reviews? are required to merge this pull request./, "至少需要 $1 次批准审查才能合并此拉取请求。"],
@@ -9571,6 +9582,7 @@ I18N["zh-CN"]["repository/compare"] = { // 仓库 - 比较并创建拉取请求
 
         "Helpful resources": "帮助性资源",
             // "GitHub Community Guidelines": "GitHub 社区准则",
+            "Contributing": "贡献准则",
 
 
         // 标签对应版本比较 /<user-name>/<repo-name>/compare/<tag-id1>...<tag-id2>
@@ -9871,7 +9883,7 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
         [/(\d+) parents?/, "$1 个父"],
         [/lines? changed/, "行更改"],//新版提交页面
         [/(\d+) changed files?/, "$1 个更改的文件"],
-        [/(\d+) changes: (\d+) additions? & (\d+) deletions?$/, "$1 处更改：$2 处增加和 $3 处删除"],
+        [/(\d+) changes?: (\d+) additions? & (\d+) deletions?$/, "$1 处更改：$2 处增加和 $3 处删除"],
         [/(\d+) additions?$/, "$1 处增加"],
         [/(\d+) deletions?$/, "$1 处删除"],
         [/This commit closes issue (#\d+)./, "此提交关闭了议题 $1。"], //具体提交页面
