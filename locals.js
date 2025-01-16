@@ -7114,6 +7114,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                 "Protect this branch from force pushing or deletion, or require status checks before merging.": "保护此分支免受强制推送或删除，或在合并前要求状态检查。",
                 "View documentation.": "查看文档",
                 "Protect this branch": "保护该分支",
+                "Dismiss": "忽略",
 
             // 仓库主页 Dependabot 警告框
                 "We found potential security vulnerabilities in your dependencies.": "我们在您的依赖项中发现了潜在的安全漏洞。",
@@ -11108,6 +11109,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
             "This job was skipped": "此作业被跳过",
             "Waiting for pending jobs": "等待中",
             "Input required and not supplied: token": "需要输入但未提供：令牌",
+            "The deployment was rejected or didn't satisfy other protection rules.": "部署被拒绝或不符合其他保护规则。",
             "Fit to window": "适合",
             "Zoom out": "缩小",
             "Zoom in": "放大",
@@ -11146,6 +11148,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
         [/([^ ]+) value is not set/, "$1 值未设置"],
         [/([^ ]+) summary/, "$1 摘要"],
         [/By ([^ ]+)/, "创建：$1"],
+        [/Branch "([^ ]+)" is not allowed to deploy to ([^ ]+) due to environment protection rules./, "由于环境保护规则，“$1”分支不允许部署到 $2 上。"],
     ],
 };
 I18N["zh-CN"]["repository/runs"] = I18N["zh-CN"]["repository/actions"];
@@ -17918,6 +17921,11 @@ I18N["zh-CN"]["gist"] = { // 代码片段页面
             "You must be signed in to fork a gist": "您必须登录才能复刻代码片段",
         "User actions": "用户操作",
         "Report abuse": "举报滥用",
+        "Disable comments": "禁用评论",
+            "Comments have been disabled.": "评论已禁用。", // 顶部提示
+            "Comments are disabled for this gist.": "评论已被禁用。", // 评论框底部提示
+        "Enable comments": "启用评论",
+            "Comments have been enabled.": "评论已启用。", // 顶部提示
 
         "Code": "代码",
         "Revisions": "修订",
