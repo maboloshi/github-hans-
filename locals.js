@@ -1970,6 +1970,8 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             // 编辑个人资料
                 "Edit profile": "编辑个人资料",
                 "Name": "名称",
+                "Display": "显示",
+                    "badge.": "徽章。",
                 "Bio": "个人简介",
                 "Add a bio": "添加个人简介",
                     "You can": "您可",
@@ -22394,6 +22396,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         [/Codespace "(.+)" stopped./, "代码空间 “$1” 停止。"],
         [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
         [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
+        [/Your codespace "(.+)" has been updated to use machine type: "(\d+) cores, (\d+) GB RAM, (\d+) GB storage". Changes will take effect the next time your codespace restarts./, "您的代码空间“$1”将更新机器类型为：“$2 核，$3 GB 内存，$4 GB 存储”。更改将在下次启动代码空间时生效。"],
         [/Are you sure you want to delete/, "您确定要删除"],
         [/(.+) has unpushed changes, are you sure you want to delete\?/, "$1 有未提交更改，您确定要删除吗？"],
         [/Last used (.+)/, (match, p1) => {
