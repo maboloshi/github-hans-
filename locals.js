@@ -6591,6 +6591,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
                 "Author": "作者",
                     "You are the author of this issue.": "您是这个议题的作者。",  // 议题
                     "You are the author of this pull request.": "您是这个拉取请求的作者。", // 拉取请求
+                    "This user is the author of this issue": "该用户是这个议题的作者",  // 议题
                     "This user is the author of this issue.": "该用户是这个议题的作者。",// 拉取请求
                     "This user is the author of this pull request.": "该用户是这个拉取请求的作者。",// 拉取请求
                 "Member": "成员",
@@ -7726,6 +7727,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                 "Requested changes must be addressed to merge this pull request.": "要合并这个拉取请求，必须先解决所要求的更改。",
 
             "Relationships": "关系",
+                "Parent issue": "父议题",
 
             "Sort": "排序",
                 "Sort by": "排序",
@@ -7878,9 +7880,10 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                 "Subscribe": "订阅",
                 // "Unsubscribe": "取消订阅",
                 "You’re not receiving notifications from this thread.": "您没有收到来自该话题的通知。",
+                "You're receiving notifications because you're subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
+                "You’re receiving notifications because you’re subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you’re watching this repository.": "您收到通知是因为您正在关注此仓库。",
                 "You’re receiving notifications because you authored the thread.": "您收到通知是因为您提出了该话题。",
-                "You’re receiving notifications because you’re subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you were mentioned.": "您收到通知是因为有人 @您。",
                 "You’re receiving notifications because you commented.": "您收到通知是因为您发表了评论。",
                 "You’re receiving notifications because you are watching pull requests on this repository.": "您收到通知是因为您正在关注此仓库上的拉取请求。",
@@ -8050,6 +8053,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "opened": "打开于",
             // "closed": "已关闭",
 
+            // 父级议题
+            "Parent:": "父级：",
+
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
             "You commented on this issue": "您对此议题发表了评论",
@@ -8124,6 +8130,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "added this to": "添加到",
             "milestone": "里程碑",
             "closed this": "关闭了",
+            "as": "因",
             "closed this as": "已关闭因",
                 "not planned": "非计划中",
                 "completed": "已完成",
@@ -8162,6 +8169,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "added a commit that referenced this issue": "添加了一个引用此问题的提交",
             "referenced this issue": "提及这个议题",
             "closed this as completed": "已完成，关闭",
+            "added a parent issue": "添加了一个父议题",
 
             // 右侧栏 补充
                 // "Development": "进展",
@@ -8266,6 +8274,13 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "deleted this from": "删除了这个，从",
 
             "Reference in a new issue": "在新议题中提及",
+
+            // 评论框
+            "edited by": "编辑者",
+            "Edits": "编辑",
+                "Most recent": "最近",
+            "Reopen Issue": "重新打开议题",
+                "You do not have permissions to reopen this issue": "您没有权限重新打开此议题",
 
         // 议题标签管理 /<user-name>/<repo-name>/issues/labels
         // 仓库 --> 标签页面 /<user-name>/<repo-name>/labels
