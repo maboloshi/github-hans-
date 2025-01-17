@@ -45,13 +45,13 @@ I18N.conf = {
      * 导入仓库 /new/import
      * ...
      */
-    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap|education)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
+    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|codespaces\/allow_permissions|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap|education)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
-    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
+    rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications|key_links)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
-    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
+    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|invitations?|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
 
     // 特定页面，启用`字符数据`监测
     characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob'],
@@ -359,6 +359,10 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
         "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
         "Signup to GitHub Copilot": "注册 GitHub Copilot",
+        "Device Activation": "设备激活",
+        "Spending Limit": "支付限额",
+        "Autolink references": "自动链接引用",
+        "Add autolink reference": "添加自动链接引用",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -416,6 +420,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Sponsor @([^ ]+) on GitHub Sponsors/, "在 GitHub 上赞助 $1"],
         [/OAuth applications/, "OAuth 应用"],
         [/People · Pending Collaborators/, "成员 · 待定协作者"],
+        [/Members · People · ([^ ]+)/, "成员 · $1"],
         [/People/, "成员"],
         [/Outside collaborators/, "外部协作者"],
         [/New Discussion/, "新讨论"],
@@ -446,6 +451,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         [/Codespaces secrets · ([^ ]+)/, "代码空间机密 · $1"],
         [/Dependabot secrets · ([^ ]+)/, "Dependabot 机密 · $1"],
         [/Invitation to join ([^ ]+)/, "加入 $1 邀请"],
+        [/Security Managers for · ([^ ]+)/, "安全管理员 · $1"],
         ["_regexp_end", "end"]
     ],
 };
@@ -633,6 +639,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Chat with Copilot": "与 Copilot 聊天",
             "Open Copilot…": "打开 Copilot…",
                 "New conversation in": "新聊天",
+                "New conversation": "新聊天",
                     "Immersive": "沉浸式",
                 "Open with": "打开于",
 
@@ -1390,12 +1397,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
          * 正则中的 ?? 前面的字符 重复0次或1次
          * 正则中的 ?: 非捕获符号(即关闭圆括号的捕获能力) 使用方法 (?: 匹配规则) -->该匹配不会被捕获 为 $数字
          */
-        [/(^Updated |^Commits on |^Joined on |on |^Submitted )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
+        [/(^Updated |^Commits on |^Joined on |on )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
             var prefixKey = {
                 "Updated "   : "更新于 ",
                 "Commits on ": "提交于 ",
                 "Joined on " : "加入于 ",
-                "Submitted ": "提交于 ",
+                //"Submitted ": "提交于 ", // 教育
             };
             var weekKey = {
                 "Sun"  : "周日",
@@ -1613,6 +1620,7 @@ I18N["zh-CN"]["orgs-public"] = { // 组织公共部分
         [/New team in/, "新建团队在组织"],
         [/New repository in/, "新建仓库在组织"],
         [/This organization was marked as archived by an administrator (on .+). It is no longer maintained./, "该组织已由管理员于 $1 存档。不再维护。"],
+        [/You are now a member of ([^ ]+)!/, "您现在是 $1 的成员了！"],
     ],
 };
 
@@ -1648,6 +1656,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         // 组织
         // [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"],
         // [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"],
+        "Welcome to the": "欢迎来到",
+        "View your teams": "查看您的团队",
         "View and create teams": "查看并创建团队",
         "See all owners": "查看全部所有者",
         "You've been added to the": "您已被添加至",
@@ -1853,6 +1863,11 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "The world’s fair of software is here.": "世界软件博览会就在这里。",
         "The GitHub Universe call for sessions is now open! Apply to share your expertise by submitting a session proposal today. Plus, get 35% off your tickets to GitHub Universe only for a limited time.": "GitHub Universe 的会议征集现已开启！立即提交您的会议提案，分享您的专业知识。此外，现在限时可享 35% 的 GitHub Universe 会议门票折扣。",
 
+        // 教育看板（申请教育包才有
+        "Learn. Collaborate. Grow.": "学习，协作，成长。",
+        "GitHub Education gives you the tools and community support to take on tech challenges and turn them into opportunities. Your future in tech starts here!": "GitHub 教育提供工具和社区支持，帮助您应对技术挑战并将其转化为机遇。您科技领域的未来从这里开始！",
+        "Go to GitHub Education": "前往 GitHub 教育",
+
         // 用户 浮动信息卡
         "Member of": "隶属组织",
         // [/, and (\d+) more/, "，以及其他 $1 个组织"],
@@ -1898,6 +1913,7 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"], // 组织
         [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"], // 组织
         [/Edit ([^ ]+)’s settings/, "编辑 $1 的设置"], // 组织
+        [/Check out ([^ ]+)’s public profile/, "查看 $1 的公开资料"], // 组织
         [/and (\d+) more/, "和另外 $1 个"],
         [/You're seeing this because you collaborated with ([^ ]+)/, "您看到这个是因为您与 $1 有过合作"],
         [/You're seeing this because you starred ([^ ]+)/, "您看到这个，是因为您星标了 $1"],
@@ -1944,6 +1960,7 @@ I18N["zh-CN"]["page-profile-public"] = { // 个人首页（含组织）
             "Joined": "加入于",
             "Achievements": "成就",
             "Highlights": "高光时刻",
+                "Label: Pro": "标签：专业版",
             "Developer Program Member": "开发者计划成员",
             "Organizations": "组织",
             "Block or Report": "拉黑或举报",
@@ -2209,22 +2226,11 @@ I18N["zh-CN"]["page-profile"] = { // 个人首页
         [/([\d,]+) contributions? in (\d+) in ([^ ]+)/, "在 $2 年中向 $3, 贡献 $1 次"],
         [/([\d,]+) contributions? in (\d+)/, "在 $2 年中贡献 $1 次"],
         [/(\d+) contributions? in private repositor(y|ies)/, "私有仓库 $1 个贡献"],
-        [/(\d+|No) contribution(?:s)? on (January|February|March|April|May|June|July|August|September|October|November|December) (\d+)(?:st|nd|rd|th)./, function (all, number, month , day) {
-            var monthKey = {
-                "January"   : "1月",
-                "February"  : "2月",
-                "March"     : "3月",
-                "April"     : "4月",
-                "May"       : "5月",
-                "June"      : "6月",
-                "July"      : "7月",
-                "August"    : "8月",
-                "September" : "9月",
-                "October"   : "10月",
-                "November"  : "11月",
-                "December"  : "12月",
-            };
-            return number === 'No' ? monthKey[month] + day + "日，"+ "无贡献"  : monthKey[month] + day + "日，" + number + " 次贡献";
+        [/(\d+|No) contribution(?:s)? on (.+)(?:st|nd|rd|th)./, (match, number, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            //return optKey[opt] + `${translatedDate}`;
+            return number === 'No' ? `${translatedDate}，无贡献` : `${translatedDate}，` + number + ` 次贡献`;
         }],// 贡献日历
         //[/A graph representing ([^ ]+)'s contributions from ( .+) to ( .+)./, "$1 从 $2 到 $3 的贡献图。"],
         [/and (\d+) other repositor(y|ies)/, "和 $1 个其他仓库"], // 活动概览
@@ -3058,6 +3064,9 @@ I18N["zh-CN"]["settings/profile"] = { // 设置 - 个人资料
             "Update preferences": "更新设置",
 
             "Profile settings": "个人资料设置",
+                "Display PRO badge": "显示 PRO 徽章",
+                    "This will display the": "将会显示",
+                    "badge on your public profile page.": "徽章在您的个人资料中。",
                 "Show Achievements on my profile": "在我的个人资料上显示成就",
                     "Your achievements will be shown on your profile.": "您的成就将显示在您的个人资料中。",
 
@@ -3477,12 +3486,15 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "Manage spending limit": "管理支出限额",
             "View payment history": "查看支付记录",
             "Switch to yearly billing": "切换到按年计费",
+            "Switch to monthly billing": "切换到月度计费",
 
             "Current plan": "当前计划",
                 "Compare all plans": "比较所有计划",
+                    "per month": "每月",
 
                 "GitHub Free": "GitHub 免费",
                 "The basics for all developers": "基础计划（所有开发者）",
+                //"GitHub Pro": "GitHub 专业",
 
                 "The basics for organizations and developers": "组织和开发者的基本计划", // 组织设置
                 "Unlimited public/private repos": "无限的公共/私有仓库",
@@ -3492,6 +3504,15 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "120 core-hours of Codespaces compute per developer": "每位开发者拥有 120 个核心小时的代码空间计算能力",
                 "15GB of Codespaces storage per developer": "每位开发者拥有 15GB 的代码空间存储空间",
                 "Community support": "社区支持",
+                // pro
+                    "Downgrade to Free": "降级至免费版",
+                "3,000 Actions minutes/month": "每月 3,000 分钟 GitHub Actions",
+                "2GB of Packages storage": "2GB 的包存储空间",
+                "180 core-hours of Codespaces compute": "180 个核心小时的代码空间计算能力",
+                "20GB of Codespaces storage": "20GB 的代码空间存储空间",
+                "Code owners, required reviewers, GitHub Pages,": "代码所有者、所需审核者、GitHub Pages，",
+                "and more": "以及更多",
+                "advanced tools": "高级工具",
 
                 "Not included:": "不包含：",
                 "Free Codespaces usage per organization": "每个组织的免费代码空间使用量",
@@ -3522,6 +3543,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "Active subscription": "已激活订阅",
                         "Copilot Free": "免费版",
                     "You can upgrade to Copilot Pro at any time. Check out this": "您可以随时升级到 Copilot Pro。详情请查看",
+                    "You are eligible to use GitHub Copilot for free.": "您有资格免费使用 GitHub Copilot。",
                     "documentation": "文档",
                     "for more details.": "。",
                     //"Enable GitHub Copilot": "启用 GitHub Copilot",
@@ -3619,12 +3641,22 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                     "To manage metered billing for this account through Microsoft Azure an Azure Subscription ID must be added to your account.": "通过 Microsoft Azure 管理此账户的计量计费，必须将 Azure 订阅 ID 添加到您的账户中。",
 
         // 支付信息 https://github.com/settings/billing/payment_information
+            // pro
+                "Your recurring charges & discounts": "您的定期费用和折扣",
+                    "GitHub Coupon": "GitHub 优惠券",
+                        "* Discount applies for GitHub Pro": "* 适用于 GitHub Pro 的折扣",
+
             "Billing & plans": "账单和计划",
             "/ Payment information": "/ 支付信息",
 
             "Please update your billing information in order to add a payment method.": "请更新您的账单信息，以便添加支付方式。",
 
             "Billing information": "账单信息",
+                "Remove": "移除",
+                    "Remove your billing information?": "确定移除账单信息？",
+                    "You are about to remove the billing information for this account.": "您即将删除此账户的账单信息。",
+                    "Are you sure you want to do this?": "您确定要这样做吗？",
+                    "Remove billing information": "移除账单信息",
             // 组织设置
             "An organization owner's personal billing information must be linked with this organization account.": "组织所有者的个人账单信息必须与该组织账户关联。",
             "Update your billing information": "更新您的账单信息",
@@ -3663,6 +3695,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "Coupon": "优惠劵",
             "Redeem a coupon": "兑换优惠券",
             "You don't have an active coupon.": "您没有有效的优惠券。",
+            "* Discount only applies for GitHub Pro": "* 优惠仅限 GitHub Pro。",
 
             "Additional Information": "附加信息",
                 "Add specific contact or tax information to your receipts, like your full business name, VAT/GST identification number, or address of record here. We’ll make sure it shows up on every receipt.": "在您的收据上添加具体的联系方式或税务信息，例如您的企业全称、VAT/GST 识别号码或记录地址。我们将确保它显示在每张收据上。",
@@ -3718,6 +3751,9 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
             "Payment method is missing": "缺失支付方式",
             "You can’t increase the spending limits until you set up a valid payment method.": "在您设置有效的支付方式之前，您无法提高支出限额。",
+                // 教育认证
+                "Coupons do not apply to any overages.": "优惠券不适用于任何超额部分。",
+                    "Any incurred overages will be paid in full by the added payment method.": "任何超额费用都将通过添加的付款方式全额支付。",
             "Add payment method": "添加支付方式",
 
             "Actions & Packages": "操作与软件包",
@@ -3904,22 +3940,51 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
     },
     "regexp": [ // 正则翻译
+        [/The plan change was successful. @([^ ]+) has been updated to the pro yearly plan./, "计划变更成功。@$1 已更新为专业版年度计费。"],
+        [/The plan change was successful. @([^ ]+) has been updated to the pro monthly plan./, "计划变更成功。@$1 已更新为专业版月度计费。"],
         [/We're preparing your report! We’ll send an email to ([^@]+@[^\n]+) when it’s ready./, "我们正在准备您的报告！完成后，我们将发送电子邮件至 $1。"], //顶部提醒
-        [/Included minutes quota resets? in (\d+) days./, "包含的分钟配额将在 $1 天之内重置"],
-        [/Data transfer quota resets? in (\d+) days./, "数据传输配额将在 $1 天之内重置"],
-        [/Included quotas resets? in (\d+) days./, "包含的配额将在 $1 天之内重置"],
-        [/Bandwidth quota resets? in (\d+) days./, "带宽使用配额将在 $1 天之内重置"],
+        [/Included minutes quota resets? in (\d+) days?./, "包含的分钟配额将在 $1 天之内重置"],
+        [/Data transfer quota resets? in (\d+) days?./, "数据传输配额将在 $1 天之内重置"],
+        //[/Included minutes quota resets/, ""],
+        [/Included quotas resets? in (\d+) days?./, "包含的配额将在 $1 天之内重置"],
+        [/Bandwidth quota resets? in (\d+) days?./, "带宽使用配额将在 $1 天之内重置"],
         [/In addition to your personal account, you manage (\d+) organizations?./, "除了您的个人账户之外，您还管理 $1 个组织。"],
         [/Leaving it at (\$\d+\.\d{2}) will avoid any extra expenses/, "将其限制在 $1 美元将避免任何额外的费用。"],
         [/isn’t a GitHub member/, "不是 GitHub 成员"], // 组织设置
         [/of ([\d,]+\.\d{2}) min included/, "/ $1 分钟"],
-        [/GB of ([^ ]+) GB included/, "/ $1 GB "],
-        [/of ([^ ]+) GB( included)?/, "/ $1 GB"],
+        [/(?:GB )?of ([^ ]+) GB(?: included)?/, "/ $1 GB"],
+        //[/of ([^ ]+) GB( included)?/, "/ $1 GB"],
         [/of (\d+\.\d{2}) included core hours used/, "/ $1 核心小时数"],
         [/of (\d+\.\d{2}) included GB-month used/, "/ $1 GB/每月"],
         [/Last (\d+) days/, "最近 $1 天"],
         [/([^ ]+) support/, "$1 支持"],
         [/Included minutes quota only applies to Ubuntu 2-core, Windows 2-core and macOS 3-core runners\. Windows 2-core and macOS 3-core runners consume included minutes at higher rates\. Your (\d+\.\d+) included minutes used consists of (.*)/, "包含的分钟配额仅适用于 双核 Ubuntu、双核 Windows 和三核 macOS 运行器。双核 Windows 和三核 macOS 运行器以更高的速度消耗包括的分钟数。您已使用的 $1 分钟包含分钟数由 $2 组成。"],
+        [/(\$\d+\.\d{2}) off per month for (\d+) years/, "每月优惠 $1，为期 $2 年"],
+        [/(\$\d+\.\d{2})\/month/, "$1/月"],
+        [/(\$\d+\.\d{2}) off \/ month/, "-$1/月"],
+        [/(\$\d+\.\d{2})\/year/, "$1/年"],
+        [/(\$\d+\.\d{2}) off \/ year/, "-$1/年"],
+        //[/(Due by|until|On|Expires) (Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (\d+), (\d+)/, function(all, opt, month, day, yesr){
+        //    var monthKey = {
+        //        "Jan": "1月", "Feb": "2月", "Mar": "3月", "Apr": "4月", "May": "5月", "Jun": "6月", "Jul": "7月", "Aug": "8月", "Sep": "9月", "Oct": "10月", "Nov": "11月", "Dec": "12月"
+        //    };
+        //    var optKey = {
+        //        "Due by": "截止", "until": "直到", "On": "开始", "Expires": "到期"
+        //    };
+        //    return year + '年' + monthKey[month] + day + '日 ' + optKey[opt];
+        //}],
+        //[/Due by (.+)/, "$1 截止"],
+        [/(Due by|On|Expires) (.+)/, (match, opt, p1) => {
+            var optKey = {"Due by": "结算", "On": "开始", "Expires": "到期"};
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `${translatedDate}` + optKey[opt];
+        }],
+        [/until (.+)./, (match, p1) => { // p1为(.+)
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `直到 ${translatedDate}。`; // 这里写翻译结果
+        }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
@@ -4356,6 +4421,7 @@ I18N["zh-CN"]["settings/organizations"] = { // 设置 - 组织
             "You are not a member of any organizations.": "您暂无任何组织。",
 
             "Owner": "所有者",
+            "Member": "成员",
             "Compare plans": "比较计划",
             "Leave": "离开",
 
@@ -4738,6 +4804,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Cancelling...": "撤销中...",
             "Buy Copilot Business": "购买 GitHub Copilot 企业版",
             "Owner": "所有者",
+            "Member": "成员",
 
         // 免费版
             "You are using Copilot for free": "您正在使用 Copilot 免费版",
@@ -5341,14 +5408,24 @@ I18N["zh-CN"]["settings/security-log"] = { // 设置 - 安全日志
             "Added": "添加",
             "to the": "至",
             "repository": "仓库",
+                "organization with": "组织，使用",
+                "read": "读取",
+                "permission": "权限",
             "Added the following repositories to the": "添加以下仓库到",
             "integration:": "集成：",
             "Enabled GitHub Actions for": "启用仓库操作：",
             "Created a secret for": "创建机密：",
+            "Created a token for": "创建令牌：",
+            "Regenerated a token for": "重新生成令牌：",
+            "Revoked a token for": "撤销令牌：",
+                "ending in": "结尾",
+                "for the": "用于",
+                "GitHub App": "GitHub 应用",
 
     },
     "regexp": [ // 正则翻译
         [/Found (\d+) events?/, "发现 $1 个活动"],
+        [/View ([^ ]+)'s profile/, "查看 $1 的资料"],
     ],
 };
 
@@ -5873,6 +5950,21 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                 "Are you sure you want to update permissions?": "您确定要更新权限吗？",
                     "Current users will be prompted to accept these changes and enable the new permissions on their installation.": "系统将提示当前用户接受这些更改，并在其安装中启用新权限。",
 
+        // 某个 GitHub 应用 - 助理 https://github.com/settings/apps/<app-name>/agent
+            "A Copilot configuration allows your GitHub App to integrate with Copilot. Learn more about building GitHub Copilot Extensions in the": "Copilot 配置允许您的 GitHub 应用与 Copilot 集成。了解更多关于构建 GitHub Copilot 扩展的信息，请访问",
+            "documentation": "文档",
+
+            "Accept the Marketplace Developer agreement to create your Copilot Extension": "接受市场开发者协议以创建您的 Copilot 扩展",
+                "By clicking \"Accept Terms\" below, you agree to the": "点击下面的 “接受条款”，即表示您同意以下条款",
+                "GitHub Copilot Extension Developer Policy": "GitHub Copilot 扩展开发者政策",
+                "Pre-release License terms": "预发布许可条款",
+                "on behalf of": "代表",
+                ". Please check to make sure that you are agreeing to these terms on behalf of the correct account.": "。请检查以确保您代表正确的帐户同意这些条款。",
+                "Accept Terms": "接受条款",
+
+            "To enable Copilot functionality, you must first accept the Marketplace Developer agreement": "要启用 Copilot 功能，您必须首先接受市场开发者协议",
+            "To enable Copilot functionality, you must first grant your app permission to read Copilot Messages. To do so, navigate to Permissions & Events > Account Permissions > Read-only for Copilot Chat": "要启用 Copilot 功能，必须先授予应用读取 Copilot 消息的权限。为此，请导航至权限和事件 > 帐户权限 > Copilot 聊天 - 只读",
+
         // 某个 GitHub 应用 - 安装 https://github.com/settings/apps/<app-name>/installations
             // [/Install (.*)/, "安装 $1"],
             // [/Choose an account to install (.*) on:/, "选择要安装 $1 的账户："],
@@ -6332,6 +6424,7 @@ I18N["zh-CN"]["settings/tokens"] = { // 设置 - 开发者设置/个人访问令
             "Manage enterprise runners and runner groups": "管理企业运行器和运行器组",
             "Read and write enterprise billing data": "读写企业计费数据",
             "Read enterprise profile data": "读取企业个人数据",
+            "Provisioning of users and groups via SCIM": "通过 SCIM 配置用户和组",
             "Full control of audit log": "完全控制审核日志",
             "Read access of audit log": "读取审核日志",
             "Full control of codespaces": "完全控制代码空间",
@@ -6712,21 +6805,11 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
         [/You have been invited to collaborate on the (.*) repository./, "您已受邀参与 $1 仓库的协作。"],
         [/You have previously committed to the (.*) repository./, "您之前有提交到 $1 仓库。"],
         [/This user has previously committed to the (.*) repository./, "该用户之前有提交到 $1 仓库。"],
-        [/This repository has been archived by the owner on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is now read-only./, function(all, m , d ,y){
-            var mKey = {"Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"};
-
-            return '此仓库已由所有者于' + y + '年' + mKey[m] + d + '日'+ '存档。它现在是只读的。';
+        [/This repository has been archived by the owner on (.+). It is now read-only./, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `此仓库已由所有者于${translatedDate}存档。它现在是只读的。`;
+            //return '此仓库已由所有者于' + y + '年' + mKey[m] + d + '日'+ '存档。它现在是只读的。';
         }],
         [/, and ([^ ]+)/, ", 和 $1"],
         [/reacted with (thumbs up|thumbs down|laugh|hooray|confused|heart|rocket|eyes) emoji/, function (all, reacted) {
@@ -6778,6 +6861,9 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
                 "to your organization's GitHub profile. Make sure it’s public and initialize it with a": "到您组织的 GitHub 个人资料。确保它是公开的，并在初始化时加入一个",
                 "in the": "在",
                 "directory to get started.": "目录下以便开始工作。",
+
+                // 组织仓库
+                "You may not create private repositories by organization policy.": "根据组织政策，您不能创建私有仓库。",
 
             "Description": "描述",
                 "(optional)": "(可选)",
@@ -7144,6 +7230,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                         "What are codespaces?": "什么是代码空间？",
                     "No codespaces": "尚无代码空间",
                     "You don't have any codespaces with this repository checked out": "您没有检出此仓库的任何代码空间",
+                    "Opening in codespace": "正在打开代码空间",
                     //[/Create codespace on ([^ ]+)/, "在 $1 上创建代码空间"],
                     "Learn more about codespaces...": "了解更多关于代码空间的信息...",
                     "Codespace usage for this repository is paid for by": "该仓库的代码空间使用费由以下人员支付",
@@ -7196,6 +7283,10 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                             "Update codespace": "更新代码空间",
                         "Stop codespace": "停止代码空间",
                     "No changes": "未更改",
+                
+                // Copilot
+                    "Describe a task...": "描述任务...",
+                    "Start task": "开始任务",
 
                     // [/Codespace \"(.+)\" stopped./, "代码空间 “$1” 已停止。"],
                     // [/Codespace \"(.+)\" deleted./, "代码空间 “$1” 已删除。"],
@@ -7865,6 +7956,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
             "contributing guidelines": "贡献指南",
             "security policy": "安全政策",
             "code of conduct": "行为准则",
+            "contributing guidelines": "贡献准则",
 
             // 被锁定
                 "This conversation has been locked as": "此对话已锁定为",
@@ -8068,6 +8160,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "Create a branch": "创建分支",
                     "for this issue or link a pull request.": "为这个议题或关联一个拉取请求",
                     "When branches are created from issues, their pull requests are automatically linked.": "当从议题中创建分支时，它们的拉取请求会自动关联。",
+                    "Open in Workspace": "在工作区打开",
+
+                    // 参与者数大于2
+                        "and others": "等",
 
                     // 下拉
                     "Link a pull request from this repository": "关联来自此仓库的拉取请求",
@@ -8405,6 +8501,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 "Marked pull request as ready for review.": "标记拉取请求为可审核。",
                 "Your review was submitted successfully.": "您的审查已成功提交。",
                 "requested your review on this pull request.": "请求审核此拉取请求。",
+                // Dependabot 打开的拉取请求
+                    "Merging this pull request will resolve": "合并此拉取请求将解决", // 后面警报数走正则
+                    //"on rollup including a": "，包括 1 个",
+                    "severity alert.": "风险警报。",
 
             // 快捷键
                 "Edit pull request title": "编辑拉取请求标题",
@@ -8593,6 +8693,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "stale review": "陈旧审查",
             "via": "通过",
             "force-pushed": "强制推送",
+            "enabled auto-merge (squash)": "启用自动合并（压缩）",
             "the": " ",
             "branch from": "分支从",
             "and others": "和其他成员",
@@ -8694,6 +8795,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
                 // 新版合并界面
                 "Merge is not an allowed merge method in this repository.": "合并不是此仓库允许的合并方法。",
                 "Pull request cannot be merged because it has a merge conflict.": "由于存在合并冲突，无法合并拉取请求。",
+                "User does not have push access to the repository.": "用户无权推送到此仓库。",
+                "You're not authorized to push to this branch. Visit https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches for more information.": "您无权推送到该分支。请访问 https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches 了解更多信息。",
             "Merging can be performed automatically once the requested changes are addressed.": "一旦请求的更改得到解决，合并就可以自动执行。",
             "This branch is out-of-date with the base branch": "此分支相比基础分支已过时",
                 "Merge the latest changes from": "将",
@@ -8866,6 +8969,13 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Show environments": "显示环境",
             // [/(\d+) active deployments?/, "$1 个活动的部署"],
 
+            // 评论输入框选项，仅PR界面有
+                "Copilot actions": "Copilot 操作",
+                   "Generate": "生成",
+                   "Summary": "总结",
+                   "Generate a summary of the changes in this pull request.": "生成此拉取请求的更改摘要。",
+                "Summarizing changes… this might take a minute": "总结更改…这可能需要 1 分钟",
+
         // 拉取请求 --> 提交 标签卡 /<user-name>/<repo-name>/pull/<id>/commits
             // 顶部提示
                 "This pull request is big! We're only showing the most recent 250 commits": "该拉取请求过大！仅显示最近 250 次提交",
@@ -8882,6 +8992,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             // 修改的文件 左侧 展开按钮
             "Expand all": "展开全部",
             "Expand All": "展开全部",
+            "Collapse expanded lines": "折叠展开行",
             "Expand Up": "向上展开",
             "Expand Down": "向下展开",
 
@@ -9108,8 +9219,11 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
     "regexp": [ // 正则翻译
         [/The (\d+) commits? from this branch will be rebased and added to the base branch./, "该分支的 $1 次提交将变基并添加到基本分支。"],
         [/([^ ]+):([^ ]+)% was force-pushed and no longer has any new commits./, "$1:$2 分支被强制推送，现在没有新的提交。"], // 放这里是因为跟现有词条冲突
-        ...I18N["zh-CN"]["repository-public"]["regexp"],
-        ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
+        // Dependabot 打开的拉取请求
+        [/This pull request resolved a Dependabot alert on ([^ ]+)./, "此拉取请求解决了 1 个 Dependabot 警报，在 $1 上。"],
+        [/(\d+) Dependabot alerts?/, "$1 个 Dependabot 警报"],
+        [/^on ([^ ]+) including a/, "在 $1 上，包括 1 个"],
+        [/^on ([^ ]+)./, "在 $1 上。"],
 
         // 提交时展开收缩的描述
         [/Show description for ([a-f0-9]{7})/, "显示提交 $1 的描述"],
@@ -9117,22 +9231,10 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
         // 新版 PR 提交页
         [/wants to merge (\d+) commits? into/, "希望合并 $1 条提交到"],
-        [/Commits on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+)/, function (all, mon, day, year){
-            var monKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"};
-
-            return '提交于' + year + '年' + monKey[mon] + day + '日';
+        [/Commits on (.+)/,  (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `提交于${translatedDate}`;
         }],
 
         // 具体某条拉取请求
@@ -9227,6 +9329,8 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         // 解决冲突编辑器（似乎又是 F12 才会翻译）
         [/Search:/, "搜索："],
         [/\(Use \/re\/ syntax for regexp search\)/, "(使用 /re/ 进行正则搜索)"],
+        ...I18N["zh-CN"]["repository-public"]["regexp"],
+        ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
     ],
     "selector": [ // 元素筛选器规则
         ["span[data-message='Review changes']", "审查更改"], // 拉取请求 --> 更改的文件
@@ -9600,6 +9704,8 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
 
             "commented on": "评论于",
 
+            "Paste, drop, or click to add files": "粘贴、拖放或点击添加文件",
+
             // 隐藏评论
             "Choose a reason for hiding this comment": "选择隐藏此评论原因",
             "The reason will be displayed to describe this comment to others.": "将显示原因，以便向其他人描述此评论。",
@@ -9769,7 +9875,9 @@ I18N["zh-CN"]["repository/commit"] = { // 仓库 - 提交页面
         [/View checks?/, "查看检查"], // Android UA
         [/Add a comment on line (L|R)(\d+)/, "在 $1$2 行添加评论"], // 新版提交详情页
         [/Start conversation on line (L|R)(\d+)/, "在 $1$2 行开始讨论"], // 新版提交详情页
-        [/expand all lines: ([^ ]+)/, "展开全部： $1"],
+        [/expand all lines: ([^ ]+)/, "展开全部：$1"],
+        [/collapse file: ([^ ]+)/, "折叠文件：$1"],
+        [/collapse non diff lines: ([^ ]+)/, "折叠无差异行：$1"],
     ],
 };
 
@@ -10019,6 +10127,9 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
 
         // 讨论页面 /<user-name>/<repo-name>/discussions
         // 组织讨论页 /orgs/<orgs-name>/discussions
+            // 顶部提示
+                "You can't perform that action at this time.": "您现在不能执行该操作。",
+
             "Start a new discussion": "开始新的讨论",
             "Get started by creating the first": "开始吧，为您的社区创建",
             "discussion for your community.": "第一个讨论。",
@@ -10362,6 +10473,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
             "Remember, contributions to this repository should follow its": "请记住，对该仓库的贡献应遵循",
             "Remember, contributions to this repository should follow our": "请记住，对该仓库的贡献应遵循我们的",
             "code of conduct": "行为准则",
+            "contributing guidelines": "贡献准则",
 
             // [/(\d+) new suggested answers?/, "$1 个新的建议答案"],
             "Answer selected": "已选择答案",
@@ -10764,6 +10876,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                     "Workflow run was successfully requested.": "工作流程已成功请求运行。",
 
             "This scheduled workflow is disabled because there hasn't been activity in this repository for at least 60 days.": "此计划工作流程已禁用，因为此仓库至少 60 天没有活动。",
+            "This scheduled workflow is disabled because there hasn't been activity in this repository for at least 60 days. Enable this workflow to resume scheduled runs.": "此计划的工作流程已禁用，因为此仓库至少有 60 天没有活动。启用此工作流程可恢复计划运行。",
             "This scheduled workflow is disabled because scheduled workflows are disabled by default in forks.": "此计划工作流程已被禁用，因为计划工作流程在复刻仓库中默认被禁用。",
             "This workflow was disabled manually.": "工作流程已被手动禁用。",
             "This workflow is": "此工作流程正在等待维护者",
@@ -10857,6 +10970,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
 
             //"Latest attempt": "最后运行",
             //"Attempt": "运行",
+            "Explain error": "解释错误",
             //右侧按钮
             "View workflow runs": "查看工作流程运行",
             "Workflow run options": "工作流程运行选项",
@@ -11732,9 +11846,10 @@ I18N["zh-CN"]["repository/branches"] = { // 仓库 - 分支页面
                 "Copy branch name to clipboard": "将分支名称复制到剪贴板",
                 "This branch is protected by branch protections": "该分支受分支保护的保护",
 
-                "Activity": "活动",
-                "View rules": "查看规则",
-                    "There are no rulesets associated with this branch.": "该分支没有相关的规则集。",
+                "Branch menu": "分支菜单",
+                    "Activity": "活动",
+                    "View rules": "查看规则",
+                        "There are no rulesets associated with this branch.": "该分支没有相关的规则集。",
 
                 "View more branches": "查看更多分支",
 
@@ -13023,7 +13138,11 @@ I18N["zh-CN"]["repository/graphs/contributors"] = { // 仓库 -> 洞察 - 贡献
 
             return user + ' 的' + contKey[cont];
         }],
-        //[/Week of (.+)/, "每周 $1"],
+        [/Week of (.+)/, (match, p1) => { // p1为(.+)
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `${translatedDate}当周`;
+        }],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
 };
@@ -13578,6 +13697,7 @@ I18N["zh-CN"]["repository-settings-menu"] = { // 仓库设置公共部分
             "Integrations": "集成",
                 "GitHub Apps": "GitHub 应用",
                 "Email notifications": "邮件通知",
+                "Autolink references": "自动链接引用",
 
     },
     "regexp": [ // 正则翻译
@@ -15760,6 +15880,7 @@ I18N["zh-CN"]["repository/settings/secrets"] = { // 仓库设置 - 机密 /<user
 
             // 顶部提醒
             "Failed to add secret. Secret names can only contain alphanumeric characters ([a-z], [A-Z], [0-9]) or underscores (_). Spaces are not allowed. Must start with a letter ([a-z], [A-Z]) or underscores (_).": "添加机密失败。机密名称只能包含字母数字字符（[a-z]、[A-Z]、[0-9]）或下划线 (_)。不允许有空格。必须以字母 ([a-z], [A-Z]) 或下划线 (_) 开头。",
+            "Secret names must not start with GITHUB_.": "机密名称不能以“GITHUB_”开头。",
 
             "Environment secrets": "环境机密",
                 "This environment has no secrets.": "此环境尚无机密。",
@@ -15913,6 +16034,37 @@ I18N["zh-CN"]["repository/settings/notifications"] = { // 仓库设置 - 邮件�
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
     ],
+};
+
+I18N["zh-CN"]["repository/settings/key_links"] = { // 仓库设置 - 自动链接引用（注：只有专业版有） /<user-name>/<repo-name>/settings/key_links
+    "static": { // 静态翻译
+        ...I18N["zh-CN"]["repository-public"]["static"],
+        ...I18N["zh-CN"]["repository-settings-menu"]["static"],
+
+        "Add autolink reference": "添加自动链接引用",
+
+        "References to GitHub issues, pull requests, and commits are automatically converted into links. Configure your own autolink references for non-GitHub URLs.": "GitHub 问题、拉取请求和提交的引用会自动转换为链接。为非 GitHub URL 配置您自己的自动链接引用。",
+            "Learn more about automatic autolinks.": "了解更多有关自动链接的信息。",
+        "Autolinks can be either alphanumeric or numeric.": "自动链接可以是字母或数字。",
+            "Read more about the differences between the two.": "了解两者之间的区别。",
+
+        "No custom autolink references have been created yet.": "尚未创建自定义自动链接引用。",
+
+        // 新建 <user-name>/<repo-name>/settings/key_links/new
+            "/ Add new": "/ 添加",
+                "Alphanumeric": "字母数字",
+                    "Alphanumeric autolinks match": "匹配",
+                    ". They are not case sensitive.": "。不区分大小写。",
+                "Numeric": "纯数字",
+                    "Numeric autolinks only match": "只匹配",
+
+                "Reference prefix": "引用前缀",
+                    "This prefix appended by a string will generate a link any time it is found in an issue, pull request, or commit.": "这段前缀加上一个字符串后，在议题、拉取请求或提交中找到时将生成一个链接。",
+                "Target URL": "目标链接",
+                    "The URL must contain": "该链接必须包含",
+                    "for the reference number.": "作为引用编号。",
+    },
+    "regexp": [],
 };
 
 I18N["zh-CN"]["repository/transfer"] = { // 转让仓库
@@ -16915,6 +17067,8 @@ I18N["zh-CN"]["notifications"] = { // 通知页面
             "Create custom filters to quickly access your most important notifications.": "创建自定义筛选器以快速访问最重要的通知。",
             "Filter by": "使用",
             "to see what's new.": "查看新通知。",
+            "then bulk select and mark all as": "然后批量选择并将所有内容标记为",
+            "to clean up your inbox.": "以清理收件箱。",
     },
     "regexp": [ // 正则翻译
         [/(\d+) selected/, "$1 条被选中"],
@@ -18474,17 +18628,59 @@ I18N["zh-CN"]["account/choose"] = { // 账户升级选择
     ],
 };
 
+I18N["zh-CN"]["account/upgrade"] = { // 账户
+    "static": {
+        "Change how often your account is billed": "更改您账户的计费频率",
+
+        "Back to billing settings": "返回账单设置",
+
+        "Change duration to": "切换周期至",
+
+        "Pay yearly": "按年支付",
+        "/ year": "/年",
+        "Pay monthly": "按月支付",
+        "/ month": "/月",
+
+        "Payment frequency": "支付频率",
+            "Total amount": "总计",
+
+        "Billing information": "账单信息",
+            "Personal account": "个人账户",
+
+            "Change your account's billing cycle": "更改计费周期",
+        
+        "By clicking “Change your account's billing cycle”, you agree to our": "通过点击“更改计费周期”，您同意我们的",
+        "Terms of Service": "服务条款",
+        ". We’ll occasionally send you account-related emails.": "我们会偶尔发送与账户相关的电子邮件。",
+    },
+    "regexp": [
+        [/Payment due (.+)/, (match, p1) => {
+        const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+        const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+        return `${translatedDate}结算`;
+        }],
+    ],
+};
+
 I18N["zh-CN"]["marketplace"] = { // GitHub 市场
     "static": { // 静态翻译
-        // GitHub 市场主页 https://github.com/marketplace
+        // GitHub 市场主页及相关type页 https://github.com/marketplace
            "Enhance your workflow with extensions": "增强您的工作流程",
                "Tools from the community and partners to simplify tasks and automate processes": "社区和合作伙伴提供的简化任务和自动化流程的工具",
                "Search for Copilot extensions, apps, actions, and models": "搜索 Copilot 扩展、应用、操作和模型",
                "Menu": "菜单", // Android UA 下出现
+
             "Featured": "精选",
                 "Models for your every use case": "适用于各种方案的模型",
+                "Try, test, and deploy from a wide range of model types, sizes, and specializations.": "尝试、测试和部署各种型号、尺寸和专业化产品。",
+
+                // 未登录 或 https://github.com/marketplace?type=
                 "Discover apps with Copilot extensions": "使用 Copilot 扩展程序探索应用",
                 "Your favorite tools now work with GitHub Copilot.": "您最喜欢的工具现在可与 GitHub Copilot 配合使用。",
+
+                "Recommended": "推荐",
+                "Recently added": "最近添加",
+
             // Copilot
                 "Copilot Extensions": "Copilot 扩展",
                 "Extend Copilot capabilities using third party tools, services, and data": "使用第三方工具、服务或数据扩展 Copilot 的功能",
@@ -18495,14 +18691,12 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "By:": "分类：",
                     "All creators": "所有创作者",
                     "Verified creators": "已验证创作者",
-                // 排序
+                "Sort:": "排序：",
                     "Popularity": "热门",
                     "Best match": "最佳匹配",
+
             "Models": "模型",
-                "Try, test, and deploy from a wide range of model types, sizes, and specializations.": "尝试、测试和部署各种型号、尺寸和专业化产品。",
                 "Model": "模型",
-                    "Get early access to our playground for models": "抢先体验我们的模型市场",
-                        "Join our limited beta waiting list today and be among the first to try out an easy way to test models.": "立即加入我们的限量测试版候补名单，率先体验轻松测试模型的新方式。",
 
                     // 分类
                         "All providers": "所有提供商",
@@ -18510,197 +18704,153 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                         "Chat/completion": "聊天/完成",
                         "Embeddings": "嵌入",
                     "Tag:": "标签",
-                        "agents": "代理",
-                        "chat": "聊天",
-                        "conversation": "对话",
-                        "large context": "长文本",
-                        "low latency": "低延迟",
-                        "multilingual": "多语言",
-                        "multimodal": "多模态",
-                        "multipurpose": "多功能",
-                        "rag": "抹布", // 疑问，翻译软件给出的结果全是抹布
-                        "reasoning": "推理",
-                        "search": "搜索",
-                        "understanding": "理解",
+                        "Agents": "代理",
+                        "Conversation": "对话",
+                        "Large context": "大模型",
+                        "Low latency": "低延迟",
+                        "Multilingual": "多语言",
+                        "Multimodal": "多模态",
+                        "Multipurpose": "多功能",
+                        "Rag": "检索增强生成",
+                        "Reasoning": "推理",
+                        "Understanding": "理解",
 
-           "Extend GitHub": "拓展 GitHub",
-                "Add tools to help you build and grow": "添加工具来帮助您构建和成长",
-                "Find tools to improve your workflow": "寻找改进工作流程的工具", // 未登录
-            "Explore apps": "探索应用",
-            "Explore free apps": "探索免费应用", // 未登录
-            "Contact sales": "联系销售",
-            "Create a new extension": "创建新扩展",
+            "All apps": "所有应用",
+                "Apps": "应用",
+                "Build on your workflow with apps that integrate with GitHub": "使用与 GitHub 集成的应用构建您的工作流程。",
+                "App": "应用",
 
-            "Types": "类型",
-                "Build on your workflow with apps that integrate with GitHub.": "使用与 GitHub 集成的应用构建您的工作流程。",
-                "An entirely new way to automate your development workflow.": "自动化开发工作流程的全新方式。",
+            "API management": "API 管理",
+                "API management apps": "API 管理应用",
+                "API management actions": "API 管理操作",
+                "Structure your API infrastructure to enable various internet gateways to interact with your service.": "构建应用接口基础设施，使各种互联网网关能够与您的服务互动。",
 
-            "Search for apps and actions": "搜索应用和操作",
-                "Narrow your search": "缩小搜索范围",
+            "Backup Utilities": "备份工具",
+                "Backup Utilities apps": "备份工具应用",
+                "Backup Utilities actions": "备份工具操作",
+                "Utilities providing periodic backups of your GitHub data": "定期备份 GitHub 数据的实用工具",
 
-            "Sort:": "排序：",
-                "Sort options": "排序选项",
-                "Best Match": "最佳匹配",
-                "Recently added": "最近添加",
-                "Most installed/starred": "安装次数最多/标星最多",
+            "Chat": "聊天",
+                "Chat apps": "聊天应用",
+                "Chat actions": "聊天操作",
+                "Bring GitHub into your conversations.": "将 GitHub 纳入您的对话中。",
 
-            // 类别
-                "All apps": "所有应用",
-                    "Build on your workflow with apps that integrate with GitHub": "使用与 GitHub 集成的应用构建您的工作流程。",
-                "All actions": "所有操作",
-                    "Automate your workflow from idea to production": "实现从构思到生产的工作流程自动化",
-                "API management": "API 管理",
-                    "API management apps": "API 管理应用",
-                    "API management actions": "API 管理操作",
-                    "Structure your API infrastructure to enable various internet gateways to interact with your service.": "构建应用接口基础设施，使各种互联网网关能够与您的服务互动。",
-                "Chat": "聊天",
-                    "Chat apps": "聊天应用",
-                    "Chat actions": "聊天操作",
-                    "Bring GitHub into your conversations.": "将 GitHub 纳入您的对话中。",
-                "Code quality": "代码质量",
-                    "Code quality apps": "代码质量应用",
-                    "Code quality actions": "代码质量操作",
-                    "Automate your code review with style, quality, security, and test‑coverage checks when you need them.": "在需要时，通过样式、质量、安全性和测试覆盖检查自动进行代码审查。",
-                "Code review": "代码审查",
-                    "Code review apps": "代码审查应用",
-                    "Code review actions": "代码审查操作",
-                    "Ensure your code meets quality standards and ship with confidence.": "确保您的代码符合质量标准，并能放心交付。",
-                "Continuous integration": "持续集成",
-                    "Continuous integration apps": "持续集成应用",
-                    "Continuous integration actions": "持续集成操作",
-                    "Automatically build and test your code as you push it to GitHub, preventing bugs from being deployed to production.": "当您将代码推送到 GitHub 时，自动构建和测试您的代码，从而防止将错误部署到生产中。",
-                    "Container CI": "容器持续集成",
-                        "Container CI apps": "容器 CI 应用",
-                        "Container CI actions": "容器 CI 操作",
-                        "Continuous integration for container applications.": "容器应用的持续集成。",
-                    "Game CI": "游戏 CI",
-                        "Game CI apps": "游戏 CI 应用",
-                        "Game CI actions": "游戏 CI 操作",
-                        "Tools for building a CI pipeline for game development": "用于构建游戏开发 CI 管道的工具",
-                    "Mobile CI": "移动 CI",
-                        "Continuous integration for Mobile applications": "移动应用的持续集成",
-                "Dependency management": "依赖管理",
-                    "Dependency management apps": "依赖管理应用",
-                    "Dependency management actions": "依赖管理操作",
-                    "Secure and manage your third-party dependencies.": "保护和管理第三方依赖关系。",
-                "Deployment": "部署",
-                    "Deployment apps": "部署应用",
-                    "Deployment actions": "部署操作",
-                    "Streamline your code deployment so you can focus on your product.": "简化代码部署，让您专注于产品。",
-                "Deployment Protection Rules": "部署保护规则",
-                    // 应用
-                    "Deployment Protection Rules apps": "部署保护规则应用",
-                    "Deployment Protection Rules actions": "部署保护规则操作",
-                    "Enables custom protection rules to gate deployments with third-party services": "启用自定义保护规则，以使用第三方服务进行部署",
-                "GitHub Sponsors": "GitHub 赞助",
-                    "GitHub Sponsors actions": "GitHub 赞助操作",
-                    "Tools to manage your": "管理您的",
+            "Code quality": "代码质量",
+                "Code quality apps": "代码质量应用",
+                "Code quality actions": "代码质量操作",
+                "Automate your code review with style, quality, security, and test‑coverage checks when you need them.": "在需要时，通过样式、质量、安全性和测试覆盖检查自动进行代码审查。",
+
+            "Code review": "代码审查",
+                "Code review apps": "代码审查应用",
+                "Code review actions": "代码审查操作",
+                "Ensure your code meets quality standards and ship with confidence.": "确保您的代码符合质量标准，并能放心交付。",
+
+            "Container CI": "容器持续集成",
+                "Container CI apps": "容器 CI 应用",
+                "Container CI actions": "容器 CI 操作",
+                "Continuous integration for container applications.": "容器应用的持续集成。",
+
+            "Continuous integration": "持续集成",
+                "Continuous integration apps": "持续集成应用",
+                "Continuous integration actions": "持续集成操作",
+                "Automatically build and test your code as you push it to GitHub, preventing bugs from being deployed to production.": "当您将代码推送到 GitHub 时，自动构建和测试您的代码，从而防止将错误部署到生产中。",
+
+            "Dependency management": "依赖管理",
+                "Dependency management apps": "依赖管理应用",
+                "Dependency management actions": "依赖管理操作",
+                "Secure and manage your third-party dependencies.": "保护和管理第三方依赖关系。",
+
+            "Deployment": "部署",
+                "Deployment apps": "部署应用",
+                "Deployment actions": "部署操作",
+                "Streamline your code deployment so you can focus on your product.": "简化代码部署，让您专注于产品。",
+
+            "Deployment Protection Rules": "部署保护规则",
+                "Deployment Protection Rules apps": "部署保护规则应用",
+                "Deployment Protection Rules actions": "部署保护规则操作",
+                "Enables custom protection rules to gate deployments with third-party services": "启用自定义保护规则，以使用第三方服务进行部署",
+
+            "Game CI": "游戏 CI",
+                "Game CI apps": "游戏 CI 应用",
+                "Game CI actions": "游戏 CI 操作",
+                "Tools for building a CI pipeline for game development": "用于构建游戏开发 CI 管道的工具",
+
+            "GitHub Sponsors": "GitHub 赞助",
+                "GitHub Sponsors actions": "GitHub 赞助操作",
+                "Tools to manage your": "管理您的",
                     "community": "社区",
 
                 "IDEs": "集成开发环境",
-                    "IDEs apps": "IDE 应用",
-                    "IDEs actions": "IDE 操作",
-                    "Find the right interface to build, debug, and deploy your source code.": "找到合适的界面来构建、调试和部署源代码。",
-                "Learning": "学习",
-                    "Learning apps": "学习应用",
-                    "Learning actions": "学习操作",
-                    "Get the skills you need to level up.": "获得升级所需的技能。",
-                "Localization": "本地化",
-                    "Localization apps": "本地化应用",
-                    "Localization actions": "本地化操作",
-                    "Extend your software's reach. Localize and translate continuously from GitHub.": "扩展您的软件的覆盖范围。从 GitHub 持续本地化和翻译。",
-                "Mobile": "移动",
-                    "Mobile apps": "移动应用",
-                    "Mobile actions": "移动操作",
-                    "Improve your workflow for the small screen.": "针对小屏幕改进工作流程。",
-                // 移动CI
-                    "Mobile CI apps": "移动 CI 应用",
-                    "Mobile CI actions": "移动 CI 操作",
-                "Monitoring": "监控",
-                    "Monitoring apps": "监控应用",
-                    "Monitoring actions": "监控操作",
-                    "Monitor the impact of your code changes. Measure performance, track errors, and analyze your application.": "监控代码更改的影响。衡量性能、跟踪错误并分析您的应用。",
-                "Project management": "项目管理",
-                    "Project management apps": "项目管理应用",
-                    "Project management actions": "项目管理操作",
-                    "Organize, manage, and track your project with tools that build on top of issues and pull requests.": "使用基于置顶议题和拉取请求的工具来组织、管理和跟踪您的项目。",
-                "Publishing": "发布",
-                    "Publishing apps": "发布应用",
-                    "Publishing actions": "发布操作",
-                    "Get your site ready for production so you can get the word out.": "让您的网站做好生产准备，以便您可以宣传。",
-                "Recently added": "最近添加",
-                    "Recently added apps": "最近添加应用",
-                    "Recently added actions": "最近添加操作",
-                    "The latest tools that help you and your team build software better, together.": "最新的工具可帮助您和您的团队更好地共同构建软件。",
-                // 安全
-                    "Security apps": "安全应用",
-                    "Security actions": "安全操作",
-                "Testing": "测试",
-                    "Find, fix, and prevent security vulnerabilities before they can be exploited.": "发现、修复和预防安全漏洞，防患于未然。",
-                // 支持
-                    "Support apps": "支持应用",
-                    "Support actions": "支持操作",
-                    "Get your team and customers the help they need.": "为您的团队和客户提供所需的帮助。",
-                // 测试
-                    "Testing apps": "测试应用",
-                    "Testing actions": "测试操作",
-                    "Eliminate bugs and ship with more confidence by adding these tools to your workflow.": "通过将这些工具添加到您的工作流程中，消除错误并更有信心地交付。",
-                "Utilities": "实用工具",
-                    "Utilities apps": "实用工具应用",
-                    "Utilities actions": "实用工具操作",
-                    "Auxiliary tools to enhance your experience on GitHub": "辅助工具，提升您的 GitHub 使用体验",
-                    "Backup Utilities": "备份工具",
-                        "Backup Utilities apps": "备份工具应用",
-                        "Backup Utilities actions": "备份工具操作",
-                        "Utilities providing periodic backups of your GitHub data": "定期备份 GitHub 数据的实用工具",
+                "IDEs apps": "IDE 应用",
+                "IDEs actions": "IDE 操作",
+                "Find the right interface to build, debug, and deploy your source code.": "找到合适的界面来构建、调试和部署源代码。",
 
-            "Filter": "筛选器",
-                // 免费
-                    "Tools that provide a free tier.": "提供免费套餐的工具。",
-                "Free Trials": "免费试用",
-                    "Tools that support free, time-limited, access to their service.": "支持免费、限时访问其服务的工具。",
-                "GitHub Enterprise": "GitHub 企业版",
-                    "Tools that have GitHub Enterprise supported offerings.": "支持 GitHub 企业版的工具。",
-                "GitHub Partners": "GitHub 合作伙伴",
-                    "This category is used for tagging listings/actions for TPE team to use as a filter": "此类别用于标记列表/操作，以供 TPE 团队用作筛选器",
-                "Paid": "付费",
-                    "Tools that require a paid subscription.": "需要付费订阅的工具。",
+            "Learning": "学习",
+                "Learning apps": "学习应用",
+                "Learning actions": "学习操作",
+                "Get the skills you need to level up.": "获得升级所需的技能。",
 
-            "Verification": "验证",
-                "Verified Creator": "经验证的创建者",
+            "Localization": "本地化",
+                "Localization apps": "本地化应用",
+                "Localization actions": "本地化操作",
+                "Extend your software's reach. Localize and translate continuously from GitHub.": "扩展您的软件的覆盖范围。从 GitHub 持续本地化和翻译。",
 
-            "Your items": "您的项目",
-                "Pending orders": "待处理订单",
-                "Pending installations": "待安装",
-                "Purchases": "购买",
+            "Mobile": "移动",
+                "Mobile apps": "移动应用",
+                "Mobile actions": "移动操作",
+                "Improve your workflow for the small screen.": "针对小屏幕改进工作流程。",
 
-            "Recommended": "推荐",
-            "View all": "查看全部",
+            "Mobile CI": "移动 CI",
+                "Mobile CI apps": "移动 CI 应用",
+                "Mobile CI actions": "移动 CI 操作",
+                "Continuous integration for Mobile applications": "移动应用的持续集成",
 
-            "List your tool": "列出您的工具",
-            "List your tool on GitHub Marketplace": "在 GitHub 市场上列出您的工具",
-            "You have no tools to list on GitHub Marketplace": "您没有可在 GitHub 市场上列出的工具",
-            "Learn more about the requirements": "了解更多关于",
-            "to list a tool on GitHub Marketplace.": "在 GitHub 市场上列出工具的要求。",
-            "Read the documentation": "阅读文档",
-                "Learn how you can build tools to extend and improve developers' workflows.": "了解如何构建工具来扩展和改进开发人员的工作流程",
+            "Monitoring": "监控",
+                "Monitoring apps": "监控应用",
+                "Monitoring actions": "监控操作",
+                "Monitor the impact of your code changes. Measure performance, track errors, and analyze your application.": "监控代码更改的影响。衡量性能、跟踪错误并分析您的应用。",
 
-            "More about tools and GitHub Marketplace": "关于工具和 Gtihub 市场",
-                "About GitHub Marketplace": "关于 GitHub 市场",
-                "How to create and list tools on the GitHub Marketplace, including guidelines for listing content, artwork, and screenshots.": "如何在 GitHub 市场上创建和列出工具，包括列出内容、插图和屏幕截图的指南。",
-            "Adding webhooks for a GitHub Marketplace listing": "添加 GitHub 市场列表的 Web 钩子",
-                "Add webhooks for your app to notify you when specified events are triggered.": "为您的应用程序添加 Web 钩子，以便在触发指定事件时通知您。",
-            "Submit your tool for review": "提交您的工具以供审核",
-                "Share your app or GitHub Action with millions of developers.": "与数百万开发者分享您的应用或 GitHub Action",
+            "Project management": "项目管理",
+                "Project management apps": "项目管理应用",
+                "Project management actions": "项目管理操作",
+                "Organize, manage, and track your project with tools that build on top of issues and pull requests.": "使用基于置顶议题和拉取请求的工具来组织、管理和跟踪您的项目。",
 
-            // 搜索
-                "Search results": "搜索结果",
+            "Publishing": "发布",
+                "Publishing apps": "发布应用",
+                "Publishing actions": "发布操作",
+                "Get your site ready for production so you can get the word out.": "让您的网站做好生产准备，以便您可以宣传。",
 
-        // https://github.com/marketplace?type=
-            "Search results": "搜索结果",
-            "filtered by": "已筛选",
-            "Publisher domain and email verified": "已验证发布者域名和电子邮件",
-            "Creator verified by GitHub": "创建者经 GitHub 验证",
+            // "Recently added": "最近添加",
+                "Recently added apps": "最近添加应用",
+                "Recently added actions": "最近添加操作",
+                "The latest tools that help you and your team build software better, together.": "最新的工具可帮助您和您的团队更好地共同构建软件。",
+
+            // 安全
+                "Security apps": "安全应用",
+                "Security actions": "安全操作",
+                "Find, fix, and prevent security vulnerabilities before they can be exploited.": "发现、修复和预防安全漏洞，防患于未然。",
+
+            // 支持
+                "Support apps": "支持应用",
+                "Support actions": "支持操作",
+                "Get your team and customers the help they need.": "为您的团队和客户提供所需的帮助。",
+
+            "Testing": "测试",
+                "Testing apps": "测试应用",
+                "Testing actions": "测试操作",
+                "Eliminate bugs and ship with more confidence by adding these tools to your workflow.": "通过将这些工具添加到您的工作流程中，消除错误并更有信心地交付。",
+
+            "Utilities": "实用工具",
+                "Utilities apps": "实用工具应用",
+                "Utilities actions": "实用工具操作",
+                "Auxiliary tools to enhance your experience on GitHub": "辅助工具，提升您的 GitHub 使用体验",
+
+            // 操作
+            "All actions": "所有操作",
+                "Automate your workflow from idea to production": "实现从构思到生产的工作流程自动化",
+                    "Action": "操作",
+
+            "Create a new extension": "创建新扩展",
 
         // 待处理订单页面 https://github.com/marketplace/orders/pending
             "Review and complete your orders": "查看并完成您的订单",
@@ -19131,6 +19281,8 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
 
     },
     "regexp": [ // 正则翻译
+        [/Search results for “([^ ]+)”/, "“$1”的搜索结果"], // 市场搜索
+        [/(\d+) results?/, "$1 个结果"], // 市场搜索
         [/and ([^ ]+)’s/, "和 $1 的"],
         [/plan has been deleted./, "计划已被删除。"],
         // /marketplace/codacy
@@ -19141,7 +19293,6 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         // [/By clicking "Issue plan changes", you are agreeing to ([^ ]+)’s/, "点击 “议题计划更改”，您同意 $1 的"],
         // [/By clicking "Complete order and begin installation", you are agreeing to ([^ ]+)’s/, "点击 “完成订购并开始安装”，表示您同意 $1 的"],
         [/Next: Authorize ([^ ]+) to access your account./, "下一步：授权 $1 访问您的账户。"],
-        [/(\d+) results?/, "$1 个结果"],
         [/([0-9.k]+) stars?/, "$1 星标"],
         //[/([0-9.k]+) installs?/, "$1 次安装"],
         [/(\d+) installs?/, "$1 次安装"],
@@ -19159,7 +19310,6 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/(.*) is installed. Click to configure./, "$1 已安装。点击进行配置。"],
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
-        [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
         [/Use (v\d+)/, "使用 $1"], // 右上角绿色按钮
     ],
 };
@@ -19308,6 +19458,9 @@ I18N["zh-CN"]["orgs"] = { // 组织页面
             "No repositories or gists found.": "没有发现仓库或 Gists。",
             // 顶部提醒
             "You’re not a member of any teams in this organization.": "您不是该组织中任何团队的成员。",
+            "invited you to join the": "邀请您加入",
+            "organization": "组织",
+            "View invitation": "查看邀请",
 
             // 新组织 入门任务
             "We think you’re gonna like it here.": "我们认为您会喜欢这里的。",
@@ -19366,6 +19519,7 @@ I18N["zh-CN"]["orgs/packages"] = I18N["zh-CN"]["page-profile/packages"];
 
 I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
     "static": { // 静态翻译
+        ...I18N["zh-CN"]["orgs-public"]["static"],
 
         // 成员标签页 https://github.com/orgs/<orgs-name>/people
             // 左侧栏
@@ -19375,6 +19529,7 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
             "Pending collaborators": "待定协作者",
             "Invitations": "邀请",
             "Failed invitations": "失败邀请",
+            "Security Managers": "安全管理员",
 
             "Find a member…": "搜索成员…",
 
@@ -19401,10 +19556,12 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
 
             "Owner": "所有者",
             "Owners have full access to teams, settings, and repositories.": "所有者拥有对团队、设置和仓库的完全访问权限。",
-            // [/0 teams/, ""],
+            // [/(\d+) teams?/, "$1 团队"],
+            // [/(\d+) roles?/, "$1 角色"],
 
             "Member settings": "成员设置",
             "Manage": "管理",
+            "Change role…": "切换角色…",
             "Convert to outside collaborator…": "转为外部协作者…",
             "Remove from organization…": "从组织移除…",
 
@@ -19453,6 +19610,11 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
             "There aren't any pending collaborators.": "暂无任何待定的协作者",
 
         // 待定邀请 https://github.com/orgs/<orgs-name>/people/pending_invitations
+            // 顶部提醒
+                // [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+                // [/You've successfully updated ([^ ]+)'s invitation./, "您已成功更新 $1 的邀请。"],
+                // [/You've canceled (\d+) invitations? from ([^ ]+). It may take a few minutes to process./, "您已经取消了来自 $2 的 $1 个邀请。可能需要几分钟处理。"],
+
             "Find an invitation…": "搜索邀请…",
 
             "Role": "角色",
@@ -19470,18 +19632,38 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
 
             "No matching invitations.": "暂无匹配的邀请。",
 
+            "Edit invitation": "编辑邀请",
+            "Cancel invitation": "取消邀请",
+                // [/Cancel invitation from ([^ ]+)/, "取消来自 $1 的邀请"],
+                "The following invitations will be canceled:": "以下邀请将被取消：",
+
         // 失败邀请 https://github.com/orgs/<orgs-name>/people/failed_invitations
             // [/(\d+) Failed invitations?/, "个失败邀请"],
             "No failed invitations.": "暂无失败邀请。",
+        
+        // 安全管理 https://github.com/orgs/<orgs-name>/people/security_managers
+            "Find a security manager…": "搜索安全管理员…",
 
     },
     "regexp": [ // 正则翻译
         [/(\d+) teams?/, "$1 团队"],
-        [/(\d+) invitations?/, "$1 邀请"],
+        [/(\d+) roles?/, "$1 角色"],
         [/(\d+) Failed invitations?/, "$1 失败邀请"],
         [/Invite a member to/, "邀请成员加入"],
         [/Convert ([^ ]+) to outside collaborator?/, "将 $1 转换为外部协作者？"],
         [/Removing (\d+) members? from/, "移除 $1 名成员，从"],
+        [/(\d+) pe(?:ople|rson) in the ([^ ]+) organization/, "$2 组织中的 $1 位成员"],
+        [/(\d+) security managers? in the ([^ ]+) organization/, "$2 组织中的 $1 位安全管理员"],
+        [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+        [/You've successfully updated ([^ ]+)'s invitation./, "您已成功更新 $1 的邀请。"],
+        [/Cancel invitation from ([^ ]+)/, "取消来自 $1 的邀请"],
+        [/You've canceled (\d+) invitations? from ([^ ]+). It may take a few minutes to process./, "您已经取消了来自 $2 的 $1 个邀请。可能需要几分钟处理。"],
+        [/(\d+) invitations?/, "$1 邀请"],
+        [/Invited on (.+)/, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `邀请于${translatedDate}`;
+        }],
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
    ],
 };
@@ -19542,8 +19724,79 @@ I18N["zh-CN"]["orgs/teams"] = { // 组织 - 团队标签卡
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
+I18N["zh-CN"]["orgs/new-team"]= I18N["zh-CN"]["orgs/teams"];
 
-I18N["zh-CN"]["orgs/new-team"]= I18N["zh-CN"]["orgs/teams"]
+I18N["zh-CN"]["orgs/invitations"] = { // 组织 - 邀请页面
+    "static": { // 静态翻译
+        ...I18N["zh-CN"]["orgs-public"]["static"],
+
+        // 邀请 https://github.com/orgs/<orgs-name>/invitations/<user-name>/edit
+            // [/Invite ([^ ]+) to ([^ ]+)/, "邀请 $1 加入 $2 组织"],
+            "Give them an appropriate role in the organization and add them to some teams to give access to repositories.": "在组织中赋予他们适当的角色，并将他们添加到一些团队中，以便让他们访问仓库。",
+            "Role in the organization": "在组织中的角色",
+                "Member": "成员",
+                    "Members can see all other members, and can be granted access to repositories. They can also create new teams and repositories.": "成员可以看到所有其他成员，并可被授予访问仓库的权限。他们还可以创建新团队和仓库。",
+                "Owner": "所有者",
+                    "Owners have full administrative rights to the organization and have complete access to all repositories and teams.": "所有者拥有组织的全部管理权限，可以完全访问所有仓库和团队。",
+            "Send invitation": "发送邀请",
+
+        // 编辑模式
+            // [/Edit ([^ ]+)’s invitation to ([^ ]+)/, "编辑 $2 对 $1 的邀请"],
+            "Originally invited by": "最初由",
+            // [/. As an owner, you can give ([^ ]+) a different role and pick different teams for them./, "邀请。作为所有者，您可以赋予 $1 不同的角色，并为他们挑选不同的团队。"],
+            "Cancel invitation": "取消邀请",
+            "Update invitation": "更新邀请",
+
+        // 已通过邀请
+            // [/Invite a member to ([^ ]+)/, "邀请会员加入 $1"],
+            "Sorry,": "抱歉!",
+            // [/is already a member of ([^ ]+)./, "已经是 $1 的成员。"],
+
+    },
+    "regexp": [ // 正则翻译
+        [/Invite ([^ ]+) to ([^ ]+)/, "邀请 $1 加入 $2"],
+        [/invitation to ([^ ]+)/, "关于组织 $1 的邀请"],
+        [/. As an owner, you can give ([^ ]+) a different role and pick different teams for them./, "邀请。作为所有者，您可以赋予 $1 不同的角色，并为他们挑选不同的团队。"],
+        [/Invite a member to ([^ ]+)/, "邀请会员加入 $1"],
+        [/is already a member of ([^ ]+)./, "已经是 $1 的成员。"],
+    ],
+};
+
+I18N["zh-CN"]["orgs/invitation"] = { // 组织 - 接受邀请页面
+    "static": {
+
+        // 接受邀请 https://github.com/<orgs-name>/invitation
+            "You’ve been invited to the": "您被邀请加入",
+                "organization!": "组织！",
+
+            "Invited by": "邀请者：",
+
+            // [/Join ([^ ]+)/, "加入 $1"],
+            "Decline": "拒绝",
+
+            // [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
+            // 组织权限
+                "If you have": "您的",
+                    "two-factor authentication": "双重身份验证（2FA）",
+                    "enabled or not": "是否启用",
+                "Your public profile information": "您的公开信息",
+                "Certain activity": "某些活动",
+                    "within this organization": "在该组织内",
+                "Country of request origin": "请求来源国家/地区",
+                "Your access level to repositories within the organization": "您对组织内仓库的访问级别",
+                "Your IP address": "您的 IP 地址",
+
+            "Opt out": "拒绝",
+                "of future invitations from this organization.": "该组织未来的邀请。",
+            "of future invitations from this organization.": "该组织未来的邀请。",
+
+    },
+    "regexp": [
+        [/Join ([^ ]+)/, "加入 $1"],
+        [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
+        ...I18N["zh-CN"]["orgs-public"]["regexp"],
+    ],
+};
 
 I18N["zh-CN"]["orgs/domain/new"] = { // 组织 - 添加域名
     "static": { // 静态翻译
@@ -19695,8 +19948,9 @@ I18N["zh-CN"]["orgs/settings/roles"] = { // 组织设置 - 仓库角色
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
         // 仓库角色 /organizations/<org-login>/settings/roles
-            "Roles are used to grant access and permissions for teams and members. In addition to the available pre-defined roles, you can create up to 0 custom roles to fit your needs.": "角色是用来为团队和成员授予访问和权限的。除了可用的预定义角色外，您可以创建多达 0 个自定义角色以满足您的需求。",
-                "Learn more about custom repository roles": "了解更多关于自定义仓库角色的信息",
+            // "Roles are used to grant access and permissions for teams and members. In addition to the available pre-defined roles, you can create up to 0 custom roles to fit your needs.": "角色是用来为团队和成员授予访问和权限的。除了可用的预定义角色外，您可以创建多达 0 个自定义角色以满足您的需求。",
+            //     "Learn more about custom repository roles": "了解更多关于自定义仓库角色的信息",
+            "Roles are used to grant access and permissions for teams and members.": "角色是用来为团队和成员授予访问和权限的。",
             "Pre-defined roles": "预定义角色",
                 "You can": "您可",
                 "set the base role": "设置基础角色",
@@ -19716,7 +19970,7 @@ I18N["zh-CN"]["orgs/settings/roles"] = { // 组织设置 - 仓库角色
             "Custom roles": "自定义角色",
                 "Create a role": "创建角色",
                 "Create custom roles with GitHub Enterprise": "使用 GitHub 企业版创建自定义角色",
-                    "Enterprise accounts offer organizations more granular control over permissions by allowing you to configure up to three custom repository roles. This enables greater control over who and how your users access code and data in your organization.": "企业账户允许配置最多三个自定义仓库角色，从而为企业提供更细粒度的权限控制。这样就能更好地控制组织内用户访问代码和数据。",
+                    "Enterprise accounts offer organizations more granular control over permissions by allowing you to configure up to five custom repository roles. This enables greater control over who and how your users access code and data in your organization.": "企业账户允许配置最多五个自定义仓库角色，从而为企业提供更细粒度的权限控制。这样就能更好地控制组织内用户访问代码和数据。",
                 "Try GitHub Enterprise": "试用 GitHub 企业版",
 
     },
@@ -21001,14 +21255,14 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
     "static": { // 静态翻译
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
-        // 个人访问令牌 /organizations/<org-login>/settings/personal-access-tokens-onboarding
-            "Restrict access via fine-grained personal access tokens": "通过精细化的个人访问令牌限制访问。",
+        // 个人访问令牌 - 精细化令牌 /organizations/<org-login>/settings/personal-access-tokens
+            "Fine-grained tokens": "精细化令牌",
+            "Fine-grained personal access tokens": "精细化的个人访问令牌",
                 "By default, fine-grained personal access tokens cannot access content owned by your organization via the Public API or Git. This includes both public and private resources such as repositories.": "默认情况下，精细化的个人访问令牌不能通过公共 API 或 Git 访问您组织拥有的内容。这包括公共和私人资源，如仓库。",
                 "Allow access via fine-grained personal access tokens": "允许通过细化的个人访问令牌进行访问",
                     "API and Git access will be allowed using approved organization member's fine-grained personal access tokens": "API 和 Git 访问将被允许使用经批准的组织成员的精细化个人访问令牌",
                 "Restrict access via fine-grained personal access tokens": "通过精细化的个人访问令牌限制访问。",
                     "Organization members will not be allowed to access your organization using a fine-grained personal access token": "不允许组织成员使用精细化的个人访问令牌访问您的组织",
-            "Continue": "继续",
 
             "Require approval of fine-grained personal access tokens": "要求批准精细化的个人访问令牌",
                 "Access requests by organization members can be subject to review by administrator before approval.": "组织成员的访问请求在批准之前可能需要经过管理员审查。",
@@ -21016,31 +21270,37 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "All access requests by organization members to this organization must be approved before the token is usable.": "组织成员对该组织的所有访问请求都必须在令牌可用之前得到批准。",
                 "Do not require administrator approval": "不需要管理员批准",
                     "Tokens requested for this organization will work immediately, and organization members are not required to provide a justification when creating the token.": "为该组织申请的令牌将立即生效，并且组织成员在创建令牌时无需提供理由。",
-            "Restrict access via personal access tokens (classic)": "通过个人访问令牌限制访问（经典）",
+
+            "Set maximum lifetimes for personal access tokens": "设置个人访问令牌的最长使用期限",
+                "Control the maximum lifetime for fine-grained personal access tokens in your organizations. If set, your organization members can only use fine-grained personal access tokens against your resources if the tokens are set to expire within the period you provide.": "控制组织中精细化个人访问令牌的最长使用期限。如果设置了，您的组织成员只能在您提供的期限内对您的资源使用精细化个人访问令牌。",
+                "Learn more about token expiration policies.": "了解更多关于令牌过期策略的信息。",
+
+            "Fine-grained personal access tokens must expire": "精细化个人访问令牌必须过期",
+                "Select a maximum lifetime for fine-grained personal access tokens to be allowed to access your organizations.": "选择允许访问组织的精细化个人访问令牌的最长有效期。",
+                // 有效期 下拉菜单
+                    "7 days": "7 天",
+                    "30 days": "30 天",
+                    "60 days": "60 天",
+                    "90 days": "90 天",
+                    "366 days": "366 天",
+                    "Custom...": "自定义...",
+
+                    "days": "天",
+                    "between 1 and 366 days": "1 至 366 天之间",
+
+        // 个人访问令牌 - 令牌（经典）/organizations/<org-login>/settings/personal-access-tokens?tab=classic
+            "Tokens (classic)": "令牌（经典）",
+            "Restrict personal access tokens (classic) from accessing your organizations": "限制个人访问令牌（经典）访问您的组织",
                 "By default, personal access tokens (classic) can access content owned by your organization via the GitHub API or Git over HTTPS. This includes both public and private resources such as repositories.": "默认情况下，个人访问令牌（经典）可以通过 GitHub API 或基于 HTTPS 的 Git 访问您组织拥有的内容。这包括公共和私有资源，例如仓库。",
                 "Allow access via personal access tokens (classic)": "允许通过个人访问令牌进行访问（经典）",
                     "API and Git access will be allowed using an organization member's personal access token (classic)": "允许组织成员使用个人访问令牌（经典）访问 API 和 Git。",
                 "Restrict access via personal access tokens (classic)": "通过个人访问令牌限制访问（经典）",
                     "Organization members will not be allowed to access your organization using a personal access token (classic)": "不允许组织成员使用个人访问令牌（经典）访问您的组织",
 
-                "Enroll your organization": "注册您的组织",
-                    "You've selected the following options. If these don't look correct, you can go back through your previous choices before enrolling. These options can be configured at any time on the settings page.": "您已选择以下选项。如果这些看起来不正确，您可以在注册之前返回之前的选择。这些选项可以随时在设置页面上进行配置。",
-                "Enroll": "注册",
-                "Done": "完成",
-                    "Your organization has been configured": "您的组织已配置",
-                    "Click \"Continue\" to move on.": "点击 “继续”，继续。",
-
-                "Fine-grained personal access tokens": "精细化的个人访问令牌",
-                "Personal access token (classic)": "个人访问令牌（经典）",
-
-                "Are you sure you want to update your selection?": "您确定要更新您的选择吗？",
-                // 顶部提醒
-                    "Personal access tokens are now able to access your organization.": "个人访问令牌能够访问您的组织。",
-                    "Personal access tokens are no longer able to access your organization.": "个人访问令牌不再能够访问您的组织。",
-                    "All organization fine-grained personal access token requests are now subject to administrator review.": "所有组织精细化的个人访问令牌请求现在都要经过管理员的审查。",
-                    "All fine-grained personal access tokens requested for this organization will work immediately": "为该组织申请的所有精细化的个人访问令牌将立即生效。",
-                    "Personal access tokens (classic) are now able to access your organization.": "个人访问令牌（经典）现在能够访问您的组织。",
-                    "Personal access tokens (classic) are no longer able to access your organization.": "个人访问令牌（经典）不再能够访问您的组织。",
+            // 设置个人访问令牌的最长使用期限
+                "Control the maximum lifetime for personal access tokens (classic) in your organizations. If set, your organization members can only use personal access tokens (classic) against your resources if the tokens are set to expire within the period you provide.": "控制组织中个人访问令牌（经典）的最长使用期限。如果设置了，您的组织成员只能在您提供的期限内对您的资源使用个人访问令牌（经典）。",
+                "Personal access tokens (classic) must expire": "个人访问令牌（经典）必须过期",
+                    "Select a maximum lifetime for personal access tokens (classic) to be allowed to access your organizations.": "选择允许访问组织的个人访问令牌（经典）的最长使用期限。",
 
         // 活跃的令牌  /organizations/<org-login>/settings/personal-access-tokens/active
             "Filter active fine-grained tokens": "筛选活跃的精细化令牌",
@@ -21048,6 +21308,7 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
             "Owner": "所有者",
                 "Filter by owner": "按所有者筛选",
                 "Filter users": "筛选用户",
+                "Clear": "清除",
 
             // "Repository": "仓库",
                 "Filter by repository": "按仓库筛选",
@@ -21059,6 +21320,7 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "read": "只读",
                     "write": "可写",
                     "Administration": "管理员",
+                    "Attestations": "证书",
                     "Code scanning alerts": "代码扫描警报",
                     "Codespaces lifecycle admin": "代码空间生命周期管理员",
                     "Codespaces metadata": "代码空间元数据",
@@ -21078,17 +21340,20 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "Variables": "变量",
                     "Workflows": "工作流程",
                     "Organization": "组织",
+                        "API Insights": "API 透视",
                         "Blocking users": "拉黑用户",
                         "Custom organization roles": "自定义组织角色",
                         "Custom repository roles": "自定义仓库角色",
                         "Events": "活动",
                         "GitHub Copilot Business": "GitHub Copilot 商业版",
+                        "Knowledge bases": "知识库",
                         "Members": "成员",
                         "Organization announcement banners": "组织公告横幅",
                         "Organization codespaces": "组织代码空间",
                         "Organization codespaces secrets": "组织代码空间机密",
                         "Organization codespaces settings": "组织代码空间设置",
                         "Organization dependabot secrets": "组织 Dependabot 机密",
+                        "Organization private registries": "组织私有注册表",
                         "Plan": "计划",
                         "Self-hosted runners": "自托管运行器",
 
@@ -21834,6 +22099,7 @@ I18N["zh-CN"]["redeem"] = { // 兑换页面
 
 I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页面
     "static": { // 静态翻译
+    ...I18N["zh-CN"]["settings/copilot"]["static"],
 
         // https://github.com/github-copilot/signup
            "GitHub Copilot Individual": "GitHub Copilot 个人版",
@@ -21871,6 +22137,24 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
            "free use FAQ": "免费使用常见问题解答（FAQ）",
            "for more details.": "以获取更多详细信息。",
 
+        // https://github.com/github-copilot/signup/success
+        "Your AI pair programmer": "您的 AI 编程助理",
+        "Select your preferences": "设置规则",
+            "You can change these at any time from your account settings.": "您稍后可以在账户设置内更改。",
+
+            // 此处引用 I18N["zh-CN"]["settings/copilot"]部分词条
+
+            "Save and complete setup": "保存并继续",
+        
+        // https://github.com/github-copilot/signup/settings
+            "GitHub Copilot is now ready": "GitHub Copilot 已就绪",
+                "Add it to your editor and start building.": "添加至您的编辑器并开始构建",
+
+            "Install the GitHub Copilot extension": "安装 GitHub Copilot 扩展",
+                "You can now use GitHub Copilot on the GitHub website. To use Copilot in your IDE, you first need to install the GitHub Copilot extension. To install for your preferred code editor, check out these Getting Started guides:": "您现在可以在 GitHub 网站上使用 GitHub Copilot。要在 IDE 中使用 Copilot，您需要安装 GitHub Copilot 扩展。请查看这些入门指南：",
+            
+            "If you have the extension already installed for your code editor and have it open, please restart your editor in order to access GitHub Copilot.": "如果您的代码编辑器中已经安装了扩展并且是打开状态，请重启您的编辑器以使用 GitHub Copilot。",
+
     },
     "regexp": [ // 正则翻译
     ],
@@ -21878,6 +22162,8 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
 
 I18N["zh-CN"]["github-copilot/free_signup"] = { // GitHub Copilot 个人免费版获取页面
     "static": { // 静态翻译
+
+        "Your AI pair programmer": "您的 AI 编程助理",
 
         // https://github.com/github-copilot/free_signup
            "Use GitHub Copilot for free": "免费使用 GitHub Copilot",
@@ -21937,6 +22223,8 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
             "port forwarding": "端口转发",
             "Access codespaces from within": "从内部访问代码空间，使用",
 
+            "Request Usage Report": "请求使用报告",
+
             "Retrieving…": "正在检索…",
             "Active": "活跃",
             "Last used": "上次使用",
@@ -21980,6 +22268,10 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
             "2-core • 8GB RAM • 32GB": "双核 • 8GB 内存 • 32GB 硬盘",
             "4-core • 16GB RAM • 32GB": "四核 • 16GB 内存 • 32GB 硬盘",
 
+            // 状态
+                "No changes": "没有更改",
+                "This codespace has uncommitted changes": "此代码空间有未提交的更改",
+
         // https://github.com/codespaces/templates
             "Choose a template": "选择模版",
             "Start a codespace from a template and get to developing with the power of a virtual machine in the cloud.": "从模板开始创建代码空间，然后利用云中虚拟机的能力进行开发。",
@@ -21992,11 +22284,17 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
                 "To be cloned into your codespace": "要被克隆到您的代码空间",
                 "Select a repository": "选择仓库",
                 "Search for a repository": "查找仓库",
+                "Select repository": "选择仓库",
             "Branch": "分支",
                 "This branch will be checked out on creation": "创建时将显示此分支",
                 "Default branch": "默认分支",
+                "Default Branch": "默认分支",
                 "Select branch": "选择分支",
                 "Find a branch": "查找分支",
+                "Switch branches": "切换分支",
+                "Find a branch...": "查找分支...",
+                "default": "默认",
+                "branches": "分支",
             "Region": "区域",
                 "Your codespace will run in the selected region": "您的代码空间将在所选区域运行",
                 "US East": "美国东部",
@@ -22044,13 +22342,40 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
     "regexp": [
         [/By ([^ ]+)/, "$1 发布"],
         [/Owned by ([^ ]+)/, "拥有者为 $1"],
-        [/Last used (\d+) days ago/, "上次使用 $1 天前"],
-        [/Last used 大约 (\d+) 小时之前/, "上次使用大约 $1 小时以前"],
-        [/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
-        [/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
-        [/Codespace "([^ ]+)" stopped./, "代码空间 “$1” 停止。"],
-        [/Your codespace "([^ ]+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
+        //[/Last used (\d+) days ago/, "上次使用 $1 天前"],
+        //[/Last used 大约 (\d+) 小时之前/, "上次使用大约 $1 小时以前"],
+        //[/Last used less than (\d+) 分钟之前/, "上次使用小于 $1 分钟以前"],
+        //[/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
+        [/Codespace "(.+)" stopped./, "代码空间 “$1” 停止。"],
+        [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
+        [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
         [/Are you sure you want to delete/, "您确定要删除"],
+        [/(.+) has unpushed changes, are you sure you want to delete\?/, "$1 有未提交更改，您确定要删除吗？"],
+        [/Last used (.+)/, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `最后使用${translatedDate}`;
+        }],
+    ],
+};
+
+I18N["zh-CN"]["codespaces/allow_permissions"] = { // 代码空间申请额外权限页面，似乎不可用
+    "static": {
+        "This codespace is requesting": "该代码空间要求",
+        "additional permissions": "额外权限",
+
+        "Your codespace is requesting the following permissions for these repositories:": "您的代码空间正在为这些仓库申请以下权限：",
+
+        "The following permissions were also requested but are not available. You can continue but the codespace may not function as intended.": "以下权限已申请，但不可用。您可以继续，但代码空间可能无法正常运行。",
+
+        "Contents:": "内容：",
+            "write": "写入",
+
+        "Continue without authorizing": "不授权继续",
+        "Authorize and continue": "授权并继续",
+    },
+    "regexp": [
+        [/(\d+) permissions? requested/, "要求 $1 项权限"],
     ],
 };
 
@@ -22202,8 +22527,14 @@ I18N["zh-CN"]["status"] = { // GitHub Status
                         "Get the": "获取",
                         "Atom Feed": "Atom 反馈",
                         "RSS Feed": "RSS 反馈",
+            "Current Status: GitHub.com": "当前状态：GitHub.com",
             "All Systems Operational": "所有系统运行正常",
             "Normal": "正常",
+                "Operational": "运行",
+            "Incident": "故障",
+                "Major Outage": "重大故障",
+            "Degraded": "降级",
+                "Partial Outage": "部分中断",
             "Git Operations": "Git 操作",
                 "Performance of git clones, pulls, pushes, and associated operations": "git 克隆、拉取、推送和相关操作的性能",
             "API Requests": "API 请求",
@@ -22222,6 +22553,7 @@ I18N["zh-CN"]["status"] = { // GitHub Status
                 "Frontend application and API servers for Pages builds": "用于页面构建的前端应用程序和应用程序接口服务器",
             // 代码空间
                 "Orchestration and Compute for GitHub Codespaces": "GitHub 代码空间的协调与计算",
+            "For the status of GitHub Enterprise Cloud - EU, please visit:": "有关 GitHub 企业云的状态，请访问",
             "Current Status": "当前状态",
             "Incident History": "历史事故",
 
@@ -22492,14 +22824,21 @@ I18N["zh-CN"]["orgs/sponsoring"] = { // https://github.com/orgs/<org-name>/spons
     ],
 };
 
+I18N["zh-CN"]["organizations/plan"] = {
+    "static": {
+        "Pick a plan for your organization": "为您的组织选择计划",
+    },
+    "regexp": [],
+};
+
 I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操作使用情况
     "static": {
         ...I18N["zh-CN"]["repository-public"]["static"],
         ...I18N["zh-CN"]["repository-insights-menu"]["static"],
 
-        "Period": "周期",
-            "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
-            "Current month": "本月",
+            "Period": "周期",
+                "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
+                "Current month": "本月",
             "Last month": "上个月",
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
@@ -22761,6 +23100,7 @@ I18N["zh-CN"]["copilot"] = {
             // 时间
                 "Today": "今天",
                 "Yesterday": "昨天",
+                "Last 7 days": "最近 7 天",
                 "Last 30 days": "最近 30 天",
 
             // 无对话
@@ -22782,7 +23122,18 @@ I18N["zh-CN"]["copilot"] = {
                     "Enable Claude 3.5 Sonnet": "启用 Claude 3.5 Sonnet",
                         "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
                         "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "了解更多关于 GitHub Copilot 如何为 Claude 3.5 Sonnet 提供服务。",
+                // o1
+                    "Model capabilities": "模型限制",
+                    "Limited capabilities (o1-mini)": "功能限制（o1-mini）",
+                    "Limited capabilities (o1)": "功能限制（o1）",
+                        "While this model is better at reasoning, it is generally slower for everyday tasks and has limited capabilities in retrieving external data. Here are a few of the common actions that are not supported:": "虽然这种模型的推理能力更强，但在执行日常任务时通常速度较慢，而且检索外部数据的能力有限。以下是一些不支持的常见操作：",
+                        "Not supported": "不支持",
+                            "Using knowledge bases": "使用知识库",
+                            "Retrieving issues": "检索议题",
+                            "Retrieving pull requests": "检索拉取请求",
+                            "Retrieving discussions": "检索讨论",
             "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+            "Get file": "获取文件",
 
             "Copy code": "复制代码",
             "Copied!": "复制成功！",
@@ -22838,6 +23189,10 @@ I18N["zh-CN"]["copilot"] = {
                         "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
                         "Browse marketplace": "前往市场",
             "Send now": "发送",
+        
+        // 漏洞相关
+            "Path Injection": "路径注入",
+                "Unvalidated input in path value creation risks unintended file/directory access": "创建路径值时输入的无效信息可能会导致意外文件/目录访问",
 
         // 了解世界领先的人工智能开发工具的所有优势。
         "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
@@ -22845,7 +23200,10 @@ I18N["zh-CN"]["copilot"] = {
             "benefits": "优势",
             "of the world’s leading AI developer tool.": "。",
     },
-    "regexp":[],
+    "regexp":[
+        [/Using results for “([^ ]+)” in ([^ ]+)/, "使用 $2 中“$1”的结果"],
+        [/(\d+) vulnerability detected/, "检测到 $1 个漏洞"],
+    ],
 };
 
 I18N["zh-CN"]["sitemap"] = { // 网站地图页，仅匹配公共部分
@@ -22956,6 +23314,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "Congrats! Your request for": "恭喜！您的申请",
                                 "was approved and your benefits will be available": "已获批准，福利将很快发放。",
                                 "soon": "常见问题", // 该处链接指向 https://github.com/orgs/community/discussions/111352#user-content-how-long-after-ive-been-approved-will-i-receive-my-academic-benefits
+                                "was approved and your benefits are now available.": "已获批准且福利已发放。",
                                 
                             "rejected": "驳回",
                                 "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
@@ -23006,7 +23365,7 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "Please upload proof of your current school affiliation that is less than 1MB in size": "请上传小于 1MB 的照片",
                                 "Binary data can't be blank": "二进制数据不能为空",
                     
-                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
+                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
                         "Process my application": "处理申请",
                         "Processing your application": "处理中",
                         "Processing information...": "处理中...",
@@ -23073,6 +23432,15 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                 // 顶部提示
                 "Your onboarding preferences have been saved!": "您的入职首选项已保存！",
                 // 左侧
+                    // 左侧栏
+                        "Open Global Navigation Menu": "打开全局导航菜单",
+                            "Student Developer Pack": "学生开发包",
+
+                            "Explore More": "探索更多",
+                                "Education Community": "教育社区",
+                                "Campus Experts": "校园专家",
+                                "Education Blog": "教育博客",
+
                     "Your request was approved.": "您的申请已批准。",
                         "Your benefits will be available soon.": "您的福利即将发放。",
 
@@ -23100,6 +23468,9 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                                 "offers": "优惠",
                                 "become": " ",
                                 "available to you.": "时。",
+                        "Popular offers you have not explored:": "您尚未探索的热门优惠：",
+                            "Explore More Offers": "探索更多",
+                            "Curated Experiences with popular offers:": "精选体验与热门优惠：",
                 // 右侧
                     // 右上角图标菜单
                     "Update your location": "更新您的位置",
@@ -23141,24 +23512,25 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
-        [/Hi, ([^ ]+)! You were last verified as a on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
-            var monthKey = {
-                "Jan": "1月",
-                "Feb": "2月",
-                "Mar": "3月",
-                "Apr": "4月",
-                "May": "5月",
-                "Jun": "6月",
-                "Jul": "7月",
-                "Aug": "8月",
-                "Sep": "9月",
-                "Oct": "10月",
-                "Nov": "11月",
-                "Dec": "12月"
-            };
-            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
-    }],
-        //[/Submitted (.+)/, "提交于 $1"],
+        [/Hi, ([^ ]+)! You were last verified as a on (.+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, (match, user, p1) => {
+                const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+                const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+                return `您好，`+ user + `！您最近于${translatedDate}验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。`;
+            // return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+        }],
+        [/Hi, ([^ ]+)! You were last verified as a student on (.+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, (match, user, p1)=> {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `您好，`+ user + `！您最近于${translatedDate}学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。`;
+            //return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日学生验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+        }],
+        [/(Submitted|Verified since) (.+)/, (match, opt, p1) => { // p1为(.+)
+            var optKey = {"Submitted": "提交于", "Verified since": "验证自",};
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return optKey[opt] + `${translatedDate}`;
+        }],
+        //[/Verified since (.+)/, "验证自 $1"],
         [/(\d+) views?/, "$1 次观看"],
     ],
 };

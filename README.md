@@ -2,7 +2,7 @@
 
 > 本项目源自: [52cik/github-hans](https://github.com/52cik/github-hans)
 >
-> 繁體中文用戶請前往[zh-TW 分支](https://github.com/maboloshi/github-chinese/tree/zh-TW)
+> 繁體中文版介紹[點擊這裡](https://github.com/maboloshi/github-chinese/blob/gh-pages/README_zh-TW.md)
 
 [![GitHub issues][issues-image]][issues-url]
 [![GitHub stars][stars-image]][stars-url]

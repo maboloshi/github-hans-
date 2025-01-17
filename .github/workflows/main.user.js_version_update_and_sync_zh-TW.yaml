@@ -1,0 +1,114 @@
+name: main.user.js version update & sync zh-TW
+on:
+  schedule:
+    # 每周日的UTC时间16点（北京时间周一凌晨0点）
+    - cron: "0 16 * * 0"
+  workflow_dispatch:
+
+jobs:
+  update_version:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Generate a token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Test if locals.js has changed since the last release
+        run: |
+          # 最近提交是否存在tag
+          if [ ! "$(git tag --contains ${{ github.sha }})" ]; then
+            # 获得最近以`main.user.js Update to`开头的提交的sha和时间戳
+            release_commit_sha=$(git log --grep="^main.user.js Update to" -n 1 --pretty=format:"%H")
+            release_commit_timestamp=$(git show -s --format=%ct $release_commit_sha)
+
+            # 最近的tag对应提交的sha和时间戳
+            latest_tag_commit_sha=$(git rev-list --tags --max-count=1)
+            latest_tag_commit_timestamp=$(git show -s --format=%ct $latest_tag_commit_sha)
+
+            if [ $release_commit_timestamp -gt $latest_tag_commit_timestamp ]; then
+              ref=$release_commit_sha
+            else
+              ref=$latest_tag_commit_sha
+            fi
+
+            # 如果 locals.js 没有变化，设置环境变量
+            git diff --quiet --exit-code $ref locals.js || \
+            echo "LOCALS_JS_IS_CHANGED=true" >> $GITHUB_ENV
+          fi
+
+      # 如果 locals.js 没有变化，直接跳过后续步骤
+      - name: Exit if no changes in locals.js
+        if: env.LOCALS_JS_IS_CHANGED != 'true'
+        run: echo "No changes in locals.js, exiting..."
+
+      - name: Cache apt packages
+        if: env.LOCALS_JS_IS_CHANGED == 'true'
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: apt-${{ runner.os }}-${{ hashFiles('**/apt-packages.txt') }}
+          restore-keys: |
+            apt-${{ runner.os }}-
+
+      - name: Install OpenCC
+        if: env.LOCALS_JS_IS_CHANGED == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y opencc
+
+      - name: Sync locals.js -> locals_zh-TW.js
+        if: env.LOCALS_JS_IS_CHANGED == 'true'
+        run: |
+          opencc -i locals.js -o locals_zh-TW.js -c s2tw.json
+
+      - name: Update version in main.user.js, main_zh-TW.user.js
+        if: env.LOCALS_JS_IS_CHANGED == 'true'
+        run: |
+          # 获取最后一次提交中`locals.js`的文件时间
+          locals_js_time=$(git log -1 --format=%at -- locals.js)
+
+          # 使用`locals.js`的文件日期为词库版本号
+          locals_js_date=$(TZ='Asia/Shanghai' date -d "@$locals_js_time" +'%Y-%m-%d')
+
+          sed -i -E "s/(@version\s*[0-9]+\.[0-9]+\.[0-9]+)(-[0-9]{4}-[0-9]{2}-[0-9]{2})?/\1-$locals_js_date/" main.user.js
+          sed -i -E "s/(@require.+locals.js\?v[0-9]+\.[0-9]+\.[0-9]+)(-[0-9]{4}-[0-9]{2}-[0-9]{2})?/\1-$locals_js_date/" main.user.js
+
+          sed -i -E "s/(@version\s*[0-9]+\.[0-9]+\.[0-9]+)(-[0-9]{4}-[0-9]{2}-[0-9]{2})?/\1-$locals_js_date/" main_zh-TW.user.js
+          sed -i -E "s/(@require.+locals_zh-TW.js\?v[0-9]+\.[0-9]+\.[0-9]+)(-[0-9]{4}-[0-9]{2}-[0-9]{2})?/\1-$locals_js_date/" main_zh-TW.user.js
+
+          # 如果 main.user.js 没有变化，设置环境变量
+          git diff --quiet --exit-code main.user.js || \
+          echo "MAIN_USER_JS_IS_CHANGED=true" >> $GITHUB_ENV
+
+      - name: Commit and push changes
+        if: env.LOCALS_JS_IS_CHANGED == 'true' && env.MAIN_USER_JS_IS_CHANGED == 'true'
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          APP_SLUG: ${{ steps.generate_token.outputs.app-slug }}
+        run: |
+          version=$(sed -n -E 's/^\/\/ @version\s+(.+)/\1/p' main.user.js)
+          bash script/ci_commit_with_signature.sh \
+            -R "${{ github.repository }}" \
+            -B "${{ github.ref_name }}" \
+            -P "${{ github.sha }}" \
+            -F "main.user.js" \
+            -h "main.user.js Update to $version"
+
+          # 获取远程仓库的最新提交 SHA
+          remote_sha=$(git ls-remote origin "${{ github.ref_name }}" | awk '{print $1}')
+
+          bash script/ci_commit_with_signature.sh \
+            -R "${{ github.repository }}" \
+            -B "${{ github.ref_name }}" \
+            -P "$remote_sha" \
+            -F "main_zh-TW.user.js, locals_zh-TW.js" \
+            -h "zh-TW Sync to $version"
