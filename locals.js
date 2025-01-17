@@ -6589,9 +6589,9 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
                 "Contributor": "贡献者",
                 "Owner": "所有者",
                 "Author": "作者",
-                    "You are the author of this issue.": "您是这个议题的作者。",  // 议题
+                    "You are the author of this issue": "您是这个议题的作者。",  // 议题
                     "You are the author of this pull request.": "您是这个拉取请求的作者。", // 拉取请求
-                    "This user is the author of this issue": "该用户是这个议题的作者",  // 议题
+                    "This user is the author of this issue": "该用户是这个议题的作者。",  // 议题
                     "This user is the author of this issue.": "该用户是这个议题的作者。",// 拉取请求
                     "This user is the author of this pull request.": "该用户是这个拉取请求的作者。",// 拉取请求
                 "Member": "成员",
@@ -7690,6 +7690,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
             "Clear current search query, filters, and sorts": "清除当前的搜索查询、筛选器和排序方式",
 
             "Labels": "标签",
+                "No labels": "无标签",
             "Milestones": "里程碑",
             "New issue": "创建议题",
             "New": "创建", // 小屏
@@ -7722,9 +7723,12 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
 
             "Assignee": "受理人",
                 "Filter by who’s assigned": "按受理人筛选",
+                "Filter assignees": "筛选受理人",
                 "Assigned to nobody": "无受理人",
                 // [/Awaiting requested review from ([^ ]+)/, "正在等待 $1 审查请求"],
                 "Requested changes must be addressed to merge this pull request.": "要合并这个拉取请求，必须先解决所要求的更改。",
+                "No one -": "无人 -",
+                    "Assign yourself": "分配给自己",
 
             "Relationships": "关系",
                 "Parent issue": "父议题",
@@ -8055,6 +8059,15 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
             // 父级议题
             "Parent:": "父级：",
+            // 子级议题
+            "Create sub-issue": "创建子议题",
+                "Create sub-issue": "创建子议题",
+                "Add existing issue": "添加现有议题",
+
+                "Blank issue": "空白议题",
+                    "in": "在",
+                "Type your description here…": "在此键入介绍…",
+                "Create more sub-issues": "创建更多子议题",
 
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
@@ -8420,6 +8433,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
         [/open issues? and pull requests?/, "个打开的议题和拉取请求"],
         [/open issues? or pull requests?/, "个打开的议题或拉取请求"],
         [/Are you sure you want to convert (\d+) issues? with the following label to (?:a |)discussions?\?/, "您确定要将带有以下标签的 $1 条议题转换为讨论吗？"],
+
+        // 子议题
+        [/Create new sub-issue in ([^ ]+)/, "在 $1 中新建子议题"],
     ],
 };
 I18N["zh-CN"]["repository/labels"] = I18N["zh-CN"]["repository/issues"];
