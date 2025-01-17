@@ -11936,7 +11936,7 @@ I18N["zh-CN"]["repository/branches"] = { // 仓库 - 分支页面
         [/Rename default branch/, "重命名默认分支"],
         [/Rename branch/, "重命名分支"],
         [/Your branch name will be ([^ ]+)/, "分支将重命名为 $1"],
-        [/Delete/, "删除分支"],
+        [/Delete branch/, "删除分支"],
         // [/is associated with (\d+) open pull requests?:/, "与 $1 个拉取请求相关联："],
         [/Branch ([^ ]+) will be renamed to ([^ ]+) shortly./,"分支 $1 将很快重命名为 $2。"], //分支重命名成功
         [/(\d+) commits? ahead, (\d+) commits? behind ([^ ]+)/, "领先 $1 个提交，落后 $2 个提交于 $3"],
