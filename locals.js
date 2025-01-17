@@ -22395,6 +22395,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         //[/Last used (\d+) 分钟之前/, "上次使用 $1 分钟以前"],
         [/Codespace "(.+)" stopped./, "代码空间 “$1” 停止。"],
         [/Codespace "(.+)" deleted./, "代码空间 “$1” 删除。"],
+        [/Your codespace "(.+)" has been updated./, "您的代码空间 “$1” 已更新。"],
         [/Your codespace "(.+)" will no longer be auto-deleted./, "您的代码空间 “$1” 将不再自动删除。"],
         [/Your codespace "(.+)" has been updated to use machine type: "(\d+) cores, (\d+) GB RAM, (\d+) GB storage". Changes will take effect the next time your codespace restarts./, "您的代码空间“$1”将更新机器类型为：“$2 核，$3 GB 内存，$4 GB 存储”。更改将在下次启动代码空间时生效。"],
         [/Are you sure you want to delete/, "您确定要删除"],
