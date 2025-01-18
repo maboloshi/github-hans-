@@ -692,6 +692,11 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "Rich Jupyter Notebook Diffs": "Jupyter Notebook 的丰富差异视图",
                     "Enables rich diffs of Jupyter Notebooks in pull requests": "在拉取请求中启用 Jupyter Notebook 的丰富差异视图",
                     "Note: commenting on rich diff views of notebooks is not yet supported": "注意：尚不支持对 Jupyter Notebook 的丰富差异视图进行评论",
+                "New Issues Experience": "新议题体验",
+                    "The new GitHub Issues experience brings three powerful new features:": "新版 GitHub 议题体验带来了三个强大的新功能：",
+                    "Sub-issues are designed to help you break-down and manage your issues with a parent/child relationship into a hierarchy.": "子议题旨在帮助您将具有父/子关系的议题分解和管理为层次结构。",
+                    "Issues types allow you to classify and manage your issues with a shared and consistent language across all repositories in an organization, such as bugs or tasks.": "议题类型允许您使用组织中所有仓库中的共享和一致的语言对议题进行分类和管理，例如错误或任务。",
+                    "Advanced search allows you to build advanced queries using the AND and OR keywords, as well as nested queries using parentheses up to 5 layers deep right from the repository Issues page.": "高级搜索允许您使用 AND 和 OR 关键字构建高级查询，以及使用括号构建多达 5 层深的嵌套查询，直接从仓库议题页面开始。",
                 "New merge experience": "新合并体验",
                     "Improved merge experience on the pull request page that helps you better understand the state of your pull request and get it merged faster!": "改进了拉取请求页面上的合并体验，可帮助您更好地了解拉取请求的状态，更快地完成合并！",
                 "New Pull Request Commits Experience": "新拉取请求提交体验",
@@ -8031,6 +8036,27 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "discover issues": "探索议题",
             "labeled with": "标记为",
 
+            "Clear filter": "清除筛选",
+            "Filter authors": "筛选作者",
+            "Filter by assignees": "筛选受理人",
+                "No assignees": "无人受理",
+            // 新版排序
+            "Created on": "创建时间",
+            "Comments": "评论",
+            "Total comments": "评论数",
+            "Reactions": "看法数",
+                "Total reactions": "总看法数",
+                "Thumbs up": "点赞",
+                "Thumbs down": "点踩",
+                "Rocket": "火箭",
+                "Hooray": "欢呼",
+                "Eyes": "关注",
+                "Heart": "比心",
+                "Laugh": "大笑",
+                "Confused": "拒绝",
+            "Ascending": "递增",
+            "Descending": "递减",
+
             // [/Want to contribute to ([^ ]+)/, "想为 $1 做贡献吗？"], /issues
             "If you have a bug or an idea, read the": "如果您发现一个错误或有任何想法，请阅读",
             "before opening an issue.": "，在打开议题之前。",
@@ -8077,6 +8103,16 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             // 置顶议题
             "Pinned issues": "置顶议题",
             "Drag to reorder": "拖拽排序",
+
+            "Unpin": "取消置顶",
+            "Advanced move...": "高级移动…",
+                "Move selected item": "移动选中项",
+                    "Item": "标题",
+                    "Action": "操作",
+                    "Move item before": "移动到…之前",
+                    "Move item after": "移动到…之后",
+                    "Move to position": "指定位置",
+                    "Move": "移动",
 
             "ProTip!": "专业提示！",
                 "Find everything you created by searching": "查找您创建的所有内容，使用",
@@ -8237,6 +8273,8 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
                 "Pin issue": "置顶议题",
                     "Up to 3 issues can be pinned and they will appear publicly at the top of the issues page": "最多可以置顶 3 个议题，它们将公开显示在议题页面的顶部",
+                    "Up to 3 issues can be pinned to the top of the issues page": "最多可以在议题页面置顶 3 个议题",
+                    "This will unpin this issue from the top of the issues page": "将从议题页面取消置顶该议题",
                     // 顶部提醒
                     "The issue has been pinned.": "该议题已置顶。",
                 "Unpin issue": "取消置顶",
@@ -8290,6 +8328,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
             // 评论框
             "edited by": "编辑者",
+            "Hidden as": "隐藏因",
+                "show comment": "显示评论",
+                "hide comment": "隐藏评论",
             "Edits": "编辑",
                 "Most recent": "最近",
             "Reopen Issue": "重新打开议题",
@@ -8399,9 +8440,6 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
     },
     "regexp": [ // 正则翻译
-        ...I18N["zh-CN"]["repository-public"]["regexp"],
-        ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
-
         [/Want to contribute to ([^ ]+)\?/, "想为 $1 做贡献？"],
         [/Awaiting requested review from ([^ ]+)/, "正在等待 $1 审查请求"],
         [/([\d,]+) Open/, "$1 打开"],
@@ -8436,6 +8474,14 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
         // 子议题
         [/Create new sub-issue in ([^ ]+)/, "在 $1 中新建子议题"],
+
+        // 新版议题
+        [/(.+) will be between (.+) and (.+)./, "“$1” 将在 “$2” 和 “$3” 之间。"],
+        [/(.+) will not be moved./, "“$1” 将不会被移动。"],
+        [/(.+) will be first item in the list./, "“$1” 将移至最前。"],
+        [/(.+) will be last item in the list./, "“$1” 将移至最后。"],
+        ...I18N["zh-CN"]["repository-public"]["regexp"],
+        ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
     ],
 };
 I18N["zh-CN"]["repository/labels"] = I18N["zh-CN"]["repository/issues"];
