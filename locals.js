@@ -1626,7 +1626,7 @@ I18N["zh-CN"]["orgs-public"] = { // 组织公共部分
 
 I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
     "static": { // 静态翻译
-        //顶部 GPT 聊天窗口
+        // 顶部 GPT 聊天窗口
         "Ask Copilot": "询问 Copilot",
         "Send": "发送",
         "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
@@ -1687,6 +1687,10 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         // 中间栏
         "The home for all developers — including you.": "所有开发者的家园——包括您。",
         "Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.": "欢迎来到您的个人仪表板，在这里您可以看到关于 GitHub 工作原理的介绍，帮助您构建软件的工具，以及帮助您合并您的第一行代码。",
+        "Learn with a tutorial project": "通过教程项目学习",
+            "Introduction to GitHub": "GitHub 简介",
+            "Get started using GitHub in less than an hour.": "一个小时内学会如何使用 GitHub",
+            "Create a site or blog from your GitHub repositories with GitHub Pages.": "使用 GitHub Pages 从您的 GitHub 仓库创建网站或博客。",
         "Start writing code": "开始编写代码",
             "A repository contains all of your project's files, revision history, and collaborator discussion.": "仓库包含项目的所有文件、修订历史记录和协作者讨论。",
             "Repository name": "仓库名称",
