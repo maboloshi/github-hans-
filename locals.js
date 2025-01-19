@@ -7904,6 +7904,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                 "Subscribe": "订阅",
                 // "Unsubscribe": "取消订阅",
                 "You’re not receiving notifications from this thread.": "您没有收到来自该话题的通知。",
+                "You're not receiving notifications from this thread.": "您没有收到来自该话题的通知。",
                 "You're receiving notifications because you're subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you’re subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you’re watching this repository.": "您收到通知是因为您正在关注此仓库。",
@@ -7918,6 +7919,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
 
                     // 通知设置对话框
                     "Notification settings": "通知设置",
+                    "Notifications settings": "通知设置", // 新版议题页面
                     "Not subscribed": "未订阅",
                         "Only receive notifications from this pull request when you have participated or have been @mentioned.": "只有在您参与或被 @您时才会收到来自此拉取请求的通知。",
                         "Only receive notifications from this issue when you have participated or have been @mentioned.": "只有在您参与或被 @您时才会收到来自此议题的通知。", // 议题页面
@@ -7925,6 +7927,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                         "Receive all notifications from this pull request.": "接收来自此拉取请求的所有通知。",
                         "Receive all notifications from this issue.": "接收来自此议题的所有通知。",  // 议题页面
                     "Custom": "自定义",
+                        "You will only be notified for events selected from the list below. If you participate or are @mentioned you will be subscribed.": "您只会收到从以下列表中选择的事件的通知。如果您参与或 @s您时，将自动订阅。",
                         "You will only be notified for the events selected from the list below.": "您只会收到从以下列表中选择的事件的通知。",
                         "If you participate or are @mentioned you will be subscribed.": "如果您参与或 @您时，将自动订阅。",
                     // 议题
@@ -8234,6 +8237,8 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "referenced this issue": "提及这个议题",
             "closed this as completed": "已完成，关闭",
             "added a parent issue": "添加了一个父议题",
+            "added a commit that references this issue": "添加了一个引用此议题的提交",
+            "as off topic": "因偏离主题",
 
             // 右侧栏 补充
                 // "Development": "进展",
@@ -12483,6 +12488,8 @@ I18N["zh-CN"]["repository/pkgs"] = { // 仓库 - 软件包
 
         // /<user-name>/<repo-name>/pkgs/container/<pag name>
             "Installation": "安装",
+                "OS / Arch": "系统 / 架构",
+                    "unknown/unknown": "未知/未知",
             "Learn more about packages": "了解更多关于软件包的信息",
             "Learn more about npm packages": "了解更多关于 npm 软件包的信息",
             "Install from the command line": "从命令行安装",
@@ -12496,6 +12503,7 @@ I18N["zh-CN"]["repository/pkgs"] = { // 仓库 - 软件包
             "View all tagged versions": "查看所有被标记的版本",
 
             "Details": "详细信息",
+                "stars": "星标",
             "Readme": "自述文件",
             "Last published": "最新发布",
             "Total downloads": "总下载量",
