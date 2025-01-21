@@ -22543,6 +22543,9 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
             "Get started with development in the cloud from an existing repository or a template.": "从现有仓库或模板开始云开发。",
             "Find out more about codespaces.": "了解更多关于代码空间的信息。",
 
+            "Start coding": "开始编程",
+                "Add a README file and start coding in a secure, configurable, and dedicated development environment.": "添加 README 文件并在安全、可配置和专用的开发环境中开始编码。",
+
             // 警示
                 "You cannot create a codespace on a closed pull request. Please reopen it if you wish to create a new codespace.": "您无法在已关闭的拉取请求上创建代码空间。如果您想创建新的代码空间，请重新打开它。",
 
