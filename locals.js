@@ -7523,6 +7523,9 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
             "Refresh": "刷新",
 
         // 初始化空仓库 /<user-name>/<repo-name>/
+            "Start coding with Codespaces": "使用代码空间开始编程",
+                "Add a README file and start coding in a secure, configurable, and dedicated development environment.": "添加 README 文件并在安全、可配置和专用的开发环境中开始编码。",
+                "Create a codespace": "创建代码空间",
             // 组织仓库
             "Set up GitHub Copilot": "设置 GitHub Copilot",
                 "Use GitHub's AI pair programmer to autocomplete suggestions as you code.": "使用 GitHub 的 AI 配对程序员在您编码时自动完成建议。",
