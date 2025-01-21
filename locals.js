@@ -8238,7 +8238,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "closed this as completed": "已完成，关闭",
             "added a parent issue": "添加了一个父议题",
             "added a commit that references this issue": "添加了一个引用此议题的提交",
+            "transferred this issue from": "将此议题转移，从",
             "as off topic": "因偏离主题",
+            "as too heated": "因争论不休",
 
             // 右侧栏 补充
                 // "Development": "进展",
@@ -8339,6 +8341,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Participants": "参与者",
 
             "Load more…": "载入更多…",
+            // 新版议题页面
+            "remaining": "剩余",
+            "items": "项",
+            "Load more": "载入更多",
 
             "This conversation has been locked and limited to collaborators.": "此对话已锁定并限制与协作者对话。",
             "This issue has been deleted.": "该议题已被删除。",
