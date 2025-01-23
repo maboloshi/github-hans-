@@ -1,8 +1,10 @@
+<div align="center"><a name="readme-top"></a>
+
 # [GitHub 中文化插件][project-url]
 
 > 本項目源自: [52cik/github-hans](https://github.com/52cik/github-hans)
->
-> 简体中文版简介[点击这里](https://github.com/maboloshi/github-chinese)
+
+[简体中文](./README.md) · **繁體中文**
 
 [![GitHub issues][issues-image]][issues-url]
 [![GitHub stars][stars-image]][stars-url]
@@ -17,6 +19,8 @@
     <img alt="Featured｜HelloGitHub" src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=738d0abae49543f18d887a7e29ec9e90&claim_uid=zepvSg6Vwl4EqMr&theme=neutral" style="width: 250px; height: 54px;" />
   </picture>
 </a>
+
+</div>
 
 ## 💖 星標歷史
 
@@ -75,6 +79,12 @@ Via 瀏覽器（Android）                | 瀏覽器內自帶
 
 > [!TIP]
 > 直接將詞庫文件拖到瀏覽器的地址欄，再復製地址欄的中地址即可。
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 
 ## 📝 更新說明
 
@@ -263,6 +273,12 @@ GitHub 的 ajax 載入方式逐步從 [defunkt/jquery-pjax](https://github.com/d
 
 </details>
 
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 ## ✔ 待辦 (TODO)
 
 1. 添加 GitHub 名詞解釋，新手可能不太理解部分名詞具體表達的意思，比如 `pull request`。
@@ -301,31 +317,6 @@ GitHub 的 ajax 載入方式逐步從 [defunkt/jquery-pjax](https://github.com/d
   <img src="https://cdn.jsdelivr.net/gh/maboloshi/maboloshi/img/weixin.jpg" alt="微信贊賞" width="30%">  <img src="https://cdn.jsdelivr.net/gh/maboloshi/maboloshi/img/alipay.jpg" alt="支付寶贊賞" width="30%">
   
 </details>
-
-[project-url]: https://github.com/maboloshi/github-chinese "GitHub 中文化插件"
-
-[issues-url]: https://github.com/maboloshi/github-chinese/issues "議題"
-[issues-image]: https://img.shields.io/github/issues/maboloshi/github-chinese?style=flat-square&logo=github&label=Issue
-
-[stars-url]: https://github.com/maboloshi/github-chinese/stargazers "星標"
-[stars-image]: https://img.shields.io/github/stars/maboloshi/github-chinese?style=flat-square&logo=github&label=Star
-
-[forks-url]: https://github.com/maboloshi/github-chinese/network "復刻"
-[forks-image]: https://img.shields.io/github/forks/maboloshi/github-chinese?style=flat-square&logo=github&label=Fork
-
-[license-url]: https://opensource.org/licenses/GPL-3.0  "許可證"
-[license-image]: https://img.shields.io/github/license/maboloshi/github-chinese?style=flat-square&logo=github&label=License
-
-[greasyFork-url]: https://greasyfork.org/scripts/435208  "GreasyFork - GitHub 中文化插件"
-[greasyFork-image]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=GreasyFork&query=total_installs&suffix=%20installs&url=https://greasyfork.org/scripts/435208.json
-
-[Tampermonkey]: http://tampermonkey.net/ "篡改猴"
-[Violentmonkey]: https://violentmonkey.github.io/ "暴力猴"
-[Macaque]: https://macaque.app/ "獼猴"
-[Stay]: https://apps.apple.com/cn/app/stay-for-safari-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%B4%E4%BE%A3/id1591620171 "Stay"
-
-[main_zh-TW.user.js]: https://github.com/maboloshi/github-chinese/raw/gh-pages/main_zh-TW.user.js "GitHub 中文化插件（繁體版） - GitHub 託管"
-[main(greasyfork).user.js]: https://greasyfork.org/scripts/435208-github-%E4%B8%AD%E6%96%87%E5%8C%96%E6%8F%92%E4%BB%B6/code/GitHub%20%E4%B8%AD%E6%96%87%E5%8C%96%E6%8F%92%E4%BB%B6.user.js "GitHub 中文化插件 - GreasyFork 托管"
 
 ## 💝 鳴謝
 
@@ -405,4 +396,32 @@ GitHub 的 ajax 載入方式逐步從 [defunkt/jquery-pjax](https://github.com/d
 </a>
 <!--AUTO_GENERATED_PLEASE_DONT_DELETE_IT-END-->
 
-貢獻者列表，由 [GitHub Action](https://github.com/maboloshi/github-chinese/blob/gh-pages/.github/workflows/update_contributors_images.yml) 自動生成
+貢獻者列表，由 [GitHub Action][GitHub Action] 自動生成
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+<!-- LINK GROUP -->
+
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
+[project-url]: https://github.com/maboloshi/github-chinese "GitHub 中文化插件"
+[issues-url]: https://github.com/maboloshi/github-chinese/issues "議題"
+[issues-image]: https://img.shields.io/github/issues/maboloshi/github-chinese?style=flat-square&logo=github&label=Issue
+[stars-url]: https://github.com/maboloshi/github-chinese/stargazers "星標"
+[stars-image]: https://img.shields.io/github/stars/maboloshi/github-chinese?style=flat-square&logo=github&label=Star
+[forks-url]: https://github.com/maboloshi/github-chinese/network "復刻"
+[forks-image]: https://img.shields.io/github/forks/maboloshi/github-chinese?style=flat-square&logo=github&label=Fork
+[license-url]: https://opensource.org/licenses/GPL-3.0  "許可證"
+[license-image]: https://img.shields.io/github/license/maboloshi/github-chinese?style=flat-square&logo=github&label=License
+[greasyFork-url]: https://greasyfork.org/scripts/435208  "GreasyFork - GitHub 中文化插件"
+[greasyFork-image]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=GreasyFork&query=total_installs&suffix=%20installs&url=https://greasyfork.org/scripts/435208.json
+[Tampermonkey]: http://tampermonkey.net/ "篡改猴"
+[Violentmonkey]: https://violentmonkey.github.io/ "暴力猴"
+[Macaque]: https://macaque.app/ "獼猴"
+[Stay]: https://apps.apple.com/cn/app/stay-for-safari-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%B4%E4%BE%A3/id1591620171 "Stay"
+[main_zh-TW.user.js]: https://github.com/maboloshi/github-chinese/raw/gh-pages/main_zh-TW.user.js "GitHub 中文化插件（繁體版） - GitHub 託管"
+[main(greasyfork).user.js]: https://greasyfork.org/scripts/435208-github-%E4%B8%AD%E6%96%87%E5%8C%96%E6%8F%92%E4%BB%B6/code/GitHub%20%E4%B8%AD%E6%96%87%E5%8C%96%E6%8F%92%E4%BB%B6.user.js "GitHub 中文化插件 - GreasyFork 托管"
+[GitHub Action]: https://github.com/maboloshi/github-chinese/blob/gh-pages/.github/workflows/update_contributors_images.yml
