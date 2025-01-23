@@ -8114,6 +8114,8 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             // "Opened": "打开",
             "opened": "打开于",
             // "closed": "已关闭",
+            // 新版
+                "Closed as not planned": "关闭因未计划",
 
             // 父级议题
             "Parent:": "父级：",
@@ -8126,6 +8128,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "in": "在",
                 "Type your description here…": "在此键入介绍…",
                 "Create more sub-issues": "创建更多子议题",
+
+            "Sub-issues": "子议题",
+                "Collapse Sub-issues": "折叠子议题",
+                "Expand Sub-issues": "展开子议题",
 
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
@@ -8255,6 +8261,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "transferred this issue from": "将此议题转移，从",
             "as off topic": "因偏离主题",
             "as too heated": "因争论不休",
+            "added a sub-issue": "添加了一个子议题",
 
             // 右侧栏 补充
                 // "Development": "进展",
@@ -8514,6 +8521,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
         // 子议题
         [/Create new sub-issue in ([^ ]+)/, "在 $1 中新建子议题"],
+        [/(\d+) of (\d+)/, "$1 / $2"],
 
         // 新版议题
         [/(.+) will be between (.+) and (.+)./, "“$1” 将在 “$2” 和 “$3” 之间。"],
