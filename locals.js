@@ -8082,10 +8082,13 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "Descending": "递减",
 
                 "Types": "类型",
+                "Issue type": "议题类型",
                     "Filter by issue type": "按议题类型筛选",
+                    "Select issue type": "选择议题类型",
                     "Filter types": "筛选类型",
                         "No type": "无类型",
                             "Issues with no type": "无类型议题",
+                            "No issue type": "无议题类型",
                 // 搜索
                 "Try adjusting your search filters.": "尝试调整搜索筛选器。",
 
@@ -8097,6 +8100,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Learn about Open Source and how to contribute": "了解开源和如何贡献",
             "If you're ready to tackle some open issues,": "如果您准备好解决一些未解决的议题，",
             "we've collected some good first issues for you": "我们已为您收集了一些好的首发议题",
+            "we've collected some good first issues for you.": "我们已为您收集了一些好的首发议题。", // 新版议题页
 
             "Dismiss": "忽略",
                 // 忽略 下拉
@@ -8528,6 +8532,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
         [/(.+) will not be moved./, "“$1” 将不会被移动。"],
         [/(.+) will be first item in the list./, "“$1” 将移至最前。"],
         [/(.+) will be last item in the list./, "“$1” 将移至最后。"],
+        [/of (\d+) selected/, "/ $1 选中"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
     ],
