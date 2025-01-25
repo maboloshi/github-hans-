@@ -884,6 +884,9 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                     "Done, closed, fixed, resolved": "已完成、已关闭、已修复、已解决",
                 "Close as not planned": "非计划中关闭",
                     "Won't fix, can't repro, duplicate, stale": "不会修复，无法重现，重复，陈旧",
+                    "Won't fix, can't repro, stale": "不会修复，无法重现，陈旧", // 新版议题页
+                // 因重复而关闭（新版议题页）
+                    "Duplicate of another issue": "重复议题",
             "Close with comment": "评论并关闭", // 议题/拉取请求 评论框
             "Close pull request": "关闭拉取请求", // 拉取请求页 评论框
             "Reopen discussion": "重新打开讨论", // discussion页 评论框
@@ -8126,7 +8129,16 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             // 子级议题
             "Create sub-issue": "创建子议题",
                 "Create sub-issue": "创建子议题",
+                    // 窗口
+                        "Create new issue": "新建议题",
+                            "Select an item": "选择一项",
+                                "Select repository": "选择仓库",
+                            "Templates and forms": "模板和表单",
+                                // 空白议题
+                                    "Create a new issue from scratch": "从头开始创建新议题",
                 "Add existing issue": "添加现有议题",
+                    "Search issues": "搜索议题",
+                        "Group selected": "分组选择",
 
                 "Blank issue": "空白议题",
                     "in": "在",
@@ -8275,6 +8287,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "for this issue or link a pull request.": "为这个议题或关联一个拉取请求",
                     "When branches are created from issues, their pull requests are automatically linked.": "当从议题中创建分支时，它们的拉取请求会自动关联。",
                     "Open in Workspace": "在工作区打开",
+
+                    // 关系
+                        "Add parent": "添加父议题",
+                        "Select a repository": "选择一个仓库",
 
                     // 参与者数大于2
                         "and others": "等",
