@@ -8128,7 +8128,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "Parent:": "父级：",
             // 子级议题
             "Create sub-issue": "创建子议题",
-                "Create sub-issue": "创建子议题",
+                //"Create sub-issue": "创建子议题",
                     // 窗口
                         "Create new issue": "新建议题",
                             "Select an item": "选择一项",
