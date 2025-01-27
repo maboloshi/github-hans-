@@ -69,6 +69,7 @@ jobs:
         if: env.LOCALS_JS_IS_CHANGED == 'true'
         run: |
           opencc -i locals.js -o locals_zh-TW.js -c s2tw.json
+          sed -i 's/"zh-CN"/"zh-TW"/g' locals_zh-TW.js
 
       - name: Update version in main.user.js, main_zh-TW.user.js
         if: env.LOCALS_JS_IS_CHANGED == 'true'

@@ -27,7 +27,7 @@
 (function (window, document, undefined) {
     'use strict';
 
-    const lang = 'zh-CN'; // 設置默認語言
+    const lang = 'zh-TW'; // 設置默認語言
     let enable_RegExp = GM_getValue("enable_RegExp", 1),
         page = false,
         cachedPage = null,
