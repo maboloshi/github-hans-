@@ -462,6 +462,10 @@ I18N["zh-CN"]["title"] = { // 标题翻译
 I18N["zh-CN"]["public"] = { // 公共区域翻译
     "static": { // 静态翻译
         // 错误页面
+        "Access has been restricted": "访问被限制",
+            "You have triggered a rate limit.": "您已触发速率限制。",
+            "Please wait a few minutes before you try again;": "请稍等几分钟再重试；",
+            "in some cases this may take up to an hour.": "在某些情况下，这可能最多需要一个小时。",
         "No server is currently available to service your request.": "当前服务器无法为您的请求提供服务。",
         "This page is taking too long to load.": "此页面加载时间过长。",
         "We had issues producing the response to your request.": "我们在响应您的请求时遇到了问题。",
