@@ -36,7 +36,8 @@
         ignoreSelectors = [],
         tranSelectors = [],
         regexpRules = [];
-
+    
+    let enable_XunfeiTranslation = GM_getValue("enable_XunfeiTranslation", true); // 初始化讯飞听见翻译为开启状态
     function updateConfig(page) {
         if (cachedPage !== page && page) {
             cachedPage = page;
@@ -361,7 +362,7 @@
         const element = document.querySelector(selector);
 
         // 如果元素不存在 或者 translate-me 元素已存在，那么直接返回
-        if (!element || document.getElementById('translate-me')) return false;
+        if (!element || !enable_XunfeiTranslation||document.getElementById('translate-me')) return false;
 
         // 在元素后面插入一个翻译按钮
         const buttonHTML = `<div id='translate-me' style='color: rgb(27, 149, 224); font-size: small; cursor: pointer'>翻译</div>`;
@@ -458,7 +459,17 @@
             id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
         };
 
+        const toggleXunfeiTranslation = () => {
+            enable_XunfeiTranslation = !enable_XunfeiTranslation;
+            GM_setValue("enable_XunfeiTranslation", enable_XunfeiTranslation);
+            GM_notification(`已${enable_XunfeiTranslation ? '开启' : '关闭'}讯飞听见翻译`);
+            // 这里可以添加一些额外的逻辑，比如根据开关状态更新页面等
+            GM_unregisterMenuCommand(xunfeiId);
+            xunfeiId = GM_registerMenuCommand(`${enable_XunfeiTranslation ? '关闭' : '开启'}讯飞听见翻译`, toggleXunfeiTranslation);
+        };
         let id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
+        // 注册新的菜单命令，用于控制讯飞听见翻译的开关
+        let xunfeiId = GM_registerMenuCommand(`${enable_XunfeiTranslation ? '关闭' : '开启'}讯飞听见翻译`, toggleXunfeiTranslation);
     }
 
     /**
