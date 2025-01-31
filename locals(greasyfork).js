@@ -54,7 +54,7 @@ I18N.conf = {
     rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|invitations?|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
 
     // 特定页面，启用`字符数据`监测
-    characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob', 'marketplace'],
+    characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob', 'marketplace', 'homepage'],
 
     // 特定页面，忽略突变元素规则
     ignoreMutationSelectorPage: {
@@ -884,6 +884,9 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                     "Done, closed, fixed, resolved": "已完成、已关闭、已修复、已解决",
                 "Close as not planned": "非计划中关闭",
                     "Won't fix, can't repro, duplicate, stale": "不会修复，无法重现，重复，陈旧",
+                    "Won't fix, can't repro, stale": "不会修复，无法重现，陈旧", // 新版议题页
+                // 因重复而关闭（新版议题页）
+                    "Duplicate of another issue": "重复议题",
             "Close with comment": "评论并关闭", // 议题/拉取请求 评论框
             "Close pull request": "关闭拉取请求", // 拉取请求页 评论框
             "Reopen discussion": "重新打开讨论", // discussion页 评论框
@@ -7523,6 +7526,9 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
             "Refresh": "刷新",
 
         // 初始化空仓库 /<user-name>/<repo-name>/
+            "Start coding with Codespaces": "使用代码空间开始编程",
+                "Add a README file and start coding in a secure, configurable, and dedicated development environment.": "添加 README 文件并在安全、可配置和专用的开发环境中开始编码。",
+                "Create a codespace": "创建代码空间",
             // 组织仓库
             "Set up GitHub Copilot": "设置 GitHub Copilot",
                 "Use GitHub's AI pair programmer to autocomplete suggestions as you code.": "使用 GitHub 的 AI 配对程序员在您编码时自动完成建议。",
@@ -7904,6 +7910,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                 "Subscribe": "订阅",
                 // "Unsubscribe": "取消订阅",
                 "You’re not receiving notifications from this thread.": "您没有收到来自该话题的通知。",
+                "You're not receiving notifications from this thread.": "您没有收到来自该话题的通知。",
                 "You're receiving notifications because you're subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you’re subscribed to this thread.": "您收到通知是因为您订阅了该话题。",
                 "You’re receiving notifications because you’re watching this repository.": "您收到通知是因为您正在关注此仓库。",
@@ -7918,6 +7925,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
 
                     // 通知设置对话框
                     "Notification settings": "通知设置",
+                    "Notifications settings": "通知设置", // 新版议题页面
                     "Not subscribed": "未订阅",
                         "Only receive notifications from this pull request when you have participated or have been @mentioned.": "只有在您参与或被 @您时才会收到来自此拉取请求的通知。",
                         "Only receive notifications from this issue when you have participated or have been @mentioned.": "只有在您参与或被 @您时才会收到来自此议题的通知。", // 议题页面
@@ -7925,6 +7933,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
                         "Receive all notifications from this pull request.": "接收来自此拉取请求的所有通知。",
                         "Receive all notifications from this issue.": "接收来自此议题的所有通知。",  // 议题页面
                     "Custom": "自定义",
+                        "You will only be notified for events selected from the list below. If you participate or are @mentioned you will be subscribed.": "您只会收到从以下列表中选择的事件的通知。如果您参与或 @s您时，将自动订阅。",
                         "You will only be notified for the events selected from the list below.": "您只会收到从以下列表中选择的事件的通知。",
                         "If you participate or are @mentioned you will be subscribed.": "如果您参与或 @您时，将自动订阅。",
                     // 议题
@@ -8055,22 +8064,36 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "Filter authors": "筛选作者",
             "Filter by assignees": "筛选受理人",
                 "No assignees": "无人受理",
-            // 新版排序
-            "Created on": "创建时间",
-            "Comments": "评论",
-            "Total comments": "评论数",
-            "Reactions": "看法数",
-                "Total reactions": "总看法数",
-                "Thumbs up": "点赞",
-                "Thumbs down": "点踩",
-                "Rocket": "火箭",
-                "Hooray": "欢呼",
-                "Eyes": "关注",
-                "Heart": "比心",
-                "Laugh": "大笑",
-                "Confused": "拒绝",
-            "Ascending": "递增",
-            "Descending": "递减",
+            // 新版内容
+                // 顶部
+                    "👋 Want to contribute to": "👋 想做贡献给",
+                // 排序
+                    "Created on": "创建时间",
+                    "Comments": "评论",
+                    "Total comments": "评论数",
+                    "Reactions": "看法数",
+                    "Total reactions": "总看法数",
+                    "Thumbs up": "点赞",
+                    "Thumbs down": "点踩",
+                    "Rocket": "火箭",
+                    "Hooray": "欢呼",
+                    "Eyes": "关注",
+                    "Heart": "比心",
+                    "Laugh": "大笑",
+                    "Confused": "拒绝",
+                    "Ascending": "递增",
+                    "Descending": "递减",
+
+                "Types": "类型",
+                "Issue type": "议题类型",
+                    "Filter by issue type": "按议题类型筛选",
+                    "Select issue type": "选择议题类型",
+                    "Filter types": "筛选类型",
+                        "No type": "无类型",
+                            "Issues with no type": "无类型议题",
+                            "No issue type": "无议题类型",
+                // 搜索
+                "Try adjusting your search filters.": "尝试调整搜索筛选器。",
 
             // [/Want to contribute to ([^ ]+)/, "想为 $1 做贡献吗？"], /issues
             "If you have a bug or an idea, read the": "如果您发现一个错误或有任何想法，请阅读",
@@ -8080,6 +8103,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Learn about Open Source and how to contribute": "了解开源和如何贡献",
             "If you're ready to tackle some open issues,": "如果您准备好解决一些未解决的议题，",
             "we've collected some good first issues for you": "我们已为您收集了一些好的首发议题",
+            "we've collected some good first issues for you.": "我们已为您收集了一些好的首发议题。", // 新版议题页
 
             "Dismiss": "忽略",
                 // 忽略 下拉
@@ -8097,18 +8121,33 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             // "Opened": "打开",
             "opened": "打开于",
             // "closed": "已关闭",
+            // 新版
+                "Closed as not planned": "关闭因未计划",
 
             // 父级议题
             "Parent:": "父级：",
             // 子级议题
             "Create sub-issue": "创建子议题",
-                "Create sub-issue": "创建子议题",
+                //"Create sub-issue": "创建子议题",
+                    // 窗口
+                        "Create new issue": "新建议题",
+                            "Select an item": "选择一项",
+                                "Select repository": "选择仓库",
+                            "Templates and forms": "模板和表单",
+                                // 空白议题
+                                    "Create a new issue from scratch": "从头开始创建新议题",
                 "Add existing issue": "添加现有议题",
+                    "Search issues": "搜索议题",
+                        "Group selected": "分组选择",
 
                 "Blank issue": "空白议题",
                     "in": "在",
                 "Type your description here…": "在此键入介绍…",
                 "Create more sub-issues": "创建更多子议题",
+
+            "Sub-issues": "子议题",
+                "Collapse Sub-issues": "折叠子议题",
+                "Expand Sub-issues": "展开子议题",
 
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
@@ -8234,6 +8273,11 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
             "referenced this issue": "提及这个议题",
             "closed this as completed": "已完成，关闭",
             "added a parent issue": "添加了一个父议题",
+            "added a commit that references this issue": "添加了一个引用此议题的提交",
+            "transferred this issue from": "将此议题转移，从",
+            "as off topic": "因偏离主题",
+            "as too heated": "因争论不休",
+            "added a sub-issue": "添加了一个子议题",
 
             // 右侧栏 补充
                 // "Development": "进展",
@@ -8243,6 +8287,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                     "for this issue or link a pull request.": "为这个议题或关联一个拉取请求",
                     "When branches are created from issues, their pull requests are automatically linked.": "当从议题中创建分支时，它们的拉取请求会自动关联。",
                     "Open in Workspace": "在工作区打开",
+
+                    // 关系
+                        "Add parent": "添加父议题",
+                        "Select a repository": "选择一个仓库",
 
                     // 参与者数大于2
                         "and others": "等",
@@ -8334,6 +8382,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Participants": "参与者",
 
             "Load more…": "载入更多…",
+            // 新版议题页面
+            "remaining": "剩余",
+            "items": "项",
+            "Load more": "载入更多",
 
             "This conversation has been locked and limited to collaborators.": "此对话已锁定并限制与协作者对话。",
             "This issue has been deleted.": "该议题已被删除。",
@@ -8489,12 +8541,14 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
 
         // 子议题
         [/Create new sub-issue in ([^ ]+)/, "在 $1 中新建子议题"],
+        [/(\d+) of (\d+)/, "$1 / $2"],
 
         // 新版议题
         [/(.+) will be between (.+) and (.+)./, "“$1” 将在 “$2” 和 “$3” 之间。"],
         [/(.+) will not be moved./, "“$1” 将不会被移动。"],
         [/(.+) will be first item in the list./, "“$1” 将移至最前。"],
         [/(.+) will be last item in the list./, "“$1” 将移至最后。"],
+        [/of (\d+) selected/, "/ $1 选中"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
     ],
@@ -12483,6 +12537,8 @@ I18N["zh-CN"]["repository/pkgs"] = { // 仓库 - 软件包
 
         // /<user-name>/<repo-name>/pkgs/container/<pag name>
             "Installation": "安装",
+                "OS / Arch": "系统 / 架构",
+                    "unknown/unknown": "未知/未知",
             "Learn more about packages": "了解更多关于软件包的信息",
             "Learn more about npm packages": "了解更多关于 npm 软件包的信息",
             "Install from the command line": "从命令行安装",
@@ -12496,6 +12552,7 @@ I18N["zh-CN"]["repository/pkgs"] = { // 仓库 - 软件包
             "View all tagged versions": "查看所有被标记的版本",
 
             "Details": "详细信息",
+                "stars": "星标",
             "Readme": "自述文件",
             "Last published": "最新发布",
             "Total downloads": "总下载量",
@@ -22514,6 +22571,9 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
         // 在拉取请求上创建代码空间 https://github.com/codespaces/new/<user-name>/<repo-name>/pull/<pull-id>?resume=1
             "Get started with development in the cloud from an existing repository or a template.": "从现有仓库或模板开始云开发。",
             "Find out more about codespaces.": "了解更多关于代码空间的信息。",
+
+            "Start coding": "开始编程",
+                "Add a README file and start coding in a secure, configurable, and dedicated development environment.": "添加 README 文件并在安全、可配置和专用的开发环境中开始编码。",
 
             // 警示
                 "You cannot create a codespace on a closed pull request. Please reopen it if you wish to create a new codespace.": "您无法在已关闭的拉取请求上创建代码空间。如果您想创建新的代码空间，请重新打开它。",
