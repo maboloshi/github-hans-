@@ -62,4 +62,4 @@ jobs:
           -B "${{ github.ref_name }}" \
           -P "${{ github.sha }}" \
           -F "locals(greasyfork).js, main(greasyfork).user.js" \
-          -h "main(greasyfork).user.js Update to $version"
+          -h "main(greasyfork).user.js Sync Thesaurus to $version"

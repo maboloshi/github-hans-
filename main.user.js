@@ -27,37 +27,82 @@
 (function (window, document, undefined) {
     'use strict';
 
-    const lang = 'zh-CN'; // 设置默认语言
-    let enable_RegExp = GM_getValue("enable_RegExp", 1),
-        page = false,
-        cachedPage = null,
-        characterData = null,
-        ignoreMutationSelectors = [],
-        ignoreSelectors = [],
-        tranSelectors = [],
-        regexpRules = [];
+    /****************** 全局配置区（开发者可修改部分） ******************/
+    const FeatureSet = {
+        enable_RegExp: GM_getValue("enable_RegExp", true),
+        enable_transDesc: GM_getValue("enable_transDesc", true),
+    };
+    const CONFIG = {
+        LANG: 'zh-CN',
+        // 站点域名 -> 类型映射
+        PAGE_MAP: {
+            'gist.github.com': 'gist',
+            'www.githubstatus.com': 'status',
+            'skills.github.com': 'skills',
+            'education.github.com': 'education'
+        },
+        // 需要特殊处理的站点类型
+        SPECIAL_SITES: ['gist', 'status', 'skills', 'education'],
+        // 简介 css 筛选器规则
+        DESC_SELECTORS: {
+            repository: ".f4.my-3",
+            gist: ".gist-content [itemprop='about']"
+        },
+        OBSERVER_CONFIG: {
+            childList: true,
+            subtree: true,
+            characterData: true,
+            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm']
+        },
+    };
 
-    function updateConfig(page) {
-        if (cachedPage !== page && page) {
-            cachedPage = page;
+    let PageConfig = {
+        currentPageType: null,
+        staticDict: {},
+        regexpRules: [],
+        ignoreMutationSelectors: [],
+        ignoreSelectors: [],
+        characterData: null,
+        tranSelectors: [],
+    };
 
-            const { characterDataPage, ignoreMutationSelectorPage, ignoreSelectorPage } = I18N.conf;
-            characterData = characterDataPage.includes(page);
+    function updatePageConfig() {
+        const pageType = getPageType();
+
+        // 如果页面类型不一致且pageType有效，则重建整个PageConfig对象
+        if (PageConfig.currentPageType !== pageType && pageType) return {
+            // 当前页面类型
+            currentPageType: pageType,
+            // 静态词库
+            staticDict: {
+                ...I18N[CONFIG.LANG].public.static,
+                ...(I18N[CONFIG.LANG][pageType]?.static || {})
+            },
+            // 正则词库
+            regexpRules: [
+                ...I18N[CONFIG.LANG].public.regexp,
+                ...(I18N[CONFIG.LANG][pageType]?.regexp || [])
+            ],
             // 忽略突变元素选择器
-            ignoreMutationSelectors = ignoreMutationSelectorPage['*'].concat(ignoreMutationSelectorPage[page] || []);
-            // 忽略元素选择器
-            ignoreSelectors = ignoreSelectorPage['*'].concat(ignoreSelectorPage[page] || []);
-            // 通过 CSS 选择器翻译的规则
-            tranSelectors = (I18N[lang][page]?.selector || []).concat(I18N[lang]['public'].selector || []);
-            // 正则词条
-            regexpRules = (I18N[lang][page].regexp || []).concat(I18N[lang]['public'].regexp || []);
-        }
-    }
-
-    function initPage() {
-        const page = getPage();
-        updateConfig(page);
-        return page;
+            ignoreMutationSelectors: [
+                ...I18N.conf.ignoreMutationSelectorPage['*'],
+                ...(I18N.conf.ignoreMutationSelectorPage[pageType] || [])
+            ],
+            // 忽略元素选择器规则
+            ignoreSelectors: [
+                ...I18N.conf.ignoreSelectorPage['*'],
+                ...(I18N.conf.ignoreSelectorPage[pageType] || [])
+            ],
+            // 字符数据监视开启规则
+            characterData: I18N.conf.characterDataPage.includes(pageType),
+            // CSS 选择器规则
+            tranSelectors: [
+                ...(I18N[CONFIG.LANG].public.selector || []),
+                ...(I18N[CONFIG.LANG][pageType]?.selector || [])
+            ],
+        };
+        // 如果条件不满足，则返回原本的 PageConfig，不做更改
+        return PageConfig;
     }
 
     /**
@@ -80,39 +125,42 @@
             // 如果页面的 URL 发生变化
             if (currentURL !== previousURL) {
                 previousURL = currentURL;
-                page = initPage();
-                console.log(`DOM变化触发: 链接变化 page= ${page}`);
+                PageConfig = updatePageConfig();
+                console.log(`DOM变化触发: 链接变化 pageType= ${PageConfig.currentPageType}`);
             }
 
-            if (page) {
+            if (PageConfig.currentPageType) {
 
+                // 平铺突变记录并过滤需要处理的节点（链式操作）
                 // 使用 mutations.flatMap 进行筛选突变:
                 //   1. 针对`节点增加`突变，后期迭代翻译的对象调整为`addedNodes`中记录的新增节点，而不是`target`，此举大幅减少重复迭代翻译
                 //   2. 对于其它`属性`和特定页面`文本节点`突变，仍旧直接处理`target`
-                //   3. 使用`nodes.filter()`筛选丢弃特定页面`特定忽略元素`内突变的节点
-                const filteredMutations = mutations.flatMap(({ target, addedNodes, type }) => {
-                    let nodes = [];
+                //   3. 使用`.filter()`筛选丢弃特定页面`特定忽略元素`内突变的节点
+                mutations.flatMap(({ target, addedNodes, type }) => {
+                    // 处理子节点添加的情况
                     if (type === 'childList' && addedNodes.length > 0) {
-                        nodes = Array.from(addedNodes); // 将新增节点转换为数组
-                    } else if (type === 'attributes' || (characterData && type === 'characterData')) {
-                        nodes = [target]; // 否则，仅处理目标节点
+                        return Array.from(addedNodes); // 将新增节点转换为数组
                     }
-
-                    // 对每个节点进行筛选，忽略特定选择器
-                    return nodes.filter(node =>
-                        !ignoreMutationSelectors.some(selector => node.parentElement?.closest(selector))
-                    );
-                });
-
+                    // 处理属性和文本内容变更的情况
+                    else if (type === 'attributes' || (PageConfig.characterData && type === 'characterData')) {
+                        return [target]; // 否则，仅处理目标节点
+                    }
+                    return []
+                })
+                // 过滤需要忽略的突变节点
+                .filter(node =>
+                    !PageConfig.ignoreMutationSelectors.some(selector =>
+                        // 检查节点是否在忽略选择器的父元素内
+                        node.parentElement?.closest(selector)
+                    )
+                )
                 // 处理每个变化
-                filteredMutations.forEach(node => traverseNode(node));
+                .forEach(node =>
+                    // 递归遍历节点树进行处理
+                    traverseNode(node)
+                );
             }
-        }).observe(document.body, {
-            characterData: true,
-            subtree: true,
-            childList: true,
-            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm', 'data-visible-text'], // 仅观察特定属性变化
-        });
+        }).observe(document.body, CONFIG.OBSERVER_CONFIG);
     }
 
     /**
@@ -121,7 +169,7 @@
      */
     function traverseNode(node) {
         // 跳过忽略的节点
-        const skipNode = node => ignoreSelectors.some(selector => node.matches?.(selector));
+        const skipNode = node => PageConfig.ignoreSelectors.some(selector => node.matches?.(selector));
         if (skipNode(node)) return;
 
         if (node.nodeType === Node.ELEMENT_NODE) { // 元素节点处理
@@ -181,60 +229,80 @@
     }
 
     /**
-     * getPage 函数：获取页面的类型。
-     * @param {URL object} URL - 需要分析的 URL。
+     * getPageType 函数：获取页面的类型。
      * @returns {string|boolean} 页面的类型，如果无法确定类型，那么返回 false。
      */
-    function getPage(url = window.location) {
-        // 站点映射
-        const siteMapping = {
-            'gist.github.com': 'gist',
-            'www.githubstatus.com': 'status',
-            'skills.github.com': 'skills',
-            'education.github.com': 'education',
-        };
-        const site = siteMapping[url.hostname] || 'github';
-        const pathname = url.pathname;
+    function getPageType() {
+        const { PAGE_MAP, SPECIAL_SITES } = CONFIG;
+        const url = new URL(window.location.href);
+        const { hostname, pathname } = url;
 
-        // 是否登录
+        // 基础配置 ===============================================
+        const site = PAGE_MAP[hostname] || 'github'; // 通过站点映射获取基础类型
         const isLogin = document.body.classList.contains("logged-in");
-        // 获取 analytics-location
-        const analyticsLocation = document.head.querySelector('meta[name="analytics-location"]')?.content || '';
+        const metaLocation = document.head.querySelector('meta[name="analytics-location"]')?.content || '';
 
-        // 判断页面类型
-        const isOrganization = /\/<org-login>/.test(analyticsLocation) || /^\/(?:orgs|organizations)/.test(pathname);
-        const isRepository = /\/<user-name>\/<repo-name>/.test(analyticsLocation);
-        const isProfile = document.body.classList.contains("page-profile") || analyticsLocation === '/<user-name>';
+        // 页面特征检测 ============================================
         const isSession = document.body.classList.contains("session-authentication");
+        const isHomepage = pathname === '/' && site === 'github';
+        const isProfile = document.body.classList.contains("page-profile") || metaLocation === '/<user-name>';
+        const isRepository = /\/<user-name>\/<repo-name>/.test(metaLocation);
+        const isOrganization = /\/<org-login>/.test(metaLocation) || /^\/(?:orgs|organizations)/.test(pathname);
 
+        // 正则配置 ================================================
         const { rePagePathRepo, rePagePathOrg, rePagePath } = I18N.conf;
-        let t, page = false;
 
-        if (isSession) {
-            page = 'session-authentication';
-        } else if (site === 'gist' || site === 'status' || site === 'skills' || site === 'education') {
-            page = site;
-        } else if (isProfile) {
-            t = url.search.match(/tab=([^&]+)/);
-            page = t ? 'page-profile/' + t[1] : pathname.includes('/stars') ? 'page-profile/stars' : 'page-profile';
-        } else if (pathname === '/' && site === 'github') {
-            page = isLogin ? 'page-dashboard' : 'homepage';
-        } else if (isRepository) {
-            t = pathname.match(rePagePathRepo);
-            page = t ? 'repository/' + t[1] : 'repository';
-        } else if (isOrganization) {
-            t = pathname.match(rePagePathOrg);
-            page = t ? 'orgs/' + (t[1] || t.slice(-1)[0]) : 'orgs';
-        } else {
-            t = pathname.match(rePagePath);
-            page = t ? (t[1] || t.slice(-1)[0]) : false;
+        // 核心判断逻辑 ============================================
+        let pageType;
+        switch (true) { // 使用 switch(true) 模式处理多条件分支
+            // 1. 登录相关页面
+            case isSession:
+                pageType = 'session-authentication';
+                break;
+
+            // 2. 特殊站点类型（gist/status/skills/education）
+            case SPECIAL_SITES.includes(site):
+                pageType = site;
+                break;
+
+            // 3. 个人资料页
+            case isProfile:
+                const tabParam = new URLSearchParams(url.search).get('tab');
+                pageType = pathname.includes('/stars') ? 'page-profile/stars'
+                         : tabParam ? `page-profile/${tabParam}`
+                         : 'page-profile';
+                break;
+
+            // 4. 首页/仪表盘
+            case isHomepage:
+                pageType = isLogin ? 'dashboard' : 'homepage';
+                break;
+
+            // 5. 代码仓库页
+            case isRepository:
+                const repoMatch = pathname.match(rePagePathRepo);
+                pageType = repoMatch ? `repository/${repoMatch[1]}` : 'repository';
+                break;
+
+            // 6. 组织页面
+            case isOrganization:
+                const orgMatch = pathname.match(rePagePathOrg);
+                pageType = orgMatch ? `orgs/${orgMatch[1] || orgMatch.slice(-1)[0]}` : 'orgs';
+                break;
+
+            // 7. 默认处理逻辑
+            default:
+                const pathMatch = pathname.match(rePagePath);
+                pageType = pathMatch ? (pathMatch[1] || pathMatch.slice(-1)[0]) : false;
         }
 
-        if (!page || !I18N[lang][page]) {
-            console.log(`请注意对应 page ${page} 词库节点不存在`);
-            page = false;
+        // 词库校验 ================================================
+        if (pageType === false || !I18N[CONFIG.LANG]?.[pageType]) {
+            console.warn(`[i18n] 页面类型未匹配或词库缺失: ${pageType}`);
+            return false; // 明确返回 false 表示异常
         }
-        return page;
+
+        return pageType;
     }
 
     /**
@@ -242,11 +310,11 @@
      */
     function transTitle() {
         const text = document.title; // 获取标题文本内容
-        let translatedText = I18N[lang]['title']['static'][text] || '';
+        let translatedText = I18N[CONFIG.LANG]['title']['static'][text] || '';
         if (!translatedText) {
-            const res = I18N[lang]['title'].regexp || [];
-            for (let [a, b] of res) {
-                translatedText = text.replace(a, b);
+            const res = I18N[CONFIG.LANG]['title'].regexp || [];
+            for (const [pattern, replacement] of res) {
+                translatedText = text.replace(pattern, replacement);
                 if (translatedText !== text) break;
             }
         }
@@ -333,16 +401,16 @@
     function fetchTranslatedText(text) {
 
         // 静态翻译
-        let translatedText = I18N[lang][page]['static'][text] || I18N[lang]['public']['static'][text]; // 默认翻译 公共部分
+        let translatedText = PageConfig.staticDict[text]; // 默认翻译 公共部分
 
         if (typeof translatedText === 'string') {
             return translatedText;
         }
 
         // 正则翻译
-        if (enable_RegExp) {
-            for (let [a, b] of regexpRules) {
-                translatedText = text.replace(a, b);
+        if (FeatureSet.enable_RegExp) {
+            for (const [pattern, replacement] of PageConfig.regexpRules) {
+                translatedText = text.replace(pattern, replacement);
                 if (translatedText !== text) {
                     return translatedText;
                 }
@@ -430,9 +498,9 @@
      * transBySelector 函数：通过 CSS 选择器找到页面上的元素，并将其文本内容替换为预定义的翻译。
      */
     function transBySelector() {
-        if (tranSelectors.length > 0) {
+        if (PageConfig.tranSelectors) {
             // 遍历每个翻译规则
-            for (let [selector, translatedText] of tranSelectors) {
+            for (const [selector, translatedText] of PageConfig.tranSelectors) {
                 // 使用 CSS 选择器找到对应的元素
                 const element = document.querySelector(selector);
                 // 如果找到了元素，那么将其文本内容替换为翻译后的文本
@@ -447,41 +515,83 @@
      * registerMenuCommand 函数：注册菜单。
      */
     function registerMenuCommand() {
-        const toggleRegExp = () => {
-            enable_RegExp = !enable_RegExp;
-            GM_setValue("enable_RegExp", enable_RegExp);
-            GM_notification(`已${enable_RegExp ? '开启' : '关闭'}正则功能`);
-            if (enable_RegExp) {
-                location.reload();
-            }
-            GM_unregisterMenuCommand(id);
-            id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
+        const createMenuCommand = (config) => {
+            const { label, key, callback } = config;
+            let menuId;
+
+            const getMenuLabel = (label, isEnabled) =>
+                `${isEnabled ? "禁用" : "启用"} ${label}`;
+
+            const toggle = () => {
+                const newFeatureState = !FeatureSet[key];
+                GM_setValue(key, newFeatureState);
+                FeatureSet[key] = newFeatureState;
+                GM_notification(`${label}已${newFeatureState ? '启用' : '禁用'}`);
+
+                // 调用回调函数
+                if (callback) callback(newFeatureState);
+
+                // 更新菜单命令的标签
+                GM_unregisterMenuCommand(menuId);
+                menuId = GM_registerMenuCommand(
+                    getMenuLabel(label, newFeatureState),
+                    toggle
+                );
+            };
+
+            // 初始注册菜单命令
+            menuId = GM_registerMenuCommand(
+                getMenuLabel(label, FeatureSet[key]),
+                toggle
+            );
         };
 
-        let id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
-    }
+        const menuConfigs = [
+            {
+                label: "正则功能",
+                key: "enable_RegExp",
+                callback: (newFeatureState) => {
+                    if (newFeatureState) traverseNode(document.body);
+                }
+            },
+            {
+                label: "描述翻译",
+                key: "enable_transDesc",
+                callback: (newFeatureState) => {
+                    if (newFeatureState && CONFIG.DESC_SELECTORS[PageConfig.currentPageType]) {
+                        transDesc(CONFIG.DESC_SELECTORS[PageConfig.currentPageType]);
+                    } else {
+                        document.getElementById('translate-me')?.remove();
+                    }
+                }
+            }
+        ];
+
+        // 注册所有菜单项
+        menuConfigs.forEach(config => createMenuCommand(config));
+    };
 
     /**
      * init 函数：初始化翻译功能。
      */
     function init() {
         // 获取当前页面的翻译规则
-        page = initPage();
-        console.log(`开始page= ${page}`);
+        PageConfig = updatePageConfig();
+        console.log(`开始pageType= ${PageConfig.currentPageType}`);
 
-        if (page) traverseNode(document.body);
+        if (PageConfig.currentPageType) traverseNode(document.body);
 
         // 监视页面变化
         watchUpdate();
     }
 
     // 设置中文环境
-    document.documentElement.lang = lang;
+    document.documentElement.lang = CONFIG.LANG;
 
     // 监测 HTML Lang 值, 设置中文环境
     new MutationObserver(mutations => {
         if (document.documentElement.lang === "en") {
-            document.documentElement.lang = lang;
+            document.documentElement.lang = CONFIG.LANG;
         }
     }).observe(document.documentElement, {
         attributeFilter: ['lang']
@@ -489,14 +599,13 @@
 
     // 监听 Turbo 完成事件
     document.addEventListener('turbo:load', () => {
-        if (page) {
-            transTitle(); // 翻译页面标题
-            transBySelector();
-            if (page === "repository") { //仓库简介翻译
-                transDesc(".f4.my-3");
-            } else if (page === "gist") { // Gist 简介翻译
-                transDesc(".gist-content [itemprop='about']");
-            }
+        if (!PageConfig.currentPageType) return;
+
+        transTitle(); // 翻译页面标题
+        transBySelector();
+
+        if (FeatureSet.enable_transDesc && CONFIG.DESC_SELECTORS[PageConfig.currentPageType]) {
+            transDesc(CONFIG.DESC_SELECTORS[PageConfig.currentPageType]);
         }
     });
 

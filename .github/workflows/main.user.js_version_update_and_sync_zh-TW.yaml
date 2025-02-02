@@ -107,9 +107,10 @@ jobs:
           # 获取远程仓库的最新提交 SHA
           remote_sha=$(git ls-remote origin "${{ github.ref_name }}" | awk '{print $1}')
 
+          version=$(sed -n -E 's/^\/\/ @version\s+(.+)/\1/p' main_zh-TW.user.js)
           bash script/ci_commit_with_signature.sh \
             -R "${{ github.repository }}" \
             -B "${{ github.ref_name }}" \
             -P "$remote_sha" \
             -F "main_zh-TW.user.js, locals_zh-TW.js" \
-            -h "zh-TW Sync to $version"
+            -h "main_zh-TW.user.js Sync Thesaurus to $version"
