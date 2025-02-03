@@ -11164,6 +11164,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
             "View workflow runs": "查看工作流程运行",
             "Workflow run options": "工作流程运行选项",
             "Delete all logs": "删除所有日志",
+            "Sign in to view logs": "登录后查看日志",
 
             // 左侧栏
             "Summary": "摘要",
