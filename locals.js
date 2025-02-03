@@ -3498,6 +3498,17 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         // 顶部提示
             "Successfully updated billing information.": "成功更新支付信息。",
 
+        // 代码空间超限
+        "You've used 90% of included services for GitHub Codespaces storage.": "您已使用 90% 代码空间存储。",
+            "When your allotment is exhausted, you won't be able to use Codespaces until you set up a spending limit or your free Codespaces allotment is reset next month. If you want to access your in progress work from a codespace, you can": "当您的配额耗尽后，您将无法使用代码空间，直到您设置支出上限或下月重置您的免费代码空间配额。如果您想访问代码空间中正在进行的工作，您可以",
+            "export your unpushed work to a branch.": "将未推送的工作导出到分支。",
+            "To see a full list of your usage, obtain a copy of your": "要查看所有使用情况，请获取您的",
+            "usage report": "使用报告",
+            "to see the codespaces and prebuilds created by your account. The usage report is the only place where prebuild usage is visible. If you see charges you'd like to stop going forward, you can delete a": "，以查看您的账户创建的代码空间和预构建。使用报告是唯一能显示预构建使用情况的地方。如果您看到希望以后停止的费用，您可以删除一个",
+            "codespace": "代码空间",
+            "delete prebuilds for a repository.": "删除某个仓库的预构建。",
+        "Update spending limit": "更新支出限额",
+
         // 账单和计划 https://github.com/settings/billing/summary
             "Billing summary": "账单摘要",
             "Your next payment": "您的下一次应付款",
