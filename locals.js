@@ -8425,6 +8425,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Most recent": "最近",
             "Reopen Issue": "重新打开议题",
                 "You do not have permissions to reopen this issue": "您没有权限重新打开此议题",
+            // 关闭议题
+                "You do not have permissions to close this issue": "您没有权限关闭此议题",
+            "Comment can not be empty": "评论不能为空",
 
         // 议题标签管理 /<user-name>/<repo-name>/issues/labels
         // 仓库 --> 标签页面 /<user-name>/<repo-name>/labels
