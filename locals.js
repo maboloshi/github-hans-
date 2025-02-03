@@ -7052,6 +7052,10 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
     "static": { // 静态翻译
             ...I18N["zh-CN"]["repository-public"]["static"],
 
+        // 顶部
+            "Help us improve GitHub Codespaces": "帮助我们改进 GitHub 代码空间",
+                "Tell us how to make GitHub Codespaces work better for you with three quick questions.": "通过三个简单的问题告诉我们如何让 GitHub 代码空间更适合您。",
+
         // 代码标签卡 & 仓库首页 /<user-name>/<repo-name>/ 和 /<user-name>/<repo-name>/tree/<branch>
             // [/Branch ([^ ]+) was renamed to ([^ ]+)./, "分支 $1 已更名为 $2。"],
 
@@ -22457,6 +22461,9 @@ I18N["zh-CN"]["orgs/enterprise_plan"] = { // 企业版订阅页面
 
 I18N["zh-CN"]["codespaces"] = { // 代码空间页面
     "static": {
+        // 顶部
+            "Help us improve GitHub Codespaces": "帮助我们改进 GitHub 代码空间",
+                "Tell us how to make GitHub Codespaces work better for you with three quick questions.": "通过三个简单的问题告诉我们如何让 GitHub 代码空间更适合您。",
         // https://github.com/codespaces
             "All": "所有",
             "Templates": "模版",
