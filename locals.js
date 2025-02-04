@@ -8172,6 +8172,9 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "Collapse Sub-issues": "折叠子议题",
                 "Expand Sub-issues": "展开子议题",
 
+                "More list item action bar": "更多操作",
+                    "Remove sub-issue": "移除子议题",
+
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
             "You commented on this issue": "您对此议题发表了评论",
