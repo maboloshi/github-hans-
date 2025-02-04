@@ -13689,7 +13689,12 @@ I18N["zh-CN"]["repository/network/dependencies"] = { // 仓库 -> 洞察 - 依�
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         [/View Dependabot alerts?/, "查看 Dependabot 警报"],
-        [/Detected automatically on (.+)/, "自动检测于$1"],
+        //[/Detected automatically on (.+)/, "自动检测于$1"],
+        [/· Detected automatically on (.+)/, (match, p1) => {
+            const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
+            const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
+            return `· 自动检测于 ${translatedDate}`;
+        }],
         [/(\d+) Total/, "$1 总计"],
         [/(\d+) vulnerabilities? found/, "发现 $1 个漏洞"],
         [/(\d+) more dependencies/, "更多 $1 个依赖项"],
