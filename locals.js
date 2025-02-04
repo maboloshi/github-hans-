@@ -8175,6 +8175,10 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
                 "More list item action bar": "更多操作",
                     "Remove sub-issue": "移除子议题",
 
+            "Invalid value": "无效值",
+            "for": "，",
+            //"parent-issue": "父议题",
+
             "You commented on and opened this issue": "您打开了此议题并发表了评论",
             "You were mentioned on and commented on this issue": "您被提及并对此议题发表了评论",
             "You commented on this issue": "您对此议题发表了评论",
@@ -8571,6 +8575,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
         // 子议题
         [/Create new sub-issue in ([^ ]+)/, "在 $1 中新建子议题"],
         [/(\d+) of (\d+)/, "$1 / $2"],
+        [/Filter contains (\d+) issues?\:/, "筛选包含 $1 个议题："],
 
         // 新版议题
         [/(.+) will be between (.+) and (.+)./, "“$1” 将在 “$2” 和 “$3” 之间。"],
