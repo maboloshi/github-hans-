@@ -8578,6 +8578,7 @@ I18N["zh-CN"]["repository/issues"] = { // 仓库 - 议题页面
         [/(.+) will be first item in the list./, "“$1” 将移至最前。"],
         [/(.+) will be last item in the list./, "“$1” 将移至最后。"],
         [/of (\d+) selected/, "/ $1 选中"],
+        [/(\d+\%) completed/, "$1 完成"],
         ...I18N["zh-CN"]["repository-public"]["regexp"],
         ...I18N["zh-CN"]["repository/pull_issue_public"]["regexp"],
     ],
