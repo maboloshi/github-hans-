@@ -74,7 +74,7 @@ Via 瀏覽器（Android）                | 瀏覽器內自帶
 1. 安裝用戶腳本管理器 [Tampermonkey][Tampermonkey]。
 1. 在瀏覽器擴展管理中，開啟 [Tampermonkey][Tampermonkey] 的 「允許訪問文件網址」。
 1. 將修改的詞庫文件放到方便訪問的本地位置。
-1. 安裝 [GitHub 中文化插件 - GitHub 托管【開發版】][main.user.js] 或 [GitHub 中文化插件 - GreasyFork 托管【發布版】][main(greasyfork).user.js]。
+1. 安裝 [GitHub 中文化插件 - GitHub 托管【開發版】][main_zh-TW.user.js] 或 [GitHub 中文化插件 - GreasyFork 托管【發布版】][main(greasyfork).user.js]。
 1. 回到腳本管理器，修改詞庫文件路徑，如將 `// @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals_zh-TW.js?v1.9.0` 改為本地路徑格式如 `file:///D:/APP/github%E9%A1%B9%E7%9B%AE/github-chinese/locals_zh-TW.js`。
 
 > [!TIP]
