@@ -3501,6 +3501,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
         // 代码空间超限
         "You've used 90% of included services for GitHub Codespaces storage.": "您已使用 90% 代码空间存储。",
+        "You've used 100% of included services for GitHub Codespaces storage.": "您已使用 100% 代码空间存储。",
             "When your allotment is exhausted, you won't be able to use Codespaces until you set up a spending limit or your free Codespaces allotment is reset next month. If you want to access your in progress work from a codespace, you can": "当您的配额耗尽后，您将无法使用代码空间，直到您设置支出上限或下月重置您的免费代码空间配额。如果您想访问代码空间中正在进行的工作，您可以",
             "export your unpushed work to a branch.": "将未推送的工作导出到分支。",
             "To see a full list of your usage, obtain a copy of your": "要查看所有使用情况，请获取您的",
